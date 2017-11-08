@@ -246,10 +246,10 @@ private function resize_($upload,$uploads_dir,$file_name,$process){
 
 
      $main_array=$_POST;
-
+dump(session()->all());
 //Add goods_
      $main_image=session('file_name_main_image');
-
+     dd($main_image);
      $dataSet['type'] = $main_array['type'];
      $dataSet['category'] = $main_array['category'];
      $dataSet['articul'] = $main_array['artikul'];

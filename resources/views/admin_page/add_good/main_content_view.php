@@ -31,7 +31,7 @@
                     <div class="col-md-12">
                         <section class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Форма добавления товара</h3>
+                                <h3 class="panel-title">Форма добавления товара 12</h3>
                             </div>
                             <div class="panel-body">
                                 <h3 class="panel-title">Выберите какие присутствуют цвета в данной модели</h3>
@@ -575,7 +575,7 @@
                                                     },
                                                     // когда все загружены
                                                     onAllComplete: function() {
-
+                                                        $('#step').val('true')
                                                         log('<span style="color: white;">*** Все загрузки завершены! ***</span>');
                                                         imgCount = 0;
                                                         imgSize = 0;
@@ -875,6 +875,7 @@
                                                         <input type="hidden" name="lheight" value="<?=$image_height?>">
                                                         <input type="hidden" name="lproducers" value="/upload">
                                                         <input type="hidden" name="ltype" value="<?=$image_type?>">
+                                                        <input id='step' type="hidden" name="step" value="false">
                                                         <span id="info-count">Изображений не выбрано</span><br/>
                                                         Общий размер:<span id="info-size">0</span> Кб<br/><br/>
                                                     </div>
@@ -888,7 +889,7 @@
                                         <script>
 
 
-
+                                            window.step = false;
 
                                             $(document).ready(function() {
 
@@ -930,6 +931,7 @@
 
                                                 var uploaded_data = [];
                                                 var img_preloaded = false;
+
                                                 fileInput.damnUploader({
                                                     // куда отправлять
                                                     url: '/functions_images',
@@ -952,7 +954,6 @@
 
                                                     // когда все загружены
                                                     onAllComplete: function() {
-
                                                         log('<span style="color: blue;">*** Все загрузки завершены! ***</span>');
                                                         imgCount = 0;
                                                         imgSize = 0;
@@ -976,6 +977,7 @@
                                                 function updateInfo() {
                                                     countInfo.text( (imgCount == 0) ? 'Изображений не выбрано' : ('Изображений выбрано: '+imgCount));
                                                     sizeInfo.text( (imgSize == 0) ? '-' : Math.round(imgSize / 1024));
+
                                                 }
 
                                                 // Обновление progress bar'а
@@ -1161,7 +1163,7 @@
                                                         });
                                                         fileInput.damnUploader('startUpload');
                                                     } else if (nums_iter == count) {
-                                                        log('<span style="color: white;">*** Все загрузки завершены! ***</span>');
+                                                        log('<span style="color: white;">*** Все загрузки завершены да! ***</span>');
                                                         imgCount = 0;
                                                         imgSize = 0;
                                                         updateInfo();

@@ -85,7 +85,7 @@ $(document).ready(function() {
 			}
 		},
 		onNext: function(){
-			isValid = null;
+		    isValid = null;
 			$('#demo-bv-wz-form').bootstrapValidator('validate');
 
 

@@ -23,6 +23,13 @@ $(function () {
         bodyTag: ".wizard-container",
         transitionEffect: "fade",
         onStepChanging: function (event, currentIndex, newIndex) {
+if(currentIndex==2){
+
+   if($('#step').val()=='false'){
+       alert('Вы не загрузили основную фотографию - не нажали кнопку "Сохранить фото на сервере"')
+       return false;
+   }
+}
             // Allways allow previous action even if the current form is not valid!
             if (currentIndex > newIndex) {
                 return true;
