@@ -24,7 +24,7 @@ class AdminController extends \App\Http\Controllers\Controller
 
     }
 
-    private function menu(){
+    protected function menu(){
         return $data_nav['menu']=MenuController::index('admin_categories');
 
     }

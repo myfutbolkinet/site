@@ -35,9 +35,10 @@ class IndexController extends AdminController
 
             abort(403);
         }
+        $data_nav['menu']=$this->menu();
         $data=array();
         $this->title = 'Панель администратора';
-        return view('home.index',$data)->render();
+        return view('home/index',$data_nav);
     }
 }
 
