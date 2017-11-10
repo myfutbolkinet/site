@@ -16,8 +16,6 @@ class GoodsController extends AdminController
     {
         parent::__construct();
 
-
-        $this->template='admin_page';
     }
     /**
      * Display a listing of the resource.
@@ -38,13 +36,12 @@ class GoodsController extends AdminController
             ->orderBy('updated_at', 'desc')
             ->get();
         $data['types']=Type_of_good::get();
-        
-        $this->template='admin_page/add_good';
+        $data_nav['menu']=$this->menu();
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
 
-        return $this->renderOutput($data);
+        return view('admin_page/add_good/index',$data,$data_nav);
     }
 
 
@@ -63,6 +60,7 @@ class GoodsController extends AdminController
             ->get();
         $data['types']=Type_of_good::get();
         $data['goods']=Good::get();
+
         $this->template='admin_page/delete_goods';
         $data['title']="Видалити товар";
         $data['keywords']="Ukrainian industry platform";
