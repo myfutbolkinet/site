@@ -144,9 +144,33 @@
 
 
 
-                                        <div class="form-group">
-                                            <label>Username *</label>
-                                            <input id="userName" name="userName" type="text" class="form-control required">
+                                        <div class="form-group col-sm-12">
+                                            <label style="display:block;">Категория в каталоге*</label>
+                                            <div class="block_main_categories cat_block_1" style="">
+                                                @foreach ($categories as $key=>$category)
+                                                    @if($category->parent_id==0)
+                                                        <a ><div class="cat_block" >
+                                                        <input type="hidden" value="{{$category->id}}">
+                                                       {{$category->name}}
+
+                                                       <span class="fa arrow" style="float:right"></span>
+                                                   </div></a>
+                                                    @endif
+                                                @endforeach
+
+                                            </div>
+                                            <div class="block_main_categories cat_block_2" >
+
+
+                                            </div>
+                                            <div class="block_main_categories cat_block_3" >
+
+
+                                            </div>
+                                            <div class="block_main_categories cat_block_4" >
+
+
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label>Password *</label>

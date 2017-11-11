@@ -63,6 +63,7 @@ Route::group(['prefix' => 'admin','middleware'=>['web','auth']],function(){
        //admin
     Route::get('/main',['uses' => 'Admin\IndexController@main','as' => 'adminMain']);
     Route::get('/',['uses' => 'Admin\IndexController@index','as' => 'adminIndex']);
+    Route::post('/show_subcat', 'FunctionsController@show_subcat');
     Route::post('/func_update_role', 'FunctionsController@role');
     Route::post('/func_delete_user', 'FunctionsController@delete_user');
     Route::post('/func_delete_good', 'FunctionsController@delete_good');

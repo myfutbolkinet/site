@@ -47,6 +47,23 @@
     <link href="{!! asset('css/plugins/dualListbox/bootstrap-duallistbox.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('css/style.css') !!}" rel="stylesheet">
+    <style>
+        .cat_block:hover{
+            background:#ee9;
+        }
+        .cat_block{
+            padding:10px 15px;
+
+        }
+        .block_main_categories{
+            width:24%;
+            height:350px;
+            border:1px solid #0000cc;
+            overflow-y:auto;
+            display:inline-block;
+
+        }
+    </style>
 </head>
 <body>
 
@@ -138,6 +155,41 @@
 
 
     <script>
+
+        $.ajaxSetup({
+            headers:{
+                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+            }
+        })
+        $('.cat_block').click(function(){
+            alert()
+            var id_cat = $(this).parent('a').find('input').val()
+            var cl=$(this).parent('a').parent().attr('class');
+            cl=cl.split(' ')[1]
+            var simbol=parseInt(cl.slice(10))+1
+            alert(cl)
+            alert(simbol)
+            new_block_cl=cl.slice(0, 10)+simbol
+            $.ajax({
+                type: "POST",
+                dataType: 'json',
+                url: '/admin/show_subcat',
+                data: {id_cat: id_cat}, // serializes the form's elements.
+                success: function (data) {
+                    $('.'+new_block_cl+'').empty();
+                    $.each( data, function( key, value ) {
+                        $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
+                            '<input type="hidden" value="'+value.id+'">' +
+                            value.name+
+                            '<span class="fa arrow" style="float:right"></span>' +
+                            '</div></a>')
+                    });
+                }
+
+            });
+
+        })
+
         $(document).ready(function(){
             $(".touchspin2").TouchSpin({
                 min: 0,

@@ -16,9 +16,10 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('parent_id');
-            $table->string('name');
-            /*$table->string('link');*/
-            $table->string('icon')->default('');
+            $table->text('name');
+            $table->text('link');
+            $table->text('icon');
+            $table->text('icon_hover');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });

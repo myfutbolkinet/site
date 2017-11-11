@@ -9,6 +9,7 @@ use Intervention\Image\Facades\Image;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Libraries\Display_lib;
 use Auth;
+use App\Category;
 class FunctionsController extends Controller
 {
     //
@@ -838,6 +839,15 @@ if(!empty($main_array['video4'])){
         DB::table('goods')->where('id',$_POST['id_good'])->update($star_set);
         
         
+    }
+
+    public function show_subcat(Request $request){
+    $id_cat=$request->input('id_cat');
+    //find all categories which have parent_id = id_cat
+    $data=DB::table('categories')->where('parent_id', $id_cat)->get();
+
+
+    return json_encode($data);
     }
 
   
