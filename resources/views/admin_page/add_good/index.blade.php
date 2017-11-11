@@ -68,7 +68,7 @@
 
 
 
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"> Название товара : </label>
                                             <div class="col-sm-5">
                                                 <input class="form-control" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
@@ -84,7 +84,7 @@
 
 
 
-                                            <div class="form-group" style="position:relative;top:5px;">
+                                            <div class="form-group col-sm-12" style="position:relative;top:5px;">
                                          {{--   <label class="col-sm-2 control-label"> Категорія : </label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="category" placeholder="Виберить категорію" />
@@ -108,7 +108,7 @@
 
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-12">
 
                                             <label class="col-sm-2 control-label"> Тип : </label>
                                             <div class="col-sm-5">
@@ -126,18 +126,15 @@
                                             </div>
 
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"> Скидка : </label>
-                                            <div class="col-sm-5 input-group bootstrap-touchspin">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-white bootstrap-touchspin-down" type="button">-</button>
-                                                </span>
-                                                <span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span>
-                                                <input class="touchspin2 form-control" value="55" name="discount" style="display: block;" type="text">
-                                                <span class="input-group-addon bootstrap-touchspin-postfix">%</span>
-                                                <span class="input-group-btn"><button class="btn btn-white bootstrap-touchspin-up" type="button">+</button></span>
-                                            </div>
+                                            <div class="col-sm-5">
 
+                                                <input class="touchspin2" type="text" value="55" name="discount">
+                                            </div>
+                                            <label class="col-sm-2 control-label"> </label>
+                                            <div class="col-sm-3 input-group ">
+                                            </div>
                                         </div>
 
 
