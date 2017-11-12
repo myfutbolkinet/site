@@ -31,6 +31,11 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Guest',
 
             ],
+            [
+
+                'name' => 'Superadmin',
+
+            ],
 
         ]);
 
@@ -46,6 +51,11 @@ class UsersTableSeeder extends Seeder
             [
 
                 'name' => 'ADMIN_USERS',
+
+            ],
+            [
+
+                'name' => 'SUPERADMIN_EDIT',
 
             ]
 
@@ -68,6 +78,24 @@ class UsersTableSeeder extends Seeder
 
                 'role_id' => 2,
                 'permission_id' => 1,
+
+            ],
+            [
+
+                'role_id' => 4,
+                'permission_id' => 1,
+
+            ],
+            [
+
+                'role_id' => 4,
+                'permission_id' => 2,
+
+            ],
+            [
+
+                'role_id' => 4,
+                'permission_id' => 3,
 
             ]
 
@@ -112,12 +140,13 @@ class UsersTableSeeder extends Seeder
                 'user_id' => 2,
                 'role_id' => 2
 
-            ]/*, [
+            ],
+            [
 
-            'user_id' => 3,
-            'role_id' => 3
+            'user_id' => 1,
+            'role_id' => 4
 
-        ]*/
+        ]
 
 
         ]);

@@ -77,6 +77,16 @@ Route::group(['prefix' => 'admin','middleware'=>['web','auth']],function(){
     Route::get('/good/{id}','Admin\GoodsController@edit_good');
     Route::resource('/customers_managment','Admin\CustomersController');
 });
+
+//superadmin
+Route::group(['prefix' => 'superadmin','middleware'=>['web','auth']],function(){
+
+    Route::get('/',['uses' => 'Superadmin\IndexController@index','as' => 'superadminIndex']);
+    Route::get('/categories/add','Superadmin\CategoriesController@add_show');
+
+});
+
+
 /*Route::get('sendmail','')*/
 Route::get('user/activation/{token}', 'Auth\AuthController@activateUser')->name('user.activate');
 Route::post('/add_to_cart','ShopingCartController@addToCart')->name('add_to_cart');

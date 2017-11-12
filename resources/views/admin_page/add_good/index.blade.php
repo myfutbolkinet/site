@@ -144,7 +144,7 @@
 
 
 
-                                        <div class="form-group col-sm-12">
+                                        <div class="form-group col-sm-12 categories">
                                             <label style="display:block;">Категория в каталоге*</label>
                                             <div class="block_main_categories cat_block_1" style="">
                                                 @foreach ($categories as $key=>$category)

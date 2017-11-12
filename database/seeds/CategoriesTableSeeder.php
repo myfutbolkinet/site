@@ -508,6 +508,465 @@ class CategoriesTableSeeder extends Seeder
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png'
             ],
+            /*63*/
+            [
+                'parent_id' => 37,
+                'name' => 'Амортизаторы,стойки,подушки стоек',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*64*/
+            [
+                'parent_id' => 37,
+                'name' => 'Подшипники для транспорта',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*65*/
+            [
+                'parent_id' => 37,
+                'name' => 'Пружины,рессоры для техники',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*66*/
+            [
+                'parent_id' => 37,
+                'name' => 'Сайлентблоки',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*67*/
+            [
+                'parent_id' => 37,
+                'name' => 'Стабилизаторы,стойки стабилизатора,тяги стабилизатора',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*68*/
+            [
+                'parent_id' => 37,
+                'name' => 'Втулки автомобильные',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*69*/
+            [
+                'parent_id' => 37,
+                'name' => 'Пневморессоры, пневмоподушки',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*70*/
+            [
+                'parent_id' => 37,
+                'name' => 'Рычаги,тяги',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*71*/
+            [
+                'parent_id' => 37,
+                'name' => 'Шаровые опоры',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*72*/
+            [
+                'parent_id' => 37,
+                'name' => 'Пыльники,отбойники',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*73*/
+            [
+                'parent_id' => 37,
+                'name' => 'Ступицы',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*74*/
+            [
+                'parent_id' => 37,
+                'name' => 'Автомобильные опоры стоек',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*75*/
+            [
+                'parent_id' => 37,
+                'name' => 'Поворотные кулаки',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*76*/
+            [
+                'parent_id' => 37,
+                'name' => 'Балки передней и задней подвески',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*77*/
+            [
+                'parent_id' => 37,
+                'name' => 'Ступичные болты,шпильки и гайки',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*78*/
+            [
+                'parent_id' => 37,
+                'name' => 'Автомобильные шкворни',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*79*/
+            [
+                'parent_id' => 37,
+                'name' => 'Крепежи узлов подвески',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*80*/
+            [
+                'parent_id' => 37,
+                'name' => 'Торсионы',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*81*/
+            [
+                'parent_id' => 38,
+                'name' => 'Турбины, турбокомпрессоры',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*82*/
+            [
+                'parent_id' => 38,
+                'name' => 'Двигатели для техники',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*83*/
+            [
+                'parent_id' => 38,
+                'name' => 'Подшипники для транспорта',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*84*/
+            [
+                'parent_id' => 38,
+                'name' => 'Прокладки для техники',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*85*/
+            [
+                'parent_id' => 38,
+                'name' => 'Сальники',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*86*/
+            [
+                'parent_id' => 38,
+                'name' => 'Ремни приводные автомобильные',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*87*/
+            [
+                'parent_id' => 38,
+                'name' => 'Ролики и натяжители',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*88*/
+            [
+                'parent_id' => 38,
+                'name' => 'Подушки двигателя',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*89*/
+            [
+                'parent_id' => 38,
+                'name' => 'Шкивы двигателей',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*90*/
+            [
+                'parent_id' => 38,
+                'name' => 'Ремни вариатора',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*91*/
+            [
+                'parent_id' => 38,
+                'name' => 'Ремни вариаторные',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*92*/
+            [
+                'parent_id' => 39,
+                'name' => 'Бамперы',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*93*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные двери',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*94*/
+            [
+                'parent_id' => 39,
+                'name' => 'Крылья, арки автомобильные',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*95*/
+            [
+                'parent_id' => 39,
+                'name' => 'Пистоны, заглушки, крепежные элементы',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*96*/
+            [
+                'parent_id' => 39,
+                'name' => 'Брызговики',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*97*/
+            [
+                'parent_id' => 39,
+                'name' => 'Защита картера и КПП',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*98*/
+            [
+                'parent_id' => 39,
+                'name' => 'Фаркопы',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*99*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные решетки на бамперы и радиаторы',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*100*/
+            [
+                'parent_id' => 39,
+                'name' => 'Капоты',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*101*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные дверные ручки',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*102*/
+            [
+                'parent_id' => 39,
+                'name' => 'Стеклоподъемники',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*103*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные подкрылки',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*104*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные эиблемы',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*105*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные замки и ключи',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*106*/
+            [
+                'parent_id' => 39,
+                'name' => 'Передние панели кузова',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*107*/
+            [
+                'parent_id' => 39,
+                'name' => 'Амортизаторы капота, багажника',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*108*/
+            [
+                'parent_id' => 39,
+                'name' => 'Усилители бампера, буфер бампера',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*109*/
+            [
+                'parent_id' => 39,
+                'name' => 'Кронштейны автомобильные',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*110*/
+            [
+                'parent_id' => 39,
+                'name' => 'Петли, ограничители автомобильные',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*111*/
+            [
+                'parent_id' => 39,
+                'name' => 'Крышки багажника',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*112*/
+            [
+                'parent_id' => 39,
+                'name' => 'Задние панели кузова',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*113*/
+            [
+                'parent_id' => 39,
+                'name' => 'Боковины кузова',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*114*/
+            [
+                'parent_id' => 39,
+                'name' => 'Лонжироны, подрамники',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*115*/
+            [
+                'parent_id' => 39,
+                'name' => 'Кузова легковых автомобилей',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*116*/
+            [
+                'parent_id' => 39,
+                'name' => 'Лючки, крышки бензобака',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*117*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные крыши',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*118*/
+            [
+                'parent_id' => 39,
+                'name' => 'Автомобильные люки',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+            /*119*/
+            [
+                'parent_id' => 39,
+                'name' => 'Ноускаты',
+                'link'=> '/auto_moto',
+                'icon'=>'/img/dashboard_icon.png',
+                'icon_hover'=>'/img/dashboard_icon_white.png'
+            ],
+
+
+
 
 
 
@@ -585,7 +1044,77 @@ class CategoriesTableSeeder extends Seeder
             ],
         ]);
 
+        DB::table('superadmin_categories')->insert([
 
+            [
+                'parent_id' => 0,
+                'name' => 'Користувачі',
+                'icon'=> 'fa-users',
+                'link'=> '/superadmin'
+            ],
+            [
+                'parent_id' => 1,
+                'name' => 'Управління користувачами',
+                'icon'=> 'fa-registered',
+                'link'=> '/superadmin/customers_managment'
+            ],
+            [
+                'parent_id' => 0,
+                'name' => 'Товари',
+                'icon'=> 'fa-gift',
+                'link'=> '/superadmin'
+            ],
+            [
+                'parent_id' => 3,
+                'name' => 'Додати товар',
+                'icon'=> 'fa-envelope','link'=> '/superadmin/add_good'
+            ],
+            [
+                'parent_id' => 3,
+                'name' => 'Видалити товар',
+                'icon'=> 'fa-envelope','link'=> '/superadmin/delete_good'
+            ],
+            [
+                'parent_id' => 3,
+                'name' => 'Категоріі',
+                'icon'=> 'fa-envelope','link'=> '/superadmin/categories'
+            ],
+            [
+                'parent_id' => 0,
+                'name' => 'Замовлення',
+                'icon'=> 'fa-envelope',
+                'link'=> '/superadmin'
+
+            ],
+            [
+                'parent_id' => 0,
+                'name' => 'Реклама',
+                'icon'=> 'fa-bullhorn',
+                'link'=> '/superadmin'
+            ],
+            [
+                'parent_id' => 0,
+                'name' => 'Партнери',
+                'icon'=> 'fa-thumbs-o-up',
+                'link'=> '/superadmin/partners'
+            ],
+            [
+                'parent_id' => 9,
+                'name' => 'Додати логотипи',
+                'icon'=> 'fa-envelope','link'=> '/superadmin/add_logos'
+            ],
+            [
+                'parent_id' => 9,
+                'name' => 'Видалити логотипи',
+                'icon'=> 'fa-envelope','link'=> '/superadmin/del_logos'
+            ],
+            [
+                'parent_id' => 6,
+                'name' => 'Добавить категорию',
+                'icon'=> 'fa-envelope',
+                'link'=> '/superadmin/categories/add'
+            ],
+        ]);
 
 
         DB::table('logos')->insert([
