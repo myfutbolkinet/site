@@ -15,6 +15,8 @@
     <link href="{!! asset('inspinia/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/select2/select2.min.css') !!}" rel="stylesheet">
 
+    <link href="{!! asset('css/plugins/steps/jquery.steps.css') !!}" rel="stylesheet">
+
 
 
 
@@ -102,6 +104,17 @@
     <script src="{!! asset('inspinia/js/inspinia.js') !!}"></script>
     <script src="{!! asset('inspinia/js/plugins/pace/pace.min.js') !!}"></script>
     <script src="{!! asset('inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js') !!}"></script>
+
+    <script src="{!! asset('js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
+
+
+    <!-- Steps -->
+    <script src="{!! asset('js/plugins/steps/jquery.steps.min.js') !!}"></script>
+
+    <!-- Jquery Validate -->
+    <script src="{!! asset('js/plugins/validate/jquery.validate.min.js') !!}"></script>
+
+
 
     <!-- Chosen -->
     <script src="{!! asset('inspinia/js/plugins/chosen/chosen.jquery.js') !!}"></script>
@@ -201,49 +214,16 @@
             });
 
         })*/
-$('.categories').delegate('.cat_block','click',function(){
 
-    alert()
-    var id_cat = $(this).parent('a').find('input').val()
-    var cl=$(this).parent('a').parent().attr('class');
-    cl=cl.split(' ')[1]
-    var simbol=parseInt(cl.slice(10))+1
-    alert(cl)
-    alert(simbol)
-    new_block_cl=cl.slice(0, 10)+simbol
-    $.ajax({
-        type: "POST",
-        dataType: 'json',
-        url: '/admin/show_subcat',
-        data: {id_cat: id_cat}, // serializes the form's elements.
-        success: function (data) {
-            $('.'+new_block_cl+'').empty();
-            switch(new_block_cl){
-                case 'cat_block_2':
-                    $('.cat_block_3').empty();
-                    $('.cat_block_4').empty();
-                    break;
-                case 'cat_block_3':
-                    $('.cat_block_4').empty();
-                    break;
-
-            }
-            $.each( data, function( key, value ) {
-                $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
-                    '<input type="hidden" value="'+value.id+'">' +
-                    value.name+
-                    '<span class="fa arrow" style="float:right"></span>' +
-                    '</div></a>')
-            });
-
-        }
-
-    });
-
-})
 
         $(document).ready(function(){
-            show_subcat();
+
+
+
+
+
+
+
             $(".touchspin2").TouchSpin({
                 min: 0,
                 max: 100,
@@ -257,6 +237,135 @@ $('.categories').delegate('.cat_block','click',function(){
             });
 
 
+
+
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex)
+                    {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18)
+                    {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex)
+                    {
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex)
+                {
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                    {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3)
+                    {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                errorPlacement: function (error, element)
+                {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+
+
+            $('.categories').delegate('.cat_block','click',function(){
+
+                var id_cat = $(this).parent('a').find('input').val()
+                var cl=$(this).parent('a').parent().attr('class');
+                cl=cl.split(' ')[1]
+                var simbol=parseInt(cl.slice(10))+1
+                new_block_cl=cl.slice(0, 10)+simbol
+
+                $.ajax({
+                    type: "POST",
+                    dataType: 'json',
+                    async: false,
+                    url: '/admin/show_subcat',
+                    data: {id_cat: id_cat}, // serializes the form's elements.
+                    success: function (data) {
+                        if(data.message=='null'){
+
+
+
+                            alert(data.value.name)
+                        }
+                       else{
+                        $('.'+new_block_cl+'').empty();
+                        switch(new_block_cl){
+                            case 'cat_block_2':
+                                $('.cat_block_3').empty();
+                                $('.cat_block_4').empty();
+                                break;
+                            case 'cat_block_3':
+                                $('.cat_block_4').empty();
+                                break;
+
+                        }
+                        $.each( data.value, function( key, value ) {
+                            $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
+                                '<input type="hidden" value="'+value.id+'">' +
+                                value.name+
+                                '<span class="fa arrow" style="float:right"></span>' +
+                                '</div></a>')
+                        });
+
+                    }}
+
+                });
+
+
+
+
+            });
 
         });
 
