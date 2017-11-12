@@ -17,6 +17,7 @@ class FunctionsController extends Controller
         $this->middleware('guest');
     }*/
     private static $num;
+    private $cat_name;
     public function index(Request $request){
 
 
@@ -840,6 +841,32 @@ if(!empty($main_array['video4'])){
         
         
     }
+   public function recursive_cat_names($name,$id_cat){
+        $data['parent']=DB::table('categories')->where('id', $id_cat)->get();
+        if($data['parent'][0]->parent_id==0){
+
+            $_name=$data['parent'][0]->name.' > '.$name;
+            $this->cat_name=$_name;
+
+        }
+        else{
+            $id_cat=$data['parent'][0]->parent_id;
+            if($name!==''){
+                $name=$data['parent'][0]->name.' > '.$name;
+            }
+            else{
+                $name=$data['parent'][0]->name;
+            }
+            $this->recursive_cat_names($name,$id_cat);
+        }
+
+
+       if(isset($this->cat_name)){
+
+           return $this->cat_name;
+       }
+
+    }
 
     public function show_subcat(Request $request){
     $id_cat=$request->input('id_cat');
@@ -849,27 +876,15 @@ if(!empty($main_array['video4'])){
     if(count($data['value'])<1){
         $data['value']['id']=$id_cat;
         $name='';
-       dd($this->recursive_cat_names($name,$id_cat));
-        $data['value']['name']='';
+
+        $data['value']['name']=$this->recursive_cat_names($name,$id_cat);
        $data['message']='null';
     }
 
 
     return json_encode($data);
     }
-    public function recursive_cat_names($name,$id_cat){
-        $data['parent']=DB::table('categories')->where('id', $id_cat)->get();
-        if($data['parent'][0]->parent_id!==0){
-            $id_cat=$data['parent'][0]->parent_id;
-            $name=$data['parent'][0]->name.'>'.$name;
-            $this->recursive_cat_names($name,$id_cat);
-        }
-        else{
-            $_name=$data['parent'][0]->name.'>'.$name;
-            dump($_name);
-            return $_name;
-        }
-    }
+
 
   
 

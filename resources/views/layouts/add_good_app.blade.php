@@ -333,10 +333,11 @@
                     data: {id_cat: id_cat}, // serializes the form's elements.
                     success: function (data) {
                         if(data.message=='null'){
+                        //проверить чтобы соседние последующие блоки были пусты
 
+                        $('input[name="id_cat"]').val(data.value.id)
+                            $('.cat_name').html(data.value.name)
 
-
-                            alert(data.value.name)
                         }
                        else{
                         $('.'+new_block_cl+'').empty();

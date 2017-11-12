@@ -145,7 +145,8 @@
 
 
                                         <div class="form-group col-sm-12 categories">
-                                            <label style="display:block;">Категория в каталоге*</label>
+                                            <label style="display:block;">Категория в каталоге*</label><input type="text" name="id_cat">
+                                            <p class="cat_name" style="font-size:17px;"></p>
                                             <div class="block_main_categories cat_block_1" style="">
                                                 @foreach ($categories as $key=>$category)
                                                     @if($category->parent_id==0)
