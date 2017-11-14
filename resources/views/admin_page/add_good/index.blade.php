@@ -130,7 +130,7 @@
                                             <label class="col-sm-2 control-label"> Скидка : </label>
                                             <div class="col-sm-5">
 
-                                                <input class="touchspin2" type="text" value="55" name="discount">
+                                                <input class="touchspin2" type="text" value="5" name="discount">
                                             </div>
                                             <label class="col-sm-2 control-label"> </label>
                                             <div class="col-sm-3 input-group ">
@@ -181,39 +181,9 @@
 
                                         <div class="form-group col-sm-12">
                                             <label>Описание *</label>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="ibox float-e-margins">
-                                                        <div class="ibox-title">
-                                                            <h5>Wyswig Summernote Editor</h5>
-                                                            <div class="ibox-tools">
-                                                                <a class="collapse-link">
-                                                                    <i class="fa fa-chevron-up"></i>
-                                                                </a>
-                                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                                    <i class="fa fa-wrench"></i>
-                                                                </a>
-                                                                <ul class="dropdown-menu dropdown-user">
-                                                                    <li><a href="#">Config option 1</a>
-                                                                    </li>
-                                                                    <li><a href="#">Config option 2</a>
-                                                                    </li>
-                                                                </ul>
-                                                                <a class="close-link">
-                                                                    <i class="fa fa-times"></i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ibox-content no-padding">
-
-                                                            <div class="summernote">
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                                                This is my textarea to be replaced with CKEditor.
+                                            </textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">

@@ -18,6 +18,8 @@ class FunctionsController extends Controller
     }*/
     private static $num;
     private $cat_name;
+    private $parent_num=0;
+
     public function index(Request $request){
 
 
@@ -842,6 +844,7 @@ if(!empty($main_array['video4'])){
         
     }
    public function recursive_cat_names($name,$id_cat){
+        $this->parent_num=$this->parent_num+1;
         $data['parent']=DB::table('categories')->where('id', $id_cat)->get();
         if($data['parent'][0]->parent_id==0){
 
@@ -862,8 +865,9 @@ if(!empty($main_array['video4'])){
 
 
        if(isset($this->cat_name)){
-
-           return $this->cat_name;
+       $cat_info['name']=$this->cat_name;
+       $cat_info['parent_num']=$this->parent_num;
+       return $cat_info;
        }
 
     }
@@ -877,7 +881,7 @@ if(!empty($main_array['video4'])){
         $data['value']['id']=$id_cat;
         $name='';
 
-        $data['value']['name']=$this->recursive_cat_names($name,$id_cat);
+        $data['value']['info']=$this->recursive_cat_names($name,$id_cat);
        $data['message']='null';
     }
 

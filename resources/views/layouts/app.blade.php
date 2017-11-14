@@ -6,8 +6,8 @@
     <title>INSPINIA </title>
 
 
-    <link rel="stylesheet" href="{!! asset('inspinia/css/vendor.css') !!}" />
-    <link rel="stylesheet" href="{!! asset('inspinia/css/app.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('css/vendor.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('css/app.css') !!}" />
 
 </head>
 <body>
@@ -36,7 +36,7 @@
     </div>
     <!-- End wrapper-->
 
-<script src="{!! asset('inspinia/js/app.js') !!}" type="text/javascript"></script>
+<script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
 
 @section('scripts')
 @show
