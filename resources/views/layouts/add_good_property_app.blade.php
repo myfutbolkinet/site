@@ -18,6 +18,9 @@
     <link href="{!! asset('inspinia/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/style.css') !!}" rel="stylesheet">
 
+    <link href="{!! asset('inspinia/css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') !!}" rel="stylesheet">
+
+
     <style>
         .cat_block:hover{
             background:#ee9;
@@ -84,14 +87,109 @@
 
     <!-- Jquery Validate -->
     <script src="{!! asset('inspinia/js/plugins/validate/jquery.validate.min.js') !!}"></script>
+    <!-- Tags Input -->
+    <script src="{!! asset('inspinia/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js') !!}"></script>
 
 
     <script>
+        $.ajaxSetup({
+            headers:{
+                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+            }
+        })
+
+
+
+
         $(document).ready(function(){
+            $('.categories').delegate('.cat_block','click',function(){
+
+                var id_cat = $(this).parent('a').find('input').val()
+                var cl=$(this).parent('a').parent().attr('class');
+                cl=cl.split(' ')[1]
+                var simbol=parseInt(cl.slice(10))+1
+                new_block_cl=cl.slice(0, 10)+simbol
+
+                $.ajax({
+                    type: "POST",
+                    dataType: 'json',
+                    async: false,
+                    url: '/admin/show_subcat',
+                    data: {id_cat: id_cat}, // serializes the form's elements.
+                    success: function (data) {
+                        if(data.message=='null'){
+                            //проверить чтобы соседние последующие блоки были пусты
+
+                            $('input[name="id_cat"]').val(data.value.id)
+                            $('.cat_name').html(data.value.info.name)
+                            //если (data.value.info.parent_num) ==2
+                            //удалить 3,4
+                            // если (data.value.info.parent_num) ==3
+                            //4
+                            if(data.value.info.parent_num==2){
+                                $('.cat_block_3').empty();
+                                $('.cat_block_4').empty();
+                            }
+                            else if(data.value.info.parent_num==3){
+                                $('.cat_block_4').empty();
+                            }
+
+                        }
+                        else{
+                            $('.'+new_block_cl+'').empty();
+                            switch(new_block_cl){
+                                case 'cat_block_2':
+                                    $('.cat_block_3').empty();
+                                    $('.cat_block_4').empty();
+                                    break;
+                                case 'cat_block_3':
+                                    $('.cat_block_4').empty();
+                                    break;
+
+                            }
+                            $.each( data.value, function( key, value ) {
+                                $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
+                                    '<input type="hidden" value="'+value.id+'">' +
+                                    value.name+
+                                    '<span class="fa arrow" style="float:right"></span>' +
+                                    '</div></a>')
+                            });
+
+                        }}
+
+                });
+
+
+
+
+            });
+
+            $('.tagsinput').tagsinput({
+                tagClass: 'label label-primary'
+            });
+
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
             });
+
+
+
+            $("#form").validate({
+                errorPlacement: function (error, element)
+                {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+
+
+
+
         });
     </script>
 

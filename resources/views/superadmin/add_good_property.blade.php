@@ -74,21 +74,107 @@
                                 <div class="row">
                                     <div class="col-lg-8">
 
-
+                                    <form id="form">
 
                                         <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"> Название товара : </label>
-                                            <div class="col-sm-5">
+                                            <label class="col-sm-2 control-label"> Название *: </label>
+                                            <div class="col-sm-10">
                                                 <input class="form-control required" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
                                             </div>
-                                            <label class="col-sm-2 control-label"> Артикул : </label>
-                                            <div class="col-sm-3 input-group">
-                                                <input class="form-control" name="artikul" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
-                                            </div>
+
 
 
 
                                         </div>
+                                        <div class="form-group col-sm-12">
+                                        <label class="col-sm-2 control-label">Имя колонки CSV* : </label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control required" name="artikul" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
+                                        </div>
+                                        </div>
+
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                            <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Активный</label></div>
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Главное свойство</label></div>
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Подсказка</label></div>
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Показать на странице товаров</label></div>
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Показать на странице сравнения товаров</label></div>
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Показать в фильтре</label></div>
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Множественный выбор</label></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="ibox-content col-sm-10 control-label">
+                                                <p>
+                                                    Выберите категории в которых будет использоваться данное свйство
+                                                </p>
+
+
+
+
+                                                <input style="display:block" class="tagsinput form-control" type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo"/>
+                                            </div>
+                                            <br>
+
+
+
+                                                <div class="form-group col-sm-12 categories">
+                                                    <p class="font-bold">
+                                                        Выбор категорий
+                                                    </p>
+                                                <div class="block_main_categories cat_block_1" style="">
+                                                    @foreach ($categories as $key=>$category)
+                                                        @if($category->parent_id==0)
+                                                            <a ><div class="cat_block" >
+                                                                    <input type="hidden" value="{{$category->id}}">
+                                                                    {{$category->name}}
+
+                                                                    <span class="fa arrow" style="float:right"></span>
+                                                                </div></a>
+                                                        @endif
+                                                    @endforeach
+
+                                                </div>
+                                                <div class="block_main_categories cat_block_2" >
+
+
+                                                </div>
+                                                <div class="block_main_categories cat_block_3" >
+
+
+                                                </div>
+                                                <div class="block_main_categories cat_block_4" >
+
+
+                                                </div>
+                                                </div>
+
+
+
+                                            </div>
+
+
                                         <div class="hr-line-dashed"></div>
                                         <div class="form-group">
                                             <div class="col-sm-4 col-sm-offset-2">
@@ -96,6 +182,8 @@
                                                 <button class="btn btn-primary" type="submit">Save changes</button>
                                             </div>
                                         </div>
+
+                                    </form>
                                     </div>
                                 </div>
 
