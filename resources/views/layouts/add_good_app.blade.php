@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}" />
     <link href="{!! asset('inspinia/css/bootstrap.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/font-awesome/css/font-awesome.css') !!}" rel="stylesheet">
-    <link href="{!! asset('inspinia/inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
-    <link href="{!! asset('inspinia/css/plugins/steps/jquery.steps.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/select2/select2.min.css') !!}" rel="stylesheet">
 
-    <link href="{!! asset('css/plugins/steps/jquery.steps.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/steps/jquery.steps.css') !!}" rel="stylesheet">
 
 
 
@@ -49,6 +48,10 @@
     <link href="{!! asset('inspinia/css/plugins/dualListbox/bootstrap-duallistbox.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/style.css') !!}" rel="stylesheet">
+
+
+    <link href="{!! asset('inspinia/css/plugins/summernote/summernote.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/summernote/summernote-bs3.css') !!}" rel="stylesheet">
     <style>
         .cat_block:hover{
             background:#ee9;
@@ -96,6 +99,10 @@
 
 @section('scripts')
 
+
+
+
+
     <!-- Mainly scripts -->
     <script src="{!! asset('inspinia/js/jquery-3.1.1.min.js') !!}"></script>
     <script src="{!! asset('inspinia/js/bootstrap.min.js') !!}"></script>
@@ -105,14 +112,14 @@
     <script src="{!! asset('inspinia/js/plugins/pace/pace.min.js') !!}"></script>
     <script src="{!! asset('inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js') !!}"></script>
 
-    <script src="{!! asset('js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
+    <script src="{!! asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
 
 
     <!-- Steps -->
-    <script src="{!! asset('js/plugins/steps/jquery.steps.min.js') !!}"></script>
+    <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
 
     <!-- Jquery Validate -->
-    <script src="{!! asset('js/plugins/validate/jquery.validate.min.js') !!}"></script>
+    <script src="{!! asset('inspinia/js/plugins/validate/jquery.validate.min.js') !!}"></script>
 
 
 
@@ -165,6 +172,9 @@
     <!-- Dual Listbox -->
     <script src="{!! asset('inspinia/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js') !!}"></script>
 
+
+    <!-- SUMMERNOTE -->
+    <script src="{!! asset('inspinia/js/plugins/summernote/summernote.min.js') !!}"></script>
 
 
     <script>
@@ -219,7 +229,7 @@
         $(document).ready(function(){
 
 
-
+            $('.summernote').summernote();
 
 
 

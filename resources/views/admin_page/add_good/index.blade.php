@@ -144,18 +144,22 @@
 
 
 
+                                        <div class="form-group ">
+                                            <label class="col-sm-2 control-label" style="display:block;">Категория в каталоге*</label>
+                                            <input type="hidden" name="id_cat">
+                                            <p class="col-sm-10 control-label cat_name" style="font-size:17px;"></p>
+
+                                        </div>
                                         <div class="form-group col-sm-12 categories">
-                                            <label style="display:block;">Категория в каталоге*</label><input type="text" name="id_cat">
-                                            <p class="cat_name" style="font-size:17px;"></p>
                                             <div class="block_main_categories cat_block_1" style="">
                                                 @foreach ($categories as $key=>$category)
                                                     @if($category->parent_id==0)
                                                         <a ><div class="cat_block" >
-                                                        <input type="hidden" value="{{$category->id}}">
-                                                       {{$category->name}}
+                                                                <input type="hidden" value="{{$category->id}}">
+                                                                {{$category->name}}
 
-                                                       <span class="fa arrow" style="float:right"></span>
-                                                   </div></a>
+                                                                <span class="fa arrow" style="float:right"></span>
+                                                            </div></a>
                                                     @endif
                                                 @endforeach
 
@@ -173,13 +177,43 @@
 
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Password *</label>
-                                            <input id="password" name="password" type="text" class="form-control required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Confirm Password *</label>
-                                            <input id="confirm" name="confirm" type="text" class="form-control required">
+
+
+                                        <div class="form-group col-sm-12">
+                                            <label>Описание *</label>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="ibox float-e-margins">
+                                                        <div class="ibox-title">
+                                                            <h5>Wyswig Summernote Editor</h5>
+                                                            <div class="ibox-tools">
+                                                                <a class="collapse-link">
+                                                                    <i class="fa fa-chevron-up"></i>
+                                                                </a>
+                                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                                    <i class="fa fa-wrench"></i>
+                                                                </a>
+                                                                <ul class="dropdown-menu dropdown-user">
+                                                                    <li><a href="#">Config option 1</a>
+                                                                    </li>
+                                                                    <li><a href="#">Config option 2</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <a class="close-link">
+                                                                    <i class="fa fa-times"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ibox-content no-padding">
+
+                                                            <div class="summernote">
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
