@@ -233,7 +233,8 @@
                             <h1>Описания и видео с Youtube</h1>
                             <fieldset>
                                 <h2>Terms and Conditions</h2>
-                                <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+                                <label for="acceptTerms">I agree with the Terms and Conditions.</label>
                             </fieldset>
                         </form>
                     </div>

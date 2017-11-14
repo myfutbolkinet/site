@@ -1010,9 +1010,10 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'parent_id' => 3,
-                'name' => 'Категоріі',
+                'name' => 'Категоріі товаров',
                 'icon'=> 'fa-envelope','link'=> '/admin/categories'
             ],
+
             [
                 'parent_id' => 0,
                 'name' => 'Замовлення',
@@ -1078,6 +1079,11 @@ class CategoriesTableSeeder extends Seeder
                 'parent_id' => 3,
                 'name' => 'Категоріі',
                 'icon'=> 'fa-envelope','link'=> '/superadmin/categories'
+            ],
+            [
+                'parent_id' => 3,
+                'name' => 'Свойства товаров',
+                'icon'=> 'fa-envelope','link'=> '/superadmin/goods_properties'
             ],
             [
                 'parent_id' => 0,

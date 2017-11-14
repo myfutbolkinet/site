@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Superadmin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
+use Gate;
 use App\Http\Controllers\MenuController;
 class SuperadminController extends \App\Http\Controllers\Controller
 {
