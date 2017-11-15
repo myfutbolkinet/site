@@ -85,6 +85,7 @@ Route::group(['prefix' => 'superadmin','middleware'=>['web','auth']],function(){
     Route::get('/categories/add','Superadmin\CategoriesController@add_show');
     Route::get('/goods_properties','Superadmin\GoodsPropertiesController@index');
     Route::get('/add_good_property','Superadmin\GoodsPropertiesController@add_property');
+    Route::post('/good_property','Superadmin\GoodsPropertiesController@good_property_form');
 
 });
 

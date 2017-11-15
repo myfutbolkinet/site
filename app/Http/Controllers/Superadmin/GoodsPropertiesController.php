@@ -43,4 +43,22 @@ class GoodsPropertiesController extends SuperadminController
         $this->title = 'Панель администратора';
         return view('superadmin/add_good_property',$data);
     }
+
+    public function good_property_form(Request $request){
+
+     dd($request->input());
+    $data=[
+        'name'=>$request->input('name'),
+        'column'=>$request->input('column'),
+        'active'=>(!empty($request->input('active'))) ? 1:0,
+        'main_property'=>(!empty($request->input('main_property'))) ? 1:0,
+        'hint'=>(!empty($request->input('hint'))) ? 1:0,
+        'show_on_goods_page'=>(!empty($request->input('show_on_goods_page'))) ? 1:0,
+        'show_on_comparison'=>(!empty($request->input('show_on_comparison'))) ? 1:0,
+        'show_on_filter'=>(!empty($request->input('show_on_filter'))) ? 1:0,
+        ' multiple'=>(!empty($request->input(' multiple'))) ? 1:0,
+
+        ];
+
+    }
 }

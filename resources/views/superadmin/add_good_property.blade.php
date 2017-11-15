@@ -74,7 +74,10 @@
                                 <div class="row">
                                     <div class="col-lg-8">
 
-                                    <form id="form">
+                                    <form id="form" class="addel"
+                                          data-addel-hide="true"
+                                          data-addel-add="1"
+                                          data-addel-animation-duration="1000" action="/superadmin/good_property" method="post">
 
                                         <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"> Название *: </label>
@@ -89,38 +92,38 @@
                                         <div class="form-group col-sm-12">
                                         <label class="col-sm-2 control-label">Имя колонки CSV* : </label>
                                         <div class="col-sm-10">
-                                            <input class="form-control required" name="artikul" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
+                                            <input class="form-control required" name="column" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
                                         </div>
                                         </div>
 
                                         <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                            <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Активный</label></div>
+                                            <div class="i-checks"><label> <input type="checkbox" name="active" value=""> <i></i> Активный</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Главное свойство</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="main_property" value=""> <i></i> Главное свойство</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Подсказка</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="hint" value=""> <i></i> Подсказка</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Показать на странице товаров</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_goods_page" value=""> <i></i> Показать на странице товаров</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Показать на странице сравнения товаров</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_comparison" value=""> <i></i> Показать на странице сравнения товаров</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Показать в фильтре</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_filter" value=""> <i></i> Показать в фильтре</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Множественный выбор</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="multiple" value=""> <i></i> Множественный выбор</label></div>
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12">
@@ -133,7 +136,7 @@
 
 
 
-                                                <input style="display:block" class="tagsinput form-control" type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo"/>
+                                                <input style="display:block" class="tagsinput form-control" type="text" name="categories" value="Amsterdam"/>
                                             </div>
                                             <br>
 
@@ -173,6 +176,33 @@
 
 
                                             </div>
+
+
+
+
+
+                                        <div class="form-group addel-target">
+                                            <label for="person" class="control-label">
+                                                Свойства
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="text" id="person" name="data[]" class="form-control">
+                                                <span class="input-group-btn">
+                            <button type="button" class="btn btn-danger addel-delete">
+                                <i class="fa fa-remove">
+
+                                </i>
+                            </button>
+                        </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-success btn-block addel-add">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+
 
 
                                         <div class="hr-line-dashed"></div>

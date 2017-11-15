@@ -90,6 +90,7 @@
     <!-- Tags Input -->
     <script src="{!! asset('inspinia/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js') !!}"></script>
 
+    <script src="{!! asset('Addel/addel.jquery.js') !!}"></script>
 
     <script>
         $.ajaxSetup({
@@ -102,6 +103,36 @@
 
 
         $(document).ready(function(){
+
+
+
+            $('.addel').addel({
+                events: {
+                    added: function (event) {
+                        console.log('Added ' + event.added.length);
+                    }
+                }
+            }).on('addel:delete', function (event) {
+                if (!window.confirm('Are you absolutely positive you would like to delete: ' + '"' + event.target.find(':input').val() + '"?')) {
+                    console.log('Deletion prevented!');
+                    event.preventDefault();
+                }
+            });
+
+
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+            $('.tagsinput').tagsinput({
+                tagClass: 'label label-primary',
+                itemValue: 'value',
+                itemText: 'text',
+            });
+
+
+
             $('.categories').delegate('.cat_block','click',function(){
 
                 var id_cat = $(this).parent('a').find('input').val()
@@ -119,9 +150,10 @@
                     success: function (data) {
                         if(data.message=='null'){
                             //проверить чтобы соседние последующие блоки были пусты
-
                             $('input[name="id_cat"]').val(data.value.id)
                             $('.cat_name').html(data.value.info.name)
+                            $('.tagsinput').tagsinput('add', {"value":data.value.id,"text": data.value.info.name });
+
                             //если (data.value.info.parent_num) ==2
                             //удалить 3,4
                             // если (data.value.info.parent_num) ==3
@@ -164,14 +196,8 @@
 
             });
 
-            $('.tagsinput').tagsinput({
-                tagClass: 'label label-primary'
-            });
 
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green',
-                radioClass: 'iradio_square-green',
-            });
+
 
 
 
