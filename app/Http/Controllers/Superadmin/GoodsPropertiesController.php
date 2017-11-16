@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Superadmin;
 
+use App\Http\Controllers\FunctionsController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Gate;
+use DB;
 use App\Category;
 class GoodsPropertiesController extends SuperadminController
 {
@@ -24,8 +26,41 @@ class GoodsPropertiesController extends SuperadminController
 
         $data=array();
         $this->title = 'Панель администратора';
-        $data_nav['menu']=$this->menu();
-        return view('superadmin/goods_properties',$data_nav);
+        $data['menu']=$this->menu();
+        $data['properties']=DB::table('properties')->get();
+
+        return view('superadmin/goods_properties',$data);
+    }
+
+
+    public function good_property($id){
+        if(Gate::denies('SUPERADMIN_EDIT')){
+
+            abort(403);
+        }
+        $data=array();
+        $data['categories']=Category::orderBy('parent_id', 'asc')
+            ->orderBy('created_at', 'desc')
+            ->orderBy('updated_at', 'desc')
+            ->get();
+        $data['menu']=$this->menu();
+        $data['property']=DB::table('properties')->where('id',$id)->get();
+        //Получить все категории связанные с этим свойством
+        $cats=$data['property'][0]->categories;
+        $cats=explode(',' ,$cats );
+        dump($cats);
+        $a=new FunctionsController();
+        foreach($cats as $cat){
+            //сформировать строку полный путь к категории
+        $data['info'][]=$a->print_subcat($cat);
+
+        }
+        dd($data['info']);
+        $data['cats']=[
+            'value'=>''
+        ];
+        $this->title = 'Панель администратора';
+        return view('superadmin/good_property',$data);
     }
 
     public function add_property(){
@@ -46,19 +81,21 @@ class GoodsPropertiesController extends SuperadminController
 
     public function good_property_form(Request $request){
 
-     dd($request->input());
+    dump($request->input());
     $data=[
         'name'=>$request->input('name'),
         'column'=>$request->input('column'),
-        'active'=>(!empty($request->input('active'))) ? 1:0,
-        'main_property'=>(!empty($request->input('main_property'))) ? 1:0,
-        'hint'=>(!empty($request->input('hint'))) ? 1:0,
-        'show_on_goods_page'=>(!empty($request->input('show_on_goods_page'))) ? 1:0,
-        'show_on_comparison'=>(!empty($request->input('show_on_comparison'))) ? 1:0,
-        'show_on_filter'=>(!empty($request->input('show_on_filter'))) ? 1:0,
-        ' multiple'=>(!empty($request->input(' multiple'))) ? 1:0,
-
+        'active'=>($request->input('active')!==null) ? 0:1,
+        'main_property'=>($request->input('main_property')!==null) ? 0:1,
+        'hint'=>($request->input('hint')!==null) ? 0:1,
+        'show_on_goods_page'=>($request->input('show_on_goods_page')!==null) ? 0:1,
+        'show_on_comparison'=>($request->input('show_on_comparison')!==null) ? 0:1,
+        'show_on_filter'=>($request->input('show_on_filter')!==null) ? 0:1,
+        'multiple'=>($request->input('multiple')!==null) ? 0:1,
+        'categories'=>$request->input('categories'),
+        'data'=>implode(",", $request->input('data'))
         ];
 
+        DB::table('properties')->insert($data);
     }
 }

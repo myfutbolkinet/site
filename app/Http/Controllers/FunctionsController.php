@@ -874,6 +874,12 @@ if(!empty($main_array['video4'])){
 
     public function show_subcat(Request $request){
     $id_cat=$request->input('id_cat');
+    $data=$this->print_subcat($id_cat);
+    return json_encode($data);
+    }
+
+    public function print_subcat($id_cat){
+
     //find all categories which have parent_id = id_cat
     $data['value']=DB::table('categories')->where('parent_id', $id_cat)->get();
     $data['message']='success';
@@ -884,10 +890,10 @@ if(!empty($main_array['video4'])){
         $data['value']['info']=$this->recursive_cat_names($name,$id_cat);
        $data['message']='null';
     }
-
-
-    return json_encode($data);
+    return $data;
     }
+
+
 
 
   
