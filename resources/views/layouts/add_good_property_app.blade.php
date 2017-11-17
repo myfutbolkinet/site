@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<meta name="csrf_token" content="{{ csrf_token() }}">
     <title>SUPERADMIN_ADD_GOOD_PROPERTY</title>
 
 
@@ -149,7 +149,7 @@
                     url: "\show_subcat/",
                     data: {id_cat: id_cat}, // serializes the form's elements.
 					headers: {
-					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+					'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
 					},
                     success: function (data) {
                         if(data.message=='null'){
