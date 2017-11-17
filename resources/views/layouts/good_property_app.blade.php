@@ -93,6 +93,8 @@
     <script src="{!! asset('Addel/addel.jquery.js') !!}"></script>
 
     <script>
+
+
         $.ajaxSetup({
             headers:{
                 'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
@@ -105,8 +107,38 @@
         $(document).ready(function(){
 
 
+            var prop = <?php echo $property[0]->id;?>;
+            $.ajax({
+                type: "POST",
+                dataType: 'json',
+                url: '/superadmin/show_property_categories',
+                data: {prop:prop}, // serializes the form's elements.
+                success: function (data) {
+                    $.each( data, function( key, value ) {
+                        alert(value.value.id)
+                      $('.tagsinput').tagsinput('add', {"value":value.value.id,"text":value.value.info.name });
+                    });
+
+                }
+
+            });
 
             $('.addel').addel({
+
+                events: {
+                    added: function (event) {
+                        console.log('Added ' + event.added.length);
+                    }
+                }
+            }).on('addel:delete', function (event) {
+                if (!window.confirm('Are you absolutely positive you would like to delete: ' + '"' + event.target.find(':input').val() + '"?')) {
+                    console.log('Deletion prevented!');
+                    event.preventDefault();
+                }
+            });
+
+            $('.addel2').addel({
+hide:false,
                 events: {
                     added: function (event) {
                         console.log('Added ' + event.added.length);
@@ -131,7 +163,11 @@
                 itemText: 'text',
             });
 
-            $('.tagsinput').tagsinput('add', {"value":1,"text":"Washington" });
+
+
+            /**/
+
+
 
 
             $('.categories').delegate('.cat_block','click',function(){

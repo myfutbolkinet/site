@@ -894,6 +894,23 @@ if(!empty($main_array['video4'])){
     }
 
 
+    public function show_property_categories(Request $request){
+    $id=$request->input('prop');
+
+   $data['property']=DB::table('properties')->where('id',$id)->get();
+        //Получить все категории связанные с этим свойством
+        $cats=$data['property'][0]->categories;
+        $cats=explode(',' ,$cats );
+
+        $a=new FunctionsController();
+        foreach($cats as $cat){
+            //сформировать строку полный путь к категории
+            $data['info'][]=$a->print_subcat($cat);
+
+        }
+
+    return json_encode($data['info']);
+    }
 
 
   

@@ -215,15 +215,18 @@
                                                 Свойства
                                             </label>
                                             <div class="input-group">
-                                                <input type="text" id="person" name="data[]" class="form-control">
-                                                <span class="input-group-btn">
-                            <button type="button" class="btn btn-danger addel-delete">
-                                <i class="fa fa-remove">
 
-                                </i>
-                            </button>
-                        </span>
+                                            <input type="text" id="person" name="data[]" class="form-control">
+
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger addel-delete">
+                                                    <i class="fa fa-remove">
+
+                                                    </i>
+                                                </button>
+                                            </span>
                                             </div>
+
                                         </div>
 
                                         <div class="form-group">
@@ -231,9 +234,6 @@
                                                 <i class="fa fa-plus"></i>
                                             </button>
                                         </div>
-
-
-
                                         <div class="hr-line-dashed"></div>
                                         <div class="form-group">
                                             <div class="col-sm-4 col-sm-offset-2">

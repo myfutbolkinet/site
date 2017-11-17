@@ -45,23 +45,11 @@ class GoodsPropertiesController extends SuperadminController
             ->get();
         $data['menu']=$this->menu();
         $data['property']=DB::table('properties')->where('id',$id)->get();
-        //Получить все категории связанные с этим свойством
-        $cats=$data['property'][0]->categories;
-        $cats=explode(',' ,$cats );
-        dump($cats);
-        $a=new FunctionsController();
-        foreach($cats as $cat){
-            //сформировать строку полный путь к категории
-        $data['info'][]=$a->print_subcat($cat);
-
-        }
-        dd($data['info']);
-        $data['cats']=[
-            'value'=>''
-        ];
         $this->title = 'Панель администратора';
+
         return view('superadmin/good_property',$data);
     }
+
 
     public function add_property(){
         if(Gate::denies('SUPERADMIN_EDIT')){
