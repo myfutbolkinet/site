@@ -63,7 +63,7 @@ Route::group(['prefix' => 'admin','middleware'=>['web','auth']],function(){
        //admin
     Route::get('/main',['uses' => 'Admin\IndexController@main','as' => 'adminMain']);
     Route::get('/',['uses' => 'Admin\IndexController@index','as' => 'adminIndex']);
-    Route::post('/show_subcat', 'FunctionsController@show_subcat');
+    Route::post('/show_subcat/', 'FunctionsController@show_subcat');
     Route::post('/func_update_role', 'FunctionsController@role');
     Route::post('/func_delete_user', 'FunctionsController@delete_user');
     Route::post('/func_delete_good', 'FunctionsController@delete_good');
@@ -88,6 +88,7 @@ Route::group(['prefix' => 'superadmin','middleware'=>['web','auth']],function(){
     Route::post('/good_property','Superadmin\GoodsPropertiesController@good_property_form');
     Route::get('/good_property/{id}','Superadmin\GoodsPropertiesController@good_property');
     Route::post('/show_property_categories','FunctionsController@show_property_categories');
+	Route::post('/show_subcat', 'FunctionsController@show_subcat');
 });
 
 

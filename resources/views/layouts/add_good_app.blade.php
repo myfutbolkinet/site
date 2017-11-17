@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ADD_GOOD</title>
 
 
@@ -190,16 +191,16 @@
 
     <script>
 
-        $.ajaxSetup({
-            headers:{
-                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
-            }
-        })
+  
 
 
         $(document).ready(function(){
 
-
+      $.ajaxSetup({
+            headers:{
+                'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
+            }
+        })
             $('.summernote').summernote();
 
 
@@ -307,10 +308,10 @@
                 new_block_cl=cl.slice(0, 10)+simbol
 
                 $.ajax({
-                    type: "POST",
+                    method: "POST",
                     dataType: 'json',
                     async: false,
-                    url: '/admin/show_subcat',
+                    url: 'show_subcat/',
                     data: {id_cat: id_cat}, // serializes the form's elements.
                     success: function (data) {
                         if(data.message=='null'){

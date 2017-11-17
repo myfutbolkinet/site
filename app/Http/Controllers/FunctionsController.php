@@ -873,7 +873,7 @@ if(!empty($main_array['video4'])){
     }
 
     public function show_subcat(Request $request){
-    $id_cat=$request->input('id_cat');
+	$id_cat=$request->input('id_cat');
     $data=$this->print_subcat($id_cat);
     return json_encode($data);
     }

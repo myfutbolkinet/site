@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
     <title>SUPERADMIN_ADD_GOOD_PROPERTY</title>
 
 
@@ -142,11 +143,14 @@
                 new_block_cl=cl.slice(0, 10)+simbol
 
                 $.ajax({
-                    type: "POST",
+                    method: 'POST',
                     dataType: 'json',
-                    async: false,
-                    url: '/admin/show_subcat',
+                    async:false,
+                    url: "\show_subcat/",
                     data: {id_cat: id_cat}, // serializes the form's elements.
+					headers: {
+					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+					},
                     success: function (data) {
                         if(data.message=='null'){
                             //проверить чтобы соседние последующие блоки были пусты
