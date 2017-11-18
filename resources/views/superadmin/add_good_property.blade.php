@@ -126,6 +126,9 @@
                                                 <div class="i-checks"><label> <input type="checkbox" name="multiple" value=""> <i></i> Множественный выбор</label></div>
                                             </div>
                                         </div>
+
+
+
                                         <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="ibox-content col-sm-10 control-label">

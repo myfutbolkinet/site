@@ -61,15 +61,17 @@ class FuncController extends Controller
     public function show_property_categories(Request $request){
     $id=$request->input('prop');
 
-   $data['property']=DB::table('properties')->where('id',$id)->get();
+   $data['property']=DB::table('property_category')->where('property_id',$id)->get();
+
+
         //Получить все категории связанные с этим свойством
-        $cats=$data['property'][0]->categories;
-        $cats=explode(',' ,$cats );
+      /*  $cats=$data['property'][0]->category_id;
+        $cats=explode(',' ,$cats );*/
 
         
-        foreach($cats as $cat){
+        foreach($data['property'] as $cat){
             //сформировать строку полный путь к категории
-            $data['info'][]=$this->print_subcat($cat);
+            $data['info'][]=$this->print_subcat($cat->category_id);
 
         }
 

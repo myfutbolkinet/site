@@ -6,7 +6,7 @@
 
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Wizard</h2>
+            <h2>Свойства товаров</h2>
             <ol class="breadcrumb">
                 <li>
                     <a href="index.html">Home</a>
@@ -85,6 +85,14 @@
                                     <td><input type="checkbox"  checked class="i-checks" name="input[]"></td>
                                     <td>{{$val->id}}</td>
                                     <td><a href="/superadmin/good_property/{{$val->id}}">{{$val->name}}</a></td>
+                                    <td>
+
+                                        @foreach($val->categories as $cats)
+
+                                        <p>{{$cats}}</a>
+                                        @endforeach
+
+                                    </td>
                                 </tr>
                             @endforeach
 

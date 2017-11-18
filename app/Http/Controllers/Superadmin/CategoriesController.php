@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Superadmin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Gate;
+use App\Category;
 class CategoriesController extends SuperadminController
 {
     //
@@ -14,10 +15,14 @@ class CategoriesController extends SuperadminController
         if(Gate::denies('SUPERADMIN_EDIT')){
 
             abort(403);
-        }
-        $data_nav['menu']=$this->menu();
-        $data=array();
+        }$data=array();
+        $data['menu']=$this->menu();
+        $data['categories']=Category::orderBy('parent_id', 'asc')
+            ->orderBy('created_at', 'desc')
+            ->orderBy('updated_at', 'desc')
+            ->get();
+
         $this->title = 'Панель администратора';
-        return view('superadmin/add_category',$data_nav);
+        return view('superadmin/add_category',$data);
     }
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
     <title>SUPERADMIN_ADD_GOOD_PROPERTY</title>
 
 
@@ -36,6 +37,14 @@
             overflow-y:auto;
             display:inline-block;
 
+        }
+        .fahover_cubes{
+            text-align:center;width:45px;height:15px;background:#eee;float:left;
+            margin-top:10px;
+        }
+        .fahover_cubes:hover{
+            background:#FF0000;
+            color:#fff;
         }
     </style>
 </head>
@@ -90,11 +99,8 @@
     <!-- Tags Input -->
     <script src="{!! asset('inspinia/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js') !!}"></script>
 
-    <script src="{!! asset('Addel/addel.jquery.js') !!}"></script>
 
     <script>
-
-
         $.ajaxSetup({
             headers:{
                 'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
@@ -106,70 +112,6 @@
 
         $(document).ready(function(){
 
-
-            var prop = <?php echo $property[0]->id;?>;
-            $.ajax({
-                type: "POST",
-                dataType: 'json',
-                url: '/show_property_categories',
-                data: {prop:prop}, // serializes the form's elements.
-                success: function (data) {
-                    $.each( data, function( key, value ) {
-                        alert(value.value.id)
-                      $('.tagsinput').tagsinput('add', {"value":value.value.id,"text":value.value.info.name });
-                    });
-
-                }
-
-            });
-
-            $('.addel').addel({
-
-                events: {
-                    added: function (event) {
-                        console.log('Added ' + event.added.length);
-                    }
-                }
-            }).on('addel:delete', function (event) {
-                if (!window.confirm('Are you absolutely positive you would like to delete: ' + '"' + event.target.find(':input').val() + '"?')) {
-                    console.log('Deletion prevented!');
-                    event.preventDefault();
-                }
-            });
-
-            $('.addel2').addel({
-hide:false,
-                events: {
-                    added: function (event) {
-                        console.log('Added ' + event.added.length);
-                    }
-                }
-            }).on('addel:delete', function (event) {
-                if (!window.confirm('Are you absolutely positive you would like to delete: ' + '"' + event.target.find(':input').val() + '"?')) {
-                    console.log('Deletion prevented!');
-                    event.preventDefault();
-                }
-            });
-
-
-
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green',
-                radioClass: 'iradio_square-green',
-            });
-            $('.tagsinput').tagsinput({
-                tagClass: 'label label-primary',
-                itemValue: 'value',
-                itemText: 'text',
-            });
-
-
-
-            /**/
-
-
-
-
             $('.categories').delegate('.cat_block','click',function(){
 
                 var id_cat = $(this).parent('a').find('input').val()
@@ -179,18 +121,19 @@ hide:false,
                 new_block_cl=cl.slice(0, 10)+simbol
 
                 $.ajax({
-                    type: "POST",
+                    method: 'POST',
                     dataType: 'json',
-                    async: false,
-                    url: '/show_subcat',
+                    async:false,
+                    url: "/show_subcat",
                     data: {id_cat: id_cat}, // serializes the form's elements.
+					headers: {
+					'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
+					},
                     success: function (data) {
                         if(data.message=='null'){
                             //проверить чтобы соседние последующие блоки были пусты
                             $('input[name="id_cat"]').val(data.value.id)
                             $('.cat_name').html(data.value.info.name)
-                            $('.tagsinput').tagsinput('add', {"value":data.value.id,"text": data.value.info.name });
-
                             //если (data.value.info.parent_num) ==2
                             //удалить 3,4
                             // если (data.value.info.parent_num) ==3
@@ -217,8 +160,8 @@ hide:false,
 
                             }
                             $.each( data.value, function( key, value ) {
-                                $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
-                                    '<input type="hidden" value="'+value.id+'">' +
+                                $('.'+new_block_cl+'').append(' <a ><span onclick="faclick()" class="fahover_cubes fa fa-cubes" style=""></span><div class="cat_block" >' +
+                                    '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
                                     value.name+
                                     '<span class="fa arrow" style="float:right"></span>' +
                                     '</div></a>')
@@ -234,26 +177,14 @@ hide:false,
             });
 
 
-
-
-
-
-            $("#form").validate({
-                errorPlacement: function (error, element)
-                {
-                    element.before(error);
-                },
-                rules: {
-                    confirm: {
-                        equalTo: "#password"
-                    }
-                }
-            });
-
-
-
-
         });
+        $('.categories').delegate('.fahover_cubes','click',function() {
+
+
+                alert($(this).parent('a').find('.fahover_cubes_input').val())
+
+
+        })
     </script>
 
 </body>

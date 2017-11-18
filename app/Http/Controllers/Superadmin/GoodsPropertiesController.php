@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Gate;
 use DB;
 use App\Category;
+use App\Property;
 class GoodsPropertiesController extends SuperadminController
 {
     //
@@ -28,7 +29,11 @@ class GoodsPropertiesController extends SuperadminController
         $this->title = 'Панель администратора';
         $data['menu']=$this->menu();
         $data['properties']=DB::table('properties')->get();
-
+        foreach($data['properties'] as $val){
+            $cats=explode(',',$val->categories);
+            $val->categories=$cats;
+        }
+        /**/
         return view('superadmin/goods_properties',$data);
     }
 
@@ -83,7 +88,20 @@ class GoodsPropertiesController extends SuperadminController
         'categories'=>$request->input('categories'),
         'data'=>implode(",", $request->input('data'))
         ];
-
         DB::table('properties')->insert($data);
+        $data_m =  Property::all();
+        $last_data_object = collect($data_m)->last();
+
+        $last_data_object =$last_data_object->id;
+
+$categories=explode(',',$request->input('categories'));
+foreach($categories as $val){
+$data_prop[]=[
+    'category_id'=>$val,
+    'property_id'=>$last_data_object
+];
+}
+DB::table('property_category')->insert($data_prop);
+
     }
 }
