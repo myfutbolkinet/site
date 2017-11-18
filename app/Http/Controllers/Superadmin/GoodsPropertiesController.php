@@ -69,7 +69,7 @@ class GoodsPropertiesController extends SuperadminController
 
     public function good_property_form(Request $request){
 
-    dump($request->input());
+    dd($request->input());
     $data=[
         'name'=>$request->input('name'),
         'column'=>$request->input('column'),

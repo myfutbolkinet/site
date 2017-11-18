@@ -124,10 +124,10 @@
             });
 
             $('.addel').addel({
-
                 events: {
                     added: function (event) {
                         console.log('Added ' + event.added.length);
+                        event.target.find(':input').show();
                     }
                 }
             }).on('addel:delete', function (event) {
