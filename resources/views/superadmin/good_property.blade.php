@@ -75,7 +75,7 @@
                                     <div class="col-lg-8">
 
                                     <form id="form" class="addel"
-                                          data-addel-hide="true"
+                                          data-addel-hide="false"
                                           data-addel-add="1"
                                           data-addel-animation-duration="1000" action="/superadmin/good_property" method="post">
 
@@ -206,23 +206,40 @@
 
                                             </div>
 
-
-
-
                                         @php
-
                                         $props = explode(',', $property[0]->data);
-                                        print_r($props);
-
+                                        foreach($props as $key=>$prop){
                                         @endphp
+                                        <div class="form-group addel-target">
+                                            <label for="person" class="control-label">
+                                                Свойства
+                                            </label>
+
+                                            <div class="input-group">
+
+                                                <input type="text" id="person" name="data[]" class="form-control" value="{{$prop}}" placeholder="{{$prop}}">
+
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger addel-delete">
+                                                    <i class="fa fa-remove">
+
+                                                    </i>
+                                                </button>
+                                            </span>
+                                            </div>
+                                            </div>
+                                            @php
+                                            }
+                                            @endphp
 
                                         <div class="form-group addel-target">
                                             <label for="person" class="control-label">
                                                 Свойства
                                             </label>
+
                                             <div class="input-group">
 
-                                            <input type="text" id="person" name="data[]" class="form-control" val="{{$props[0]}}">
+                                            <input type="text" id="person" name="data[]" class="form-control">
 
                                             <span class="input-group-btn">
                                                 <button type="button" class="btn btn-danger addel-delete">
