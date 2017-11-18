@@ -209,6 +209,12 @@
 
 
 
+                                        @php
+
+                                        $props = explode(',', $property[0]->data);
+                                        print_r($props);
+
+                                        @endphp
 
                                         <div class="form-group addel-target">
                                             <label for="person" class="control-label">
@@ -216,7 +222,7 @@
                                             </label>
                                             <div class="input-group">
 
-                                            <input type="text" id="person" name="data[]" class="form-control">
+                                            <input type="text" id="person" name="data[]" class="form-control" val="{{$props[0]}}">
 
                                             <span class="input-group-btn">
                                                 <button type="button" class="btn btn-danger addel-delete">

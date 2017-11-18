@@ -111,7 +111,7 @@
             $.ajax({
                 type: "POST",
                 dataType: 'json',
-                url: '/superadmin/show_property_categories',
+                url: '/show_property_categories',
                 data: {prop:prop}, // serializes the form's elements.
                 success: function (data) {
                     $.each( data, function( key, value ) {

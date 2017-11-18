@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="csrf_token" content="{{ csrf_token() }}">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ADD_GOOD</title>
 
 
@@ -193,7 +193,7 @@
 
         $.ajaxSetup({
             headers:{
-                'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
+                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
             }
         })
 
@@ -311,12 +311,12 @@
                     type: "POST",
                     dataType: 'json',
                     async: false,
-                    url: '/admin/show_subcat',
+                    url: '/show_subcat',
                     data: {id_cat: id_cat}, // serializes the form's elements.
                     success: function (data) {
                         if(data.message=='null'){
                         //проверить чтобы соседние последующие блоки были пусты
-alert(data.message)
+
                         $('input[name="id_cat"]').val(data.value.id)
                         $('.cat_name').html(data.value.info.name)
                         //если (data.value.info.parent_num) ==2
