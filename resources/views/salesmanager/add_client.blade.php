@@ -1,4 +1,4 @@
-@extends('layouts.good_property_app')
+@extends('layouts.add_good_property_app')
 
 @section('title', 'Main page')
 
@@ -75,14 +75,14 @@
                                     <div class="col-lg-8">
 
                                     <form id="form" class="addel"
-                                          data-addel-hide="false"
+                                          data-addel-hide="true"
                                           data-addel-add="1"
-                                          data-addel-animation-duration="1000" action="/superadmin/edit_good_property_form" method="post">
-                                        <input type="hidden" name="id" value="{{$property[0]->id}}">
+                                          data-addel-animation-duration="1000" action="/superadmin/good_property" method="post">
+
                                         <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"> Название *: </label>
                                             <div class="col-sm-10">
-                                                <input class="form-control required" name="name" value="{{$property[0]->name}}" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
+                                                <input class="form-control required" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
                                             </div>
 
 
@@ -92,70 +92,43 @@
                                         <div class="form-group col-sm-12">
                                         <label class="col-sm-2 control-label">Имя колонки CSV* : </label>
                                         <div class="col-sm-10">
-                                            <input class="form-control required" name="column" value="{{$property[0]->column}}" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
+                                            <input class="form-control required" name="column" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
                                         </div>
                                         </div>
 
                                         <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                            <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->active==1)
-                                            checked
-                                            @endif
-                                            name="active" value="1"> <i></i> Активный</label></div>
+                                            <div class="i-checks"><label> <input type="checkbox" name="active" value=""> <i></i> Активный</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->main_property==1)
-                                            checked
-                                            @endif
-                                            name="main_property" value="1">  <i></i> Главное свойство</label></div>
-
+                                                <div class="i-checks"><label> <input type="checkbox" name="main_property" value=""> <i></i> Главное свойство</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->hint==1)
-                                            checked
-                                            @endif
-                                            name="hint" value="1"> <i></i> Подсказка</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="hint" value=""> <i></i> Подсказка</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-
-                                            @if($property[0]->show_on_goods_page==1)
-                                            checked
-                                            @endif
-                                            name="show_on_goods_page" value="1"> <i></i> Показать на странице товаров</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_goods_page" value=""> <i></i> Показать на странице товаров</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->show_on_comparison==1)
-                                            checked
-                                            @endif
-                                             name="show_on_comparison" value="1"> <i></i> Показать на странице сравнения товаров</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_comparison" value=""> <i></i> Показать на странице сравнения товаров</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->show_on_filter==1)
-                                            checked
-                                            @endif
-                                            name="show_on_filter" value="1"> <i></i> Показать в фильтре</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_filter" value=""> <i></i> Показать в фильтре</label></div>
                                             </div>
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->multiple==1)
-                                            checked
-                                            @endif
-                                            name="multiple" value="1"> <i></i> Множественный выбор</label></div>
+                                                <div class="i-checks"><label> <input type="checkbox" name="multiple" value=""> <i></i> Множественный выбор</label></div>
                                             </div>
                                         </div>
+
+
+
                                         <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"></label>
                                             <div class="ibox-content col-sm-10 control-label">
@@ -166,7 +139,7 @@
 
 
 
-                                            <input style="display:block" class="tagsinput form-control" type="text" name="categories" value="Amsterdam"/>
+                                                <input style="display:block" class="tagsinput form-control" type="text" name="categories" value="Amsterdam"/>
                                             </div>
                                             <br>
 
@@ -209,47 +182,22 @@
 
 
 
-                                        @foreach($props as $key=>$prop)
+
 
                                         <div class="form-group addel-target">
                                             <label for="person" class="control-label">
                                                 Свойства
                                             </label>
-
                                             <div class="input-group">
+                                                <input type="text" id="person" name="data[]" class="form-control">
+                                                <span class="input-group-btn">
+                            <button type="button" class="btn btn-danger addel-delete">
+                                <i class="fa fa-remove">
 
-                                                <input type="text" id="person" name="data[]" class="form-control" value="{{$prop}}" placeholder="{{$prop}}">
-
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-danger addel-delete">
-                                                    <i class="fa fa-remove">
-
-                                                    </i>
-                                                </button>
-                                            </span>
+                                </i>
+                            </button>
+                        </span>
                                             </div>
-                                            </div>
-
-                                            @endforeach
-
-                                        <div class="form-group addel-target">
-                                            <label for="person" class="control-label">
-                                                Свойства
-                                            </label>
-
-                                            <div class="input-group">
-
-                                            <input type="text" id="person" name="data[]" class="form-control">
-
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-danger addel-delete">
-                                                    <i class="fa fa-remove">
-
-                                                    </i>
-                                                </button>
-                                            </span>
-                                            </div>
-
                                         </div>
 
                                         <div class="form-group">
@@ -257,6 +205,9 @@
                                                 <i class="fa fa-plus"></i>
                                             </button>
                                         </div>
+
+
+
                                         <div class="hr-line-dashed"></div>
                                         <div class="form-group">
                                             <div class="col-sm-4 col-sm-offset-2">

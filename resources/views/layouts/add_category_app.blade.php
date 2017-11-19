@@ -126,18 +126,20 @@
                     async:false,
                     url: "/show_subcat",
                     data: {id_cat: id_cat}, // serializes the form's elements.
-					headers: {
-					'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
-					},
-                    success: function (data) {
+					success: function (data) {
                         if(data.message=='null'){
+
                             //проверить чтобы соседние последующие блоки были пусты
-                            $('input[name="id_cat"]').val(data.value.id)
-                            $('.cat_name').html(data.value.info.name)
+
                             //если (data.value.info.parent_num) ==2
                             //удалить 3,4
                             // если (data.value.info.parent_num) ==3
                             //4
+                            if(data.value.info.parent_num==1){
+                                $('.cat_block_2').empty();
+                                $('.cat_block_3').empty();
+                                $('.cat_block_4').empty();
+                            }
                             if(data.value.info.parent_num==2){
                                 $('.cat_block_3').empty();
                                 $('.cat_block_4').empty();
@@ -177,14 +179,39 @@
             });
 
 
-        });
+
         $('.categories').delegate('.fahover_cubes','click',function() {
 
 
-                alert($(this).parent('a').find('.fahover_cubes_input').val())
+         var id_cat = $(this).parent('a').find('.fahover_cubes_input').val();
+        $('.parent_category').val(id_cat);
+            $.ajax({
+                type: "POST",
+                dataType: 'json',
+                url: '/show_parent_categories_tree',
+                data: {id_cat:id_cat}, // serializes the form's elements.
+                success: function (data) {
+
+                $('.cat_name').html(data.name)
+                }
+
+            });
 
 
-        })
+        });
+
+            $("#form").validate({
+                errorPlacement: function (error, element)
+                {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+        });
     </script>
 
 </body>

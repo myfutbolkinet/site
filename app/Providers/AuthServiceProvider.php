@@ -35,6 +35,10 @@ class AuthServiceProvider extends ServiceProvider
 
             return $user->canDo('SUPERADMIN_EDIT');
         });
+        Gate::define('SUPERADMIN_SALES', function (User $user) {
+
+            return $user->canDo('SUPERADMIN_SALES');
+        });
 
     }
 }

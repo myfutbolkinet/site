@@ -32,7 +32,7 @@
         <label class="col-sm-2 control-label"></label>
         <div class="ibox-content col-sm-10 control-label">
             <p>
-                Выберите категории в которых будет использоваться данное свйство
+                Выберите родительскую категорию для новой категории затем напишите ее название
             </p>
 
 
@@ -43,11 +43,40 @@
         <br>
 
 
+    </div></div>
 
-        <div class="form-group col-sm-12 categories">
+<form id="form" action="/superadmin/add_category" method="post">
+        <input class="parent_category" name="parent_id" type="text" value="">
+
+
+    <div class="row">
+<div class="col-sm-12" >
+            <div class="form-group"><label class="col-sm-2 control-label">Название родительской категории</label>
+
+                <div ><p class="col-sm-10 cat_name" style="font-size:17px;"></p></div>
+
+
+            </div>
+</div></div></br></br>
+    <div class="row">
+            <div class="form-group"><label class="col-sm-2 control-label">Название новой категории</label>
+
+                <div class="col-sm-8"><input class="form-control required" name="name" type="text" ></div>
+
+                <div class="col-sm-2 ">
+                    <button class="btn btn-white" type="submit">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Save changes</button>
+                </div>
+            </div>
+    </div>
+</form>
+<br><br>
+    <div class="row">
+    <div class="col-sm-12" >
             <p class="font-bold">
-                Выбор дочерней категории
+                Выбор родительской категории категории
             </p>
+        <div class="categories">
             <div class="block_main_categories cat_block_1" style="">
                 @foreach ($categories as $key=>$category)
                     @if($category->parent_id==0)
@@ -64,6 +93,7 @@
                 @endforeach
 
             </div>
+
             <div class="block_main_categories cat_block_2" >
 
 
@@ -72,14 +102,10 @@
 
 
             </div>
-
         </div>
+    </div></div>
 
 
-
-    </div>
-
-</div>
 
 
 

@@ -36,6 +36,11 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Superadmin',
 
             ],
+            [
+
+                'name' => 'SalesManager',
+
+            ],
 
         ]);
 
@@ -56,6 +61,11 @@ class UsersTableSeeder extends Seeder
             [
 
                 'name' => 'SUPERADMIN_EDIT',
+
+            ],
+            [
+
+                'name' => 'SUPERADMIN_SALES',
 
             ]
 
@@ -97,6 +107,13 @@ class UsersTableSeeder extends Seeder
                 'role_id' => 4,
                 'permission_id' => 3,
 
+            ],
+
+            [
+
+                'role_id' => 5,
+                'permission_id' => 4,
+
             ]
 
         ]);
@@ -124,9 +141,22 @@ class UsersTableSeeder extends Seeder
                 'activated'=> TRUE,
                 'name' => 'Демидов Сергей'
 
+            ],
+
+            [
+                'email'=>'leha.razdelishin@yandex.ru',
+                'password'=>bcrypt('DrwwehWdjj25'),
+                'mobile'=>'+38(093)0712279',
+                'add_phone'=>'+38(093)0712279',
+                'information'=>'sale manager',
+                'status'=>1,
+                'activated'=> TRUE,
+                'name' => 'Алексей Разделишин'
+
             ]
 
         ]);
+
         DB::table('role_user')->insert([
 
             [
@@ -146,7 +176,13 @@ class UsersTableSeeder extends Seeder
             'user_id' => 1,
             'role_id' => 4
 
-        ]
+        ],
+            [
+
+                'user_id' => 3,
+                'role_id' => 5
+
+            ]
 
 
         ]);

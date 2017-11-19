@@ -1122,7 +1122,28 @@ class CategoriesTableSeeder extends Seeder
             ],
         ]);
 
+        DB::table('salesmanager_categories')->insert([
 
+            [
+                'parent_id' => 0,
+                'name' => 'Клиенты',
+                'icon'=> 'fa-users',
+                'link'=> '/salesmanager'
+            ],
+            [
+                'parent_id' => 1,
+                'name' => 'Управление клиентами',
+                'icon'=> 'fa-registered',
+                'link'=> '/salesmanager/clients_managment'
+            ],
+            [
+                'parent_id' => 2,
+                'name' => 'Добавить клиента',
+                'icon'=> 'fa-gift',
+                'link'=> '/salesmanager/client/add'
+            ],
+
+        ]);
         DB::table('logos')->insert([
 
             [

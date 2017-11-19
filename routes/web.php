@@ -13,6 +13,8 @@
 
 Route::post('/show_subcat', 'FuncController@show_subcat');
 Route::post('/show_property_categories','FuncController@show_property_categories');
+Route::post('/show_parent_categories_tree','FuncController@show_parent_categories_tree');
+
 Auth::routes();
 Route::get('/', 'MainController@index');
 /*Route::get('/admin', 'AdminController@index');
@@ -59,8 +61,10 @@ Route::get('/not_yours', function () {
     return view('not_yours');
 })->name('not_yours');
 
-Route::get('/logout',['uses' => 'Admin\IndexController@index','as' => 'adminIndex']);
+Route::get('/logout', function () {
+Auth::logout();
 
+});
 //admin
 Route::group(['prefix' => 'admin','middleware'=>['web','auth']],function(){
        //admin
@@ -89,11 +93,22 @@ Route::group(['prefix' => 'superadmin','middleware'=>['web','auth']],function(){
     Route::get('/goods_properties','Superadmin\GoodsPropertiesController@index');
     Route::get('/add_good_property','Superadmin\GoodsPropertiesController@add_property');
     Route::post('/good_property','Superadmin\GoodsPropertiesController@good_property_form');
+    Route::post('/edit_good_property_form','Superadmin\GoodsPropertiesController@edit_good_property_form');
+    Route::post('/add_category','FuncController@add_category_form');
     Route::get('/good_property/{id}','Superadmin\GoodsPropertiesController@good_property');
 
 });
 
+Route::group(['prefix' => 'salesmanager','middleware'=>['web','auth']],function(){
 
+    Route::get('/',['uses' => 'SalesManager\IndexController@index','as' => 'salesmanagerIndex']);
+    Route::get('/clients/add','SalesManager\ClientsController@add_show');
+    Route::get('/clients','SalesManager\ClientsController@index');
+    Route::post('/edit_client_form','SalesManager\ClientsController@edit_client_form');
+    Route::post('/add_client','SalesManager\ClientsController@add_client');
+    Route::get('/client/{id}','SalesManager\ClientsController@show_client');
+
+});
 /*Route::get('sendmail','')*/
 Route::get('user/activation/{token}', 'Auth\AuthController@activateUser')->name('user.activate');
 Route::post('/add_to_cart','ShopingCartController@addToCart')->name('add_to_cart');

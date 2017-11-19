@@ -78,4 +78,15 @@ class FuncController extends Controller
     return json_encode($data['info']);
     }
 
+    public function show_parent_categories_tree(Request $request){
+        $id_cat=$request->input('id_cat');
+        $data=$this->recursive_cat_names($name='',$id_cat);
+        return json_encode($data);
+    }
+
+    public function add_category_form(Request $request){
+
+        dd($request->input());
+    }
+
 }

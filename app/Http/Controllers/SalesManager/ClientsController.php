@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Superadmin;
+namespace App\Http\Controllers\SalesManager;
 
 use App\Http\Controllers\FunctionsController;
 use Illuminate\Http\Request;
@@ -9,7 +9,7 @@ use Gate;
 use DB;
 use App\Category;
 use App\Property;
-class GoodsPropertiesController extends SuperadminController
+class ClientsController extends SalesManagerController
 {
     //
 
@@ -20,7 +20,7 @@ class GoodsPropertiesController extends SuperadminController
 
 
     public function index(){
-        if(Gate::denies('SUPERADMIN_EDIT')){
+        if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
         }
@@ -28,13 +28,10 @@ class GoodsPropertiesController extends SuperadminController
         $data=array();
         $this->title = 'Панель администратора';
         $data['menu']=$this->menu();
-        $data['properties']=DB::table('properties')->get();
-        foreach($data['properties'] as $val){
-            $cats=explode(',',$val->categories);
-            $val->categories=$cats;
-        }
+        $data['clients']=DB::table('clients')->get();
+
         /**/
-        return view('superadmin/goods_properties',$data);
+        return view('salesmanager/clients',$data);
     }
 
 

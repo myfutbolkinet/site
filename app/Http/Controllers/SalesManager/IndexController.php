@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Superadmin;
+namespace App\Http\Controllers\SalesManager;
 
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Gate;
 use Auth;
-class IndexController extends SuperadminController
+class IndexController extends SalesManagerController
 {
     //
     public function __construct()
@@ -18,7 +18,7 @@ class IndexController extends SuperadminController
     public function index(){
         /*$this->user=Auth::user();*/
 
-        if(Gate::denies('SUPERADMIN_EDIT')){
+        if(Gate::denies('SUPERADMIN_SALES')){
 
 
                 abort(403);
@@ -28,7 +28,8 @@ class IndexController extends SuperadminController
         $data_nav['menu']=$this->menu();
         $data=array();
         $this->title = 'Панель администратора';
-        return view('superadmin/index',$data_nav);
+
+        return redirect('/salesmanager/clients');/*view('salesmanager/index',$data_nav)*/
     }
 }
 
