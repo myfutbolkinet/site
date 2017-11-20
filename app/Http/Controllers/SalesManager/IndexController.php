@@ -29,7 +29,7 @@ class IndexController extends SalesManagerController
         $data=array();
         $this->title = 'Панель администратора';
 
-        return redirect('/salesmanager/clients');/*view('salesmanager/index',$data_nav)*/
+        return redirect('/salesmanager/contacts');/*view('salesmanager/index',$data_nav)*/
     }
 }
 

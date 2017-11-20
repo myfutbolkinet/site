@@ -1,4 +1,4 @@
-@extends('layouts.add_good_property_app')
+@extends('salesmanager.add_contact_app')
 
 @section('title', 'Main page')
 
@@ -6,7 +6,7 @@
 
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Wizard</h2>
+            <h2>Создание контакта</h2>
             <ol class="breadcrumb">
                 <li>
                     <a href="index.html">Home</a>
@@ -29,11 +29,11 @@
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>Создание свойства</h5>
+                    <h5>Создание контакта</h5>
 
                     <div class="ibox-tools">
                         <a href="/superadmin/add_good_property" class="btn btn-success btn-facebook btn-outline">
-                            <i class="fa fa-plus"> </i> Создать свойство
+                            <i class="fa fa-plus"> </i> Создать контакт
                         </a>
 
                         <a class="collapse-link">
@@ -50,7 +50,7 @@
                     <div class="col-lg-12">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <h5>Информация <small>Добавьте информацию о свойствах товаров</small></h5>
+                                <h5>Информация <small>Добавьте информацию о новом контакте</small></h5>
                                 <div class="ibox-tools">
                                     <a class="collapse-link">
                                         <i class="fa fa-chevron-up"></i>
@@ -80,52 +80,27 @@
                                           data-addel-animation-duration="1000" action="/superadmin/good_property" method="post">
 
                                         <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"> Название *: </label>
+                                            <label class="col-sm-2 control-label"> Имя: </label>
                                             <div class="col-sm-10">
-                                                <input class="form-control required" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
+                                                <input class="form-control" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
                                             </div>
-
-
-
-
                                         </div>
                                         <div class="form-group col-sm-12">
-                                        <label class="col-sm-2 control-label">Имя колонки CSV* : </label>
+                                        <label class="col-sm-2 control-label">Название компании : </label>
                                         <div class="col-sm-10">
-                                            <input class="form-control required" name="column" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
+                                            <input class="form-control" name="company_name" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
                                         </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Статус контакта : </label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input type="radio" name="status" value="1" checked=""> <i></i> Сырой контакт </label></div>
+                                                <div class="i-checks"><label> <input type="radio" name="status" value="2" > <i></i> Потенциальный клиент </label></div>
+                                                <div class="i-checks"><label> <input type="radio" name="status" value="3" > <i></i> Клиент </label></div>
+                                                <div class="i-checks"><label> <input type="radio" name="status" value="4" > <i></i> Постоянный клиент (6месяцев)</label></div>
+                                            </div>
                                         </div>
 
-                                        <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                            <div class="i-checks"><label> <input type="checkbox" name="active" value=""> <i></i> Активный</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" name="main_property" value=""> <i></i> Главное свойство</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" name="hint" value=""> <i></i> Подсказка</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_goods_page" value=""> <i></i> Показать на странице товаров</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_comparison" value=""> <i></i> Показать на странице сравнения товаров</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" name="show_on_filter" value=""> <i></i> Показать в фильтре</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox" name="multiple" value=""> <i></i> Множественный выбор</label></div>
-                                            </div>
-                                        </div>
 
 
 

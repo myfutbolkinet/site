@@ -9,7 +9,7 @@ use Gate;
 use DB;
 use App\Category;
 use App\Property;
-class ClientsController extends SalesManagerController
+class ContactsController extends SalesManagerController
 {
     //
 
@@ -28,15 +28,15 @@ class ClientsController extends SalesManagerController
         $data=array();
         $this->title = 'Панель администратора';
         $data['menu']=$this->menu();
-        $data['clients']=DB::table('clients')->get();
+        $data['contacts']=DB::table('contacts')->get();
 
         /**/
-        return view('salesmanager/clients',$data);
+        return view('salesmanager/contacts',$data);
     }
 
 
     public function good_property($id){
-        if(Gate::denies('SUPERADMIN_EDIT')){
+        if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
         }
@@ -55,8 +55,8 @@ class ClientsController extends SalesManagerController
     }
 
 
-    public function add_property(){
-        if(Gate::denies('SUPERADMIN_EDIT')){
+    public function add_show(){
+        if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
         }
@@ -68,7 +68,7 @@ class ClientsController extends SalesManagerController
         $data['menu']=$this->menu();
 
         $this->title = 'Панель администратора';
-        return view('superadmin/add_good_property',$data);
+        return view('salesmanager/add_contact',$data);
     }
 
     public function good_property_form(Request $request){

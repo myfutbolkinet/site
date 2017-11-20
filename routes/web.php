@@ -102,11 +102,11 @@ Route::group(['prefix' => 'superadmin','middleware'=>['web','auth']],function(){
 Route::group(['prefix' => 'salesmanager','middleware'=>['web','auth']],function(){
 
     Route::get('/',['uses' => 'SalesManager\IndexController@index','as' => 'salesmanagerIndex']);
-    Route::get('/clients/add','SalesManager\ClientsController@add_show');
-    Route::get('/clients','SalesManager\ClientsController@index');
-    Route::post('/edit_client_form','SalesManager\ClientsController@edit_client_form');
-    Route::post('/add_client','SalesManager\ClientsController@add_client');
-    Route::get('/client/{id}','SalesManager\ClientsController@show_client');
+    Route::get('/contacts/add','SalesManager\ContactsController@add_show');
+    Route::get('/contacts','SalesManager\ContactsController@index');
+    Route::post('/edit_contact_form','SalesManager\ContactsController@edit_contact_form');
+    Route::post('/add_contact','SalesManager\ContactsController@add_contact');
+    Route::get('/contact/{id}','SalesManager\ContactsController@show_contact');
 
 });
 /*Route::get('sendmail','')*/

@@ -1,4 +1,4 @@
-@extends('salesmanager.clients_app')
+@extends('salesmanager.contacts_app')
 
 @section('title', 'Main page')
 
@@ -32,7 +32,7 @@
                     <h5>Контакты компании</h5>
 
                     <div class="ibox-tools">
-                        <a href="/superadmin/add_good_property" class="btn btn-success btn-facebook btn-outline">
+                        <a href="/salesmanager/contacts/add" class="btn btn-success btn-facebook btn-outline">
                             <i class="fa fa-plus"> </i> Создать контакт
                         </a>
 
@@ -80,7 +80,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($clients as $val)
+                            @foreach($contacts as $val)
                                 <tr>
                                     <td><input type="checkbox"  checked class="i-checks" name="input[]"></td>
                                     <td>{{$val->id}}</td>
