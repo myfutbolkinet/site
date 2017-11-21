@@ -15,11 +15,11 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user')->unsigned()->default(null);
+
             $table->integer('number_of_contacts');
-            *$table->integer('status');
-            *$table->string('name');
-           * $table->string('company_name');
+            $table->integer('status');
+            $table->string('name');
+            $table->string('company_name');
             $table->string('mobile');
             $table->string('add_phone');
             $table->string('email');
@@ -28,14 +28,15 @@ class CreateContactsTable extends Migration
             $table->string('answer_status');
             $table->text('wishes');
             $table->text('description_of_last_call');
-            $table->timestamp('next_call')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));;
+            $table->date('last_call');
+            $table->date('next_call');
             $table->string('city');
             $table->string('street');
             $table->integer('house');
-            $table->integer('code');
-            $table->integer('ofice');
+
+            $table->integer('office');
             $table->integer('index');
-            $table->foreign('id_user')->references('id')->on('users');
+
             $table->rememberToken();
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

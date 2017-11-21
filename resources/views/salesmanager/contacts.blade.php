@@ -73,10 +73,10 @@
 
                                 <th></th>
                                 <th>ID </th>
-                                <th>Свойство </th>
-                                <th>Использовать в категориях</th>
-                                <th>Имя колонки CSV</th>
-                                <th>Статус</th>
+                                <th>Имя </th>
+                                <th>Телефон</th>
+                                <th>Перезвонить</th>
+                                <th>Дата последнего контакта</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -84,15 +84,10 @@
                                 <tr>
                                     <td><input type="checkbox"  checked class="i-checks" name="input[]"></td>
                                     <td>{{$val->id}}</td>
-                                    <td><a href="/superadmin/good_property/{{$val->id}}">{{$val->name}}</a></td>
-                                    <td>
-
-                                        @foreach($val->categories as $cats)
-
-                                        <p>{{$cats}}</a>
-                                        @endforeach
-
-                                    </td>
+                                    <td><a href="/salesmanager/contact/{{$val->id}}">{{$val->name}}</a></td>
+                                    <td>{{$val->mobile}}</td>
+                                    <td>{{$val->next_call}}</td>
+                                    <td>{{$val->last_call}}</td>
                                 </tr>
                             @endforeach
 

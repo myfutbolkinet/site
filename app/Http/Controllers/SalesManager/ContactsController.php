@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\SalesManager;
 
+use App\Answer_status;
 use App\Http\Controllers\FunctionsController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -9,6 +10,8 @@ use Gate;
 use DB;
 use App\Category;
 use App\Property;
+
+
 class ContactsController extends SalesManagerController
 {
     //
@@ -35,7 +38,7 @@ class ContactsController extends SalesManagerController
     }
 
 
-    public function good_property($id){
+    public function contact($id){
         if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
@@ -65,41 +68,51 @@ class ContactsController extends SalesManagerController
             ->orderBy('created_at', 'desc')
             ->orderBy('updated_at', 'desc')
             ->get();
-        $data['menu']=$this->menu();
+        $data['answer_statuses']=Answer_status::get();
 
+        $data['menu']=$this->menu();
+        $data['date']=date('m/d/Y');
         $this->title = 'Панель администратора';
         return view('salesmanager/add_contact',$data);
     }
 
-    public function good_property_form(Request $request){
+    public function add_contact(Request $request){
+
+
+        $userDate = str_replace('-', '/', $request->input('next_call'));
+        $post_date = date("M-d-y", strtotime(stripslashes($userDate)));
+        $date = date_create_from_format('M-d-y', $post_date);
+        $next_date =date_format($date, 'Y-m-d');
+        $userDate = str_replace('-', '/', $request->input('last_call'));
+        $post_date = date("M-d-y", strtotime(stripslashes($userDate)));
+        $date = date_create_from_format('M-d-y', $post_date);
+        $last_date =date_format($date, 'Y-m-d');
+
     $data=[
+        'number_of_contacts'=>$request->input('number_of_contacts'),
         'name'=>$request->input('name'),
-        'column'=>$request->input('column'),
-        'active'=>($request->input('active')!==null) ? 0:1,
-        'main_property'=>($request->input('main_property')!==null) ? 0:1,
-        'hint'=>($request->input('hint')!==null) ? 0:1,
-        'show_on_goods_page'=>($request->input('show_on_goods_page')!==null) ? 0:1,
-        'show_on_comparison'=>($request->input('show_on_comparison')!==null) ? 0:1,
-        'show_on_filter'=>($request->input('show_on_filter')!==null) ? 0:1,
-        'multiple'=>($request->input('multiple')!==null) ? 0:1,
-        'categories'=>$request->input('categories'),
-        'data'=>implode(",", $request->input('data'))
+        'company_name'=>$request->input('company_name'),
+        'status'=>$request->input('status'),
+        'mobile'=>$request->input('mobile'),
+        'add_phone'=>$request->input('add_phone'),
+        'email'=>$request->input('email'),
+        'website'=>$request->input('website'),
+        'skype'=>$request->input('skype'),
+        'answer_status'=>$request->input('answer_status'),
+        'wishes'=>$request->input('wishes'),
+        'description_of_last_call'=>$request->input('description_of_last_call'),
+        'last_call'=>$last_date,
+        'next_call'=>$next_date,
+        'city'=>$request->input('city'),
+        'street'=>$request->input('street'),
+        'house'=>$request->input('house'),
+        'index'=>$request->input('index'),
+        'office'=>$request->input('office'),
         ];
-        DB::table('properties')->insert($data);
-        $data_m =  Property::all();
-        $last_data_object = collect($data_m)->last();
+        DB::table('contacts')->insert($data);
 
-        $last_data_object =$last_data_object->id;
 
-$categories=explode(',',$request->input('categories'));
-foreach($categories as $val){
-$data_prop[]=[
-    'category_id'=>$val,
-    'property_id'=>$last_data_object
-];
-}
-DB::table('property_category')->insert($data_prop);
-
+return redirect('/salesmanager/contacts');
     }
 
 
