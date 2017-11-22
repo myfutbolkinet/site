@@ -12,9 +12,9 @@
     <link href="{!! asset('inspinia/font-awesome/css/font-awesome.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
 
-
-
-
+    <link href="{!! asset('inspinia/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/datapicker/datepicker3.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/select2/select2.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/style.css') !!}" rel="stylesheet">
 
@@ -76,7 +76,8 @@
     <script src="{!! asset('inspinia/js/bootstrap.min.js') !!}"></script>
     <script src="{!! asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
     <script src="{!! asset('inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js') !!}"></script>
-
+    <!-- Data picker -->
+    <script src="{!! asset('inspinia/js/plugins/datapicker/bootstrap-datepicker.js') !!}"></script>
 
     <!-- Custom and plugin javascript -->
     <script src="{!! asset('inspinia/js/inspinia.js') !!}"></script>
@@ -92,169 +93,52 @@
 
     <script src="{!! asset('Addel/addel.jquery.js') !!}"></script>
 
+    <!-- iCheck -->
+    <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
+
+    <!-- Select2 -->
+    <script src="{!! asset('inspinia/js/plugins/select2/select2.full.min.js') !!}"></script>
+    <!-- TouchSpin -->
+    <script src="{!! asset('inspinia/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js') !!}"></script>
+
+
+
     <script>
-
-
-        $.ajaxSetup({
-            headers:{
-                'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
-            }
-        })
-
-
-
-
-        $(document).ready(function(){
-
-
-            var prop = <?php echo $property[0]->id;?>;
-            $.ajax({
-                type: "POST",
-                dataType: 'json',
-                url: '/show_property_categories',
-                data: {prop:prop}, // serializes the form's elements.
-                success: function (data) {
-                    $.each( data, function( key, value ) {
-                        alert(value.value.id)
-                      $('.tagsinput').tagsinput('add', {"value":value.value.id,"text":value.value.info.name });
-                    });
-
-                }
-
-            });
-
-            $('.addel').addel({
-                events: {
-                    added: function (event) {
-                        console.log('Added ' + event.added.length);
-                        event.target.find(':input').show();
-                    }
-                }
-            }).on('addel:delete', function (event) {
-                if (!window.confirm('Are you absolutely positive you would like to delete: ' + '"' + event.target.find(':input').val() + '"?')) {
-                    console.log('Deletion prevented!');
-                    event.preventDefault();
-                }
-            });
-
-            $('.addel2').addel({
-hide:false,
-                events: {
-                    added: function (event) {
-                        console.log('Added ' + event.added.length);
-                    }
-                }
-            }).on('addel:delete', function (event) {
-                if (!window.confirm('Are you absolutely positive you would like to delete: ' + '"' + event.target.find(':input').val() + '"?')) {
-                    console.log('Deletion prevented!');
-                    event.preventDefault();
-                }
-            });
-
-
-
+        $(document).ready(function () {
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
             });
-            $('.tagsinput').tagsinput({
-                tagClass: 'label label-primary',
-                itemValue: 'value',
-                itemText: 'text',
+
+            $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+            $('#data_2 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
             });
 
+            $(".touchspin2").TouchSpin({
+                min: 0,
+                max: 100,
+                step:1,
+                decimals: 0,
+                boostat: 5,
+                maxboostedstep: 10,
 
-
-            /**/
-
-
-
-
-            $('.categories').delegate('.cat_block','click',function(){
-
-                var id_cat = $(this).parent('a').find('input').val()
-                var cl=$(this).parent('a').parent().attr('class');
-                cl=cl.split(' ')[1]
-                var simbol=parseInt(cl.slice(10))+1
-                new_block_cl=cl.slice(0, 10)+simbol
-
-                $.ajax({
-                    type: "POST",
-                    dataType: 'json',
-                    async: false,
-                    url: '/show_subcat',
-                    data: {id_cat: id_cat}, // serializes the form's elements.
-                    success: function (data) {
-                        if(data.message=='null'){
-                            //проверить чтобы соседние последующие блоки были пусты
-                            $('input[name="id_cat"]').val(data.value.id)
-                            $('.cat_name').html(data.value.info.name)
-                            $('.tagsinput').tagsinput('add', {"value":data.value.id,"text": data.value.info.name });
-
-                            //если (data.value.info.parent_num) ==2
-                            //удалить 3,4
-                            // если (data.value.info.parent_num) ==3
-                            //4
-                            if(data.value.info.parent_num==2){
-                                $('.cat_block_3').empty();
-                                $('.cat_block_4').empty();
-                            }
-                            else if(data.value.info.parent_num==3){
-                                $('.cat_block_4').empty();
-                            }
-
-                        }
-                        else{
-                            $('.'+new_block_cl+'').empty();
-                            switch(new_block_cl){
-                                case 'cat_block_2':
-                                    $('.cat_block_3').empty();
-                                    $('.cat_block_4').empty();
-                                    break;
-                                case 'cat_block_3':
-                                    $('.cat_block_4').empty();
-                                    break;
-
-                            }
-                            $.each( data.value, function( key, value ) {
-                                $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
-                                    '<input type="hidden" value="'+value.id+'">' +
-                                    value.name+
-                                    '<span class="fa arrow" style="float:right"></span>' +
-                                    '</div></a>')
-                            });
-
-                        }}
-
-                });
-
-
-
-
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white'
             });
-
-
-
-
-
-
-            $("#form").validate({
-                errorPlacement: function (error, element)
-                {
-                    element.before(error);
-                },
-                rules: {
-                    confirm: {
-                        equalTo: "#password"
-                    }
-                }
-            });
-
-
-
-
         });
     </script>
+
 
 </body>
 </html>

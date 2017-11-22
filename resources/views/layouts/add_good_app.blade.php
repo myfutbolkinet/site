@@ -12,6 +12,21 @@
     <link href="{!! asset('inspinia/css/bootstrap.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/font-awesome/css/font-awesome.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/chosen/bootstrap-chosen.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/colorpicker/bootstrap-colorpicker.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/cropper/cropper.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/switchery/switchery.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/jasny/jasny-bootstrap.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/nouslider/jquery.nouislider.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/datapicker/datepicker3.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/ionRangeSlider/ion.rangeSlider.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/clockpicker/clockpicker.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/daterangepicker/daterangepicker-bs3.css') !!}" rel="stylesheet">
+
+
     <link href="{!! asset('inspinia/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/select2/select2.min.css') !!}" rel="stylesheet">
 
@@ -21,38 +36,12 @@
 
 
 
-    <link href="{!! asset('inspinia/css/plugins/chosen/bootstrap-chosen.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/colorpicker/bootstrap-colorpicker.min.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/cropper/cropper.min.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/switchery/switchery.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/jasny/jasny-bootstrap.min.css') !!}" rel="stylesheet">
-
-
-    <link href="{!! asset('inspinia/css/plugins/datapicker/datepicker3.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/ionRangeSlider/ion.rangeSlider.css') !!}" rel="stylesheet">
-    <link href="{!! asset('inspinia/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('inspinia/css/plugins/clockpicker/clockpicker.css') !!}" rel="stylesheet">
-
-    <link href="{!! asset('css/plugins/daterangepicker/daterangepicker-bs3.css') !!}" rel="stylesheet">
-
 
     <link href="{!! asset('inspinia/css/plugins/dualListbox/bootstrap-duallistbox.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/style.css') !!}" rel="stylesheet">
 
 
-    <link href="{!! asset('inspinia/css/plugins/summernote/summernote.css') !!}" rel="stylesheet">
-    <link href="{!! asset('inspinia/css/plugins/summernote/summernote-bs3.css') !!}" rel="stylesheet">
     <style>
         .cat_block:hover{
             background:#ee9;
@@ -113,14 +102,13 @@
 
     <!-- Custom and plugin javascript -->
     <script src="{!! asset('inspinia/js/inspinia.js') !!}"></script>
-    <script src="{!! asset('inspinia/js/plugins/pace/pace.min.js') !!}"></script>
+
     <script src="{!! asset('inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js') !!}"></script>
 
     <script src="{!! asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
 
 
-    <!-- Steps -->
-    <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
+
 
     <!-- Jquery Validate -->
     <script src="{!! asset('inspinia/js/plugins/validate/jquery.validate.min.js') !!}"></script>
@@ -135,10 +123,16 @@
 
     <!-- Input Mask-->
     <script src="{!! asset('inspinia/js/plugins/jasny/jasny-bootstrap.min.js') !!}"></script>
+    <!-- NouSlider -->
+    <script src="{!! asset('inspinia/js/plugins/nouslider/jquery.nouislider.min.js') !!}"></script>
 
-    <!-- Data picker -->
-    <script src="{!! asset('inspinia/js/plugins/datapicker/bootstrap-datepicker.js') !!}"></script>
+    <!-- Switchery -->
+    <script src="{!! asset('inspinia/js/plugins/switchery/switchery.js') !!}"></script>
+    <!-- Color picker -->
+    <script src="{!! asset('inspinia/js/plugins/colorpicker/bootstrap-colorpicker.min.js') !!}"></script>
 
+    <!-- Clock picker -->
+    <script src="{!! asset('inspinia/js/plugins/clockpicker/clockpicker.js') !!}"></script>
 
     <!-- IonRangeSlider -->
     <script src="{!! asset('inspinia/js/plugins/ionRangeSlider/ion.rangeSlider.min.js') !!}"></script>
@@ -149,11 +143,6 @@
     <!-- MENU -->
     <script src="{!! asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
 
-    <!-- Color picker -->
-    <script src="{!! asset('inspinia/js/plugins/colorpicker/bootstrap-colorpicker.min.js') !!}"></script>
-
-    <!-- Clock picker -->
-    <script src="{!! asset('inspinia/js/plugins/clockpicker/clockpicker.js') !!}"></script>
 
     <!-- Image cropper -->
     <script src="{!! asset('inspinia/js/plugins/cropper/cropper.min.js') !!}"></script>
@@ -161,8 +150,7 @@
     <!-- Date range use moment.js same as full calendar plugin -->
     <script src="{!! asset('inspinia/js/plugins/fullcalendar/moment.min.js') !!}"></script>
 
-    <!-- Date range picker -->
-    <script src="{!! asset('inspinia/js/plugins/daterangepicker/daterangepicker.js') !!}"></script>
+
 
     <!-- Select2 -->
     <script src="{!! asset('inspinia/js/plugins/select2/select2.full.min.js') !!}"></script>
@@ -176,10 +164,8 @@
     <!-- Dual Listbox -->
     <script src="{!! asset('inspinia/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js') !!}"></script>
 
-
-    <!-- SUMMERNOTE -->
-    <script src="{!! asset('inspinia/js/plugins/summernote/summernote.min.js') !!}"></script>
-
+    <!-- Steps -->
+    <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
     <script>
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
@@ -200,8 +186,6 @@
 
         $(document).ready(function(){
 
-
-            $('.summernote').summernote();
 
 
 
@@ -298,6 +282,26 @@
                 }
             });
 
+
+
+
+            $('.demo1').colorpicker();
+$('.color_btn').click(function(){
+    var color=$('.input_color').val()
+    alert(color)
+})
+            var divStyle = $('.back-change')[0].style;
+            $('#demo_apidemo').colorpicker({
+                color: divStyle.backgroundColor
+            }).on('changeColor', function(ev) {
+                divStyle.backgroundColor = ev.color.toHex();
+            $('.input_color').val(ev.color.toHex())
+            });
+            $('.position_colors').append('<div style="width:150px;display:inline-block">' +
+                '' +
+                '<input type="text" style="width:100px" class="demo1" value="'+ev.color.toHex()+'" /><div style="background:'+ev.color.toHex()+';display:inline-block;width:25px;height:25px"></div></div>')
+
+            $('.clockpicker').clockpicker();
 
             $('.categories').delegate('.cat_block','click',function(){
 

@@ -38,7 +38,7 @@ class ContactsController extends SalesManagerController
     }
 
 
-    public function contact($id){
+    public function show_contact($id){
         if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
@@ -49,12 +49,15 @@ class ContactsController extends SalesManagerController
             ->orderBy('updated_at', 'desc')
             ->get();
         $data['menu']=$this->menu();
-        $data['property']=DB::table('properties')->where('id',$id)->get();
-        $data['props'] = explode(',', $data['property'][0]->data);
+        $data['answer_statuses']=Answer_status::get();
+        $data['date']=date('m/d/Y');
+        $data['contact']=DB::table('contacts')->where('id',$id)->get();
+        $data['contact'][0]->last_call=date("m/d/Y", strtotime(stripslashes( $data['contact'][0]->last_call)));
+        $data['contact'][0]->next_call=date("m/d/Y", strtotime(stripslashes( $data['contact'][0]->next_call)));
 
         $this->title = 'Панель администратора';
 
-        return view('superadmin/good_property',$data);
+        return view('salesmanager/contact',$data);
     }
 
 
@@ -116,33 +119,40 @@ return redirect('/salesmanager/contacts');
     }
 
 
-    public function edit_good_property_form(Request $request){
+    public function edit_contact_form(Request $request){
 
-    $data=[
+        $userDate = str_replace('-', '/', $request->input('next_call'));
+        $post_date = date("M-d-y", strtotime(stripslashes($userDate)));
+        $date = date_create_from_format('M-d-y', $post_date);
+        $next_date =date_format($date, 'Y-m-d');
+        $userDate = str_replace('-', '/', $request->input('last_call'));
+        $post_date = date("M-d-y", strtotime(stripslashes($userDate)));
+        $date = date_create_from_format('M-d-y', $post_date);
+        $last_date =date_format($date, 'Y-m-d');
+
+        $data=[
+            'number_of_contacts'=>$request->input('number_of_contacts'),
             'name'=>$request->input('name'),
-            'column'=>$request->input('column'),
-            'active'=>($request->input('active')!=1) ? 0:1,
-            'main_property'=>($request->input('main_property')!=1) ? 0:1,
-            'hint'=>($request->input('hint')!==1) ? 0:1,
-            'show_on_goods_page'=>($request->input('show_on_goods_page')!=1) ? 0:1,
-            'show_on_comparison'=>($request->input('show_on_comparison')!=1) ? 0:1,
-            'show_on_filter'=>($request->input('show_on_filter')!=1) ? 0:1,
-            'multiple'=>($request->input('multiple')!=1) ? 0:1,
-            'categories'=>$request->input('categories'),
-            'data'=>implode(",", $request->input('data'))
+            'company_name'=>$request->input('company_name'),
+            'status'=>$request->input('status'),
+            'mobile'=>$request->input('mobile'),
+            'add_phone'=>$request->input('add_phone'),
+            'email'=>$request->input('email'),
+            'website'=>$request->input('website'),
+            'skype'=>$request->input('skype'),
+            'answer_status'=>$request->input('answer_status'),
+            'wishes'=>$request->input('wishes'),
+            'description_of_last_call'=>$request->input('description_of_last_call'),
+            'last_call'=>$last_date,
+            'next_call'=>$next_date,
+            'city'=>$request->input('city'),
+            'street'=>$request->input('street'),
+            'house'=>$request->input('house'),
+            'index'=>$request->input('index'),
+            'office'=>$request->input('office'),
         ];
-
-        DB::table('properties')->where('id',$request->input('id'))->update($data);
-//удалить записи в таблице property_category соответствующие этой категории
-        DB::table('property_category')->where('property_id',$request->input('id'))->delete();
-        $categories=explode(',',$request->input('categories'));
-        foreach($categories as $val){
-            $data_prop[]=[
-                'category_id'=>$val,
-                'property_id'=>$request->input('id')
-            ];
-        }
-        DB::table('property_category')->insert($data_prop);
+        DB::table('contacts')->where('id',$request->input('id'))->update($data);
+        return redirect('salesmanager/contacts');
 
     }
 }

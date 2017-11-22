@@ -1,4 +1,4 @@
-@extends('layouts.good_property_app')
+@extends('layouts.contact_app')
 
 @section('title', 'Main page')
 
@@ -29,28 +29,16 @@
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>Создание свойства</h5>
-
-                    <div class="ibox-tools">
-                        <a href="/superadmin/add_good_property" class="btn btn-success btn-facebook btn-outline">
-                            <i class="fa fa-plus"> </i> Создать свойство
-                        </a>
-
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
+                    <h5>Редактирование контакта</h5>
 
 
-
-
-                    </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <h5>Информация <small>Добавьте информацию о свойствах товаров</small></h5>
+                                <h5>Информация <small>Вы можете изменить информацию о контакте</small></h5>
                                 <div class="ibox-tools">
                                     <a class="collapse-link">
                                         <i class="fa fa-chevron-up"></i>
@@ -77,12 +65,18 @@
                                     <form id="form" class="addel"
                                           data-addel-hide="false"
                                           data-addel-add="1"
-                                          data-addel-animation-duration="1000" action="/superadmin/edit_good_property_form" method="post">
-                                        <input type="hidden" name="id" value="{{$property[0]->id}}">
+                                          data-addel-animation-duration="1000" action="/salesmanager/edit_contact_form" method="post">
+                                        <input type="hidden" name="id" value="{{$contact[0]->id}}">
                                         <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"> Название *: </label>
+                                            <label class="col-sm-2 control-label"> Количество контактов: </label>
                                             <div class="col-sm-10">
-                                                <input class="form-control required" name="name" value="{{$property[0]->name}}" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
+                                                <input class="touchspin2" type="text" value="{{$contact[0]->number_of_contacts}}" name="number_of_contacts">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Имя *: </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control required" name="name" value="{{$contact[0]->name}}" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
                                             </div>
 
 
@@ -90,173 +84,170 @@
 
                                         </div>
                                         <div class="form-group col-sm-12">
-                                        <label class="col-sm-2 control-label">Имя колонки CSV* : </label>
+                                        <label class="col-sm-2 control-label">Название компании* : </label>
                                         <div class="col-sm-10">
-                                            <input class="form-control required" name="column" value="{{$property[0]->column}}" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
+                                            <input class="form-control required" name="company_name" value="{{$contact[0]->company_name}}" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
                                         </div>
                                         </div>
 
                                         <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"></label>
+                                            <label class="col-sm-2 control-label">Статус контакта : </label>
                                             <div class="col-sm-10">
-                                            <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->active==1)
-                                            checked
-                                            @endif
-                                            name="active" value="1"> <i></i> Активный</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->main_property==1)
-                                            checked
-                                            @endif
-                                            name="main_property" value="1">  <i></i> Главное свойство</label></div>
 
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->hint==1)
-                                            checked
-                                            @endif
-                                            name="hint" value="1"> <i></i> Подсказка</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
+                                                @if ($contact[0]->status==1)
+                                                    <div class="i-checks"><label> <input type="radio" name="status" value="1" checked=""> <i></i> Сырой контакт </label></div>
+                                                    <div class="i-checks"><label> <input type="radio" name="status" value="2" > <i></i> Потенциальный клиент </label></div>
+                                                    <div class="i-checks"><label> <input type="radio" name="status" value="3" > <i></i> Клиент </label></div>
+                                                    <div class="i-checks"><label> <input type="radio" name="status" value="4" > <i></i> Постоянный клиент (6месяцев)</label></div>
 
-                                            @if($property[0]->show_on_goods_page==1)
-                                            checked
-                                            @endif
-                                            name="show_on_goods_page" value="1"> <i></i> Показать на странице товаров</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
+                                                @endif
+                                                    @if ($contact[0]->status==2)
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="1" > <i></i> Сырой контакт </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="2" checked=""> <i></i> Потенциальный клиент </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="3" > <i></i> Клиент </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="4" > <i></i> Постоянный клиент (6месяцев)</label></div>
+
+                                                    @endif
+                                                    @if ($contact[0]->status==3)
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="1" > <i></i> Сырой контакт </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="2" > <i></i> Потенциальный клиент </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="3" checked=""> <i></i> Клиент </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="4" > <i></i> Постоянный клиент (6месяцев)</label></div>
+
+                                                    @endif
+                                                    @if ($contact[0]->status==4)
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="1" > <i></i> Сырой контакт </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="2" > <i></i> Потенциальный клиент </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="3" > <i></i> Клиент </label></div>
+                                                        <div class="i-checks"><label> <input type="radio" name="status" value="4" checked=""> <i></i> Постоянный клиент (6месяцев)</label></div>
+
+                                                    @endif
+                                                 </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Мобильный телефон : </label>
                                             <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->show_on_comparison==1)
-                                            checked
-                                            @endif
-                                             name="show_on_comparison" value="1"> <i></i> Показать на странице сравнения товаров</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->show_on_filter==1)
-                                            checked
-                                            @endif
-                                            name="show_on_filter" value="1"> <i></i> Показать в фильтре</label></div>
-                                            </div>
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <div class="i-checks"><label> <input type="checkbox"
-                                            @if($property[0]->multiple==1)
-                                            checked
-                                            @endif
-                                            name="multiple" value="1"> <i></i> Множественный выбор</label></div>
+                                                <input class="form-control" name="mobile" type="text" value="{{$contact[0]->mobile}}" placeholder="Мобильный телефон" data-parsley-group="order" data-parsley-required />
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="ibox-content col-sm-10 control-label">
-                                                <p>
-                                                    Выберите категории в которых будет использоваться данное свйство
-                                                </p>
-
-
-
-
-                                            <input style="display:block" class="tagsinput form-control" type="text" name="categories" value="Amsterdam"/>
+                                            <label class="col-sm-2 control-label">Дополнительный телефон : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="add_phone" value="{{$contact[0]->add_phone}}" type="text" placeholder="Дополнительный телефон" data-parsley-group="order" data-parsley-required />
                                             </div>
-                                            <br>
-
-
-
-                                                <div class="form-group col-sm-12 categories">
-                                                    <p class="font-bold">
-                                                        Выбор категорий
-                                                    </p>
-                                                <div class="block_main_categories cat_block_1" style="">
-                                                    @foreach ($categories as $key=>$category)
-                                                        @if($category->parent_id==0)
-                                                            <a ><div class="cat_block" >
-                                                                    <input type="hidden" value="{{$category->id}}">
-                                                                    {{$category->name}}
-
-                                                                    <span class="fa arrow" style="float:right"></span>
-                                                                </div></a>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Email : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="email" value="{{$contact[0]->email}}" type="email" placeholder="Email" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Вебсайт : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="website" value="{{$contact[0]->website}}" type="text" placeholder="Вебсайт" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Skype : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="skype" value="{{$contact[0]->skype}}" type="text" placeholder="Skype" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Статус ответа : </label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="answer_status">
+                                                    @foreach($answer_statuses as $val)
+                                                        @if($val->id == $contact[0]->answer_status)
+                                                            <option selected value="{{$val->id}}">{{$val->name}}</option>
+                                                        @else
+                                                        <option value="{{$val->id}}">{{$val->name}}</option>
                                                         @endif
+
+
                                                     @endforeach
-
-                                                </div>
-                                                <div class="block_main_categories cat_block_2" >
-
-
-                                                </div>
-                                                <div class="block_main_categories cat_block_3" >
-
-
-                                                </div>
-                                                <div class="block_main_categories cat_block_4" >
-
-
-                                                </div>
-                                                </div>
-
-
-
+                                                </select>
                                             </div>
-
-
-
-                                        @foreach($props as $key=>$prop)
-
-                                        <div class="form-group addel-target">
-                                            <label for="person" class="control-label">
-                                                Свойства
-                                            </label>
-
-                                            <div class="input-group">
-
-                                                <input type="text" id="person" name="data[]" class="form-control" value="{{$prop}}" placeholder="{{$prop}}">
-
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-danger addel-delete">
-                                                    <i class="fa fa-remove">
-
-                                                    </i>
-                                                </button>
-                                            </span>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Пожелания клиента : </label>
+                                            <div class="col-sm-10">
+                                                <textarea style="width:100%" name="wishes">{{$contact[0]->wishes}}</textarea>
                                             </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Описание последнего звонка : </label>
+                                            <div class="col-sm-10">
+                                                <textarea style="width:100%" name="description_of_last_call">{{$contact[0]->description_of_last_call}}</textarea>
                                             </div>
-
-                                            @endforeach
-
-                                        <div class="form-group addel-target">
-                                            <label for="person" class="control-label">
-                                                Свойства
-                                            </label>
-
-                                            <div class="input-group">
-
-                                            <input type="text" id="person" name="data[]" class="form-control">
-
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-danger addel-delete">
-                                                    <i class="fa fa-remove">
-
-                                                    </i>
-                                                </button>
-                                            </span>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Последний контакт : </label>
+                                            <div class="col-sm-10">
+                                                <div class="form-group" id="data_1">
+                                                    <label class="font-normal">Дата последнего контакта с клиентом</label>
+                                                    <div class="input-group date">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="last_call" class="form-control" value="{{$contact[0]->last_call}}">
+                                                    </div>
+                                                </div>
                                             </div>
-
                                         </div>
 
-                                        <div class="form-group">
-                                            <button type="button" class="btn btn-success btn-block addel-add">
-                                                <i class="fa fa-plus"></i>
-                                            </button>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Следующий звонок назначен : </label>
+                                            <div class="col-sm-10">
+                                                <div class="form-group" id="data_2">
+                                                    <label class="font-normal">Дата запланированного звонка по согласованию с клиентом</label>
+                                                    <div class="input-group date">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" name="next_call" class="form-control" value="{{$contact[0]->next_call}}">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Город : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="city" type="text" value="{{$contact[0]->city}}" placeholder="Город" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Улица : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="street" type="text" value="{{$contact[0]->street}}" placeholder="Улица" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Дом : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="house" type="text" value="{{$contact[0]->house}}" placeholder="Дом" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Индекс : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="index" type="text" value="{{$contact[0]->index}}" placeholder="Код" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Офис : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="office" type="text" value="{{$contact[0]->office}}"placeholder="Офис" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
                                         <div class="hr-line-dashed"></div>
                                         <div class="form-group">
                                             <div class="col-sm-4 col-sm-offset-2">
@@ -264,6 +255,13 @@
                                                 <button class="btn btn-primary" type="submit">Save changes</button>
                                             </div>
                                         </div>
+
+
+
+
+
+
+
 
                                     </form>
                                     </div>

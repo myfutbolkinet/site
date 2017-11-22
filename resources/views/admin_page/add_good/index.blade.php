@@ -33,6 +33,9 @@
                 <div class="ibox">
                     <div class="ibox-title">
                         <h5>Wizard with Validation</h5>
+
+
+
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -60,6 +63,11 @@
                         </p>
 
                         <form id="form" action="#" class="wizard-big">
+
+
+
+
+
                             <h1>Основные данные о товаре</h1>
                             <fieldset>
                                 <h2>Добавляем позицию</h2>
@@ -199,6 +207,27 @@
                             <h1>Дополнительные данные о товаре</h1>
                             <fieldset>
                                 <h2>Profile Information</h2>
+
+                                <div class="ibox float-e-margins row">
+                                    <div class="ibox-title  col-sm-12">
+                                        <div class="col-sm-1 back-change" style="width:100px;height:50px;margin:10px;"></div>
+                                        <h5 class="col-sm-2 " style="text-align:center;margin-top:10px;">Последний выбранный цвет </h5>
+
+                                        <input class="input_color col-sm-1" style="margin-top:-20px;margin:10px;" type="text" class="form-control demo1" value="" />
+                                        <button  type="button" style="display:inline-block;padding:10px;" class="col-sm-2 btn btn-w-m btn-success color_btn">Добавить цвет в коллекцию</button>
+                                    </div>
+
+                                    <div class="ibox-content">
+                                       <div class="position_colors">
+
+
+                                       </div>
+
+                                        <a data-color="rgb(255, 255, 255)" id="demo_apidemo" class="btn btn-white btn-block colorpicker-element" href="#">Добавить цвет позиции</a>
+                                        <br/>
+                                    </div>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
