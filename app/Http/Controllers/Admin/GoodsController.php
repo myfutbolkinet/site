@@ -44,6 +44,10 @@ class GoodsController extends AdminController
         return view('admin_page/add_good/index',$data,$data_nav);
     }
 
+    public function add_good(Request $request){
+        dd($request->input());
+
+    }
 
     public function delete_good(){
         /*$this->user=Auth::user();*/

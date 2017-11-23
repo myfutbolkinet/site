@@ -82,6 +82,7 @@ Route::group(['prefix' => 'admin','middleware'=>['web','auth']],function(){
     Route::get('/add_category','Admin\CategoriesController@add_category');
     Route::get('/delete_good','Admin\GoodsController@delete_good');
     Route::get('/good/{id}','Admin\GoodsController@edit_good');
+    Route::post('/add_good', 'Admin\GoodsController@add_good');
     Route::resource('/customers_managment','Admin\CustomersController');
 });
 

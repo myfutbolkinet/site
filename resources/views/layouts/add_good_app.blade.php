@@ -283,13 +283,41 @@
             });
 
 
+            $('#form').delegate('.btn_delete_color','click',function(){
+                var color=$(this).parent('.color_div').find('input').val()
+                alert(color)
+                if (confirm("Удалить цвет "+color+"?")) {
+                $(this).parent('.color_div').remove() ;
+                    alert("Цвет "+color+" удален!")
+                } else {
+                    alert("Вы нажали кнопку отмена")
+                }
+            })
 
 
-            $('.demo1').colorpicker();
+    $('.cat_name').focus(function (){
+
+
+    }, function (){
+        //mouse leave
+        $('.touchspin2').focus();alert('Чтобы ввести в это поле информацию выберите категорию в таблице ниже,конечная категория будет зафиксированна')
+
+    });
+
 $('.color_btn').click(function(){
     var color=$('.input_color').val()
     alert(color)
+    $('.position_colors').append('<div class="color_div" style="width:150px;display:inline-block">' +
+        '<input type="text" style="width:100px;" name="color[]" class="demo1" value="'+color+'" />' +
+        '<div style="background:'+color+';display:inline-block;width:25px;height:25px"></div>' +
+        '<a class="btn_delete_color btn btn-danger btn-rounded btn-outline" href="#">Удалить</a></div>')
+
+
 })
+
+
+
+
             var divStyle = $('.back-change')[0].style;
             $('#demo_apidemo').colorpicker({
                 color: divStyle.backgroundColor
@@ -297,11 +325,7 @@ $('.color_btn').click(function(){
                 divStyle.backgroundColor = ev.color.toHex();
             $('.input_color').val(ev.color.toHex())
             });
-            $('.position_colors').append('<div style="width:150px;display:inline-block">' +
-                '' +
-                '<input type="text" style="width:100px" class="demo1" value="'+ev.color.toHex()+'" /><div style="background:'+ev.color.toHex()+';display:inline-block;width:25px;height:25px"></div></div>')
 
-            $('.clockpicker').clockpicker();
 
             $('.categories').delegate('.cat_block','click',function(){
 
@@ -322,7 +346,7 @@ $('.color_btn').click(function(){
                         //проверить чтобы соседние последующие блоки были пусты
 
                         $('input[name="id_cat"]').val(data.value.id)
-                        $('.cat_name').html(data.value.info.name)
+                        $('.cat_name').val(data.value.info.name)
                         //если (data.value.info.parent_num) ==2
                         //удалить 3,4
                             // если (data.value.info.parent_num) ==3

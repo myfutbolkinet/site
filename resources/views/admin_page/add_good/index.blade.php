@@ -32,7 +32,7 @@
             <div class="col-lg-12">
                 <div class="ibox">
                     <div class="ibox-title">
-                        <h5>Wizard with Validation</h5>
+                        <h5>Вы можете добавить товарную позицию</h5>
 
 
 
@@ -56,13 +56,13 @@
                     </div>
                     <div class="ibox-content">
                         <h2>
-                            Validation Wizard Form
+                            Форма добавления товарной позиции
                         </h2>
                         <p>
-                            This example show how to use Steps with jQuery Validation plugin.
+                            Постепенно добавьте информацию о товарной позиции в соответствующие поля
                         </p>
 
-                        <form id="form" action="#" class="wizard-big">
+                        <form id="form" action="/admin/add_good" method="post" class="wizard-big">
 
 
 
@@ -79,11 +79,11 @@
                                         <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label"> Название товара : </label>
                                             <div class="col-sm-5">
-                                                <input class="form-control" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
+                                                <input class="form-control required" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
                                             </div>
                                                 <label class="col-sm-2 control-label"> Артикул : </label>
                                                 <div class="col-sm-3 input-group">
-                                                    <input class="form-control" name="artikul" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
+                                                    <input class="form-control required" name="artikul" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
                                                 </div>
 
 
@@ -108,7 +108,7 @@
 
                                                 <div class="col-sm-5 input-group m-b" style="padding-left:13px;padding-right:13px;">
                                                     <span class="input-group-addon"><i class="fa fa-dollar fa-lg"></i></span>
-                                                    <input name="price" class="form-control" type="text" placeholder="Введите цену">
+                                                    <input name="price" class="form-control required" type="text" placeholder="Введите цену">
                                                     <span class="input-group-addon">.00</span>
                                                 </div>
 
@@ -155,7 +155,7 @@
                                         <div class="form-group ">
                                             <label class="col-sm-2 control-label" style="display:block;">Категория в каталоге*</label>
                                             <input type="hidden" name="id_cat">
-                                            <p class="col-sm-10 control-label cat_name" style="font-size:17px;"></p>
+                                            <input type="text" class="col-sm-10 control-label cat_name required" style="font-size:17px;">
 
                                         </div>
                                         <div class="form-group col-sm-12 categories">
@@ -228,28 +228,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label>First name *</label>
-                                            <input id="name" name="name" type="text" class="form-control required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Last name *</label>
-                                            <input id="surname" name="surname" type="text" class="form-control required">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label>Email *</label>
-                                            <input id="email" name="email" type="text" class="form-control required email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Address *</label>
-                                            <input id="address" name="address" type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
+
                             </fieldset>
 
                             <h1>Фотографии</h1>
