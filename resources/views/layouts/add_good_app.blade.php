@@ -347,6 +347,22 @@ $('.color_btn').click(function(){
 
                         $('input[name="id_cat"]').val(data.value.id)
                         $('.cat_name').val(data.value.info.name)
+                            alert('меняется категория')
+                        //достать все свойства категории и отобразить в блоке #properties
+                            $.ajax({
+                                type: "POST",
+                                dataType: 'json',
+                                async: true,
+                                url: '/show_property_by_category',
+                                data: {id_cat: data.value.id}, // serializes the form's elements.
+                                success: function (data) {
+
+
+                                }
+
+                            });
+
+
                         //если (data.value.info.parent_num) ==2
                         //удалить 3,4
                             // если (data.value.info.parent_num) ==3

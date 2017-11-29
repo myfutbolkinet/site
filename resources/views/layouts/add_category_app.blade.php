@@ -112,6 +112,8 @@
 
         $(document).ready(function(){
 
+
+
             $('.categories').delegate('.cat_block','click',function(){
 
                 var id_cat = $(this).parent('a').find('input').val()
@@ -161,13 +163,35 @@
                                     break;
 
                             }
-                            $.each( data.value, function( key, value ) {
-                                $('.'+new_block_cl+'').append(' <a ><span onclick="faclick()" class="fahover_cubes fa fa-cubes" style=""></span><div class="cat_block" >' +
-                                    '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
-                                    value.name+
-                                    '<span class="fa arrow" style="float:right"></span>' +
-                                    '</div></a>')
-                            });
+
+                            if(new_block_cl=='cat_block_4'){
+                                $.each( data.value, function( key, value ) {
+
+
+                                    $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
+                                        '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
+                                        value.name+
+                                        '<span onclick="cube_click()" class="fahover_cubes fa fa-cube" style="float:right"></span>' +
+                                        '</div></a>')
+
+
+                                });
+
+                            }
+                            else{
+                                $.each( data.value, function( key, value ) {
+
+
+                                    $('.'+new_block_cl+'').append(' <a ><span onclick="faclick()" class="fahover_cubes fa fa-cubes" style=""></span><div class="cat_block" >' +
+                                        '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
+                                        value.name+
+                                        '<span class="fa arrow" style="float:right"></span>' +
+                                        '</div></a>')
+
+
+                                });
+                            }
+
 
                         }}
 
@@ -208,9 +232,35 @@
                 rules: {
                     confirm: {
                         equalTo: "#password"
-                    }
+                    },
+
                 }
             });
+
+            $("#form").submit(function(event){
+              var link = $('#link').val()
+
+                $.ajax({
+                    type: "POST",
+                    dataType: 'json',
+                    url: '/if_link_exist',
+                    async:false,
+                    data: {link:link}, // serializes the form's elements.
+                    success: function (data) {
+                    if(data==1){
+                    $('#link_validation').css('display','block');
+                    event.preventDefault();
+                     return false;
+                    }
+                    else{
+                      $('#link_validation').css('display','none');
+                    }
+                    }
+
+                });
+
+
+            })
         });
     </script>
 

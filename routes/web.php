@@ -14,6 +14,8 @@
 Route::post('/show_subcat', 'FuncController@show_subcat');
 Route::post('/show_property_categories','FuncController@show_property_categories');
 Route::post('/show_parent_categories_tree','FuncController@show_parent_categories_tree');
+Route::post('/show_property_by_category','FuncController@show_property_by_category');
+Route::post('/if_link_exist','FuncController@if_link_exist');
 
 Auth::routes();
 Route::get('/', 'MainController@index');

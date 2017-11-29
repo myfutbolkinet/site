@@ -86,7 +86,34 @@ class FuncController extends Controller
 
     public function add_category_form(Request $request){
 
-        dd($request->input());
+
+
+        $data=[
+            'parent_id' => $request->input('parent_id'),
+            'name' => $request->input('name'),
+            'icon'=> 'fa-envelope',
+            'icon_hover'=> 'fa-envelope',
+            'link'=> '/'.$request->input('link')
+        ];
+
+        DB::table('categories')->insert($data);
+        return redirect('/superadmin/categories/add');
+    }
+
+    public function show_property_by_category(Request $request){
+    $data['property']=DB::table('property_category')->where('property_id',$id)->get();
+    die(var_dump($request->input()));
+}
+
+    public function if_link_exist(Request $request){
+
+        if(count($data['category']=DB::table('categories')->where('link','/'.$request->input('link'))->get())>=1){
+            return json_encode(1);
+        }
+        else{
+            return json_encode(null);
+        }
+
     }
 
 }

@@ -228,6 +228,11 @@
                                     </div>
                                 </div>
 
+                                <div id="properties">
+
+
+                                </div>
+
 
                             </fieldset>
 
