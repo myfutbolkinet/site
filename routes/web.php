@@ -10,6 +10,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+$domain=Request::server("HTTP_HOST");
+
+if($domain != "magelan.imedia.in.ua"){
+// TODO Получить из базы данных список активных доменов
+    //Если среди активных доменов нет входящего выдать ошибку
+    $domains_array=['eco-new.life','imedia.eco-new.life'];
+
+
+    Route::get('/',[
+        'uses' => 'SiteController@index',
+        'as' => 'site.route'
+    ]);
+
+}
+
+
+Route::domain('magelan.imedia.in.ua')->group(function () {
+
+
 
 Route::post('/show_subcat', 'FuncController@show_subcat');
 Route::post('/show_property_categories','FuncController@show_property_categories');
@@ -159,3 +178,5 @@ Route::get('/home', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+});
