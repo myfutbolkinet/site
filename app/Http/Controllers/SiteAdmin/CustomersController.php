@@ -16,7 +16,7 @@ class CustomersController extends AdminController
         parent::__construct();
 
 
-        $this->template='admin_page';
+        $this->template='site_admin_page';
     }
     /**
      * Display a listing of the resource.
@@ -38,7 +38,7 @@ class CustomersController extends AdminController
         $data['types']=Type_of_good::get();
         $data['users']=User::get();
         $data['roles']=Role::get();
-        $this->template='admin_page/customers_managment';
+        $this->template='site_admin_page/customers_managment';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";

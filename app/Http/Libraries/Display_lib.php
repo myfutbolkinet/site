@@ -58,8 +58,8 @@ class Display_lib
         session()->forget('file_name_main_image');
         session()->forget('variable');
         $view=view($path.'.preheader_view',$data)->render();
-        $view.=view('admin_page.header_view')->render();
-        $view.=view('admin_page.main_navigation_view',$data_nav)->render();
+        $view.=view('site_admin_page.header_view')->render();
+        $view.=view('site_admin_page.main_navigation_view',$data_nav)->render();
         $view.=view($path.'.main_content_view',$data)->render();
         /*$view.=view($path.'.main_aside_view',$data)->render();*/
         $view.=view($path.'.footer_view',$data)->render();

@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	// PANEL WITH BUTTONS - LOADING OVERLAY
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 	$('.demo-panel-ref-btn').jasmineOverlay().on('click', function(){
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 	// FULLSCREEN PANEL
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 	// COLLAPSE PANEL
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 	// RELOAD PANEL
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 

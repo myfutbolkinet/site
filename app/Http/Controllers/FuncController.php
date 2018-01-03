@@ -8,6 +8,13 @@ class FuncController extends Controller
 {
     //
 	private $parent_num=0;
+    public $all_subcats=[];
+    public $all_parcats=[];
+    public $level=0;
+
+    //TODO OOP
+    //TODO Перенести всю логику связанную с категориями в FuncCategoriesController
+    //TODO OOP
 	  public function recursive_cat_names($name,$id_cat){
         $this->parent_num=$this->parent_num+1;
         $data['parent']=DB::table('categories')->where('id', $id_cat)->get();
@@ -36,11 +43,116 @@ class FuncController extends Controller
        }
 
     }
+
+    private function makeSingleArray($arr){
+        if(!is_array($arr)) return false;
+        $tmp = array();
+        foreach($arr as $val){
+            if(is_array($val)){
+                $tmp = array_merge($tmp, $this->makeSingleArray($val));
+            } else {
+                $tmp[] = $val;
+            }
+        }
+        return $tmp;
+    }
+
  public function show_subcat(Request $request){
 	$id_cat=$request->input('id_cat');
     $data=$this->print_subcat($id_cat);
     return json_encode($data);
-    } 
+    }
+    public function show_subcat_all_levels(Request $request){
+        $id_cat=$request->input('id_cat');
+
+
+        $data=$this->get_all_subcats($id_cat,0);
+
+
+        $arrOut = $this->makeSingleArray($data);
+
+
+        $parrent_cats=$this->get_all_parent_cats($id_cat);
+         //var_dump($parrent_cats);
+        if($parrent_cats){
+        foreach($parrent_cats as $value){
+            $temp=DB::table('categories')->where('id',$value)->get();
+            if(!empty($arrOut)){
+
+             array_push($arrOut,(array)$temp[0]);
+            }
+            else{
+
+                $arrOut[0]=(array)$temp[0];
+            }
+
+        }
+    }
+
+        return json_encode($arrOut);
+    }
+    public function show_parent_cats(Request $request){
+        $id_cat=$request->input('id_cat');
+        $cat=DB::table('categories')->where('id', $id_cat)->get();
+        $parent_id=$cat[0]->parent_id;
+        if($parent_id==0){
+        $cats['values']=DB::table('categories')->where('parent_id', 0)->get();
+
+
+        $cats['id_cat']=$cat[0]->id;
+        }
+        else{
+        $parent=DB::table('categories')->where('id', $parent_id)->get();
+        $main_parent=$parent[0]->parent_id;
+        $cats['values']=DB::table('categories')->where('parent_id',$main_parent)->get();
+        $cats['id_cat']=$parent[0]->id;
+        }
+
+        return $cats;
+    }
+    private function get_all_parent_cats($id_cat){
+        //рекурсивная функция
+        $cat=DB::table('categories')->where('id', $id_cat)->get();
+        $parent_id=$cat[0]->parent_id;
+        //Выбрать из базы рекурсивно все родительские элементы
+        $parent=DB::table('categories')->where('id', $parent_id)->get();
+        //var_dump($parent);
+        if(count($parent)>0){
+          array_push($this->all_parcats,$parent_id);
+                if($temperary=$this->get_all_parent_cats($parent[0]->id)==false){
+                }
+         }
+        else{
+            return $this->all_parcats;
+        }
+        return $this->all_parcats;
+    }
+
+    private function get_all_subcats($id_cat,$level){
+    //рекурсивно
+        //Выбрать из базы рекурсивно все дочерние элементы
+        $temp=DB::table('categories')->where('parent_id', $id_cat)->get();
+        if(count($temp)>0){
+        array_push($this->all_subcats,(array)$temp);
+            foreach($temp as $value){
+             //$level++;var_dump($level);var_dump('value',$value->id);
+                if($temperary=$this->get_all_subcats($value->id,$level)!==false){
+                    if(is_object($temperary)){
+                    array_push($this->all_subcats,(array)$temperary );}
+                }
+                else{
+
+                    return $this->all_subcats;
+               }
+            }
+        }
+        else{
+        return false;
+        }
+
+
+
+    }
 
     public function print_subcat($id_cat){
 

@@ -13,9 +13,12 @@ class SiteController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public $host;
 
+    public function __construct(Request $request)
+    {
+    /*    $this->middleware('auth:admin');*/
+    $this->host=$request->getHttpHost();
     }
 
     /**
@@ -25,8 +28,8 @@ class SiteController extends Controller
      */
     public function index(Request $request)
     {
-        $host = $request->getHttpHost();
-        dd($host);
+
+        dd($this->host);
         $collection = Site::all();
         $site= $collection;
 
@@ -62,6 +65,7 @@ class SiteController extends Controller
         echo json_encode('Menu edited');
 
     }
+
 
 
 

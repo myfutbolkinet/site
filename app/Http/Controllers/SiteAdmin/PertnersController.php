@@ -22,7 +22,7 @@ class PertnersController extends AdminController
             ->get();
 
 
-        $this->template='admin_page/partners';
+        $this->template='site_admin_page/partners';
         $data['title']="Партнери";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
@@ -44,7 +44,7 @@ class PertnersController extends AdminController
             ->get();
 
 
-        $this->template='admin_page/del_logos';
+        $this->template='site_admin_page/del_logos';
         $data['title']="Партнери";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
@@ -64,7 +64,7 @@ class PertnersController extends AdminController
         
 
 
-        $this->template='admin_page/add_logos';
+        $this->template='site_admin_page/add_logos';
         $data['title']="Партнери";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";

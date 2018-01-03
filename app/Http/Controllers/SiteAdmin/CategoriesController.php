@@ -27,7 +27,7 @@ class CategoriesController extends AdminController
             ->get();
         $data['types']=Type_of_good::get();
 
-        $this->template='admin_page/categories';
+        $this->template='site_admin_page/categories';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
@@ -50,7 +50,7 @@ class CategoriesController extends AdminController
             ->get();
         $data['types']=Type_of_good::get();
 
-        $this->template='admin_page/add_category';
+        $this->template='site_admin_page/add_category';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";

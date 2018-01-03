@@ -9,6 +9,8 @@ use Auth;
 class IndexController extends AdminController
 {
     //
+    public $site;
+
     public function __construct()
     {
        parent::__construct();
@@ -21,6 +23,10 @@ class IndexController extends AdminController
 
             abort(403);
         }
+        $host = $request->getHttpHost();
+        $this->site=$host;
+        dd($host);
+
         $data_nav['menu']=$this->menu();
         $data=array();
         $this->title = 'Панель администратора';

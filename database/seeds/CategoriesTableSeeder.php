@@ -979,40 +979,46 @@ class CategoriesTableSeeder extends Seeder
 
 
         DB::table('admin_categories')->insert([
-
+            /*1*/
             [
                 'parent_id' => 0,
                 'name' => 'Користувачі',
                 'icon'=> 'fa-users',
                 'link'=> '/admin'
             ],
+            /*2*/
             [
                 'parent_id' => 1,
                 'name' => 'Управління користувачами',
                 'icon'=> 'fa-registered',
                 'link'=> '/admin/customers_managment'
             ],
+            /*3*/
             [
                 'parent_id' => 0,
                 'name' => 'Товари',
                 'icon'=> 'fa-gift',
                 'link'=> '/admin'
             ],
+            /*4*/
             [
                 'parent_id' => 3,
                 'name' => 'Додати товар',
                 'icon'=> 'fa-envelope','link'=> '/admin/add_good'
             ],
+            /*5*/
             [
                 'parent_id' => 3,
                 'name' => 'Видалити товар',
                 'icon'=> 'fa-envelope','link'=> '/admin/delete_good'
             ],
+            /*6*/
             [
                 'parent_id' => 3,
                 'name' => 'Категоріі товаров',
                 'icon'=> 'fa-envelope','link'=> '/admin/categories'
             ],
+            /*7*/
 
             [
                 'parent_id' => 0,
@@ -1021,27 +1027,43 @@ class CategoriesTableSeeder extends Seeder
                 'link'=> '/admin'
 
             ],
+            /*8*/
             [
                 'parent_id' => 0,
                 'name' => 'Реклама',
                 'icon'=> 'fa-bullhorn',
                 'link'=> '/admin'
             ],
+            /*9*/
             [
                 'parent_id' => 0,
                 'name' => 'Партнери',
                 'icon'=> 'fa-thumbs-o-up',
                 'link'=> '/admin/partners'
             ],
+            /*10*/
             [
                 'parent_id' => 9,
                 'name' => 'Додати логотипи',
                 'icon'=> 'fa-envelope','link'=> '/admin/add_logos'
             ],
+            /*11*/
             [
                 'parent_id' => 9,
                 'name' => 'Видалити логотипи',
                 'icon'=> 'fa-envelope','link'=> '/admin/del_logos'
+            ],
+            /*12*/
+            [
+                'parent_id' => 0,
+                'name' => 'Внешний вид',
+                'icon'=> 'fa-envelope','link'=> '/admin/themes'
+            ],
+            /*13*/
+            [
+                'parent_id' => 12,
+                'name' => 'Меню категорий товаров',
+                'icon'=> 'fa-envelope','link'=> '/admin/nav_goods_menu'
             ],
         ]);
 

@@ -359,12 +359,12 @@ $(window).on('load', function() {
 
 	// WELCOME NOTIFICATIONS
 	// =================================================================
-	// Require Admin Core Javascript
+	// Require SiteAdmin Core Javascript
 	// =================================================================
 	 var fvisit  = setTimeout(function(){
 		$.jasmineNoty({
 			type: 'dark',
-			title: 'Hello Admin,',
+			title: 'Hello SiteAdmin,',
 			message: 'Lorem ipsum dolor sit amet consectetuer <br> adipiscing elit sed diam nonummy nibh.',
 			container: 'floating',
 			timer: 5500

@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 	// GROW-LIKE / FLOATING ALERTS
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 	$('#demo-alert-noty').on('click', function(){

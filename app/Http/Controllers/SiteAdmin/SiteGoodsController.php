@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\SiteAdmin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -9,7 +9,7 @@ use App\Category;
 use App\Type_of_good;
 use App\Good;
 use App\Photo;
-class GoodsController extends AdminController
+class SiteGoodsController extends SiteAdminController
 {
    
     public function __construct()
@@ -24,12 +24,6 @@ class GoodsController extends AdminController
      */
     public function index(){
         /*$this->user=Auth::user();*/
-        
-        if(Gate::denies('VIEW_ADMIN')){
-
-            abort(403);
-        }
-
         $this->title = 'Панель администратора';
         $data['categories']=Category::orderBy('parent_id', 'asc')
             ->orderBy('created_at', 'desc')
@@ -41,7 +35,7 @@ class GoodsController extends AdminController
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
 
-        return view('admin_page/add_good/index',$data,$data_nav);
+        return view('site_admin_page/add_good/index',$data,$data_nav);
     }
 
     public function add_good(Request $request){
@@ -65,7 +59,7 @@ class GoodsController extends AdminController
         $data['types']=Type_of_good::get();
         $data['goods']=Good::get();
 
-        $this->template='admin_page/delete_goods';
+        $this->template='site_admin_page/delete_goods';
         $data['title']="Видалити товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
@@ -158,7 +152,7 @@ class GoodsController extends AdminController
             ->orderBy('updated_at', 'desc')
             ->get();
 
-        $this->template='admin_page/edit_good';
+        $this->template='site_admin_page/edit_good';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";

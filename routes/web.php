@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 $domain=Request::server("HTTP_HOST");
 
 if($domain != "magelan.imedia.in.ua"){
@@ -17,11 +18,58 @@ if($domain != "magelan.imedia.in.ua"){
     //Если среди активных доменов нет входящего выдать ошибку
     $domains_array=['eco-new.life','imedia.eco-new.life'];
 
-
     Route::get('/',[
         'uses' => 'SiteController@index',
         'as' => 'site.route'
     ]);
+
+    //TODO OOP
+    //TODO Перенести всю логику связанную с категориями в FuncCategoriesController
+    //TODO OOP
+    Route::post('/show_subcat', 'FuncController@show_subcat');
+    Route::post('/show_subcat_all_levels', 'FuncController@show_subcat_all_levels');
+    Route::post('/show_parent_cats', 'FuncController@show_parent_cats');
+    Route::post('/save_cats_list', '\App\Http\Ajax\FuncCategoriesClass@save_cats_list');
+
+    Route::post('/show_property_categories','FuncController@show_property_categories');
+    Route::post('/show_parent_categories_tree','FuncController@show_parent_categories_tree');
+    Route::post('/show_property_by_category','FuncController@show_property_by_category');
+    Route::post('/if_link_exist','FuncController@if_link_exist');
+
+
+
+    //admin
+
+    Route::group(['prefix' => 'admin'],function(){
+
+        Route::get('/login', 'Auth\SiteAdminLoginController@showLoginForm')->name('site.admin.login');
+        Route::post('/login', 'Auth\SiteAdminLoginController@login')->name('site.admin.login.submit');
+        Route::get('/', 'SiteAdmin\SiteAdminController@index')->name('site.admin.dashboard');
+        Route::resource('/add_good','SiteAdmin\SiteGoodsController');
+        Route::post('/add_good', 'SiteAdmin\SiteGoodsController@add_good');
+        //admin
+       /* Route::get('/main',['uses' => 'SiteAdmin\IndexController@main','as' => 'adminMain']);
+
+        Route::post('/func_update_role', 'FunctionsController@role');
+        Route::post('/func_delete_user', 'FunctionsController@delete_user');
+        Route::post('/func_delete_good', 'FunctionsController@delete_good');
+
+        Route::get('/add_logos','SiteAdmin\PertnersController@add_logos');
+        Route::get('/del_logos','SiteAdmin\PertnersController@del_logos');
+        Route::get('/categories','SiteAdmin\CategoriesController@index');
+        Route::get('/partners','SiteAdmin\PertnersController@index');
+        Route::get('/add_category','SiteAdmin\CategoriesController@add_category');
+        Route::get('/delete_good','SiteAdmin\GoodsController@delete_good');
+        Route::get('/good/{id}','SiteAdmin\GoodsController@edit_good');
+
+        Route::resource('/customers_managment','SiteAdmin\CustomersController');*/
+
+        Route::get('/menu_areas','SiteAdmin\MenuController@index')->name('site.admin.menu_areas');
+
+
+
+
+    });
 
 }
 
@@ -35,8 +83,8 @@ Route::post('/show_property_categories','FuncController@show_property_categories
 Route::post('/show_parent_categories_tree','FuncController@show_parent_categories_tree');
 Route::post('/show_property_by_category','FuncController@show_property_by_category');
 Route::post('/if_link_exist','FuncController@if_link_exist');
-
-Auth::routes();
+/*
+*/
 Route::get('/', 'MainController@index');
 /*Route::get('/admin', 'AdminController@index');
 Route::get('/admin/customers_managment', 'AdminController@customers_managment');
@@ -87,25 +135,25 @@ Auth::logout();
 
 });
 //admin
-Route::group(['prefix' => 'admin','middleware'=>['web','auth']],function(){
+/*Route::group(['prefix' => 'admin','middleware'=>['web','auth']],function(){
        //admin
-    Route::get('/main',['uses' => 'Admin\IndexController@main','as' => 'adminMain']);
-    Route::get('/',['uses' => 'Admin\IndexController@index','as' => 'adminIndex']);
+    Route::get('/main',['uses' => 'SiteAdmin\IndexController@main','as' => 'adminMain']);
+    Route::get('/',['uses' => 'SiteAdmin\IndexController@index','as' => 'adminIndex']);
     
     Route::post('/func_update_role', 'FunctionsController@role');
     Route::post('/func_delete_user', 'FunctionsController@delete_user');
     Route::post('/func_delete_good', 'FunctionsController@delete_good');
-    Route::resource('/add_good','Admin\GoodsController');
-    Route::get('/add_logos','Admin\PertnersController@add_logos');
-    Route::get('/del_logos','Admin\PertnersController@del_logos');
-    Route::get('/categories','Admin\CategoriesController@index');
-    Route::get('/partners','Admin\PertnersController@index');
-    Route::get('/add_category','Admin\CategoriesController@add_category');
-    Route::get('/delete_good','Admin\GoodsController@delete_good');
-    Route::get('/good/{id}','Admin\GoodsController@edit_good');
-    Route::post('/add_good', 'Admin\GoodsController@add_good');
-    Route::resource('/customers_managment','Admin\CustomersController');
-});
+    Route::resource('/add_good','SiteAdmin\GoodsController');
+    Route::get('/add_logos','SiteAdmin\PertnersController@add_logos');
+    Route::get('/del_logos','SiteAdmin\PertnersController@del_logos');
+    Route::get('/categories','SiteAdmin\CategoriesController@index');
+    Route::get('/partners','SiteAdmin\PertnersController@index');
+    Route::get('/add_category','SiteAdmin\CategoriesController@add_category');
+    Route::get('/delete_good','SiteAdmin\GoodsController@delete_good');
+    Route::get('/good/{id}','SiteAdmin\GoodsController@edit_good');
+    Route::post('/add_good', 'SiteAdmin\GoodsController@add_good');
+    Route::resource('/customers_managment','SiteAdmin\CustomersController');
+});*/
 
 //superadmin
 Route::group(['prefix' => 'superadmin','middleware'=>['web','auth']],function(){
@@ -169,14 +217,11 @@ Route::post('/change_rating','FunctionsController@change_rating');
 
 
 
+/*
 
-
-Auth::routes();
+Auth::routes();*/
 
 Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index');
 
 });

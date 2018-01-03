@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
 
             [
 
-                'name' => 'Admin',
+                'name' => 'SiteAdmin',
 
             ],
             [
@@ -220,6 +220,25 @@ class UsersTableSeeder extends Seeder
                 'index'=>348766,
 
             ]
+
+
+        ]);
+
+        DB::table('site_users')->insert([
+
+            [
+                'name' => 'Лопушанский Андрей',
+                'email'=>'imediasun@gmail.com',
+                'domain'=>'farfalla.loc',
+                'password'=>bcrypt('sunimedia'),
+                'mobile'=>'+38(096)544-11-20',
+                'add_phone'=>'+38(096)544-11-20',
+                'information'=>'information description',
+                'status'=>1,
+                'activated'=> TRUE,
+
+
+            ],
 
 
         ]);

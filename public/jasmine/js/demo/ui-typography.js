@@ -29,7 +29,7 @@
 
 	// FULLSCREEN PANEL
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 
@@ -49,7 +49,7 @@
 
 	// COLLAPSE PANEL
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 
@@ -61,7 +61,7 @@
 
 	// RELOAD PANEL
 	// =================================================================
-	// Require Nifty Admin Javascript
+	// Require Nifty SiteAdmin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 

@@ -25,7 +25,6 @@ class PrivateCabinetController extends Controller
     public function index($id,Request $request){
 
         $user= Auth::user()->id;
-        
         if($user!==(int)$id){
 
         return redirect()->route('not_yours');

@@ -13,13 +13,13 @@ class AdminController extends Controller
 
     public function __construct()
     {
-
-    $this->middleware('auth');
+     $this->middleware('auth:admin');
+   /* $this->middleware('auth');
         Auth::login(User::find(1));
         if(Gate::denies('VIEW_ADMIN')){
             dd(Gate::check('VIEW_ADMIN'));
             abort(403);
-        }
+        }*/
     }
     
     
@@ -31,10 +31,8 @@ class AdminController extends Controller
     }
     public function index()
     {
-
-
         $data_nav['menu']=$this->menu();
-        $path='admin_page';
+        $path='site_admin_page';
         $data['title']="Фрилансим по крупному";
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
@@ -46,7 +44,7 @@ class AdminController extends Controller
 
 
         $data_nav['menu']=$this->menu();
-        $path='admin_page/customers_managment';
+        $path='site_admin_page/customers_managment';
         $data['title']="Фрилансим по крупному";
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
@@ -63,7 +61,7 @@ class AdminController extends Controller
         $data['types']=Type_of_good::get();
         
         $data_nav['menu']=$this->menu();
-        $path='admin_page/add_good';
+        $path='site_admin_page/add_good';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
@@ -75,7 +73,7 @@ class AdminController extends Controller
       
 
         $data_nav['menu']=$this->menu();
-        $path='admin_page/add_logos';
+        $path='site_admin_page/add_logos';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
@@ -84,7 +82,7 @@ class AdminController extends Controller
     public function del_logos()
     {
         $data_nav['menu']=$this->menu();
-        $path='admin_page/del_logos';
+        $path='site_admin_page/del_logos';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
