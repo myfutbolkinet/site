@@ -12,9 +12,9 @@ use App\Photo;
 class SiteGoodsController extends SiteAdminController
 {
    
-    public function __construct()
+    public function __construct(Request $request)
     {
-        parent::__construct();
+        parent::__construct($request);
 
     }
     /**
@@ -28,6 +28,9 @@ class SiteGoodsController extends SiteAdminController
         $data['categories']=Category::orderBy('parent_id', 'asc')
             ->orderBy('created_at', 'desc')
             ->orderBy('updated_at', 'desc')
+            ->get();
+        $user=Auth::guard('admin')->user()->id;
+        $is_cat=Site_categories::where('user_id', $user)
             ->get();
         $data['types']=Type_of_good::get();
         $data_nav['menu']=$this->menu();

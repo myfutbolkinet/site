@@ -3,22 +3,25 @@
 namespace App\Http\Controllers\SiteAdmin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Gate;
 use Auth;
 use App\Category;
-use App\Http\Site;
+
 
 class MenuController extends SiteAdminController
 {
     //
     public $category_menu;
     public $user_categories;
+    public $user;
 
-    public function __construct(Request $request)
+    public function __construct(Auth $auth)
     {
-        parent::__construct($request);
+parent::__construct();
         $this->user_categories=$this->CategoriesMenu();
+
+       // $this->user=$auth::guard('admin')->user()->id;
+        //dd($this->user_categories);
     }
 
     public function index(){
@@ -31,10 +34,36 @@ class MenuController extends SiteAdminController
             ->orderBy('created_at', 'desc')
             ->orderBy('updated_at', 'desc')
             ->get();
+        dd(Auth::guard('admin')->user()->id);
+        dd($this->user);
         $data['site_categories']=$this->user_categories;
+        dd($data['site_categories']);
         return view('site_admin_page/themes/menu_areas/index',$data);
     }
 
+
+    public function save_cats_list(Request $request){
+        $cats_array=serialize($request->input('cats_array'));
+        /*$user=Auth::guard('admin')->user()->id;
+
+        $is_cat=Site_categories::where('user_id', $user)
+            ->get();*/
+        $is_cat=$this->user_categories;
+        var_dump($is_cat);
+        if(count($is_cat)>0){
+            $is_cat = Site_categories::find($is_cat[0]->id);
+
+            $is_cat->categories = $cats_array;
+        }
+        else{
+            $is_cat = new Site_categories();
+
+            $is_cat->user_id = $user;
+            $is_cat->categories = $cats_array;
+        }
+        $is_cat->save();
+
+    }
 
 }
 

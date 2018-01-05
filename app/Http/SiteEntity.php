@@ -11,19 +11,25 @@ namespace App\Http;
 
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Site_categories;
 
-abstract class SiteEntity extends Controller implements Categories
+abstract class SiteEntity extends Controller
 {
 
 
-    protected $host;
+
     abstract public function CategoriesMenu();
 
+public function __construct(){
+
+}
+public function get_host(Request $request){
+    $this->host=$request->getHttpHost();
+}
 
 
-    public function get_categories(){
 
-        //TODO get current categories from database
-        dump( 'user_categories');
-    }
+
+
 }
