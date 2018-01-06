@@ -340,7 +340,7 @@ $('.color_btn').click(function(){
                     dataType: 'json',
                     async: false,
                     url: '/show_subcat',
-                    data: {id_cat: id_cat}, // serializes the form's elements.
+                    data: {id_cat: id_cat,is_user:1}, // serializes the form's elements.
                     success: function (data) {
                         if(data.message=='null'){
                         //проверить чтобы соседние последующие блоки были пусты

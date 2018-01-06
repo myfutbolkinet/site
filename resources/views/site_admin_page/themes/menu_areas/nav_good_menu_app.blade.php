@@ -104,6 +104,9 @@
     <script>
         $(document).ready(function () {
             checked_categories=[];
+            <?php if(isset($json)){?>
+            checked_categories=eval('<?php echo $json;?>');
+            <?php } ?>
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
@@ -496,8 +499,10 @@ $('.btn_save_categories').click(function(){
         url: "/save_cats_list",
         data: {cats_array: cats_array}, // serializes the form's elements.
         success: function (data) {
-         alert(data)
-
+            alert(data)
+         if (data=='Changes saved'){
+         alert('Изменения сохранены на диск')
+        }
         }
     });
 })

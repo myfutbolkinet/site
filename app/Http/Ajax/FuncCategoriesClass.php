@@ -7,7 +7,7 @@ use Auth;
 use App\Site_categories;
 class FuncCategoriesClass
 {
-
+//TODO Check and Delete this class
 
    public function save_cats_list(Request $request){
        $cats_array=serialize($request->input('cats_array'));

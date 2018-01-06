@@ -20,6 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->text('link');
             $table->text('icon');
             $table->text('icon_hover');
+            $table->boolean('can_be_last_cat');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });

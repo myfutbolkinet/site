@@ -9,27 +9,47 @@
 namespace App\Http;
 
 
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Site_categories;
+use App\Category;
 
 abstract class SiteEntity extends Controller
 {
 
 
+    public function CategoriesMenu()
+    {
+        $categories = Category::orderBy('parent_id', 'asc')
+            ->orderBy('created_at', 'desc')
+            ->orderBy('updated_at', 'desc')
+            ->get();
+        dump('Не правильно',$this->user_categories['categories_array']);
+        foreach ($categories as $category) {
 
-    abstract public function CategoriesMenu();
+            if(isset($this->user_categories['categories_array'][0]) && $this->user_categories['categories_array'][0]->categories!==''){
 
-public function __construct(){
+            if (in_array($category->id, unserialize($this->user_categories['categories_array'][0]->categories))) {
+                $data['categories'][] = $category;
+          }
+        }
+        else{
+            $data['categories']=null;
+        }
+        }
 
-}
-public function get_host(Request $request){
-    $this->host=$request->getHttpHost();
-}
+        return $data['categories'];
+    }
 
+    public function __construct()
+    {
 
+    }
 
+    public function get_host(Request $request)
+    {
+        $this->host = $request->getHttpHost();
+    }
 
 
 }

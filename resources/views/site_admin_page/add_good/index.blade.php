@@ -1,4 +1,4 @@
-@extends('layouts.add_good_app')
+@extends('site_admin_page.add_good.add_good_app')
 
 @section('title', 'Main page')
 
@@ -158,7 +158,11 @@
                                             <input type="text" class="col-sm-10 control-label cat_name required" style="font-size:17px;">
 
                                         </div>
+
+
                                         <div class="form-group col-sm-12 categories">
+
+                                         @if($categories!==null)
                                             <div class="block_main_categories cat_block_1" style="">
                                                 @foreach ($categories as $key=>$category)
                                                     @if($category->parent_id==0)
@@ -184,6 +188,14 @@
 
 
                                             </div>
+
+                                            @else
+                                             <div style="width:100%;height:100px;color:#fff;background:red;text-align:center">
+
+                                                 <h3>У вас не выбраны категории товаров для использования в вашем интернет магазине </h3>
+                                                 <a href="/admin/menu_areas">Перейти для выбора категорий</a>
+                                             </div>
+                                            @endif
                                         </div>
 
 
