@@ -17,7 +17,7 @@ class SiteAdminController extends \App\Http\SiteEntity implements Categories
     public $user;
     public function __construct()
     {
-        parent::__construct();
+    parent::__construct();
     $this->middleware('auth:admin');
 
 

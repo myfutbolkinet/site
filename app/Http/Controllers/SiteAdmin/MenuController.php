@@ -17,10 +17,10 @@ class MenuController extends SiteAdminController
 
     public function __construct(Auth $auth)
     {
-parent::__construct();
+        //parent::__construct();
         $this->user_categories=$this->CategoriesMenu();
-
-       // $this->user=$auth::guard('admin')->user()->id;
+       $this->user=$auth::guard('admin')->user()->id;
+       dd($this->user);
         //dd($this->user_categories);
     }
 
@@ -34,7 +34,7 @@ parent::__construct();
             ->orderBy('created_at', 'desc')
             ->orderBy('updated_at', 'desc')
             ->get();
-        dd(Auth::guard('admin')->user()->id);
+
         dd($this->user);
         $data['site_categories']=$this->user_categories;
         dd($data['site_categories']);
