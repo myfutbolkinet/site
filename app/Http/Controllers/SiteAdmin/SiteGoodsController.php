@@ -12,9 +12,9 @@ use App\Photo;
 class SiteGoodsController extends SiteAdminController
 {
    
-    public function __construct(Request $request)
+    public function __construct()
     {
-        parent::__construct($request);
+       parent::__construct();
 
     }
     /**
@@ -25,13 +25,8 @@ class SiteGoodsController extends SiteAdminController
     public function index(){
         /*$this->user=Auth::user();*/
         $this->title = 'Панель администратора';
-        $data['categories']=Category::orderBy('parent_id', 'asc')
-            ->orderBy('created_at', 'desc')
-            ->orderBy('updated_at', 'desc')
-            ->get();
-        $user=Auth::guard('admin')->user()->id;
-        $is_cat=Site_categories::where('user_id', $user)
-            ->get();
+        $data['categories']=$this->user_categories['categories'];
+        //dd('$data[\'categories\']',$data['categories']);
         $data['types']=Type_of_good::get();
         $data_nav['menu']=$this->menu();
         $data['title']="Додати товар";

@@ -9,27 +9,29 @@
 namespace App\Http;
 
 
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Site_categories;
+use App\Category;
 
 abstract class SiteEntity extends Controller
 {
 
 
+    public function CategoriesMenu()
+    {
 
-    abstract public function CategoriesMenu();
+    }
 
-public function __construct(){
+    public function __construct()
+    {
 
-}
-public function get_host(Request $request){
-    $this->host=$request->getHttpHost();
-}
+    }
 
-
-
+    public function get_host(Request $request)
+    {
+        $this->host = $request->getHttpHost();
+    }
 
 
 }

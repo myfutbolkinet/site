@@ -8,9 +8,12 @@ use App\Site_categories;
 class FuncCategoriesClass
 {
 
-
    public function save_cats_list(Request $request){
+       if($request->input('cats_array')==NULL){
+       $cats_array='';
+       }else{
        $cats_array=serialize($request->input('cats_array'));
+        }
        $user=Auth::guard('admin')->user()->id;
 
        $is_cat=Site_categories::where('user_id', $user)
@@ -27,7 +30,7 @@ class FuncCategoriesClass
            $is_cat->categories = $cats_array;
        }
        $is_cat->save();
-
+       return json_encode('Changes saved');
 
    }
 }

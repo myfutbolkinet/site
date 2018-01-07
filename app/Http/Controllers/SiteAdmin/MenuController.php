@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Gate;
 use Auth;
 use App\Category;
-
-
+use App\Site_categories;
+use App\Http\Classes\CategoriesFactory;
 class MenuController extends SiteAdminController
 {
     //
@@ -15,13 +15,10 @@ class MenuController extends SiteAdminController
     public $user_categories;
     public $user;
 
-    public function __construct(Auth $auth)
+    public function __construct()
     {
-        //parent::__construct();
-        $this->user_categories=$this->CategoriesMenu();
-       $this->user=$auth::guard('admin')->user()->id;
-       dd($this->user);
-        //dd($this->user_categories);
+       parent::__construct();
+      //dd($this->user_categories);
     }
 
     public function index(){
@@ -30,40 +27,16 @@ class MenuController extends SiteAdminController
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
-        $data['categories']=Category::orderBy('parent_id', 'asc')
-            ->orderBy('created_at', 'desc')
-            ->orderBy('updated_at', 'desc')
-            ->get();
+        $f=new CategoriesFactory();
+        $f=$f->get_categories('All');
+        $data=$f->show_categories();
+        //dd($data);
 
-        dd($this->user);
-        $data['site_categories']=$this->user_categories;
-        dd($data['site_categories']);
         return view('site_admin_page/themes/menu_areas/index',$data);
     }
 
 
-    public function save_cats_list(Request $request){
-        $cats_array=serialize($request->input('cats_array'));
-        /*$user=Auth::guard('admin')->user()->id;
 
-        $is_cat=Site_categories::where('user_id', $user)
-            ->get();*/
-        $is_cat=$this->user_categories;
-        var_dump($is_cat);
-        if(count($is_cat)>0){
-            $is_cat = Site_categories::find($is_cat[0]->id);
-
-            $is_cat->categories = $cats_array;
-        }
-        else{
-            $is_cat = new Site_categories();
-
-            $is_cat->user_id = $user;
-            $is_cat->categories = $cats_array;
-        }
-        $is_cat->save();
-
-    }
 
 }
 

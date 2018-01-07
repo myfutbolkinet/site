@@ -29,7 +29,7 @@ if($domain != "magelan.imedia.in.ua"){
     Route::post('/show_subcat', 'FuncController@show_subcat');
     Route::post('/show_subcat_all_levels', 'FuncController@show_subcat_all_levels');
     Route::post('/show_parent_cats', 'FuncController@show_parent_cats');
-    Route::post('/save_cats_list', 'SiteAdmin\MenuController@save_cats_list');
+    Route::post('/save_cats_list', '\App\Http\Ajax\FuncCategoriesClass@save_cats_list');
 
     Route::post('/show_property_categories','FuncController@show_property_categories');
     Route::post('/show_parent_categories_tree','FuncController@show_parent_categories_tree');

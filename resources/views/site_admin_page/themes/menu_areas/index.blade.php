@@ -70,16 +70,23 @@
                                     <div class="block_main_categories cat_block_1" style="">
                                         @foreach ($categories as $key=>$category)
                                             @if($category->parent_id==0)
+
                                                 <a >
 
                                                     <div  class="cat_block" >
 
                                                         <input  class="fahover_cubes_input" type="hidden" value="{{$category->id}}">
-                                                        <div style="display:inline-block" class="i-checks"><label> <input class="category_checkbox" type="checkbox" value=""> </label></div>
+
+                                                            <div style="display:inline-block" class="i-checks">
+                                                            <label> <input class="category_checkbox" type="checkbox" {{$category->checked}} value=""> </label>
+                                                            </div>
+
+
                                                         <span style="position:relative;padding-left:20px;">{{$category->name}}</span>
 
                                                         <span class="fa arrow" style="float:right"></span>
                                                     </div></a>
+
                                             @endif
                                         @endforeach
 

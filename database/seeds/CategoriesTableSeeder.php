@@ -19,7 +19,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Авто Мото',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*2*/
             [
@@ -27,7 +28,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Одежда, обувь, аксессуары',
                 'link'=> '/Odezhda',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*3*/
             [
@@ -35,7 +37,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Материалы для ремонта',
                 'link'=> '/Materialy-dlya-remonta',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*4*/
             [
@@ -43,7 +46,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Техника и электроника',
                 'link'=> '/Tehnika-i-elektronika',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*5*/
             [
@@ -51,7 +55,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Красота и здоровье',
                 'link'=> '/Krasota-i-zdorove',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*6*/
             [
@@ -59,7 +64,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Спорт и отдых',
                 'link'=> '/Sport-i-otdykh',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*7*/
             [
@@ -67,7 +73,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Товары для детей',
                 'link'=> '/Tovary-dlya-detej',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*8*/
             [
@@ -75,7 +82,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Товары для детей',
                 'link'=> '/Tovary-dlya-detej',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*9*/
             [
@@ -83,7 +91,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Подарки, хобби, книги',
                 'link'=> '/Podarki-i-suveniry',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*10*/
             [
@@ -91,7 +100,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Дом и сад',
                 'link'=> '/Dom-i-sad',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*11*/
             [
@@ -99,7 +109,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Домашние животные и зоотовары',
                 'link'=> '/Domashnie-zhivotnye-i-zootovary',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*12*/
             [
@@ -107,7 +118,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Украшения и часы',
                 'link'=> '/Ukrasheniya-i-chasy',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*13*/
             [
@@ -115,7 +127,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Канцтовары',
                 'link'=> '/Kantstovary-1',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*14*/
             [
@@ -123,7 +136,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Свадебные товары',
                 'link'=> '/Svadebnye-tovary',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*15*/
             [
@@ -131,7 +145,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Продукты питания и напитки',
                 'link'=> '/Produkty-pitaniya-napitki',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*16*/
             [
@@ -139,7 +154,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Грузовики автобусы и спецтехника',
                 'link'=> '/Avto-moto-spetstehnika',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*17*/
             [
@@ -147,7 +163,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Инструмент',
                 'link'=> '/Instrument',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*18*/
             [
@@ -155,7 +172,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Антиквариат и коллекционирование',
                 'link'=> '/Antikvariat-i-predmety-roskoshi',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*19*/
             [
@@ -163,7 +181,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Все для пляжа',
                 'link'=> '/Vse-dlya-plyazha',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*20*/
             [
@@ -171,7 +190,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Строительствоа',
                 'link'=> '/Stroitelstvo',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*21*/
             [
@@ -179,7 +199,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Военторг',
                 'link'=> '/Voentorg',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*22*/
             [
@@ -187,21 +208,24 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Здоровая неделя',
                 'link'=> '/Zdorovaya-nedelya',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*23*/
             [
                 'parent_id' => 0,'name' =>'Все на пикник',
                 'link'=> '/Vse-na-piknik',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*24*/
             [
                 'parent_id' => 0,'name' =>'Все для отпуска',
                 'link'=> '/Vse-dlya-otpuska',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*25*/
 
@@ -210,7 +234,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автозапчасти',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*26*/
             [
@@ -218,7 +243,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Аксессуары для авто',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*27*/
             [
@@ -226,7 +252,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Диски и шины',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*28*/
             [
@@ -234,7 +261,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автохимия, автокосметика и автомасла',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*29*/
             [
@@ -242,7 +270,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильная электроника',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*30*/
             [
@@ -250,7 +279,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Электрооборудование автомобилей',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*31*/
             [
@@ -258,7 +288,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Мототехника',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*32*/
             [
@@ -266,7 +297,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Дополнительное оборудование',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*33*/
             [
@@ -274,7 +306,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автоинструмент',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*34*/
             [
@@ -282,7 +315,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Легковые автомобили',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*35*/
             [
@@ -290,7 +324,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Легковые элктромобили',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*36*/
             [
@@ -298,7 +333,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автодома',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*37*/
             [
@@ -306,7 +342,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Детали ходовой',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*38*/
             [
@@ -314,7 +351,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Двигатели и детали двигателя',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*39*/
             [
@@ -322,7 +360,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Кузовные запчасти',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*40*/
             [
@@ -330,7 +369,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Световые приборы транспорта',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*41*/
             [
@@ -338,7 +378,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Система питания двигателя',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*42*/
             [
@@ -346,7 +387,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Запчасти тормозной системы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*43*/
             [
@@ -354,7 +396,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Детали трансмиссии транспорта',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*44*/
             [
@@ -362,7 +405,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Кривошипно-шатунный механизм',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*45*/
             [
@@ -370,7 +414,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Система охлаждения двигателя',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*46*/
             [
@@ -378,7 +423,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Органы управления',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*47*/
             [
@@ -386,7 +432,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Детали мостов и привода трансмиссии',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*48*/
             [
@@ -394,7 +441,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автостекла',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*49*/
             [
@@ -402,7 +450,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Система зажигания двигателя',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*50*/
             [
@@ -410,7 +459,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Детали салона автомобиля',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*51*/
             [
@@ -418,7 +468,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Система смазки двигателя',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*52*/
             [
@@ -426,7 +477,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Система выпуска отработавших газов',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*53*/
             [
@@ -434,7 +486,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автозеркала и комплектующие',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*54*/
             [
@@ -442,7 +495,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Газораспределительный механизм',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*55*/
             [
@@ -450,7 +504,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Кондиционеры и комплектующие',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*56*/
             [
@@ -458,7 +513,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Фильтры для авто-мото и грузовой техники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*57*/
             [
@@ -466,7 +522,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Предпусковые обогреватели и автономные отопители',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*58*/
             [
@@ -474,7 +531,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Шайбы, гровер',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*59*/
             [
@@ -482,7 +540,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ремкомплекты автомобильные',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*60*/
             [
@@ -490,7 +549,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Стеклоочистители, дворники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*61*/
             [
@@ -498,7 +558,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Система очистки окон и фар автомобиля',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>false
             ],
             /*62*/
             [
@@ -506,7 +567,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Авторазборка',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*63*/
             [
@@ -514,7 +576,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Амортизаторы,стойки,подушки стоек',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*64*/
             [
@@ -522,7 +585,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Подшипники для транспорта',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*65*/
             [
@@ -530,7 +594,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Пружины,рессоры для техники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*66*/
             [
@@ -538,7 +603,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Сайлентблоки',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*67*/
             [
@@ -546,7 +612,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Стабилизаторы,стойки стабилизатора,тяги стабилизатора',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*68*/
             [
@@ -554,7 +621,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Втулки автомобильные',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*69*/
             [
@@ -562,7 +630,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Пневморессоры, пневмоподушки',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*70*/
             [
@@ -570,7 +639,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Рычаги,тяги',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*71*/
             [
@@ -578,7 +648,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Шаровые опоры',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*72*/
             [
@@ -586,7 +657,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Пыльники,отбойники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*73*/
             [
@@ -594,7 +666,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ступицы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*74*/
             [
@@ -602,7 +675,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные опоры стоек',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*75*/
             [
@@ -610,7 +684,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Поворотные кулаки',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*76*/
             [
@@ -618,7 +693,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Балки передней и задней подвески',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*77*/
             [
@@ -626,7 +702,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ступичные болты,шпильки и гайки',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*78*/
             [
@@ -634,7 +711,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные шкворни',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*79*/
             [
@@ -642,7 +720,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Крепежи узлов подвески',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*80*/
             [
@@ -650,7 +729,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Торсионы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*81*/
             [
@@ -658,7 +738,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Турбины, турбокомпрессоры',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*82*/
             [
@@ -666,7 +747,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Двигатели для техники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*83*/
             [
@@ -674,7 +756,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Подшипники для транспорта',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*84*/
             [
@@ -682,7 +765,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Прокладки для техники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*85*/
             [
@@ -690,7 +774,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Сальники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*86*/
             [
@@ -698,7 +783,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ремни приводные автомобильные',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*87*/
             [
@@ -706,7 +792,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ролики и натяжители',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*88*/
             [
@@ -714,7 +801,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Подушки двигателя',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*89*/
             [
@@ -722,7 +810,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Шкивы двигателей',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*90*/
             [
@@ -730,7 +819,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ремни вариатора',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*91*/
             [
@@ -738,7 +828,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ремни вариаторные',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*92*/
             [
@@ -746,7 +837,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Бамперы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*93*/
             [
@@ -754,7 +846,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные двери',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*94*/
             [
@@ -762,7 +855,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Крылья, арки автомобильные',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*95*/
             [
@@ -770,7 +864,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Пистоны, заглушки, крепежные элементы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*96*/
             [
@@ -778,7 +873,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Брызговики',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*97*/
             [
@@ -786,7 +882,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Защита картера и КПП',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*98*/
             [
@@ -794,7 +891,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Фаркопы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*99*/
             [
@@ -802,7 +900,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные решетки на бамперы и радиаторы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*100*/
             [
@@ -810,7 +909,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Капоты',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*101*/
             [
@@ -818,7 +918,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные дверные ручки',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*102*/
             [
@@ -826,7 +927,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Стеклоподъемники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*103*/
             [
@@ -834,7 +936,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные подкрылки',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*104*/
             [
@@ -842,7 +945,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные эиблемы',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*105*/
             [
@@ -850,7 +954,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные замки и ключи',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*106*/
             [
@@ -858,7 +963,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Передние панели кузова',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*107*/
             [
@@ -866,7 +972,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Амортизаторы капота, багажника',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*108*/
             [
@@ -874,7 +981,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Усилители бампера, буфер бампера',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*109*/
             [
@@ -882,7 +990,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Кронштейны автомобильные',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*110*/
             [
@@ -890,7 +999,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Петли, ограничители автомобильные',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*111*/
             [
@@ -898,7 +1008,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Крышки багажника',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*112*/
             [
@@ -906,7 +1017,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Задние панели кузова',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*113*/
             [
@@ -914,7 +1026,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Боковины кузова',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*114*/
             [
@@ -922,7 +1035,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Лонжироны, подрамники',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*115*/
             [
@@ -930,7 +1044,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Кузова легковых автомобилей',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*116*/
             [
@@ -938,7 +1053,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Лючки, крышки бензобака',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*117*/
             [
@@ -946,7 +1062,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные крыши',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*118*/
             [
@@ -954,7 +1071,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Автомобильные люки',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
             /*119*/
             [
@@ -962,7 +1080,8 @@ class CategoriesTableSeeder extends Seeder
                 'name' => 'Ноускаты',
                 'link'=> '/auto_moto',
                 'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png'
+                'icon_hover'=>'/img/dashboard_icon_white.png',
+                'can_be_last_cat'=>true
             ],
 
 

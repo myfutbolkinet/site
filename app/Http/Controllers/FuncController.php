@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Site_categories;
+use Auth;
 class FuncController extends Controller
 {
     //
@@ -59,9 +61,27 @@ class FuncController extends Controller
 
  public function show_subcat(Request $request){
 	$id_cat=$request->input('id_cat');
+	$is_user=$request->input('is_user');
     $data=$this->print_subcat($id_cat);
+    //var_dump($data);
+    //проверка для кейса когда нужно вывести конкретные категории по текущему юзеру
+    if($is_user==1 && $data['message']=='success'){
+        $user=Auth::guard('admin')->user()->id;
+        $user_categories= Site_categories::where('user_id', $user)
+            ->get();
+        //var_dump($data);
+        foreach($data['value'] as $category){
+            if (in_array($category->id, unserialize($user_categories[0]->categories))) {
+                $_data['categories'][] = $category;
+            }
+        }
+    $data['value']=$_data['categories'];
+    }
+    //var_dump($data);
     return json_encode($data);
     }
+
+
     public function show_subcat_all_levels(Request $request){
         $id_cat=$request->input('id_cat');
 
