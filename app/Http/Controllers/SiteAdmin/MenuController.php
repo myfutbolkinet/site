@@ -22,14 +22,14 @@ class MenuController extends SiteAdminController
     }
 
     public function index(){
-
+        $f=new CategoriesFactory();
+        $f=$f->get_categories('All');
+        $data=$f->show_categories();
         $data['menu']=$this->menu();
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
-        $f=new CategoriesFactory();
-        $f=$f->get_categories('All');
-        $data=$f->show_categories();
+
         //dd($data);
 
         return view('site_admin_page/themes/menu_areas/index',$data);

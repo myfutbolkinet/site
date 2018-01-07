@@ -26,7 +26,7 @@ class CategoriesFactory
     public function get_categories($type){
         switch($type){
             case "All":return new AllCategories($this);
-            case "User":return new UserCategories();
+            case "User":return new UserCategories($this);
             default: throw new \Exception('Wrong type!');
         }
     }
@@ -35,6 +35,7 @@ class CategoriesFactory
         $res= Site_categories::where('user_id', $this->user)
             ->get();
         if(count($res)>0){
+
             $result['row']=$res[0]->id;
             $result['categories_array']=$res;
             return $result;

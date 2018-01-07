@@ -9,6 +9,7 @@ use App\Category;
 use App\Type_of_good;
 use App\Good;
 use App\Photo;
+use App\Http\Classes\CategoriesFactory;
 class SiteGoodsController extends SiteAdminController
 {
    
@@ -25,8 +26,9 @@ class SiteGoodsController extends SiteAdminController
     public function index(){
         /*$this->user=Auth::user();*/
         $this->title = 'Панель администратора';
-        $data['categories']=$this->user_categories['categories'];
-        //dd('$data[\'categories\']',$data['categories']);
+        $f=new CategoriesFactory();
+        $f=$f->get_categories('User');
+        $data['categories']=$f->show_categories();
         $data['types']=Type_of_good::get();
         $data_nav['menu']=$this->menu();
         $data['title']="Додати товар";

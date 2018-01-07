@@ -15,15 +15,15 @@ class GoodsPropertiesController extends SuperadminController
 
     public function __construct()
     {
+        /*     if(Gate::denies('SUPERADMIN_EDIT')){
+
+                 abort(403);
+             }*/
 
     }
 
 
     public function index(){
-        if(Gate::denies('SUPERADMIN_EDIT')){
-
-            abort(403);
-        }
 
         $data=array();
         $this->title = 'Панель администратора';
@@ -39,10 +39,7 @@ class GoodsPropertiesController extends SuperadminController
 
 
     public function good_property($id){
-        if(Gate::denies('SUPERADMIN_EDIT')){
 
-            abort(403);
-        }
         $data=array();
         $data['categories']=Category::orderBy('parent_id', 'asc')
             ->orderBy('created_at', 'desc')
@@ -59,10 +56,7 @@ class GoodsPropertiesController extends SuperadminController
 
 
     public function add_property(){
-        if(Gate::denies('SUPERADMIN_EDIT')){
 
-            abort(403);
-        }
         $data=array();
         $data['categories']=Category::orderBy('parent_id', 'asc')
             ->orderBy('created_at', 'desc')

@@ -242,5 +242,22 @@ class UsersTableSeeder extends Seeder
 
 
         ]);
+        DB::table('superadmins')->insert([
+
+            [
+                'name' => 'Лопушанский Андрей',
+                'email'=>'imediasun@gmail.com',
+                'password'=>bcrypt('sunimedia'),
+                'mobile'=>'+38(096)544-11-20',
+                'add_phone'=>'+38(096)544-11-20',
+                'information'=>'information description',
+                'status'=>1,
+                'activated'=> TRUE,
+
+
+            ],
+
+
+        ]);
     }
 }

@@ -13,7 +13,7 @@
 Auth::routes();
 $domain=Request::server("HTTP_HOST");
 
-if($domain != "magelan.imedia.in.ua"){
+if($domain != "magelan.loc"){
 // TODO Получить из базы данных список активных доменов
     //Если среди активных доменов нет входящего выдать ошибку
     $domains_array=['eco-new.life','imedia.eco-new.life'];
@@ -74,7 +74,7 @@ if($domain != "magelan.imedia.in.ua"){
 }
 
 
-Route::domain('magelan.imedia.in.ua')->group(function () {
+Route::domain('magelan.loc')->group(function () {
 
 
 
@@ -156,9 +156,12 @@ Auth::logout();
 });*/
 
 //superadmin
-Route::group(['prefix' => 'superadmin','middleware'=>['web','auth']],function(){
+Route::group(['prefix' => 'superadmin'],function(){
 
-    Route::get('/',['uses' => 'Superadmin\IndexController@index','as' => 'superadminIndex']);
+    Route::get('/login', 'Auth\SuperAdminLoginController@showLoginForm')->name('superadmin.login');
+    Route::post('/login', 'Auth\SuperAdminLoginController@login')->name('superadmin.login.submit');
+    Route::get('/', 'SuperAdmin\SuperAdminController@index')->name('superadmin.dashboard');
+    //Route::get('/',['uses' => 'Superadmin\IndexController@index','as' => 'superadminIndex']);
     Route::get('/categories/add','Superadmin\CategoriesController@add_show');
     Route::get('/goods_properties','Superadmin\GoodsPropertiesController@index');
     Route::get('/add_good_property','Superadmin\GoodsPropertiesController@add_property');

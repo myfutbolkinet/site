@@ -8,10 +8,14 @@
 
 namespace App\Http\Classes;
 
-
+use App\Category;
 class UserCategories implements Categories
 {
-
+    public $user_categories;
+    public function __construct(CategoriesFactory $category)
+    {
+    $this->user_categories=$category->user_categories;
+    }
 
     public function show_categories()
     {
@@ -21,7 +25,7 @@ class UserCategories implements Categories
             ->orderBy('updated_at', 'desc')
             ->get();
 
-        dump('Не правильно',$this->user_categories['categories_array']);
+
         foreach ($categories as $category) {
 
             if(isset($this->user_categories['categories_array'][0]) && $this->user_categories['categories_array'][0]->categories!==''){
