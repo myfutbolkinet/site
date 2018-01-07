@@ -20,25 +20,7 @@ abstract class SiteEntity extends Controller
 
     public function CategoriesMenu()
     {
-        $categories = Category::orderBy('parent_id', 'asc')
-            ->orderBy('created_at', 'desc')
-            ->orderBy('updated_at', 'desc')
-            ->get();
-        dump('Не правильно',$this->user_categories['categories_array']);
-        foreach ($categories as $category) {
 
-            if(isset($this->user_categories['categories_array'][0]) && $this->user_categories['categories_array'][0]->categories!==''){
-
-            if (in_array($category->id, unserialize($this->user_categories['categories_array'][0]->categories))) {
-                $data['categories'][] = $category;
-          }
-        }
-        else{
-            $data['categories']=null;
-        }
-        }
-
-        return $data['categories'];
     }
 
     public function __construct()

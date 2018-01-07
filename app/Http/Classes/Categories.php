@@ -6,11 +6,11 @@
  * Time: 22:44
  */
 
-namespace App\Http;
+namespace App\Http\Classes;
 
 
 interface Categories
 {
-public function get_categories();
+public function show_categories();
 
 }
