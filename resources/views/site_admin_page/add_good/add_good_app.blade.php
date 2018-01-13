@@ -189,7 +189,6 @@
 
 
 
-
             $(".touchspin2").TouchSpin({
                 min: 0,
                 max: 100,
@@ -352,12 +351,26 @@ $('.color_btn').click(function(){
                             $.ajax({
                                 type: "POST",
                                 dataType: 'json',
-                                async: true,
+                                async: false,
                                 url: '/show_property_by_category',
                                 data: {id_cat: data.value.id}, // serializes the form's elements.
-                                success: function (data) {
+                                success: function (dataprop) {
 
+                                $('#properties').empty();
+                                     $.each( dataprop, function( k, prop ) {
 
+                                         prop_array = prop.data.split(',');
+                                       $('#properties').append(' <div style="border-right:1px solid #000;border-left:1px solid #000" class="prop col-md-3" >' +
+                                            '<input type="hidden" value="'+prop.id+'">' +
+                                           ' <div><h3 style="text-align:center;margin-top:10px;">'+prop.name+'</h3></div>'
+                                            +'<div id="prop_datas_'+k+'" class=""></div>'+
+                                            '</div>')
+
+                                    $.each( prop_array, function( v, dat ) {
+
+                                        properties[k]=dat;
+                                    $('#prop_datas_'+k).append('<div>'+dat+'</div>');
+                                    });});
                                 }
 
                             });

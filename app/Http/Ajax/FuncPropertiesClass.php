@@ -7,24 +7,24 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Site_categories;
 use DB;
+use App\Category;
 class FuncPropertiesClass
 {
 
     public function show_property_by_category(Request $request){
         $id_cat=$request->input('id_cat');
-
         //Найти в таблице properties все row в которых присутствует id_cat в categories field
-        $all_properties=Property::categories();
-        var_dump($all_properties);
-        foreach($all_properties as $propertie){
-            var_dump($propertie->caregories);
-            $unserialized=unserialize($propertie->caregories);
-            echo "<pre>";
-            var_dump($unserialized);
-            echo "</pre>";
+        $all_properties=Category::with('properties')->find($id_cat);
+        foreach($all_properties->properties as $property){
+
+            $tmp=unserialize($property['original']['data']);
+            $property->data=implode(",", $tmp);
+            $prop['data']=$property->data;
+            $prop['name']=$property->name;
+            $prop['id']=$property->id;
+            $properties[]=$prop;
         }
-        $data['property']=DB::table('property_category')->where('property_id',$id)->get();
-        die(var_dump($request->input()));
+       return json_encode($properties);
     }
 
 }

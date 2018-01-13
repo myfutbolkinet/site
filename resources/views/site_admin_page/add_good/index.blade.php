@@ -218,7 +218,7 @@
                             </fieldset>
                             <h1>Дополнительные данные о товаре</h1>
                             <fieldset>
-                                <h2>Profile Information</h2>
+                                <h2>Вы можете добавить множество цветов данного товара</h2>
 
                                 <div class="ibox float-e-margins row">
                                     <div class="ibox-title  col-sm-12">
@@ -239,7 +239,7 @@
                                         <br/>
                                     </div>
                                 </div>
-
+                                <h2>Информация о дополнительных фильтрах применимых к товару установите значения</h2>
                                 <div id="properties">
 
 
