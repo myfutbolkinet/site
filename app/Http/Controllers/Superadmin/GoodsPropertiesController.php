@@ -69,6 +69,8 @@ class GoodsPropertiesController extends SuperadminController
     }
 
     public function good_property_form(Request $request){
+
+    $categories=explode(',',$request->input('categories'));
     $data=[
         'name'=>$request->input('name'),
         'column'=>$request->input('column'),
@@ -79,8 +81,8 @@ class GoodsPropertiesController extends SuperadminController
         'show_on_comparison'=>($request->input('show_on_comparison')!==null) ? 0:1,
         'show_on_filter'=>($request->input('show_on_filter')!==null) ? 0:1,
         'multiple'=>($request->input('multiple')!==null) ? 0:1,
-        'categories'=>$request->input('categories'),
-        'data'=>implode(",", $request->input('data'))
+        'categories'=>serialize($categories),
+        'data'=>(!NULL==$request->input('data')) ? serialize($request->input('data') ): ''
         ];
         DB::table('properties')->insert($data);
         $data_m =  Property::all();

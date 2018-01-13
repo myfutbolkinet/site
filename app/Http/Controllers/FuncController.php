@@ -232,10 +232,6 @@ class FuncController extends Controller
         return redirect('/superadmin/categories/add');
     }
 
-    public function show_property_by_category(Request $request){
-    $data['property']=DB::table('property_category')->where('property_id',$id)->get();
-    die(var_dump($request->input()));
-}
 
     public function if_link_exist(Request $request){
 
