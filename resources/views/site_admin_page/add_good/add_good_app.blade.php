@@ -312,7 +312,7 @@ $('.color_btn').click(function(){
         '<a class="btn_delete_color btn btn-danger btn-rounded btn-outline" href="#">Удалить</a></div>')
 
 
-})
+});
 
 
 
@@ -369,7 +369,7 @@ $('.color_btn').click(function(){
                                     $.each( prop.data, function( v, dat ) {
                                     //alert(dat.data)
 
-                                    $('#prop_datas_'+k).append('<div><div class="i-checks"><label> <input type="radio" value="'+dat.id+'" name="a_'+prop.id+'"> <i></i> '+dat.data+'</label></div></div>');
+                                    $('#prop_datas_'+k).append('<div><div class="i-checks"><label><input type="radio" value="'+dat.id+'" name="property['+prop.id+'][]"> <i></i> '+dat.data+'</label></div></div>');
                                     });
 
 
