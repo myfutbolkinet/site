@@ -358,19 +358,26 @@ $('.color_btn').click(function(){
 
                                 $('#properties').empty();
                                      $.each( dataprop, function( k, prop ) {
-
-                                         prop_array = prop.data.split(',');
+                                      //alert(prop.name)
+                                      /*   prop_array = prop.data.split(',');*/
                                        $('#properties').append(' <div style="border-right:1px solid #000;border-left:1px solid #000" class="prop col-md-3" >' +
                                             '<input type="hidden" value="'+prop.id+'">' +
                                            ' <div><h3 style="text-align:center;margin-top:10px;">'+prop.name+'</h3></div>'
                                             +'<div id="prop_datas_'+k+'" class=""></div>'+
                                             '</div>')
 
-                                    $.each( prop_array, function( v, dat ) {
+                                    $.each( prop.data, function( v, dat ) {
+                                    //alert(dat.data)
 
-                                        properties[k]=dat;
-                                    $('#prop_datas_'+k).append('<div>'+dat+'</div>');
-                                    });});
+                                    $('#prop_datas_'+k).append('<div><div class="i-checks"><label> <input type="radio" value="'+dat.id+'" name="a_'+prop.id+'"> <i></i> '+dat.data+'</label></div></div>');
+                                    });
+
+
+                                         $('.i-checks').iCheck({
+                                             checkboxClass: 'icheckbox_square-green',
+                                             radioClass: 'iradio_square-green',
+                                         });
+                                     });
                                 }
 
                             });

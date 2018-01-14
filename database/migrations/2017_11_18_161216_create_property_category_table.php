@@ -33,6 +33,8 @@ class CreatePropertyCategoryTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('property_category');
+
     }
 }

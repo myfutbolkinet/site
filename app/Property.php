@@ -12,4 +12,9 @@ class Property extends Model
     {
         return $this->belongsToMany('App\Category','property_category','property_id','category_id');
     }
+
+    public function property_datas()
+    {
+        return $this->HasMany('App\Property_data','property_id','id');
+    }
 }

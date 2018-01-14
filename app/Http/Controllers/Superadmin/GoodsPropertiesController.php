@@ -90,15 +90,22 @@ class GoodsPropertiesController extends SuperadminController
 
         $last_data_object =$last_data_object->id;
 
-$categories=explode(',',$request->input('categories'));
-foreach($categories as $val){
-$data_prop[]=[
-    'category_id'=>$val,
-    'property_id'=>$last_data_object
-];
-}
-DB::table('property_category')->insert($data_prop);
+        $categories=explode(',',$request->input('categories'));
+        foreach($categories as $val){
+        $data_prop[]=[
+            'category_id'=>$val,
+            'property_id'=>$last_data_object
+        ];
+        }
+        DB::table('property_category')->insert($data_prop);
+        foreach($request->input('data') as $val){
+            $data_prop_d[]=[
 
+                'property_id'=>$last_data_object,
+                'data'=>$val
+            ];
+        }
+        DB::table('property_datas')->insert($data_prop_d);
     }
 
 
