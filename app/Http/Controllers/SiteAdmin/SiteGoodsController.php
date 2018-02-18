@@ -38,7 +38,10 @@ class SiteGoodsController extends SiteAdminController
         return view('site_admin_page/add_good/index',$data,$data_nav);
     }
 
+    //TODO: переименовать функцию в store
     public function add_good(Request $request){
+        dump(session()->all());
+        //TODO: Взять из сессии фотки товара и сохранить их в базе после чего удалить их из сессии и очистить эти файлы из storage/images/temp
         dd($request->input());
 
     }

@@ -65,6 +65,8 @@ if($domain != "magelan.loc"){
         Route::resource('/customers_managment','SiteAdmin\CustomersController');*/
 
         Route::get('/menu_areas','SiteAdmin\MenuController@index')->name('site.admin.menu_areas');
+        Route::post('/Ajax/FuncImagesClass','\App\Http\Ajax\FuncImagesClass@index');
+
 
 
 

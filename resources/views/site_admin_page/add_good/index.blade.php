@@ -250,9 +250,8 @@
 
                             <h1>Фотографии</h1>
                             <fieldset>
-                                <div class="text-center" style="margin-top: 120px">
-                                    <h2>You did it Man :-)</h2>
-                                </div>
+                                @include('site_admin_page.add_good.add_images');
+
                             </fieldset>
 
                             <h1>Описания и видео с Youtube</h1>

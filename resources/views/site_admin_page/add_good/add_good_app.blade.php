@@ -40,7 +40,7 @@
     <link href="{!! asset('inspinia/css/plugins/dualListbox/bootstrap-duallistbox.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/style.css') !!}" rel="stylesheet">
-
+    <link href="{!! asset('/css/style_admin.css') !!}" rel="stylesheet">
 
     <style>
         .cat_block:hover{
@@ -431,6 +431,6 @@ $('.color_btn').click(function(){
 
 
     </script>
-
+    <script type="text/javascript" src="{!! asset('/js/jquery.damnuploader.js') !!}"></script>
 </body>
 </html>
