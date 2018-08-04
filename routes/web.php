@@ -72,7 +72,23 @@ if($domain != "magelan.loc"){
 
 
     });
+    Route::group(['prefix' => 'privat'],function(){
+        Route::get('/privat3', 'Privat\Privat3Controller@index');
+        Route::get('/privat3_view', 'Privat\Privat3Controller@showCabinet');
+    });
+    Route::get('/potrebitelskie_tovari', 'MainController@index');
 
+    Route::post('/get_designs','GetDesignController@getDesign');
+    Route::post('/site/get_horisontal','SiteController@getHorisontal');
+    Route::post('/site/put_horisontal','SiteController@putHorisontal');
+    Route::post('/cabinet', 'Privat\Privat3Controller@showMainPrivatInformation');
+    Route::post('/goods_and_groups', 'Privat\Privat3Controller@showGoodsAndGroups');
+    Route::post('/goods_and_groups_table', 'Privat\Privat3Controller@showGoodsAndGroupsTable');
+    Route::post('/get_goods_and_groups_filters', 'Privat\Privat3Controller@getGoodsAndGroupsFilters');
+    Route::post('/privat/showCompanyMenu', 'Privat\Privat3Controller@showCompanyMenu');
+    Route::post('/privat/showEditHorisontalMenu', 'Privat\Privat3Controller@showEditHorisontalMenu');
+    Route::get('/goods/show_add_item', 'Privat\Privat3Controller@ShowGoodsAddItem');
+    Route::post('/goods/upload_files', 'Privat\Privat3Controller@UploadGoodsFiles');
 }
 
 

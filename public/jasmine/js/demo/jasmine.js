@@ -342,7 +342,7 @@ $(document).ready(function () {
 
 	// LANGUAGE SWITCHER
 	// =================================================================
-	// Require SiteAdmin Core Javascript
+	// Require Admin Core Javascript
 	// http://www.squaredesigns.net
 	// =================================================================
 	$('#demo-lang-switch').jasmineLanguage({ 
@@ -364,7 +364,7 @@ $(document).ready(function () {
 
 	// GENERATE RANDOM ALERT
 	// =================================================================
-	// Require SiteAdmin Core Javascript
+	// Require Admin Core Javascript
 	// http://squaredesigns.net
 	// =================================================================
 
@@ -411,7 +411,7 @@ $(document).ready(function () {
 
 	// GROWL LIKE NOTIFICATIONS
 	// =================================================================
-	// Require SiteAdmin Core Javascript
+	// Require Admin Core Javascript
 	// =================================================================
 	$('#demo-alert').on('click', function (ev) {
 		ev.preventDefault();
@@ -435,7 +435,7 @@ $(document).ready(function () {
 
 	// ALERT ON TOP PAGE
 	// =================================================================
-	// Require SiteAdmin Core Javascript
+	// Require Admin Core Javascript
 	// =================================================================
 
 	// Show random page alerts.

@@ -1,0 +1,68 @@
+.main_categories_bar{
+    width:100%;
+    height:40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#004799+0,2989d8+40,185499+82,7db9e8+100 */
+    background: #004799; /* Old browsers */
+    background: -moz-linear-gradient(left, #004799 0%, #2989d8 40%, #185499 82%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #004799 0%,#2989d8 40%,#185499 82%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #004799 0%,#2989d8 40%,#185499 82%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+    position:relative;
+
+}
+.category_bar{
+    width:320px;
+    height:40px;
+    position:relative;
+    display:inline-block;
+    float:left;
+    cursor:pointer;
+}
+.category_bar h3{
+
+    font-family: 'Arimo', sans-serif;
+    color:#fff;
+    font-size:18px;
+    text-align:center;
+   margin-top:10px;
+}
+.first_category_bar_color{
+    width:320px;
+    height:40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,185499+18,2989d8+60,004799+100 */
+    background:#00B3D3;
+    position:relative;
+
+}
+.second_category_bar_color{
+    width:320px;
+    height:40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,185499+18,2989d8+60,004799+100 */
+    background:#008793;
+    position:relative;
+
+}
+.third_category_bar_color{
+    width:320px;
+    height:40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,185499+18,2989d8+60,004799+100 */
+    background:#00A075;
+    position:relative;
+
+}
+.forth_category_bar_color{
+    width:320px;
+    height:40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,185499+18,2989d8+60,004799+100 */
+    background:#6BBA70;
+    position:relative;
+
+}
+.five_category_bar_color{
+    width:320px;
+    height:40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,185499+18,2989d8+60,004799+100 */
+    background:#00B709;
+    position:relative;
+
+}

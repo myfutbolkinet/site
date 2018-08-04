@@ -14479,7 +14479,7 @@
 	 */
 	
 	/**
-	 * Classes for `columns.render`.
+	 * Helpers for `columns.render`.
 	 *
 	 * The options defined here can be used with the `columns.render` initialisation
 	 * option to provide a display renderer. The following functions are defined:

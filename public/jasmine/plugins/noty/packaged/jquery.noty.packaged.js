@@ -540,7 +540,7 @@
         });
     });
 
-    // Classes
+    // Helpers
     window.noty = function noty(options) {
         return $.notyRenderer.init(options);
     };

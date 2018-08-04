@@ -37,7 +37,7 @@
 
 	// FULLSCREEN PANEL
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 
@@ -57,7 +57,7 @@
 
 	// COLLAPSE PANEL
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 
@@ -69,7 +69,7 @@
 
 	// RELOAD PANEL
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 
@@ -91,7 +91,7 @@
 
 	// PANEL WITH VARIETY OF COMPONENTS - DEMO AUTO CLOSE ALERTS
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 	$('#demo-panel-alert').on('click', function(){
@@ -108,7 +108,7 @@
 
 	// PANEL WITH VARIETY OF COMPONENTS - DEMO STICKY ALERTS
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.squaredesigns.net/
 	// =================================================================
 	$('#demo-panel-alert2').on('click', function(){

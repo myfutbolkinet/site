@@ -12,7 +12,6 @@ $(function () {
         onFinished: function () {
             // do anything here ;)
             alert("finished!");
-            $('#wizard_btn').click();
         }
     });
 
@@ -23,13 +22,6 @@ $(function () {
         bodyTag: ".wizard-container",
         transitionEffect: "fade",
         onStepChanging: function (event, currentIndex, newIndex) {
-if(currentIndex==2){
-
-   if($('#step').val()=='false'){
-       alert('Вы не загрузили основную фотографию - не нажали кнопку "Сохранить фото на сервере"')
-       return false;
-   }
-}
             // Allways allow previous action even if the current form is not valid!
             if (currentIndex > newIndex) {
                 return true;
@@ -81,19 +73,12 @@ if(currentIndex==2){
         },
         onFinishing: function (event, currentIndex, newIndex) {
             // revalidate the whole form
-            $(this).parsley().validate();
-            $.ajaxSetup({
-                headers:{
-                    'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
-                }
-            })
-            $('#wizard-validate').submit()
+            return $(this).parsley().validate();
         },
         onFinished: function () {
             // yayyy! all validation is pass.. now we can send data to server
             // or display message ;)
-           /* alert("submitted!");*/
-
+            alert("submitted!");
         }
     });
 });

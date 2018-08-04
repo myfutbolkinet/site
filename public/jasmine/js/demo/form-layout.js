@@ -12,7 +12,7 @@
 
 	// PANEL WITH BUTTONS - LOADING OVERLAY
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 	$('.demo-panel-ref-btn').jasmineOverlay().on('click', function(){
@@ -34,7 +34,7 @@
 
 	// FULLSCREEN PANEL
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 
@@ -54,7 +54,7 @@
 
 	// COLLAPSE PANEL
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 
@@ -66,7 +66,7 @@
 
 	// RELOAD PANEL
 	// =================================================================
-	// Require Nifty SiteAdmin Javascript
+	// Require Nifty Admin Javascript
 	// http://www.themeon.net/
 	// =================================================================
 
