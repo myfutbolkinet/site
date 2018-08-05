@@ -169,16 +169,20 @@
     <!-- Steps -->
     <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
     <script>
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
+        $(document).ready(function () {
+            checked_categories=[];
+            <?php if(isset($json)){?>
+                checked_categories=eval('<?php echo $json;?>');
+            <?php } ?>
 
-        setTimeout(function(){
-            CKEDITOR.replace( 'editor1' );
-        },500);
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
     </script>
 
     <script>
-
         $.ajaxSetup({
             headers:{
                 'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
@@ -186,219 +190,47 @@
         })
 
 
-        $(document).ready(function(){
 
 
 
+        $('.categories').delegate('.cat_block','click',function(){
 
-            $(".touchspin2").TouchSpin({
-                min: 0,
-                max: 100,
-                step: 0.1,
-                decimals: 2,
-                boostat: 5,
-                maxboostedstep: 10,
-                postfix: '%',
-                buttondown_class: 'btn btn-white',
-                buttonup_class: 'btn btn-white'
-            });
+            var id_cat = $(this).parent('a').find('input').val()
+            var cl=$(this).parent('a').parent().attr('class');
+            cl=cl.split(' ')[1]
+            var simbol=parseInt(cl.slice(10))+1
+            new_block_cl=cl.slice(0, 10)+simbol
 
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/show_subcat",
+                data: {id_cat: id_cat}, // serializes the form's elements.
+                success: function (data) {
+                    if(data.message=='null'){
 
-
-
-            $("#wizard").steps();
-            $("#form").steps({
-                bodyTag: "fieldset",
-                onStepChanging: function (event, currentIndex, newIndex)
-                {
-                    // Always allow going backward even if the current step contains invalid fields!
-                    if (currentIndex > newIndex)
-                    {
-                        return true;
-                    }
-
-                    // Forbid suppressing "Warning" step if the user is to young
-                    if (newIndex === 3 && Number($("#age").val()) < 18)
-                    {
-                        return false;
-                    }
-
-                    var form = $(this);
-
-                    // Clean up if user went backward before
-                    if (currentIndex < newIndex)
-                    {
-                        // To remove error styles
-                        $(".body:eq(" + newIndex + ") label.error", form).remove();
-                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
-                    }
-
-                    // Disable validation on fields that are disabled or hidden.
-                    form.validate().settings.ignore = ":disabled,:hidden";
-
-                    // Start validation; Prevent going forward if false
-                    return form.valid();
-                },
-                onStepChanged: function (event, currentIndex, priorIndex)
-                {
-                    // Suppress (skip) "Warning" step if the user is old enough.
-                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
-                    {
-                        $(this).steps("next");
-                    }
-
-                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-                    if (currentIndex === 2 && priorIndex === 3)
-                    {
-                        $(this).steps("previous");
-                    }
-                },
-                onFinishing: function (event, currentIndex)
-                {
-                    var form = $(this);
-
-                    // Disable validation on fields that are disabled.
-                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
-                    form.validate().settings.ignore = ":disabled";
-
-                    // Start validation; Prevent form submission if false
-                    return form.valid();
-                },
-                onFinished: function (event, currentIndex)
-                {
-                    var form = $(this);
-
-                    // Submit form input
-                    form.submit();
-                }
-            }).validate({
-                errorPlacement: function (error, element)
-                {
-                    element.before(error);
-                },
-                rules: {
-                    confirm: {
-                        equalTo: "#password"
-                    }
-                }
-            });
-
-
-            $('#form').delegate('.btn_delete_color','click',function(){
-                var color=$(this).parent('.color_div').find('input').val()
-                alert(color)
-                if (confirm("Удалить цвет "+color+"?")) {
-                $(this).parent('.color_div').remove() ;
-                    alert("Цвет "+color+" удален!")
-                } else {
-                    alert("Вы нажали кнопку отмена")
-                }
-            })
-
-
-    $('.cat_name').focus(function (){
-
-
-    }, function (){
-        //mouse leave
-        $('.touchspin2').focus();alert('Чтобы ввести в это поле информацию выберите категорию в таблице ниже,конечная категория будет зафиксированна')
-
-    });
-
-$('.color_btn').click(function(){
-    var color=$('.input_color').val()
-    alert(color)
-    $('.position_colors').append('<div class="color_div" style="width:150px;display:inline-block">' +
-        '<input type="text" style="width:100px;" name="color[]" class="demo1" value="'+color+'" />' +
-        '<div style="background:'+color+';display:inline-block;width:25px;height:25px"></div>' +
-        '<a class="btn_delete_color btn btn-danger btn-rounded btn-outline" href="#">Удалить</a></div>')
-
-
-});
-
-
-
-
-            var divStyle = $('.back-change')[0].style;
-            $('#demo_apidemo').colorpicker({
-                color: divStyle.backgroundColor
-            }).on('changeColor', function(ev) {
-                divStyle.backgroundColor = ev.color.toHex();
-            $('.input_color').val(ev.color.toHex())
-            });
-
-
-            $('.categories').delegate('.cat_block','click',function(){
-
-                var id_cat = $(this).parent('a').find('input').val()
-                var cl=$(this).parent('a').parent().attr('class');
-                cl=cl.split(' ')[1]
-                var simbol=parseInt(cl.slice(10))+1
-                new_block_cl=cl.slice(0, 10)+simbol
-
-                $.ajax({
-                    type: "POST",
-                    dataType: 'json',
-                    async: false,
-                    url: '/show_subcat',
-                    data: {id_cat: id_cat,is_user:1}, // serializes the form's elements.
-                    success: function (data) {
-                        if(data.message=='null'){
                         //проверить чтобы соседние последующие блоки были пусты
-
-                        $('input[name="id_cat"]').val(data.value.id)
-                        $('.cat_name').val(data.value.info.name)
-                            alert('меняется категория')
-                        //достать все свойства категории и отобразить в блоке #properties
-                            $.ajax({
-                                type: "POST",
-                                dataType: 'json',
-                                async: false,
-                                url: '/show_property_by_category',
-                                data: {id_cat: data.value.id}, // serializes the form's elements.
-                                success: function (dataprop) {
-
-                                $('#properties').empty();
-                                     $.each( dataprop, function( k, prop ) {
-                                      //alert(prop.name)
-                                      /*   prop_array = prop.data.split(',');*/
-                                       $('#properties').append(' <div style="border-right:1px solid #000;border-left:1px solid #000" class="prop col-md-3" >' +
-                                            '<input type="hidden" value="'+prop.id+'">' +
-                                           ' <div><h3 style="text-align:center;margin-top:10px;">'+prop.name+'</h3></div>'
-                                            +'<div id="prop_datas_'+k+'" class=""></div>'+
-                                            '</div>')
-
-                                    $.each( prop.data, function( v, dat ) {
-                                    //alert(dat.data)
-
-                                    $('#prop_datas_'+k).append('<div><div class="i-checks"><label><input type="radio" value="'+dat.id+'" name="property['+prop.id+'][]"> <i></i> '+dat.data+'</label></div></div>');
-                                    });
-
-
-                                         $('.i-checks').iCheck({
-                                             checkboxClass: 'icheckbox_square-green',
-                                             radioClass: 'iradio_square-green',
-                                         });
-                                     });
-                                }
-
-                            });
-
 
                         //если (data.value.info.parent_num) ==2
                         //удалить 3,4
-                            // если (data.value.info.parent_num) ==3
-                            //4
-                         if(data.value.info.parent_num==2){
-                             $('.cat_block_3').empty();
-                             $('.cat_block_4').empty();
-                         }
-                         else if(data.value.info.parent_num==3){
-                             $('.cat_block_4').empty();
-                         }
-
+                        // если (data.value.info.parent_num) ==3
+                        //4
+                        if(data.value.info.parent_num==1){
+                            $('.cat_block_2').empty();
+                            $('.cat_block_3').empty();
+                            $('.cat_block_4').empty();
                         }
-                       else{
+                        if(data.value.info.parent_num==2){
+                            $('.cat_block_3').empty();
+                            $('.cat_block_4').empty();
+                        }
+                        else if(data.value.info.parent_num==3){
+                            $('.cat_block_4').empty();
+                        }
+
+                    }
+                    else{
                         $('.'+new_block_cl+'').empty();
                         switch(new_block_cl){
                             case 'cat_block_2':
@@ -410,29 +242,339 @@ $('.color_btn').click(function(){
                                 break;
 
                         }
-                        $.each( data.value, function( key, value ) {
-                            $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
-                                '<input type="hidden" value="'+value.id+'">' +
-                                value.name+
-                                '<span class="fa arrow" style="float:right"></span>' +
-                                '</div></a>')
-                        });
+
+                        if(new_block_cl=='cat_block_4'){
+                            $.each( data.value, function( key, value ) {
+
+                                if(checkValue(value.id,checked_categories)=='Not exist') {
+                                    $('.' + new_block_cl + '').append(' <a ><div class="cat_block" >' +
+                                        '<input class="fahover_cubes_input" type="hidden" value="' + value.id + '">' +
+
+                                        '<div style="display:inline-block" class="i-checks"><label> <input class="category_checkbox" type="checkbox" value=""> </label></div>\n' +
+                                        value.name +
+                                        '</div></a>')
+                                }
+                                else{
+                                    $('.' + new_block_cl + '').append(' <a ><div class="cat_block" >' +
+                                        '<input class="fahover_cubes_input" type="hidden" value="' + value.id + '">' +
+
+                                        '<div style="display:inline-block" class="i-checks"><label> <input class="category_checkbox" checked type="checkbox" value=""> </label></div>\n' +
+                                        value.name +
+                                        '</div></a>')
+                                }
+
+                            });
+
+                        }
+                        else{
+                            $.each( data.value, function( key, value ) {
+
+                                if(checkValue(value.id,checked_categories)=='Not exist'){
+
+                                    $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
+                                        '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
+
+                                        '<div style="display:inline-block" class="i-checks"><label> <input class="category_checkbox" type="checkbox" value=""> </label></div>\n' +
+                                        value.name+
+                                        '<span class="fa arrow" style="float:right"></span>' +
+                                        '</div></a>')
+
+                                }
+                                else{
+
+                                    //alert(checked_categories)
+
+                                    $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
+                                        '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
+
+                                        '<div style="display:inline-block" class="i-checks"><label> <input class="category_checkbox" checked type="checkbox" value=""> </label></div>\n' +
+                                        value.name+
+                                        '<span class="fa arrow" style="float:right"></span>' +
+                                        '</div></a>')
+                                }
+
+
+
+                            });
+                        }
+
 
                     }}
 
-                });
+            });
 
 
-
-
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
             });
 
         });
 
 
 
+        $('.categories').delegate('.fahover_cubes','click',function() {
+            var id_cat = $(this).parent('a').find('.fahover_cubes_input').val();
+            $('.parent_category').val(id_cat);
+            $.ajax({
+                type: "POST",
+                dataType: 'json',
+                url: '/show_parent_categories_tree',
+                data: {id_cat:id_cat}, // serializes the form's elements.
+                success: function (data) {
+
+                    $('.cat_name').html(data.name)
+                }
+            });
+        });
+
+        $("#form").validate({
+            errorPlacement: function (error, element)
+            {
+                element.before(error);
+            },
+            rules: {
+                confirm: {
+                    equalTo: "#password"
+                },
+            }
+        });
+
+        $("#form").submit(function(event){
+            var link = $('#link').val()
+
+            $.ajax({
+                type: "POST",
+                dataType: 'json',
+                url: '/if_link_exist',
+                async:false,
+                data: {link:link}, // serializes the form's elements.
+                success: function (data) {
+                    if(data==1){
+                        $('#link_validation').css('display','block');
+                        event.preventDefault();
+                        return false;
+                    }
+                    else{
+                        $('#link_validation').css('display','none');
+                    }
+                }
+
+            });
+
+
+        })
 
     </script>
-    <script type="text/javascript" src="{!! asset('/js/jquery.damnuploader.js') !!}"></script>
+
+
+
+    <script>
+        function checkValue(value,arr){
+            var status = 'Not exist';
+
+            for(var i=0; i<arr.length; i++){
+                var name = arr[i];
+                if(name == value){
+                    status = 'Exist';
+                    break;
+                }
+            }
+
+            return status;
+        }
+
+
+        //Установка чекбоксов по всем подкатегориям если он активен
+        $('.categories').delegate('input','ifChecked',function(event) {
+
+            var id_cat=$(this).parent('div').parent('label').parent('div').parent('div').find('.fahover_cubes_input').val()
+            if(checkValue(id_cat,checked_categories)=='Not exist'){checked_categories.push(id_cat);}
+            //alert(event.type + ' callback');
+            //Найти все подкатегории во всех уровнях и поставить checkbox on
+
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/show_subcat_all_levels",
+                data: {id_cat: id_cat}, // serializes the form's elements.
+                success: function (data) {
+
+                    $.each( data, function( key, value ) {
+                        //Если в этом массиве
+                        //alert(key+' -> '+value.name)
+                        // Добавить в глобальную переменную все айдишники категорий
+                        if(checkValue(value.id,checked_categories)=='Not exist'){checked_categories.push(value.id);}
+                        //TODO Найти родительские категории
+                        //       alert(window.checked_categories)
+
+                    });
+                }
+            });
+
+            // Найти элемент на экране которому соответствует данный id_cat и эмитировать click
+            var id_cat_input=$('.fahover_cubes_input[value="'+id_cat+'"]').parent('.cat_block')
+            id_cat_input.click();
+            //Обновить предыдущий блок категорий
+            //
+
+            //перегрузить предыдущий блок с родительскими категориями
+            //определение блока в котором произошел клик #class
+
+
+            var block_class=$(this).parent('div').parent('label').parent('div').parent('div').parent('a').parent('div').attr('class');
+            block_class=block_class.replace('block_main_categories ', '');
+            //alert(block_class)
+            reload_parent_blocks(id_cat,block_class);
+//alert('installing')
+            //alert(checked_categories)
+
+        });
+
+        $('.categories').delegate('input','ifUnchecked',function(event) {
+
+            var id_cat=$(this).parent('div').parent('label').parent('div').parent('div').find('.fahover_cubes_input').val()
+            //alert(id_cat)
+            //id блока в котором расположены категории
+            //var id_block=$(this).parent('div').parent('label').parent('div').parent('div').find('.fahover_cubes_input').parent('.cat_block').attr('class')
+            //alert(id_block)
+            if(checkValue(id_cat,checked_categories)=='Exist'){
+
+                //checked_categories.splice($.inArray(itemtoRemove, checked_categories),1);
+
+                checked_categories = jQuery.grep(checked_categories, function(value) {
+                    return value != id_cat;
+                });
+            }
+            //alert(checked_categories)
+            //alert(event.type + ' callback');
+            //Найти все подкатегории во всех уровнях и поставить checkbox on
+
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/show_subcat_all_levels",
+                data: {id_cat: id_cat}, // serializes the form's elements.
+                success: function (data) {
+                    //alert(checked_categories)
+                    $.each( data, function( key, value ) {
+                        //Если в этом массиве
+                        //alert(value.id+' -> '+value.name)
+                        // Добавить в глобальную переменную все айдишники категорий
+                        if(checkValue(value.id,checked_categories)=='Exist'){
+
+                            checked_categories = jQuery.grep(checked_categories, function(val) {
+                                return val != value.id;
+                            });
+                            // checked_categories.splice($.inArray(value.id,checked_categories),1);
+
+                        }
+                        //Найти
+                        //       alert(window.checked_categories)
+
+                    });
+                }
+            });
+
+            //обнулить все соседние блоки справа с категориями
+            // Найти элемент на экране которому соответствует данный id_cat и эмитировать click
+            var id_cat_input=$('.fahover_cubes_input[value="'+id_cat+'"]').parent('.cat_block')
+            id_cat_input.click();
+            //перегрузить предыдущий блок с родительскими категориями
+
+        });
+
+        function reload_parent_blocks(id_cat,block_class){
+
+//Если родительский блок не равен .cat_block_1
+            if(block_class=='cat_block_1'){
+                // alert('Exit');
+                return true;
+            }
+            else{
+//Понижение класса блока (was -> cat_block_2) (is -> cat_block_1)
+                block_num =block_class.charAt ( block_class.length - 1 );
+                block_num=block_num-1;
+                block_class=block_class.slice(0,-1);
+                block_class=block_class+block_num
+//отобразить в каждом родительском блоке категории замена id_cat вызов display_parent_blocks_categories
+                display_parent_blocks_categories(block_class,id_cat)
+            }
+        }
+
+        function display_parent_blocks_categories(block_class,id_cat){
+//удаление всех категорий из текущего блока
+            $('.'+block_class).empty();
+            //AJAX заполнить категориями текущий блок
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/show_parent_cats",
+                data: {id_cat: id_cat}, // serializes the form's elements.
+                success: function (data) {
+                    //alert(checked_categories)
+
+                    $.each( data.values, function( key, value ) {
+                        //alert(value.id+' -> '+value.name)
+                        if(checkValue(value.id,checked_categories)=='Not exist'){
+
+                            $('.'+block_class+'').append(' <a ><div class="cat_block" >' +
+                                '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
+
+                                '<div style="display:inline-block" class="i-checks"><label> <input class="category_checkbox" type="checkbox" value=""> </label></div>\n' +
+                                value.name+
+                                '<span class="fa arrow" style="float:right"></span>' +
+                                '</div></a>')
+
+                        }
+                        else{
+
+                            //alert(checked_categories)
+
+                            $('.'+block_class+'').append(' <a ><div class="cat_block" >' +
+                                '<input class="fahover_cubes_input" type="hidden" value="'+value.id+'">' +
+
+                                '<div style="display:inline-block" class="i-checks"><label> <input class="category_checkbox" checked type="checkbox" value=""> </label></div>\n' +
+                                value.name+
+                                '<span class="fa arrow" style="float:right"></span>' +
+                                '</div></a>')
+                        }
+                    });
+
+
+                    //понизить id_cat
+                    //alert(data.id_cat)
+                    reload_parent_blocks(data.id_cat,block_class)
+                }
+            });
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+        }
+
+        $('.btn_save_categories').click(function(){
+            cats_array=checked_categories;
+
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/save_cats_list",
+                data: {cats_array: cats_array}, // serializes the form's elements.
+                success: function (data) {
+                    alert(data)
+                    if (data=='Changes saved'){
+                        alert('Изменения сохранены на диск')
+                    }
+                }
+            });
+        })
+    </script>
 </body>
 </html>

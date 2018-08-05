@@ -55,6 +55,9 @@ class SiteGoodsController extends SiteAdminController
 
     public function showGoodsAndGroups(){
         $this->title = 'showGoodsAndGroups';
+        $f=new CategoriesFactory();
+        $f=$f->get_categories('User');
+        $data['categories']=$f->show_categories();
         $data_nav['menu']=$this->menu();
         $data['title']="управление товарами и группами";
         $data['keywords']="Ukrainian industry platform";
@@ -73,6 +76,19 @@ class SiteGoodsController extends SiteAdminController
 
         ];
         $data['active_menu_item']=1;
+        $data['sub_menu2']=[
+            1=>[
+                'btn_title'=>'Показывать все товары',
+'data_href'=>'tab-1'
+            ],
+            2 =>[
+                'btn_title'=>'Показывать товары по категориям',
+                'data_href'=>'tab-2'
+             ],
+
+
+        ];
+        $data['active_menu2_item']=1;
 
         $data['goods']=\App\Good::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->paginate(10);
 
