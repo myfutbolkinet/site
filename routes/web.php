@@ -45,8 +45,9 @@ if($domain != "magelan.loc"){
         Route::get('/login', 'Auth\SiteAdminLoginController@showLoginForm')->name('site.admin.login');
         Route::post('/login', 'Auth\SiteAdminLoginController@login')->name('site.admin.login.submit');
         Route::get('/', 'SiteAdmin\SiteAdminController@index')->name('site.admin.dashboard');
-        Route::resource('/add_good','SiteAdmin\SiteGoodsController');
+        Route::get('/add_good','SiteAdmin\SiteGoodsController@index')->name('site.admin.add_good');
         Route::post('/add_good', 'SiteAdmin\SiteGoodsController@add_good');
+        Route::get('/goods_and_groups', 'SiteAdmin\SiteGoodsController@showGoodsAndGroups');
         //admin
        /* Route::get('/main',['uses' => 'SiteAdmin\IndexController@main','as' => 'adminMain']);
 

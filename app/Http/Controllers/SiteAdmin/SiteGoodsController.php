@@ -10,6 +10,7 @@ use App\Type_of_good;
 use App\Good;
 use App\Photo;
 use App\Http\Classes\CategoriesFactory;
+use Auth;
 class SiteGoodsController extends SiteAdminController
 {
    
@@ -35,14 +36,76 @@ class SiteGoodsController extends SiteAdminController
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
 
+        $data['sub_menu']=[
+        1=>[
+            'btn_title'=>'управление товарами и группами',
+            'href'=>'/admin/goods_and_groups'
+        ],
+        2 =>[
+            'btn_title'=>'Добавить позицию',
+            'href'=>'/admin/add_good'
+        ],
+
+
+        ];
+        $data['active_menu_item']=2;
+
         return view('site_admin_page/add_good/index',$data,$data_nav);
+    }
+
+    public function showGoodsAndGroups(){
+        $this->title = 'showGoodsAndGroups';
+        $data_nav['menu']=$this->menu();
+        $data['title']="управление товарами и группами";
+        $data['keywords']="Ukrainian industry platform";
+        $data['description']="Ukrainian industry platform";
+
+        $data['sub_menu']=[
+            1=>[
+                'btn_title'=>'управление товарами и группами',
+                'href'=>'/admin/goods_and_groups'
+            ],
+            2 =>[
+                'btn_title'=>'Добавить позицию',
+                'href'=>'/admin/add_good'
+            ],
+
+
+        ];
+        $data['active_menu_item']=1;
+
+        $data['goods']=\App\Good::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->paginate(10);
+
+
+        return view('site_admin_page/show_goods/index',$data,$data_nav);
+
     }
 
     //TODO: переименовать функцию в store
     public function add_good(Request $request){
         dump(session()->all());
         //TODO: Взять из сессии фотки товара и сохранить их в базе после чего удалить их из сессии и очистить эти файлы из storage/images/temp
-        dd($request->input());
+
+        $data= new \App\Good();
+        $data->name = $request->input('name');
+        $data->articul = $request->input('artikul');
+        $data->price = $request->input('price');
+        $data->type = $request->input('type');
+        $data->qnt =$request->input('count');
+        $data->discount= $request->input('discount');
+        $data->category=$request->input("id_cat");
+  $data->description=$request->input("editor1");
+        $data->description2='';
+        $data->user_id=Auth::user()->id;
+$data->save();
+foreach ($request->input("color") as $value){
+    $color=new \App\Colors_of_good();
+    $color->id_good=$data->id;
+    $color->color=$value;
+    $color->save();
+}
+
+return redirect()->guest(route('site.admin.add_good'));
 
     }
 

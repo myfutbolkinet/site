@@ -15,6 +15,7 @@ class CreateGoodsTable extends Migration
     {
         Schema::create('goods', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->default(0);
             $table->integer('type')->default(0);
             $table->integer('category')->default(0);
             $table->integer('qnt')->default(0);
@@ -22,16 +23,13 @@ class CreateGoodsTable extends Migration
             $table->text('description');
             $table->text('description2');
             $table->string('name')->default(0);
-            $table->string('image_small')->default(0);
-            $table->string('image_medium')->default(0);
-            $table->string('image_large')->default(0);
-            $table->string('thumbnail')->default(0);
             $table->float('star')->default(0);
             $table->integer('star_counts')->default(0);
             $table->bigInteger('price_without_discount')->default(0);
             $table->float('price')->default(0);
             $table->bigInteger('count')->default(1);
             $table->integer('discount')->default(0);
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
