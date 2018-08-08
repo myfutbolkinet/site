@@ -64,13 +64,89 @@
         <div class="tab-content">
             <div id="tab-1" class="tab-pane active">
                 <div class="panel-body">
-                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                    <strong>Здесь представлены все ваши товарные позиции</strong>
 
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of
-                        existence in this spot, which was created for the bliss of souls like mine.</p>
 
-                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at
-                        the present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>Товары</h5>
+                                    <div class="ibox-tools">
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#">Config option 1</a>
+                                            </li>
+                                            <li><a href="#">Config option 2</a>
+                                            </li>
+                                        </ul>
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Артикул</th>
+                                            <th>Наименование</th>
+                                            <th>Цена</th>
+                                            <th>Username</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>Здесь представлены все ваши товарные позиции</h5>
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div id="tab-2" class="tab-pane">
@@ -155,9 +231,11 @@
                                             </div>
                                         </div>
                                     </div>
-
+<form id="send_cats_array" action="/show_cats_list" method="POST">
+    <input type="hidden" name="cats_array" class="cats_array" value="">
+</form>
                                     <div class="row">
-                                        <button type="button" class="btn_save_categories btn btn-primary btn-lg">Показать товары</button>
+                                        <button type="button" class="btn_show_categories btn btn-primary btn-lg">Показать товары</button>
                                     </div>
 
 
@@ -171,77 +249,10 @@
 
                 </div>
             </div>
-        </div>
-    </div>
+            <div id="tab-3" class="tab-pane active">
+                <div class="panel-body">
+                    <strong>Чтобы отобразились товары по выбранным категориям сперва выберите категории перейдя по ссылке <a href="#tab-2" data-toggle="tab" aria-expanded="true">Задать фильтр выборки товаров по категориям</a></strong>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>Товары</h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#">Config option 1</a>
-                            </li>
-                            <li><a href="#">Config option 2</a>
-                            </li>
-                        </ul>
-                        <a class="close-link">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="ibox-content">
-
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Артикул</th>
-                            <th>Наименование</th>
-                            <th>Цена</th>
-                            <th>Username</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        </tbody>
-                    </table>
 
                 </div>
             </div>
@@ -251,21 +262,15 @@
 
 
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="ibox">
-                    <div class="ibox-title">
-                        <h5>Здесь представлены все ваши товарные позиции</h5>
 
 
 
 
-                    </div>
 
-                </div>
-            </div>
 
-        </div>
+
+
+
 
 
 

@@ -30,7 +30,7 @@ if($domain != "magelan.loc"){
     Route::post('/show_subcat_all_levels', 'FuncController@show_subcat_all_levels');
     Route::post('/show_parent_cats', 'FuncController@show_parent_cats');
     Route::post('/save_cats_list', '\App\Http\Ajax\FuncCategoriesClass@save_cats_list');
-
+    Route::post('/show_cats_list', '\App\Http\Ajax\FuncCategoriesClass@show_cats_list');
     Route::post('/show_property_categories','FuncController@show_property_categories');
     Route::post('/show_parent_categories_tree','FuncController@show_parent_categories_tree');
     Route::post('/show_property_by_category','\App\Http\Ajax\FuncPropertiesClass@show_property_by_category');
@@ -42,12 +42,16 @@ if($domain != "magelan.loc"){
 
     Route::group(['prefix' => 'admin'],function(){
 
+
+
         Route::get('/login', 'Auth\SiteAdminLoginController@showLoginForm')->name('site.admin.login');
         Route::post('/login', 'Auth\SiteAdminLoginController@login')->name('site.admin.login.submit');
         Route::get('/', 'SiteAdmin\SiteAdminController@index')->name('site.admin.dashboard');
         Route::get('/add_good','SiteAdmin\SiteGoodsController@index')->name('site.admin.add_good');
         Route::post('/add_good', 'SiteAdmin\SiteGoodsController@add_good');
         Route::get('/goods_and_groups', 'SiteAdmin\SiteGoodsController@showGoodsAndGroups');
+        Route::get('/goods_by_filter/{goods}', 'SiteAdmin\SiteGoodsController@showGoodsByFilter')->name('site.admin.show_good_by_filter');
+
         //admin
        /* Route::get('/main',['uses' => 'SiteAdmin\IndexController@main','as' => 'adminMain']);
 

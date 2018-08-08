@@ -2,6 +2,7 @@
 
 namespace App\Http\Ajax;
 
+use App\Category;
 use Illuminate\Http\Request;
 use Auth;
 use App\Site_categories;
@@ -33,4 +34,58 @@ class FuncCategoriesClass
        return json_encode('Changes saved');
 
    }
+
+    public function show_cats_list(Request $request){
+        $cats_array=$request->input('cats_array');
+        $cats_array=explode(',',$cats_array);
+      //Из выбранных категорий оставить только те у которых нет потомка
+        foreach($cats_array as $key=>$value){
+            var_dump(intval($value));
+            $is_cat=Category::where('parent_id',intval($value))->first();
+
+            if($is_cat==NULL){
+                $final_categories[]=$value;
+            }
+        }
+        echo "<pre>";
+        var_dump($final_categories);
+        echo "</pre>";
+        foreach($final_categories as $key=>$category){
+
+        }
+        $data=[];
+        $data['sub_menu']=[
+            1=>[
+                'btn_title'=>'управление товарами и группами',
+                'href'=>'/admin/goods_and_groups'
+            ],
+            2 =>[
+                'btn_title'=>'Добавить позицию',
+                'href'=>'/admin/add_good'
+            ],
+
+
+        ];
+        $data['active_menu_item']=1;
+        $data['sub_menu2']=[
+            1=>[
+                'btn_title'=>'Показывать все товары',
+                'href'=>'tab-1'
+            ],
+            2 =>[
+                'btn_title'=>'Задать фильтр выборки товаров по категориям',
+                'href'=>'tab-2'
+            ],
+            3 =>[
+                'btn_title'=>'Товары по категориям',
+                'href'=>'tab-3'
+            ],
+
+
+        ];
+        $data['active_menu2_item']=3;
+
+        return view('site_admin_page.show_goods.show_goods_by_filter',$data);
+
+    }
 }

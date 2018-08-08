@@ -82,9 +82,13 @@ class SiteGoodsController extends SiteAdminController
 'data_href'=>'tab-1'
             ],
             2 =>[
-                'btn_title'=>'Показывать товары по категориям',
+                'btn_title'=>'Задать фильтр выборки товаров по категориям',
                 'data_href'=>'tab-2'
              ],
+            3 =>[
+                'btn_title'=>'Товары по категориям',
+                'data_href'=>'tab-3'
+            ],
 
 
         ];
@@ -123,6 +127,10 @@ foreach ($request->input("color") as $value){
 
 return redirect()->guest(route('site.admin.add_good'));
 
+    }
+
+    public function showGoodsByFilter($goods){
+        dd($goods);
     }
 
     public function delete_good(){

@@ -558,22 +558,22 @@
 
         }
 
-        $('.btn_save_categories').click(function(){
+        $('.btn_show_categories').click(function(){
             cats_array=checked_categories;
+$('.cats_array').val(cats_array)
+            $('#send_cats_array').submit();
 
-            $.ajax({
+/*            $.ajax({
                 method: 'POST',
                 dataType: 'json',
                 async:false,
-                url: "/save_cats_list",
+                url: "/show_cats_list",
                 data: {cats_array: cats_array}, // serializes the form's elements.
                 success: function (data) {
-                    alert(data)
-                    if (data=='Changes saved'){
-                        alert('Изменения сохранены на диск')
-                    }
+                    console.log(data)
+
                 }
-            });
+            });*/
         })
     </script>
 </body>
