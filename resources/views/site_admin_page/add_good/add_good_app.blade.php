@@ -33,7 +33,7 @@
     <link href="{!! asset('inspinia/css/plugins/steps/jquery.steps.css') !!}" rel="stylesheet">
 
 
-
+    <link href="{!! asset('/inspinia/css/plugins/dropzone/dropzone.css') !!}" rel="stylesheet">
 
 
 
@@ -41,6 +41,7 @@
     <link href="{!! asset('inspinia/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/style.css') !!}" rel="stylesheet">
     <link href="{!! asset('/css/style_admin.css') !!}" rel="stylesheet">
+
 
     <style>
         .cat_block:hover{
@@ -168,6 +169,8 @@
 
     <!-- Steps -->
     <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
+    <!-- DROPZONE -->
+    <script src="{!! asset('inspinia/js/plugins/dropzone/dropzone.js') !!}"></script>
     <script>
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
@@ -177,6 +180,15 @@
         },500);
     </script>
 
+
+    <script>
+        Dropzone.options.dropzoneForm = {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 2, // MB
+            dictDefaultMessage: "<strong>Drop files here or click to upload. </strong></br> (This is just a demo dropzone. Selected files are not actually uploaded.)"
+        };
+
+    </script>
     <script>
 
         $.ajaxSetup({
@@ -357,7 +369,12 @@ $('.color_btn').click(function(){
                                 url: '/show_property_by_category',
                                 data: {id_cat: data.value.id}, // serializes the form's elements.
                                 success: function (dataprop) {
+                                    if(dataprop=='no_properties'){
 
+
+                                    }
+                                else{
+                                console.log(dataprop);
                                 $('#properties').empty();
                                      $.each( dataprop, function( k, prop ) {
                                       //alert(prop.name)
@@ -380,6 +397,7 @@ $('.color_btn').click(function(){
                                              radioClass: 'iradio_square-green',
                                          });
                                      });
+                                }
                                 }
 
                             });

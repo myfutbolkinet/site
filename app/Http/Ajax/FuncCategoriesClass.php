@@ -48,12 +48,11 @@ class FuncCategoriesClass
         }
 
         dump($final_categories);
-$goods=\App\Good::whereIn('category',$final_categories)->get();
-dump($goods);
-        foreach($final_categories as $key=>$category){
-
-        }
         $data=[];
+        $data['goods']=\App\Good::whereIn('category',$final_categories)->get();
+dump($data['goods']);
+
+
         $data['sub_menu']=[
             1=>[
                 'btn_title'=>'управление товарами и группами',
@@ -70,11 +69,11 @@ dump($goods);
         $data['sub_menu2']=[
             1=>[
                 'btn_title'=>'Показывать все товары',
-                'href'=>'tab-1'
+                'href'=>'/admin/goods_and_groups'
             ],
             2 =>[
                 'btn_title'=>'Задать фильтр выборки товаров по категориям',
-                'href'=>'tab-2'
+                'href'=>'/admin/good_filter'
             ],
             3 =>[
                 'btn_title'=>'Товары по категориям',
