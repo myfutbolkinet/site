@@ -40,16 +40,16 @@ class FuncCategoriesClass
         $cats_array=explode(',',$cats_array);
       //Из выбранных категорий оставить только те у которых нет потомка
         foreach($cats_array as $key=>$value){
-            var_dump(intval($value));
-            $is_cat=Category::where('parent_id',intval($value))->first();
+             $is_cat=Category::where('parent_id',intval($value))->first();
 
             if($is_cat==NULL){
                 $final_categories[]=$value;
             }
         }
-        echo "<pre>";
-        var_dump($final_categories);
-        echo "</pre>";
+
+        dump($final_categories);
+$goods=\App\Good::whereIn('category',$final_categories)->get();
+dump($goods);
         foreach($final_categories as $key=>$category){
 
         }
