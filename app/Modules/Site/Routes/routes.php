@@ -1,7 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: AlMir
- * Date: 09.08.2018
- * Time: 15:36
- */
+<?php Route::group( [ 'namespace' => 'App\Modules\Site\Controllers',
+    'as' => 'site',
+], function(){
+    Route::get('/home', ['uses' => 'HomeController@index']);
+    Route::get('/about', ['uses' => 'HomeController@about']);
+    Route::get('/contacts', ['uses' => 'HomeController@contacts']);
+});

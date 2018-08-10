@@ -1,7 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: AlMir
- * Date: 09.08.2018
- * Time: 16:19
- */
+@extends('Site::layouts.main_site_layout')
+
+@section('content')
+    <div>
+        contacts
+    </div>
+@endsection

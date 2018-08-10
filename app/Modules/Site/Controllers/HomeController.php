@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Modules\Site\Controllers;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,6 +25,30 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        if(Auth::user()){
+            echo "Auth";
+        }
+        else{
+            echo "No Auth";
+        }
+
+
+        return view('Site::home/index');
+
+
+
+
     }
+
+    public function about()
+    {
+        return view('Site::home/about');
+    }
+
+    public function contacts()
+    {
+        return view('Site::home/contacts');
+    }
+
 }
