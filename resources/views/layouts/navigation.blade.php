@@ -1,119 +1,131 @@
+<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+<aside id="left-panel">
+
+    <!-- User info -->
+    <div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+						<img src="/smartAdmin/img/avatars/sunny.png" alt="me" class="online" />
+						<span>
+
+							@if(isset($username)){{$username }}@endif
+						</span>
+						<i class="fa fa-angle-down"></i>
+					</a>
+
+				</span>
+    </div>
+    <!-- end user info -->
+
+    <!--MAIN NAVIGATION-->
+    <!--===================================================-->
 
 
-<!--MAIN NAVIGATION-->
-<!--===================================================-->
+    <!-- NAVIGATION : This navigation is also responsive-->
+    <nav>
+        <!--
+        NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional href="" links. See documentation for details.
+        -->
+
+        <ul>
+
+            @php
+
+                                        class Recursion
+                                        {
+                                            public $level;
+                                            public $lang = 'en';
+
+                                            public function get_cat($menu=null)
+                                            {
+
+                                                if (!$menu) {
+                                                    return NULL;
+                                                }
+                                                $arr_cat = array();
+                                                if (count($menu) != 0) {
+
+                                                    //В цикле формируем массив
+
+                                                    foreach ($menu as $key => $row) {
+
+                                                        //Формируем массив где ключами являются адишники на родительские категории
+                                                        if (empty($arr_cat[$row->parent_id])) {
+                                                            $arr_cat[$row->parent_id] = array();
+                                                        }
+                                                        $arr_cat[$row->parent_id][] = $row;
+                                                    }
 
 
-<nav style="min-height:100%" class="navbar-default navbar-static-side" role="navigation">
-    <div class="sidebar-collapse">
-        <ul class="nav metismenu" id="side-menu">
-            <li class="nav-header">
-                <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="/img/profile_small.jpg" />
-                             </span>
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="mailbox.html">Mailbox</a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html">Logout</a></li>
-                    </ul>
-                </div>
-                <div class="logo-element">
-                    IN+
-                </div>
-            </li>
+                                                    //возвращаем массив
+                                                    return $arr_cat;
+                                                }
+                                            }
 
-@php
 
-                        class Recursion
-                        {
-                            public $level;
-                            public $lang = 'en';
+                                            //вывод каталогa с помощью рекурсии
+                                            public function view_cat($arr, $parent_id = 0, $level ) {
 
-                            public function get_cat($menu=null)
-                            {
+                                                //Условия выхода из рекурсии
+                                                if (empty($arr[$parent_id])) {
+                                                    return;
+                                                }
+                                                if($parent_id !== 0) {
+                                                    echo '<ul class="nav nav-second-level" >';
+                                                }
+                                                //перебираем в цикле массив и выводим на экран
+                                                for ($i = 0; $i < count($arr[$parent_id]); $i++) {
 
-                                if (!$menu) {
-                                    return NULL;
-                                }
-                                $arr_cat = array();
-                                if (count($menu) != 0) {
+                                                    echo '
+                                                          <li>
+                                                        <a href="'.$arr[$parent_id][$i]->link.'">';
+                                                    if($parent_id == 0){
+                                                        echo '<i class="fa '.$arr[$parent_id][$i]->icon.'"></i>';
+                                                    }
 
-                                    //В цикле формируем массив
-
-                                    foreach ($menu as $key => $row) {
-
-                                        //Формируем массив где ключами являются адишники на родительские категории
-                                        if (empty($arr_cat[$row->parent_id])) {
-                                            $arr_cat[$row->parent_id] = array();
+                                                    echo '
+                                                <span class="menu-title">' . $arr[$parent_id][$i]->name . '</span>
+                                                <i class="arrow"></i>
+                                                            </a>';
+                                                    //рекурсия - проверяем нет ли дочерних категорий
+                                                    $this->view_cat($arr, $arr[$parent_id][$i]->id, 1);
+                                                    echo '</li> ';
+                                                }
+                                                if($parent_id !== 0) {
+                                                    echo '</ul>';
+                                                }
+                                            }
                                         }
-                                        $arr_cat[$row->parent_id][] = $row;
-                                    }
 
+                                        if(isset($menu)){
+                                         $rec= new Recursion;
+                                         $result = $rec->get_cat($menu);
+                                        //Выводи каталог на экран с помощью рекурсивной функции
 
-                                    //возвращаем массив
-                                    return $arr_cat;
-                                }
-                            }
-
-
-                            //вывод каталогa с помощью рекурсии
-                            public function view_cat($arr, $parent_id = 0, $level ) {
-
-                                //Условия выхода из рекурсии
-                                if (empty($arr[$parent_id])) {
-                                    return;
-                                }
-                                if($parent_id !== 0) {
-                                    echo '<ul class="nav nav-second-level" >';
-                                }
-                                //перебираем в цикле массив и выводим на экран
-                                for ($i = 0; $i < count($arr[$parent_id]); $i++) {
-
-                                    echo '
-                                          <li>
-                                        <a href="'.$arr[$parent_id][$i]->link.'">';
-                                    if($parent_id == 0){
-                                        echo '<i class="fa '.$arr[$parent_id][$i]->icon.'"></i>';
-                                    }
-
-                                    echo '
-                                <span class="menu-title">' . $arr[$parent_id][$i]->name . '</span>
-                                <i class="arrow"></i>
-                                            </a>';
-                                    //рекурсия - проверяем нет ли дочерних категорий
-                                    $this->view_cat($arr, $arr[$parent_id][$i]->id, 1);
-                                    echo '</li> ';
-                                }
-                                if($parent_id !== 0) {
-                                    echo '</ul>';
-                                }
-                            }
-                        }
-
-                        if(isset($menu)){
-                         $rec= new Recursion;
-                         $result = $rec->get_cat($menu);
-                        //Выводи каталог на экран с помощью рекурсивной функции
-
-                        $rec->view_cat($result,0,0);
-                        }
+                                        $rec->view_cat($result,0,0);
+                                        }
 
 
 
-@endphp
+            @endphp
 
-                    </ul>
+        </ul>
+    </nav>
 
 
+    <span class="minifyme" data-action="minifyMenu">
+				<i class="fa fa-arrow-circle-left hit"></i>
+			</span>
 
-                </div>
+</aside>
+<!-- END NAVIGATION -->
 
-</nav>
-<!--===================================================-->
-<!--END MAIN NAVIGATION-->
+<style>
+    #left-panel a:hover {
+        background-color:#333 !important;
+    }
+</style>
 
