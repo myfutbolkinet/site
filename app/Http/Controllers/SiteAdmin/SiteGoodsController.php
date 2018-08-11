@@ -11,6 +11,9 @@ use App\Good;
 use App\Photo;
 use App\Http\Classes\CategoriesFactory;
 use Auth;
+use Illuminate\Http\File;
+use Symfony\Component\Filesystem\Filesystem;
+use Intervention\Image\ImageManagerStatic as Image;
 class SiteGoodsController extends SiteAdminController
 {
    
@@ -35,6 +38,12 @@ class SiteGoodsController extends SiteAdminController
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
+        $tmp_folder = '/files/tmpImages/';
+        if(session('images')){
+        foreach(session('images') as $file){
+           unlink(base_path().$tmp_folder.$file);
+        }
+    }
        session()->forget('images');
         $data['sub_menu']=[
         1=>[
@@ -106,6 +115,34 @@ class SiteGoodsController extends SiteAdminController
         dump(session()->all());
         //TODO: Взять из сессии фотки товара и сохранить их в базе после чего удалить их из сессии и очистить эти файлы из storage/images/temp
 
+
+        //TODO: Переместить фотографии из
+        $tmp_folder = '/files/tmpImages/';
+
+        foreach(session('images') as $file){
+            rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
+
+            $img=Image::make(storage_path()."/app/public/".$file);
+            $height=$img->height();
+            $width=$img->width();
+            if($width>$height){
+                $img->resize(null, 1036);
+
+            }
+            if($height>$width){
+                $img->resize(850, null);
+            }
+            $img->crop(850, 1036);
+            $img->save();
+            echo "<img src='".asset('storage/'.$file.'')."'>";
+        }
+
+
+
+
+
+
+dd(session('images'));
         $data= new \App\Good();
         $data->name = $request->input('name');
         $data->articul = $request->input('artikul');
