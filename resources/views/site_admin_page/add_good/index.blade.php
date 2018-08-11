@@ -4,45 +4,28 @@
 
 @section('content')
 
-    <div id="main" role="main">
-
-        <!-- RIBBON -->
-        <div id="ribbon">
-
-				<span class="ribbon-button-alignment">
-					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
-						<i class="fa fa-refresh"></i>
-					</span>
-				</span>
-
-            <!-- breadcrumb -->
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>Add goods</h2>
             <ol class="breadcrumb">
-
-
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a>Forms</a>
+                </li>
+                <li class="active">
+                    <strong>Wizard</strong>
+                </li>
             </ol>
-            <!-- end breadcrumb -->
-
-            <!-- You can also add more buttons to the
-            ribbon for further usability
-
-            Example below:
-
-            <span class="ribbon-button-alignment pull-right">
-            <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
-            <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
-            <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
-            </span> -->
+        </div>
+        <div class="col-lg-2">
 
         </div>
-        <!-- END RIBBON -->
-
-        <!-- Main view  -->
+    </div>
 
 
-        <!-- MAIN CONTENT -->
-        <div id="content">
 
-            @include('layouts.goods_topnavbar')
 
 
         <div class="row">
@@ -278,7 +261,6 @@
                                 <label for="acceptTerms">I agree with the Terms and Conditions.</label>
                             </fieldset>
                         </form>
-
                         @include('site_admin_page.add_good.add_images');
 
                     </div>
@@ -309,10 +291,5 @@
                 </div>
     </div>
 
-        </div>
-    </div>
 
-    <style>.wizard-big.wizard > .content {
-            min-height: 1220px;
-        }</style>
 @endsection

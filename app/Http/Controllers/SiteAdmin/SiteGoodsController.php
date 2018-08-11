@@ -35,7 +35,7 @@ class SiteGoodsController extends SiteAdminController
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
-
+       session()->forget('images');
         $data['sub_menu']=[
         1=>[
             'btn_title'=>'управление товарами и группами',

@@ -6,40 +6,41 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ADD_GOOD</title>
 
-    <!-- Basic Styles -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/font-awesome.min.css">
 
-    <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/smartadmin-production-plugins.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/smartadmin-production.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/smartadmin-skins.min.css">
+    <link rel="stylesheet" href="{!! asset('css/vendor.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('css/app.css') !!}" />
+    <link href="{!! asset('inspinia/css/bootstrap.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/font-awesome/css/font-awesome.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/chosen/bootstrap-chosen.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/colorpicker/bootstrap-colorpicker.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/cropper/cropper.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/switchery/switchery.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/jasny/jasny-bootstrap.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/nouslider/jquery.nouislider.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/datapicker/datepicker3.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/ionRangeSlider/ion.rangeSlider.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/clockpicker/clockpicker.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/daterangepicker/daterangepicker-bs3.css') !!}" rel="stylesheet">
+
+
+    <link href="{!! asset('inspinia/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/select2/select2.min.css') !!}" rel="stylesheet">
 
     <link href="{!! asset('inspinia/css/plugins/steps/jquery.steps.css') !!}" rel="stylesheet">
-    <!-- SmartAdmin RTL Support -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/smartadmin-rtl.min.css">
 
-    <!-- We recommend you use "your_style.css" to override SmartAdmin
-         specific styles this will also ensure you retrain your customization with each SmartAdmin update.
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/your_style.css"> -->
 
-    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/demo.min.css">
+    <link href="{!! asset('/inspinia/css/plugins/dropzone/dropzone.css') !!}" rel="stylesheet">
 
-    <link href="{!! asset('inspinia/css/plugins/clockpicker/clockpicker.css') !!}" rel="stylesheet">
-    <!-- FAVICONS -->
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
 
-    <!-- GOOGLE FONT -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
 
-    <!-- Specifying a Webpage Icon for Web Clip
-         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
-    <link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
+    <link href="{!! asset('inspinia/css/plugins/dualListbox/bootstrap-duallistbox.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/animate.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/style.css') !!}" rel="stylesheet">
+    <link href="{!! asset('/css/style_admin.css') !!}" rel="stylesheet">
 
 
     <style>
@@ -62,92 +63,184 @@
 </head>
 <body>
 
-<!-- HEADER -->
-@include ('partials.admin_header');
-<!-- END HEADER -->
+  <!-- Wrapper-->
+    <div id="wrapper">
 
         <!-- Navigation -->
-        @include('layouts.navigation')
+        @include('layouts.navigation_view')
 
+        <!-- Page wraper -->
+        <div id="page-wrapper" class="gray-bg">
 
+            <!-- Page wrapper -->
+            @include('layouts.topnavbar')
 
+            <!-- Main view  -->
+            @include('layouts.goods_topnavbar')
 
             @yield('content')
 
-<!-- PAGE FOOTER -->
-@include ('partials.footer_admin');
-<!-- END PAGE FOOTER -->
+            <!-- Footer -->
+            @include('layouts.footer')
 
+        </div>
+        <!-- End page wrapper-->
 
-
+    </div>
+    <!-- End wrapper-->
 
 
 @section('scripts')
 
 
-    <!--================================================== -->
 
-    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
-    <script data-pace-options='{ "restartOnRequestAfter": true }' src="/smartAdmin/js/plugin/pace/pace.min.js"></script>
 
-    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        if (!window.jQuery) {
-            document.write('<script src="/smartAdmin/js/libs/jquery-3.2.1.min.js"><\/script>');
-        }
-    </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script>
-        if (!window.jQuery.ui) {
-            document.write('<script src="/smartAdmin/js/libs/jquery-ui.min.js"><\/script>');
-        }
-    </script>
+    <!-- Mainly scripts -->
+    <script src="{!! asset('inspinia/js/jquery-3.1.1.min.js') !!}"></script>
 
-    <!-- IMPORTANT: APP CONFIG -->
-    <script src="/smartAdmin/js/app.config.js"></script>
+    <!--CKEDITOR-->
+    <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
+    <script src="{!! asset('inspinia/js/bootstrap.min.js') !!}"></script>
 
-    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
-    <script src="/smartAdmin/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="{!! asset('inspinia/js/inspinia.js') !!}"></script>
+
+    <script src="{!! asset('inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js') !!}"></script>
+
+    <script src="{!! asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
+
+
+
+
+    <!-- Jquery Validate -->
+    <script src="{!! asset('inspinia/js/plugins/validate/jquery.validate.min.js') !!}"></script>
+
+
+
+    <!-- Chosen -->
+    <script src="{!! asset('inspinia/js/plugins/chosen/chosen.jquery.js') !!}"></script>
+
+    <!-- JSKnob -->
+    <script src="{!! asset('inspinia/js/plugins/jsKnob/jquery.knob.js') !!}"></script>
+
+    <!-- Input Mask-->
+    <script src="{!! asset('inspinia/js/plugins/jasny/jasny-bootstrap.min.js') !!}"></script>
+    <!-- NouSlider -->
+    <script src="{!! asset('inspinia/js/plugins/nouslider/jquery.nouislider.min.js') !!}"></script>
+
+    <!-- Switchery -->
+    <script src="{!! asset('inspinia/js/plugins/switchery/switchery.js') !!}"></script>
+    <!-- Color picker -->
+    <script src="{!! asset('inspinia/js/plugins/colorpicker/bootstrap-colorpicker.min.js') !!}"></script>
+
+    <!-- Clock picker -->
+    <script src="{!! asset('inspinia/js/plugins/clockpicker/clockpicker.js') !!}"></script>
+
+    <!-- IonRangeSlider -->
+    <script src="{!! asset('inspinia/js/plugins/ionRangeSlider/ion.rangeSlider.min.js') !!}"></script>
+
+    <!-- iCheck -->
+    <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
+
+    <!-- MENU -->
+    <script src="{!! asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js') !!}"></script>
+
+
+    <!-- Image cropper -->
+    <script src="{!! asset('inspinia/js/plugins/cropper/cropper.min.js') !!}"></script>
+
+    <!-- Date range use moment.js same as full calendar plugin -->
+    <script src="{!! asset('inspinia/js/plugins/fullcalendar/moment.min.js') !!}"></script>
+
+
+
+    <!-- Select2 -->
+    <script src="{!! asset('inspinia/js/plugins/select2/select2.full.min.js') !!}"></script>
 
     <!-- TouchSpin -->
     <script src="{!! asset('inspinia/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js') !!}"></script>
 
+    <!-- Tags Input -->
+    <script src="{!! asset('inspinia/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js') !!}"></script>
+
+    <!-- Dual Listbox -->
+    <script src="{!! asset('inspinia/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js') !!}"></script>
+
     <!-- Steps -->
     <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
-    <!-- BOOTSTRAP JS -->
-    <script src="/smartAdmin/js/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Jquery Validate -->
-    <script src="{!! asset('inspinia/js/plugins/validate/jquery.validate.min.js') !!}"></script>
-    <!-- Color picker -->
-    <script src="{!! asset('inspinia/js/plugins/colorpicker/bootstrap-colorpicker.min.js') !!}"></script>
-
-    <!-- iCheck -->
-    <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
-    <!-- PAGE RELATED PLUGIN(S) -->
+    <!-- DROPZONE -->
     <script src="{!! asset('/smartAdmin/js/plugin/dropzone/dropzone.min.js') !!}"></script>
-
-
-
-
-
-
-<!--CKEDITOR-->
-    <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
-
     <script>
-        Dropzone.autoDiscover = false;
-        $("#mydropzone").dropzone({ url: "/file/post" });
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
+
+
+
+        Dropzone.autoDiscover = false;
+var myDropzone_files=[];
+           $("#mydropzone").dropzone({
+                url: "/admin/fileupload",
+                params: {
+
+                },
+                addRemoveLinks : true,
+                maxFilesize: 2.5,
+                dictDefaultMessage: '<span class="text-center"><span class="font-lg visible-xs-block visible-sm-block visible-lg-block"><span class="font-lg"><i class="fa fa-caret-right text-danger"></i> Drop files <span class="font-xs">to upload</span></span><span>&nbsp&nbsp<h4 class="display-inline"> (Or Click)</h4></span>',
+                dictResponseError: 'Error uploading file!',
+                paramName: "file",
+                autoProcessQueue: true,
+                uploadMultiple: false, // uplaod files in a single request
+                //parallelUploads: 100, // use it with uploadMultiple
+                maxFiles: 5,
+                acceptedFiles: ".png, .jpeg, .jpg",
+                // Language Strings
+                dictFileTooBig: "File is to big ",
+                dictInvalidFileType: "Invalid File Type",
+                dictCancelUpload: "Cancel",
+                dictRemoveFile: "Remove",
+                dictMaxFilesExceeded: "Only 5 files are allowed",
+                dictDefaultMessage: "Drop files here to upload",
+               init: function(file) {
+
+
+
+               },
+                success: function(file, data){
+                    myDropzone_files.push(file)
+                    console.log(data);
+                },
+                removedfile:function(file){
+                    console.log(myDropzone_files);
+                    var index=myDropzone_files.map(function(obj,index){
+                        if(file==obj){
+                            return index;
+                        }
+                    }).filter(isFinite)[0];
+                    console.log(index);
+
+                    $.ajax({
+                        type: "POST",
+                        dataType: 'json',
+                        async: false,
+                        url: '/admin/delete_image_from_session',
+                        data: {file_index: index}, // serializes the form's elements.
+                        success: function (dataprop) {
+                            console.log(dataprop);
+                        }
+
+                    });
+                }
+            });
+
+
+
+
 
         setTimeout(function(){
             CKEDITOR.replace( 'editor1' );
         },500);
     </script>
-
 
 
     <script>
@@ -160,6 +253,7 @@
 
 
         $(document).ready(function(){
+
 
 
 
@@ -186,7 +280,12 @@
                     //Пробуем поднять dropzone
                     if (newIndex === 2 )
                     {
-                     $('#mydropzone_block').css('display','block');
+                        $('#mydropzone_block').css('display','block');
+                    }
+
+                    if (newIndex === 0 ||  newIndex === 1 || newIndex === 3)
+                    {
+                        $('#mydropzone_block').css('display','none');
                     }
 
                     // Always allow going backward even if the current step contains invalid fields!
@@ -417,6 +516,5 @@ $('.color_btn').click(function(){
 
 
     </script>
-
 </body>
 </html>

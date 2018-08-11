@@ -51,7 +51,8 @@ if($domain != "magelan.loc"){
         Route::post('/add_good', 'SiteAdmin\SiteGoodsController@add_good');
         Route::get('/goods_and_groups', 'SiteAdmin\SiteGoodsController@showGoodsAndGroups');
         Route::get('/goods_by_filter/{goods}', 'SiteAdmin\SiteGoodsController@showGoodsByFilter')->name('site.admin.show_good_by_filter');
-
+        Route::post('/fileupload', '\App\Http\Ajax\FuncUploadClass@actionImagesUpload');
+        Route::post('/delete_image_from_session', '\App\Http\Ajax\FuncUploadClass@actionImagesDelFromSession');
         //admin
        /* Route::get('/main',['uses' => 'SiteAdmin\IndexController@main','as' => 'adminMain']);
 
