@@ -39,11 +39,7 @@ class SiteGoodsController extends SiteAdminController
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
         $tmp_folder = '/files/tmpImages/';
-        if(session('images')){
-        foreach(session('images') as $file){
-           unlink(base_path().$tmp_folder.$file);
-        }
-    }
+
        session()->forget('images');
         $data['sub_menu']=[
         1=>[
@@ -125,23 +121,32 @@ class SiteGoodsController extends SiteAdminController
             $img=Image::make(storage_path()."/app/public/".$file);
             $height=$img->height();
             $width=$img->width();
+
+
+
+
+
+
+
             if($width>$height){
-                $img->resize(null, 1036);
+                $pxl_perc=$width/$height;
+
+
+                $img->resize($pxl_perc*1036, 1036);
 
             }
             if($height>$width){
-                $img->resize(850, null);
+                $pxl_perc=$height/$width;
+                $img->resize(850, $pxl_perc*850);
             }
             $img->crop(850, 1036);
             $img->save();
             echo "<img src='".asset('storage/'.$file.'')."'>";
+
         }
 
 
-
-
-
-
+        session()->forget('images');
 dd(session('images'));
         $data= new \App\Good();
         $data->name = $request->input('name');
