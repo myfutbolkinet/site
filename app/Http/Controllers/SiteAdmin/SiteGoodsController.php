@@ -109,45 +109,7 @@ class SiteGoodsController extends SiteAdminController
     //TODO: переименовать функцию в store
     public function add_good(Request $request){
         dump(session()->all());
-        //TODO: Взять из сессии фотки товара и сохранить их в базе после чего удалить их из сессии и очистить эти файлы из storage/images/temp
 
-
-        //TODO: Переместить фотографии из
-        $tmp_folder = '/files/tmpImages/';
-
-        foreach(session('images') as $file){
-            rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
-
-            $img=Image::make(storage_path()."/app/public/".$file);
-            $height=$img->height();
-            $width=$img->width();
-
-
-
-
-
-
-
-            if($width>$height){
-                $pxl_perc=$width/$height;
-
-
-                $img->resize($pxl_perc*1036, 1036);
-
-            }
-            if($height>$width){
-                $pxl_perc=$height/$width;
-                $img->resize(850, $pxl_perc*850);
-            }
-            $img->crop(850, 1036);
-            $img->save();
-            echo "<img src='".asset('storage/'.$file.'')."'>";
-
-        }
-
-
-        session()->forget('images');
-dd(session('images'));
         $data= new \App\Good();
         $data->name = $request->input('name');
         $data->articul = $request->input('artikul');
@@ -156,11 +118,34 @@ dd(session('images'));
         $data->qnt =$request->input('count');
         $data->discount= $request->input('discount');
         $data->category=$request->input("id_cat");
-  $data->description=$request->input("editor1");
+        $data->description=$request->input("editor1");
         $data->description2='';
         $data->user_id=Auth::user()->id;
-$data->save();
-foreach ($request->input("color") as $value){
+        $data->save();
+        $tmp_folder = '/files/tmpImages/';
+        foreach(session('images') as $file){
+            rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
+            $img=Image::make(storage_path()."/app/public/".$file);
+            $height=$img->height();
+            $width=$img->width();
+            if($width>$height){
+                $pxl_perc=$width/$height;
+                $img->resize($pxl_perc*1036, 1036);
+            }
+            if($height>$width){
+                $pxl_perc=$height/$width;
+                $img->resize(850, $pxl_perc*850);
+            }
+            $img->crop(850, 1036);
+            $img->save();
+           // echo "<img src='".asset('storage/'.$file.'')."'>";
+            $image=new Photo();
+            $image->id_good=$data->id;
+            $image->image_large=$file;
+            $image->save();
+        }
+    session()->forget('images');
+    foreach ($request->input("color") as $value){
     $color=new \App\Colors_of_good();
     $color->id_good=$data->id;
     $color->color=$value;
