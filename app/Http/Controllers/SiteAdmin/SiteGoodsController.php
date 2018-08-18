@@ -38,7 +38,7 @@ class SiteGoodsController extends SiteAdminController
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
-        $tmp_folder = '/files/tmpImages/';
+        $tmp_folder = '/files/tmpImages/';session()->forget('images');
         if(session('images')){
         foreach(session('images') as $file){
            unlink(base_path().$tmp_folder.$file);
@@ -114,7 +114,18 @@ class SiteGoodsController extends SiteAdminController
     public function add_good(Request $request){
         dump(session()->all());
         //TODO: Взять из сессии фотки товара и сохранить их в базе после чего удалить их из сессии и очистить эти файлы из storage/images/temp
-
+        $data= new \App\Good();
+        $data->name = $request->input('name');
+        $data->articul = $request->input('artikul');
+        $data->price = $request->input('price');
+        $data->type = $request->input('type');
+        $data->qnt =$request->input('count');
+        $data->discount= $request->input('discount');
+        $data->category=$request->input("id_cat");
+        $data->description=$request->input("editor1");
+        $data->description2='';
+        $data->user_id=Auth::user()->id;
+        $data->save();
 
         //TODO: Переместить фотографии из
         $tmp_folder = '/files/tmpImages/';
@@ -134,35 +145,22 @@ class SiteGoodsController extends SiteAdminController
             }
             $img->crop(850, 1036);
             $img->save();
-            echo "<img src='".asset('storage/'.$file.'')."'>";
+            //echo "<img src='".asset('storage/'.$file.'')."'>";
+
+            $photo=new \App\Photo();
+            $photo->id_good=$data->id;
+            $photo->photo=$file;
+            $photo->save();
         }
 
-
-
-
-
-
-dd(session('images'));
-        $data= new \App\Good();
-        $data->name = $request->input('name');
-        $data->articul = $request->input('artikul');
-        $data->price = $request->input('price');
-        $data->type = $request->input('type');
-        $data->qnt =$request->input('count');
-        $data->discount= $request->input('discount');
-        $data->category=$request->input("id_cat");
-  $data->description=$request->input("editor1");
-        $data->description2='';
-        $data->user_id=Auth::user()->id;
-$data->save();
-foreach ($request->input("color") as $value){
-    $color=new \App\Colors_of_good();
-    $color->id_good=$data->id;
-    $color->color=$value;
-    $color->save();
-}
-
-return redirect()->guest(route('site.admin.add_good'));
+        foreach ($request->input("color") as $value){
+            $color=new \App\Colors_of_good();
+            $color->id_good=$data->id;
+            $color->color=$value;
+            $color->save();
+        }
+        session()->forget('images');
+    return redirect()->guest(route('site.admin.add_good'));
 
     }
 

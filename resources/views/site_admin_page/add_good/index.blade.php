@@ -4,26 +4,31 @@
 
 @section('content')
 
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-            <h2>Add goods</h2>
-            <ol class="breadcrumb">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a>Forms</a>
-                </li>
-                <li class="active">
-                    <strong>Wizard</strong>
-                </li>
-            </ol>
-        </div>
-        <div class="col-lg-2">
+    <div id="main" role="main" style="">
+
+    <!-- Main view  -->
+    @include('layouts.goods_topnavbar')
+        <!-- RIBBON -->
+        <div id="ribbon">
+
+            <div class="back_btn" style="z-index:999;margin-left:-10px;display:inline-block;position:relative;left:0px;width:30px;height:40px;background:linear-gradient(to right,#3a3633 93%,#2a2725 100%);">
+                <a href="@php echo (isset($_SERVER['HTTP_REFERER'])) ?  $_SERVER['HTTP_REFERER'] : ''; @endphp "><i style="position:absolute;color:#fff;top:15px;left:10px;" class="fa fa-step-backward"></i></a>
+            </div>
+
+            <span class="ribbon-button-alignment" style="position:absolute;right:30px">
+					<a href="javascript:window.location.reload();"><span id="refresh" class="btn btn-ribbon" >
+						<i class="fa fa-refresh"></i>
+					</span></a>
+				</span>
+
+            <!-- breadcrumb -->
+
 
         </div>
-    </div>
+        <!-- END RIBBON -->
 
+        <!-- MAIN CONTENT -->
+        <div id="content">
 
 
 
@@ -62,6 +67,8 @@
                             Постепенно добавьте информацию о товарной позиции в соответствующие поля
                         </p>
 
+
+
                         <form id="form" action="/admin/add_good" method="post" class="wizard-big">
 
 
@@ -72,17 +79,19 @@
                             <fieldset>
                                 <h2>Добавляем позицию</h2>
                                 <div class="row">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-10" style="border-right:#000 dashed 1px">
 
 
 
                                         <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"> Название товара : </label>
-                                            <div class="col-sm-5">
+
+                                            <div class="col-sm-8">
+                                                <label class="control-label"> Название товара : </label>
                                                 <input class="form-control required" name="name" type="text" placeholder="Наберить назву товару"  data-parsley-group="order" data-parsley-required />
                                             </div>
-                                                <label class="col-sm-2 control-label"> Артикул : </label>
+
                                                 <div class="col-sm-3 input-group">
+                                                    <label class="control-label"> Артикул : </label>
                                                     <input class="form-control required" name="artikul" type="text" placeholder="Наберить артикул товару" data-parsley-group="order" data-parsley-required />
                                                 </div>
 
@@ -90,74 +99,53 @@
 
                                         </div>
 
+                                        <div class="form-group col-sm-3" style="position:relative;top:5px;">
 
+                                            <div style="padding-left:15px;">
+                                            <label class="control-label"> Ціна : </label>
+                                            <div class="col-sm-12 input-group " >
 
-                                            <div class="form-group col-sm-12" style="position:relative;top:5px;">
-                                         {{--   <label class="col-sm-2 control-label"> Категорія : </label>
-                                            <div class="col-sm-5">
-                                                <select class="form-control" name="category" placeholder="Виберить категорію" />
-                                                @foreach($categories as $key=>$val)
-                                                @if($val->parent_id!=0)
-
-                                                <option value="{{$val->id}}">{{ $val->name}}</option>
-                                                @endif
-                                                @endforeach
-                                                </select>
-                                            </div>--}}
-                                                <label class="col-sm-2 control-label"> Ціна : </label>
-
-                                                <div class="col-sm-5 input-group m-b" style="padding-left:13px;padding-right:13px;">
-                                                    <span class="input-group-addon"><i class="fa fa-dollar fa-lg"></i></span>
-                                                    <input name="price" class="form-control required" type="text" placeholder="Введите цену">
-                                                    <span class="input-group-addon">.00</span>
-                                                </div>
-
-
-
-                                        </div>
-
-                                        <div class="form-group col-sm-12">
-
-                                            <label class="col-sm-2 control-label"> Тип : </label>
-                                            <div class="col-sm-5">
-                                                <select class="form-control" name="type" placeholder="Виберить тип товару" />
-                                                @foreach ($types as $key=>$val)
-                                                    <option value="{{$val->id}}">{{$val->name}}</option>
-                                                    @endforeach
-                                                    </select>
+                                                <span class="input-group-addon"><i class="fa fa-dollar fa-lg"></i></span>
+                                                <input name="price" class="form-control required" type="text" placeholder="Введите цену">
+                                                <span class="input-group-addon">.00</span>
                                             </div>
-
-                                            <label class="col-sm-2 control-label"> Количество в партии : </label>
-                                            <div class="col-sm-3 input-group ">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-9" style="position:relative;top:5px;">
+                                            <div class="col-sm-3 ">
+                                                <label class="control-label"> Количество в партии : </label>
                                                 <input class="form-control" name="count" type="text" placeholder="Введите количество данной модели на складе"  data-parsley-group="order" data-parsley-required >
 
                                             </div>
+                                            <div class="col-sm-3" style="margin-left:20px;">
+                                                <div class="form-group">
+                                                    <label>Скидка %: </label>
+                                                    <input class="form-control"  id="spinner-decimal" name="spinner-decimal" value="5">
+                                                </div>
+
+                                            </div>
 
                                         </div>
+
                                         <div class="form-group col-sm-12">
-                                            <label class="col-sm-2 control-label"> Скидка : </label>
-                                            <div class="col-sm-5">
 
-                                                <input class="touchspin2" type="text" value="5" name="discount">
-                                            </div>
-                                            <label class="col-sm-2 control-label"> </label>
-                                            <div class="col-sm-3 input-group ">
-                                            </div>
-                                        </div>
-
-
-
-
-
-
-
-
-                                        <div class="form-group ">
-                                            <label class="col-sm-2 control-label" style="display:block;">Категория в каталоге*</label>
+                                            <label class="control-label" style="display:block;">Категория в каталоге*</label>
                                             <input type="hidden" name="id_cat">
-                                            <input type="text" class="col-sm-10 control-label cat_name required" style="font-size:17px;">
+                                            <input type="text" class="col-sm-11 control-label cat_name required" style="font-size:17px;">
 
                                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                                         <div class="form-group col-sm-12 categories">
@@ -204,14 +192,28 @@
                                             <textarea name="editor1" id="editor1" rows="10" cols="80">
                                                 This is my textarea to be replaced with CKEditor.
                                             </textarea>
+
                                         </div>
+
+
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="text-center">
-                                            <div style="margin-top: 20px">
-                                                <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
+                                    <div class="col-sm-2 ">
+
+                                        <div class="photo ">
+                                            <div style="display:none">
+                                                <input id="main_photo" class="fileupload" name="myFile1" type="file">
+                                            </div>
+                                        <div class="form-group col-sm-12 photo_blocks" style="position:relative;width:300px;height:300px;border:#000 dashed 1px;">
+
+                                            <div class="photo_inside " style="width:100%;height:100%;">
+
+                                                <div class="photo_icon" style="z-index:9999;position:absolute;margin:130px 110px;">
+                                                    <i class="fa fa-camera " style="color:grey;font-size: 48px;"></i>
+                                                </div>
+
                                             </div>
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
 
@@ -290,6 +292,7 @@
                     </div>
                 </div>
     </div>
-
+        </div>
+    </div>
 
 @endsection

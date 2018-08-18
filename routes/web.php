@@ -42,7 +42,7 @@ if($domain != "magelan.loc"){
 
     Route::group(['prefix' => 'admin'],function(){
 
-
+        Route::post('//add_photo_file','\App\Http\Ajax\FuncImagesClass@add_photo_file');
 
         Route::get('/login', 'Auth\SiteAdminLoginController@showLoginForm')->name('site.admin.login');
         Route::post('/login', 'Auth\SiteAdminLoginController@login')->name('site.admin.login.submit');

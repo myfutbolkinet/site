@@ -8,6 +8,78 @@ use Intervention\Image\ImageManagerStatic as Image;
 class FuncImagesClass
 {
 
+
+    public function add_photo_file(Request $request){
+        // define absolute folder path
+        $storeFolder = storage_path().'/app/public/';
+// if folder doesn't exists, create it
+        if(!file_exists($storeFolder) && !is_dir($storeFolder)) {
+            mkdir($storeFolder);
+        }
+// upload files to $storeFolder
+        if (!empty($_FILES)) {
+
+            $tempFile = $_FILES['file']['tmp_name'];
+            $array = explode('.', $_FILES['file']['name']);
+            $extension = end($array);$without_ext=str_replace($extension, "", $_FILES['file']['name']);
+            $without_ext=str_replace(".", "", $without_ext);
+            $target=$without_ext."_". time().".".$extension;
+
+            $targetFile =  $storeFolder. $target;
+
+            if(move_uploaded_file($tempFile,$targetFile)) {
+
+                $background = Image::canvas(1036, 1036);
+                $background->fill('#fff');
+
+
+                $img=Image::make($targetFile);
+
+                $height=$img->height();
+                $width=$img->width();
+
+                if($width>$height){
+                    $aspect_ratio=$width/$height;
+
+                    $img->resize(1036,1036/$aspect_ratio );
+                    $rest=(1036-1036/$aspect_ratio)/2;
+                    $background->insert($img,'top-left', intval(0),intval($rest));
+                }
+                if($height>$width){
+
+                    $aspect_ratio=$height/$width;
+                    $img->resize(1036/$aspect_ratio, 1036);
+                    $rest=(1036-1036/$aspect_ratio)/2;
+                    $background->insert($img,'top-left', intval($rest),intval(0));
+                }
+                else{
+                    $img->resize(1036, 1036);
+
+                    $background->insert($img,'center');
+                }
+
+                //$background->crop(1036, 1036);
+
+                $background->save($targetFile);
+
+
+                $items = session('images');
+                if ($items == null) {
+                    session()->push('images', $target);
+                } else {
+                    var_dump(session('images'));
+                    $items = array_push($items,$target);
+                    session()->push('images',$target);
+                }
+                session()->save();
+            }
+        }
+        echo json_encode($target);
+    }
+
+
+
+
     public function index(Request $request)
     {
         //функция принемает файл и записывает его на сервер

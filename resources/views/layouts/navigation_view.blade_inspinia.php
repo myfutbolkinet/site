@@ -1,36 +1,31 @@
-<!-- Note: This width of the aside area can be adjusted through LESS variables -->
-<aside id="left-panel">
-
-    <!-- User info -->
-    <div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
-
-					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-						<img src="/smartAdmin/img/avatars/sunny.png" alt="me" class="online" />
-						<span>
-
-							@if(isset($username)){{$username }}@endif
-						</span>
-						<i class="fa fa-angle-down"></i>
-					</a>
-
-				</span>
-    </div>
-    <!-- end user info -->
-
-    <!--MAIN NAVIGATION-->
-    <!--===================================================-->
 
 
-    <!-- NAVIGATION : This navigation is also responsive-->
-    <nav>
-        <!--
-        NOTE: Notice the gaps after each icon usage <i></i>..
-        Please note that these links work a bit different than
-        traditional href="" links. See documentation for details.
-        -->
+<!--MAIN NAVIGATION-->
+<!--===================================================-->
 
-        <ul>
+
+<nav style="min-height:100%" class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="/img/profile_small.jpg" />
+                             </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="mailbox.html">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
 
 @php
 
@@ -112,19 +107,13 @@
 
 @endphp
 
-        </ul>
-    </nav>
+                    </ul>
 
 
-    <span class="minifyme" data-action="minifyMenu">
-				<i class="fa fa-arrow-circle-left hit"></i>
-			</span>
 
-</aside>
-<!-- END NAVIGATION -->
+                </div>
 
-<style>
-    #left-panel a:hover {
-        background-color:#333 !important;
-    }
-</style>
+</nav>
+<!--===================================================-->
+<!--END MAIN NAVIGATION-->
+
