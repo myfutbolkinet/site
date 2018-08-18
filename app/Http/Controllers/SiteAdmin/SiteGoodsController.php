@@ -38,12 +38,14 @@ class SiteGoodsController extends SiteAdminController
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
+
         $tmp_folder = '/files/tmpImages/';session()->forget('images');
         if(session('images')){
         foreach(session('images') as $file){
            unlink(base_path().$tmp_folder.$file);
         }
     }
+
        session()->forget('images');
         $data['sub_menu']=[
         1=>[
@@ -113,7 +115,8 @@ class SiteGoodsController extends SiteAdminController
     //TODO: переименовать функцию в store
     public function add_good(Request $request){
         dump(session()->all());
-        //TODO: Взять из сессии фотки товара и сохранить их в базе после чего удалить их из сессии и очистить эти файлы из storage/images/temp
+
+
         $data= new \App\Good();
         $data->name = $request->input('name');
         $data->articul = $request->input('artikul');
@@ -126,22 +129,19 @@ class SiteGoodsController extends SiteAdminController
         $data->description2='';
         $data->user_id=Auth::user()->id;
         $data->save();
-
-        //TODO: Переместить фотографии из
         $tmp_folder = '/files/tmpImages/';
-
         foreach(session('images') as $file){
             rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
-
             $img=Image::make(storage_path()."/app/public/".$file);
             $height=$img->height();
             $width=$img->width();
             if($width>$height){
-                $img->resize(null, 1036);
-
+                $pxl_perc=$width/$height;
+                $img->resize($pxl_perc*1036, 1036);
             }
             if($height>$width){
-                $img->resize(850, null);
+                $pxl_perc=$height/$width;
+                $img->resize(850, $pxl_perc*850);
             }
             $img->crop(850, 1036);
             $img->save();
@@ -161,6 +161,7 @@ class SiteGoodsController extends SiteAdminController
         }
         session()->forget('images');
     return redirect()->guest(route('site.admin.add_good'));
+
 
     }
 
