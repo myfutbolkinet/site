@@ -64,12 +64,14 @@ class FuncImagesClass
 
 
                 $items = session('images');
+
                 if ($items == null) {
                     session()->push('images', $target);
+
                 } else {
-                    var_dump(session('images'));
                     $items = array_push($items,$target);
                     session()->push('images',$target);
+
                 }
                 session()->save();
             }

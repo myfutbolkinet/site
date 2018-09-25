@@ -39,14 +39,7 @@ class SiteGoodsController extends SiteAdminController
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
 
-        $tmp_folder = '/files/tmpImages/';session()->forget('images');
-        if(session('images')){
-        foreach(session('images') as $file){
-           unlink(base_path().$tmp_folder.$file);
-        }
-    }
-
-       session()->forget('images');
+        $tmp_folder = '/files/tmpImages/';
         $data['sub_menu']=[
         1=>[
             'btn_title'=>'управление товарами и группами',

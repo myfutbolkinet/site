@@ -10,10 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Auth::routes();
+
+
+
 $domain=Request::server("HTTP_HOST");
 
 if($domain != "magelan.loc"){
+
 // TODO Получить из базы данных список активных доменов
     //Если среди активных доменов нет входящего выдать ошибку
     $domains_array=['eco-new.life','imedia.eco-new.life'];
@@ -95,6 +101,10 @@ if($domain != "magelan.loc"){
     Route::post('/privat/showEditHorisontalMenu', 'Privat\Privat3Controller@showEditHorisontalMenu');
     Route::get('/goods/show_add_item', 'Privat\Privat3Controller@ShowGoodsAddItem');
     Route::post('/goods/upload_files', 'Privat\Privat3Controller@UploadGoodsFiles');
+
+
+
+
 }
 
 
@@ -252,3 +262,4 @@ Route::get('/home', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 
 });
+

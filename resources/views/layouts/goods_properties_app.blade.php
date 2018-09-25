@@ -42,7 +42,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        @include('layouts.navigation')
+
 
         <!-- Page wraper -->
         <div id="page-wrapper" class="gray-bg">

@@ -392,7 +392,7 @@ var myDropzone_files=[];
                     data: form_data,
                     type: 'post',
                     success: function(php_script_response){
-                        console.log();
+
                         var file=php_script_response.replace(/"/g , '')
                         //$('.photo_inside').empty();
                         $('.photo_inside').prepend(
