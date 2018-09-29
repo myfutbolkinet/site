@@ -394,7 +394,8 @@ var myDropzone_files=[];
                     success: function(php_script_response){
 
                         var file=php_script_response.replace(/"/g , '')
-                        //$('.photo_inside').empty();
+                        console.log(file);
+                        $('.photo_inside').empty();
                         $('.photo_inside').prepend(
 
                            "<img style='position:absolute;margin-left:-13px;z-index:998;width:100%;height:100%' src='/storage/"+file+"'>"+
