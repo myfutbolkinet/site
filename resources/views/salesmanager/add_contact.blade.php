@@ -131,6 +131,18 @@
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Viber : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="viber" type="text" placeholder="Viber" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-2 control-label">Whatsup : </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="vhatsup" type="text" placeholder="Whatsup" data-parsley-group="order" data-parsley-required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
                                             <label class="col-sm-2 control-label">Skype : </label>
                                             <div class="col-sm-10">
                                                 <input class="form-control" name="skype" type="text" placeholder="Skype" data-parsley-group="order" data-parsley-required />

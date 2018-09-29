@@ -206,13 +206,14 @@ Route::group(['prefix' => 'superadmin'],function(){
 
 });
 
-Route::group(['prefix' => 'salesmanager','middleware'=>['web','auth']],function(){
+Route::group(['prefix' => 'salesmanager'],function(){
 
     Route::get('/',['uses' => 'SalesManager\IndexController@index','as' => 'salesmanagerIndex']);
     Route::get('/contacts/add','SalesManager\ContactsController@add_show');
     Route::get('/contacts','SalesManager\ContactsController@index');
     Route::post('/edit_contact_form','SalesManager\ContactsController@edit_contact_form');
     Route::post('/add_contact','SalesManager\ContactsController@add_contact');
+    Route::post('/email_check','SalesManager\ContactsController@check_email');
     Route::get('/contact/{id}','SalesManager\ContactsController@show_contact');
 
 });

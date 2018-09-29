@@ -23,10 +23,10 @@ class ContactsController extends SalesManagerController
 
 
     public function index(){
-        if(Gate::denies('SUPERADMIN_SALES')){
+     /*   if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
-        }
+        }*/
 
         $data=array();
         $this->title = 'Панель администратора';
@@ -39,10 +39,10 @@ class ContactsController extends SalesManagerController
 
 
     public function show_contact($id){
-        if(Gate::denies('SUPERADMIN_SALES')){
+    /*    if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
-        }
+        }*/
         $data=array();
         $data['categories']=Category::orderBy('parent_id', 'asc')
             ->orderBy('created_at', 'desc')
@@ -62,10 +62,10 @@ class ContactsController extends SalesManagerController
 
 
     public function add_show(){
-        if(Gate::denies('SUPERADMIN_SALES')){
+     /*   if(Gate::denies('SUPERADMIN_SALES')){
 
             abort(403);
-        }
+        }*/
         $data=array();
         $data['categories']=Category::orderBy('parent_id', 'asc')
             ->orderBy('created_at', 'desc')
@@ -154,5 +154,15 @@ return redirect('/salesmanager/contacts');
         DB::table('contacts')->where('id',$request->input('id'))->update($data);
         return redirect('salesmanager/contacts');
 
+    }
+
+
+    public function check_email(Request $request){
+    if($is_contacts_email=\App\Contact::where('email',$request->input('email'))->first()){
+       echo json_encode("error");
+    }
+    else{
+        echo json_encode( "success");
+    }
     }
 }

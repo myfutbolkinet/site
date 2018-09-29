@@ -25,6 +25,8 @@ class CreateContactsTable extends Migration
             $table->string('email');
             $table->string('website');
             $table->string('skype');
+            $table->string('viber');
+            $table->string('whatsup');
             $table->string('answer_status');
             $table->text('wishes');
             $table->text('description_of_last_call');
@@ -33,10 +35,8 @@ class CreateContactsTable extends Migration
             $table->string('city');
             $table->string('street');
             $table->integer('house');
-
             $table->integer('office');
             $table->integer('index');
-
             $table->rememberToken();
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

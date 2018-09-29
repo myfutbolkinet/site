@@ -15,6 +15,12 @@ class ClientsTableSeeder extends Seeder
 
         DB::table('answer_statuses')->insert([
 
+
+            [
+
+                'name' => 'Не было контакта',
+
+            ],
             [
 
                 'name' => 'Заказ',

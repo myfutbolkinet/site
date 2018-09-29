@@ -41,8 +41,7 @@
   <!-- Wrapper-->
     <div id="wrapper">
 
-        <!-- Navigation -->
-        @include('layouts.navigation')
+
 
         <!-- Page wraper -->
         <div id="page-wrapper" class="gray-bg">
@@ -103,6 +102,31 @@
                 calendarWeeks: true,
                 autoclose: true
             });
+
+
+            $('input[name="email"]').change(function(){
+                var email = $(this).val()
+                $.ajax({
+                    type: "POST",
+                    dataType: 'json',
+                    url: '/salesmanager/email_check',
+                    data: {email: email}, // serializes the form's elements.
+                    success: function (data) {
+                    console.log(data)
+                        if(data==="success"){
+
+                        }
+                        else{
+                            alert('Такой email в базе уже есть!!!');
+                        }
+
+                    }
+
+                });
+            })
+
+
+
         });
     </script>
 
