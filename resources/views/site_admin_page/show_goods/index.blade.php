@@ -197,6 +197,7 @@
                                                 При выборе категории автоматически будут выбраны родительские категории а также все дочерние
                                             </p> <input class="parent_category required" name="parent_id" type="text" value="">
                                             <div class="categories">
+                                                @if($categories!==null)
                                                 <div class="block_main_categories cat_block_1" style="">
                                                     @foreach ($categories as $key=>$category)
                                                         @if($category->parent_id==0)
@@ -221,7 +222,13 @@
                                                     @endforeach
 
                                                 </div>
+                                                @else
+                                                    <div style="width:100%;height:100px;color:#fff;background:red;text-align:center">
 
+                                                        <h3>У вас не выбраны категории товаров для использования в вашем интернет магазине </h3>
+                                                        <a href="/admin/menu_areas">Перейти для выбора категорий</a>
+                                                    </div>
+                                                @endif
                                                 <div class="block_main_categories cat_block_2" >
 
 

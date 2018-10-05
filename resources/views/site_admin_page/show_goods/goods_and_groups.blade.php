@@ -45,7 +45,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
-
+    <link href="{!! asset('inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
     <!--link rel="stylesheet" type="text/css" media="screen" href="/css/neu.css"-->
     <!--link rel="stylesheet" type="text/css" media="screen" href="/css/credit_edit_media.css"-->
 
