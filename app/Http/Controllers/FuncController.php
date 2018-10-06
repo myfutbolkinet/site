@@ -93,8 +93,7 @@ class FuncController extends Controller
 
 
         $parrent_cats=$this->get_all_parent_cats($id_cat);
-         //var_dump($parrent_cats);
-        if($parrent_cats){
+         if($parrent_cats){
         foreach($parrent_cats as $value){
             $temp=DB::table('categories')->where('id',$value)->get();
             if(!empty($arrOut)){
@@ -111,6 +110,21 @@ class FuncController extends Controller
 
         return json_encode($arrOut);
     }
+
+    //ToDo:: make one function from show_subcat_levels && show_subcat_levels_back
+    public function show_subcat_all_levels_back(Request $request){
+        $id_cat=$request->input('id_cat');
+
+
+        $data=$this->get_all_subcats($id_cat,0);
+
+
+        $arrOut = $this->makeSingleArray($data);
+        $children_cats=$this->get_all_children_cats($id_cat);
+        if($children_cats){
+        return json_encode($children_cats);}
+    }
+
     public function show_parent_cats(Request $request){
         $id_cat=$request->input('id_cat');
         $cat=DB::table('categories')->where('id', $id_cat)->get();
@@ -130,6 +144,15 @@ class FuncController extends Controller
 
         return $cats;
     }
+
+    private function get_all_children_cats($id_cat){
+        //рекурсивная функция
+        $this->all_chilcats=DB::table('categories')->where('parent_id', $id_cat)->get();
+
+        return $this->all_chilcats;
+    }
+
+
     private function get_all_parent_cats($id_cat){
         //рекурсивная функция
         $cat=DB::table('categories')->where('id', $id_cat)->get();

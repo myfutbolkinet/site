@@ -34,6 +34,7 @@ class Good extends Model
 
         return $this->hasMany('App\Photo','id_good');
     }
+
     public function colors(){
 
         return $this->hasMany('App\Colors_of_good','id_good');

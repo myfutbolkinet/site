@@ -9,6 +9,10 @@ class Photo extends Authenticatable
 {
     use Notifiable;
 
+    protected $fillable = [
+        'photo', 'id_good'
+    ];
+
     /**
      * The attributes that are mass assignable.
      *

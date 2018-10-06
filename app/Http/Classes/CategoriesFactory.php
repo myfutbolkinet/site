@@ -14,13 +14,20 @@ class CategoriesFactory
 {
     public $user;
     public $user_categories;
-    public function __construct()
+    public function __construct($type=null)
     {
 
             $this->user=Auth::guard('admin')->user()->id;
+
+            if(!$type){
             $this->user_categories['categories_array']=$this->init_categories()['categories_array'];//сериализованный массив категорий по юзеру
             $this->user_categories['row']=$this->init_categories()['row'];
             //$this->user_categories['categories']=$this->CategoriesMenu();//Категории только принадлежащие юзеру
+            }
+            else{
+            $this->user_categories['categories_array']=$this->init_filter()['categories_array'];//сериализованный массив категорий по юзеру
+            $this->user_categories['row']=$this->init_filter()['row'];
+            }
     }
 
     public function get_categories($type){
@@ -33,6 +40,19 @@ class CategoriesFactory
 
     public function init_categories(){
         $res= Site_categories::where('user_id', $this->user)
+            ->get();
+        if(count($res)>0){
+
+            $result['row']=$res[0]->id;
+            $result['categories_array']=$res;
+            return $result;
+        }else{
+            return null;
+        }
+    }
+//ToDo:: reformat two functions to one (init_categories && init_filter)
+    public function init_filter(){
+        $res= \App\SiteGoodsFilter::where('user_id', $this->user)
             ->get();
         if(count($res)>0){
 

@@ -103,6 +103,7 @@
     <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
     <script>
         $(document).ready(function () {
+            console.log(789);
             checked_categories=[];
             <?php if(isset($json)){?>
             checked_categories=eval('<?php echo $json;?>');
@@ -321,7 +322,8 @@
         //Установка чекбоксов по всем подкатегориям если он активен
         $('.categories').delegate('input','ifChecked',function(event) {
 
-            var id_cat=$(this).parent('div').parent('label').parent('div').parent('div').find('.fahover_cubes_input').val()
+            var id_cat=$(this).parent('div').parent('label').parent('div').parent('div').find('.fahover_cubes_input').val();
+            console.log('id_cat',id_cat);
             if(checkValue(id_cat,checked_categories)=='Not exist'){checked_categories.push(id_cat);}
             //alert(event.type + ' callback');
             //Найти все подкатегории во всех уровнях и поставить checkbox on
@@ -367,13 +369,15 @@
 
         $('.categories').delegate('input','ifUnchecked',function(event) {
 
+
             var id_cat=$(this).parent('div').parent('label').parent('div').parent('div').find('.fahover_cubes_input').val()
+
             //alert(id_cat)
             //id блока в котором расположены категории
             //var id_block=$(this).parent('div').parent('label').parent('div').parent('div').find('.fahover_cubes_input').parent('.cat_block').attr('class')
             //alert(id_block)
             if(checkValue(id_cat,checked_categories)=='Exist'){
-
+                console.log('id_cat',id_cat);
                 //checked_categories.splice($.inArray(itemtoRemove, checked_categories),1);
 
                 checked_categories = jQuery.grep(checked_categories, function(value) {
@@ -388,9 +392,10 @@
                 method: 'POST',
                 dataType: 'json',
                 async:false,
-                url: "/show_subcat_all_levels",
+                url: "/show_subcat_all_levels_back",
                 data: {id_cat: id_cat}, // serializes the form's elements.
                 success: function (data) {
+                    console.log('show_subcat_all_levels_back',data);
                     //alert(checked_categories)
                     $.each( data, function( key, value ) {
                         //Если в этом массиве
@@ -404,8 +409,6 @@
                         // checked_categories.splice($.inArray(value.id,checked_categories),1);
 
                         }
-                        //Найти
-                        //       alert(window.checked_categories)
 
                     });
                 }

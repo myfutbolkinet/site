@@ -27,13 +27,12 @@ class UserCategories implements Categories
 
 
         foreach ($categories as $category) {
-
             if(isset($this->user_categories['categories_array'][0]) && $this->user_categories['categories_array'][0]->categories!==''){
-
                 if (in_array($category->id, unserialize($this->user_categories['categories_array'][0]->categories))) {
+                    $category->checked='checked';
                     $data['categories'][] = $category;
                 }
-            }
+              }
             else{
                 $data['categories']=null;
             }

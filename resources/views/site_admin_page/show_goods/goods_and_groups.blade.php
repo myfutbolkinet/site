@@ -422,7 +422,7 @@
                 method: 'POST',
                 dataType: 'json',
                 async:false,
-                url: "/show_subcat_all_levels",
+                url: "/show_subcat_all_levels_back",
                 data: {id_cat: id_cat}, // serializes the form's elements.
                 success: function (data) {
                     //alert(checked_categories)
@@ -527,20 +527,20 @@
 
         $('.btn_show_categories').click(function(){
             cats_array=checked_categories;
-$('.cats_array').val(cats_array)
-            $('#send_cats_array').submit();
+            $('.cats_array').val(cats_array)
+            //$('#send_cats_array').submit();
 
-/*            $.ajax({
+           $.ajax({
                 method: 'POST',
                 dataType: 'json',
                 async:false,
-                url: "/show_cats_list",
+                url: "/admin/save_cats_filter",
                 data: {cats_array: cats_array}, // serializes the form's elements.
                 success: function (data) {
                     console.log(data)
 
                 }
-            });*/
+            });
         })
     </script>
 </body>

@@ -34,6 +34,7 @@ if($domain != "magelan.loc"){
     //TODO OOP
     Route::post('/show_subcat', 'FuncController@show_subcat');
     Route::post('/show_subcat_all_levels', 'FuncController@show_subcat_all_levels');
+    Route::post('/show_subcat_all_levels_back', 'FuncController@show_subcat_all_levels_back');
     Route::post('/show_parent_cats', 'FuncController@show_parent_cats');
     Route::post('/save_cats_list', '\App\Http\Ajax\FuncCategoriesClass@save_cats_list');
     Route::post('/show_cats_list', '\App\Http\Ajax\FuncCategoriesClass@show_cats_list');
@@ -48,14 +49,15 @@ if($domain != "magelan.loc"){
 
     Route::group(['prefix' => 'admin'],function(){
 
-        Route::post('//add_photo_file','\App\Http\Ajax\FuncImagesClass@add_photo_file');
-
+        Route::post('/add_photo_file','\App\Http\Ajax\FuncImagesClass@add_photo_file');
+        Route::post('/save_cats_filter', '\App\Http\Ajax\FuncCategoriesClass@save_cats_filter');
         Route::get('/login', 'Auth\SiteAdminLoginController@showLoginForm')->name('site.admin.login');
         Route::post('/login', 'Auth\SiteAdminLoginController@login')->name('site.admin.login.submit');
         Route::get('/', 'SiteAdmin\SiteAdminController@index')->name('site.admin.dashboard');
         Route::get('/add_good','SiteAdmin\SiteGoodsController@index')->name('site.admin.add_good');
+        Route::get('/add_good_inspinia','SiteAdmin\SiteGoodsController@inspinia')->name('site.admin.add_good_inspinia');
         Route::post('/add_good', 'SiteAdmin\SiteGoodsController@add_good');
-        Route::get('/goods_and_groups', 'SiteAdmin\SiteGoodsController@showGoodsAndGroups');
+        Route::get('/goods_and_groups/{page?}', 'SiteAdmin\SiteGoodsController@showGoodsAndGroups');
         Route::get('/goods_by_filter/{goods}', 'SiteAdmin\SiteGoodsController@showGoodsByFilter')->name('site.admin.show_good_by_filter');
         Route::post('/fileupload', '\App\Http\Ajax\FuncUploadClass@actionImagesUpload');
         Route::post('/delete_image_from_session', '\App\Http\Ajax\FuncUploadClass@actionImagesDelFromSession');

@@ -31,7 +31,8 @@
 
     <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
     <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/demo.min.css">
-
+    <link href="{!! asset('inspinia/css/plugins/colorpicker/bootstrap-colorpicker.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('inspinia/css/plugins/clockpicker/clockpicker.css') !!}" rel="stylesheet">
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -46,9 +47,10 @@
     <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/neu.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/credit_edit_media.css">
-
+    <!--link rel="stylesheet" type="text/css" media="screen" href="/css/neu.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/credit_edit_media.css"-->
+    <!--link href="{!! asset('/inspinia/css/style.css') !!}" rel="stylesheet"-->
+    <link href="{!! asset('/css/style_admin.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css') !!}" rel="stylesheet">
     <style>
         .cat_block:hover{
@@ -68,6 +70,62 @@
         }
         .wizard-big.wizard > .content {
             min-height: 1220px;
+        }
+
+        .ibox-content {
+            clear: both;
+        }
+        .ibox-content {
+            background-color: #ffffff;
+            color: inherit;
+            padding: 15px 20px 20px 20px;
+            border-color: #e7eaec;
+            border-image: none;
+            border-style: solid solid none;
+            border-width: 1px 0;
+        }
+        .ibox-title {
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            background-color: #ffffff;
+            border-color: #e7eaec;
+            border-image: none;
+            border-style: solid solid none;
+            border-width: 2px 0 0;
+            color: inherit;
+            margin-bottom: 0;
+            padding: 15px 15px 7px;
+            min-height: 48px;
+        }
+        .float-e-margins .btn {
+            margin-bottom: 5px;
+        }
+        .btn-success {
+            background-color: #1c84c6;
+            border-color: #1c84c6;
+            color: #FFFFFF;
+        }
+        .btn-w-m {
+            min-width: 120px;
+        }
+
+        .btn {
+            border-radius: 3px;
+        }
+        .btn-rounded {
+            border-radius: 50px;
+        }
+        .btn-outline {
+            color: inherit;
+            background-color: transparent;
+            transition: all .5s;
+        }
+        .btn-danger {
+            background-color: #ed5565;
+            border-color: #ed5565;
+            color: #FFFFFF;
         }
     </style>
 </head>
@@ -364,7 +422,7 @@ var myDropzone_files=[];
 
     }, function (){
         //mouse leave
-        $('.touchspin2').focus();alert('Чтобы ввести в это поле информацию выберите категорию в таблице ниже,конечная категория будет зафиксированна')
+        $('input[name="name"]').focus();alert('Чтобы ввести в это поле информацию выберите категорию в таблице ниже,конечная категория будет зафиксированна')
 
     });
 
@@ -377,9 +435,13 @@ var myDropzone_files=[];
                 console.log('fileupload');
             });
 
-            $("input[name='myFile1']").change(function (e){
+            $(".fileupload").change(function (e){//input[name='myFile']
+
                 var fileName = $(this).val();
-                var file_data = $('#main_photo').prop('files')[0];
+                var file_data = $(this).prop('files')[0];
+                var _this=$(this);
+                console.log('file_data');
+                console.log(file_data);
                 var form_data = new FormData();
                 form_data.append('file', file_data);
                 console.log(form_data);
@@ -395,13 +457,14 @@ var myDropzone_files=[];
 
                         var file=php_script_response.replace(/"/g , '')
                         console.log(file);
-                        $('.photo_inside').empty();
-                        $('.photo_inside').prepend(
+                        console.log(_this);
+                        _this.parent('div').parent('.photo').find('.photo_blocks').find('.photo_image').empty();
+                        _this.parent('div').parent('.photo').find('.photo_blocks').find('.photo_image').prepend(
 
                            "<img style='position:absolute;margin-left:-13px;z-index:998;width:100%;height:100%' src='/storage/"+file+"'>"+
                                "<div style='margin-left:-13px;z-index:999;width:100%;height:100%;position:absolute;background:rgba(255,255,255,0.5)'></div>"
                         );
-                        $('.photo_icon .fa-camera').css('color','#fff')
+                        _this.parent('div').parent('.photo').find('.photo_blocks').find('.photo_icon .fa-camera').css('color','#fff')
                     }
                 });
 

@@ -101,6 +101,7 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
+                                            <th>Фото</th>
                                             <th>#</th>
                                             <th>Артикул</th>
                                             <th>Наименование</th>
@@ -109,24 +110,22 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+
+
+                                        @foreach($goods as $good)
                                         <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+
+                                            <td>
+                                                @if($good->photos->first())
+                                                <img width="50px;" height="50px;"  src="/storage/{{$good->photos->first()->photo}}">
+                                            @endif
+                                            </td>
+                                            <td>{{$good->id}}  </td>
+                                            <td>{{$good->articul}}</td>
+                                            <td>{{$good->name}}</td>
+                                            <td>{{$good->price}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
 
@@ -248,7 +247,7 @@
     <input type="hidden" name="cats_array" class="cats_array" value="">
 </form>
                                     <div class="row">
-                                        <button type="button" class="btn_show_categories btn btn-primary btn-lg">Показать товары</button>
+                                        <button type="button" class="btn_show_categories btn btn-primary btn-lg">Применить фильтр</button>
                                     </div>
 
 

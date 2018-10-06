@@ -1,4 +1,4 @@
-@extends('site_admin_page.add_good.add_good_app')
+@extends('site_admin_page.add_good.add_good_app_inspinia')
 
 @section('title', 'Main page')
 
@@ -79,7 +79,7 @@
                             <fieldset>
                                 <h2>Добавляем позицию</h2>
                                 <div class="row">
-                                    <div class="col-lg-9" style="border-right:#000 dashed 1px">
+                                    <div class="col-lg-10" style="border-right:#000 dashed 1px">
 
 
 
@@ -197,43 +197,23 @@
 
 
                                     </div>
-                                    <div class="col-lg-3 " style="position:relative">
-                                        <div style="position:relative;width:100%;height:300px;background:#eee;">
-                                        <div class="photo " style="position:relative">
+                                    <div class="col-sm-2 ">
+
+                                        <div class="photo ">
                                             <div style="display:none">
-                                                <input id="main_photo" class="fileupload" name="myFile" type="file">
+                                                <input id="main_photo" class="fileupload" name="myFile1" type="file">
                                             </div>
                                         <div class="form-group col-sm-12 photo_blocks" style="position:relative;width:300px;height:300px;border:#000 dashed 1px;">
 
                                             <div class="photo_inside " style="width:100%;height:100%;">
-                                                <div class="photo_image"></div>
+
                                                 <div class="photo_icon" style="z-index:9999;position:absolute;margin:130px 110px;">
-                                                    <i class="fa fa-camera " style="z-index:9999;color:grey;font-size: 48px;"></i>
+                                                    <i class="fa fa-camera " style="color:grey;font-size: 48px;"></i>
                                                 </div>
 
                                             </div>
                                         </div>
                                     </div>
-                                        </div>
-
-                                    @for($i=0;$i<9;$i++)
-                                        <div class="photo" style="display:inline-block;position:relative;margin-left:0px;left:10px">
-                                            <div style="display:none">
-                                                <input id="main_photod" class="fileupload" name="myFiled" type="file">
-                                            </div>
-                                            <div class="form-group col-sm-12 photo_blocks" style="position:relative;width:90px;height:90px;border:#000 dashed 1px;">
-
-                                                <div class="photo_inside " style="width:100%;height:100%;">
-                                                    <div class="photo_image"></div>
-                                                    <div class="photo_icon" style="z-index:9999;position:absolute;margin:31px 15px;">
-                                                        <i class="fa fa-camera " style="color:grey;font-size: 28px;"></i>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endfor
-
                                     </div>
                                 </div>
 

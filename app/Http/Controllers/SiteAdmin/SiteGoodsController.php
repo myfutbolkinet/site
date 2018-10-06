@@ -29,6 +29,7 @@ class SiteGoodsController extends SiteAdminController
      */
     public function index(){
         /*$this->user=Auth::user();*/
+        session()->forget('images');
         $this->title = 'Панель администратора';
         $f=new CategoriesFactory();
         $f=$f->get_categories('User');
@@ -57,11 +58,54 @@ class SiteGoodsController extends SiteAdminController
         return view('site_admin_page/add_good/index',$data,$data_nav);
     }
 
-    public function showGoodsAndGroups(){
-        $this->title = 'showGoodsAndGroups';
+    public function inspinia(){
+        /*$this->user=Auth::user();*/
+        $this->title = 'Панель администратора';
         $f=new CategoriesFactory();
         $f=$f->get_categories('User');
         $data['categories']=$f->show_categories();
+        $data['types']=Type_of_good::get();
+        $data_nav['menu']=$this->menu();
+        $data['title']="Додати товар";
+        $data['keywords']="Ukrainian industry platform";
+        $data['description']="Ukrainian industry platform";
+
+        $tmp_folder = '/files/tmpImages/';
+        $data['sub_menu']=[
+            1=>[
+                'btn_title'=>'управление товарами и группами',
+                'href'=>'/admin/goods_and_groups'
+            ],
+            2 =>[
+                'btn_title'=>'Добавить позицию',
+                'href'=>'/admin/add_good'
+            ],
+
+
+        ];
+        $data['active_menu_item']=2;
+
+        return view('site_admin_page/add_good/index_inspinia',$data,$data_nav);
+    }
+
+
+    public function showGoodsAndGroups($page=null){
+        $this->title = 'showGoodsAndGroups';
+
+        $f=new CategoriesFactory('filter');
+        $f=$f->get_categories('User');
+        $data['categories']=$f->show_categories();
+        if(!$data['categories']){
+            $f=new CategoriesFactory();
+            $f=$f->get_categories('User');
+            $data['categories']=$f->show_categories();
+        }
+        else{
+            foreach($data['categories'] as $cat){
+                $data['json'][]=$cat->id;
+            }
+            $data['json']=json_encode($data['json']);
+        }
         $data_nav['menu']=$this->menu();
         $data['title']="управление товарами и группами";
         $data['keywords']="Ukrainian industry platform";
@@ -79,11 +123,11 @@ class SiteGoodsController extends SiteAdminController
 
 
         ];
-        $data['active_menu_item']=1;
+
         $data['sub_menu2']=[
             1=>[
                 'btn_title'=>'Показывать все товары',
-'data_href'=>'tab-1'
+                'data_href'=>'tab-1'
             ],
             2 =>[
                 'btn_title'=>'Задать фильтр выборки товаров по категориям',
@@ -96,9 +140,22 @@ class SiteGoodsController extends SiteAdminController
 
 
         ];
-        $data['active_menu2_item']=1;
+        $data['active_menu_item']=1;
+        if(!$page){
 
-        $data['goods']=\App\Good::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->paginate(10);
+        $data['active_menu2_item']=1;
+        }
+        elseif($page=='filter'){
+
+            $data['active_menu2_item']=2;
+
+        }
+        elseif($page=='goods_with_filter'){
+            $data['active_menu2_item']=3;
+
+       }
+
+        $data['goods']=\App\Good::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->with('photos')->paginate(10);
 
 
         return view('site_admin_page/show_goods/index',$data,$data_nav);
@@ -122,9 +179,9 @@ class SiteGoodsController extends SiteAdminController
         $data->description2='';
         $data->user_id=Auth::user()->id;
         $data->save();
-        $tmp_folder = '/files/tmpImages/';
+        //$tmp_folder = '/files/tmpImages/';
         foreach(session('images') as $file){
-            rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
+            //rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
             $img=Image::make(storage_path()."/app/public/".$file);
             $height=$img->height();
             $width=$img->width();
