@@ -194,6 +194,8 @@ Auth::logout();
 //superadmin
 Route::group(['prefix' => 'superadmin'],function(){
 
+    Route::post('/add_category_photo','\App\Http\Ajax\FuncImagesClass@add_category_photo');
+
     Route::get('/login', 'Auth\SuperAdminLoginController@showLoginForm')->name('superadmin.login');
     Route::post('/login', 'Auth\SuperAdminLoginController@login')->name('superadmin.login.submit');
     Route::get('/', 'SuperAdmin\SuperAdminController@index')->name('superadmin.dashboard');

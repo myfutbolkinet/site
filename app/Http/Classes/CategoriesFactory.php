@@ -17,7 +17,7 @@ class CategoriesFactory
     public function __construct($type=null)
     {
 
-            $this->user=Auth::guard('admin')->user()->id;
+        $this->user=(Auth::guard('admin')->user()) ? Auth::guard('admin')->user()->id : ((Auth::guard('superadmin')->user() ?  Auth::guard('superadmin')->user()->id : "")) ;
 
             if(!$type){
             $this->user_categories['categories_array']=$this->init_categories()['categories_array'];//сериализованный массив категорий по юзеру

@@ -66,19 +66,34 @@ class FuncController extends Controller
     //var_dump($data);
     //проверка для кейса когда нужно вывести конкретные категории по текущему юзеру
     if($is_user==1 && $data['message']=='success'){
+
+        if(Auth::guard('admin')->user()){
         $user=Auth::guard('admin')->user()->id;
         $user_categories= Site_categories::where('user_id', $user)
             ->get();
-        //var_dump($data);
-        foreach($data['value'] as $category){
-            if (in_array($category->id, unserialize($user_categories[0]->categories))) {
-                $_data['categories'][] = $category;
+            foreach($data['value'] as $category){
+                if (in_array($category->id, unserialize($user_categories[0]->categories))) {
+                    $_data['categories'][] = $category;
+                }
             }
         }
-    $data['value']=$_data['categories'];
+        else{
+            foreach($data['value'] as $category){
+               $is_children=\App\Category::where('parent_id',$category->id)->get();
+
+               if(count($is_children)>0){
+                    $_data['categories'][] = $category;
+            }
+
+            }
+        }
+        //var_dump($data);
+
+    $data['value']=(isset($_data['categories'])) ? $_data['categories'] : null;
     }
     //var_dump($data);
-    return json_encode($data);
+     if($data['value']){return json_encode($data);}else{return json_encode('stop');}
+
     }
 
 

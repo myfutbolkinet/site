@@ -1,30 +1,15 @@
-@extends('layouts.goods_properties_app')
+@extends('superadmin.add_cat_photo')
 
 @section('title', 'Main page')
 
 @section('content')
-
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-            <h2>Добавление фотографий категориям</h2>
-            <ol class="breadcrumb">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a>Forms</a>
-                </li>
-                <li class="active">
-                    <strong>Wizard</strong>
-                </li>
-            </ol>
-        </div>
-        <div class="col-lg-2">
-
-        </div>
-    </div>
+    <div id="main" role="main" style="">
+        <div id="content">
 
 
+
+
+    <div class="row">
     <div class="form-group col-sm-12">
 
         <label class="control-label" style="display:block;">Категория в каталоге*</label>
@@ -47,17 +32,17 @@
 
 <div class="col-lg-9">
     <div class="form-group col-sm-12 categories">
-
-        @if($categories!==null)
+        @if(isset($categories) && $categories!==null)
             <div class="block_main_categories cat_block_1" style="">
                 @foreach ($categories as $key=>$category)
                     @if($category->parent_id==0)
-                        <a ><div class="cat_block" >
+                        <div>
+                        <button style="width:15px;height:15px;display:inline-block"></button><a style="display:inline-block"><div style="display:inline-block" class="cat_block" >
                                 <input type="hidden" value="{{$category->id}}">
-                                {{$category->name}}
+                                <span style="padding-left:5px;display:inline-block">{{$category->name}}</span>
 
                                 <span class="fa arrow" style="float:right"></span>
-                            </div></a>
+                            </div></a></div>
                     @endif
                 @endforeach
 
@@ -84,6 +69,7 @@
         @endif
     </div>
 </div>
+    <div class="col-lg-3">
     <div style="position:relative;width:100%;height:300px;background:#eee;">
         <div class="photo " style="position:relative">
             <div style="display:none">
@@ -101,21 +87,10 @@
             </div>
         </div>
     </div>
-
-    <div class="wrapper wrapper-content animated fadeInRight">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center m-t-lg">
-                            <h1>
-                                Welcome in Magelan Laravel Starter Project
-                            </h1>
-                            <small>
-                                It is an application skeleton for a typical web ecommerce app. You can use it to quickly bootstrap your webapp projects.
-                            </small>
-                        </div>
-                    </div>
-                </div>
     </div>
 
+    </div>
+    </div>
 
+    </div>
 @endsection
