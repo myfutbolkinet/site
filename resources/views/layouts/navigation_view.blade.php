@@ -78,10 +78,13 @@
                                 }
                                 //перебираем в цикле массив и выводим на экран
                                 for ($i = 0; $i < count($arr[$parent_id]); $i++) {
-
+ 									if($arr[$parent_id][$i]->type == 'not_linked' ){
+									   echo '<li><a>';
+									   }
+									   else{
                                     echo '
                                           <li>
-                                        <a href="'.$arr[$parent_id][$i]->link.'">';
+                                        <a href="'.$arr[$parent_id][$i]->link.'">';}
                                     if($parent_id == 0){
                                         echo '<i class="fa '.$arr[$parent_id][$i]->icon.'"></i>';
                                     }

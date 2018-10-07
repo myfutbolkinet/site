@@ -261,18 +261,18 @@
                                         <br/>
                                     </div>
                                 </div>
+
+
+
+                            </fieldset>
+
+                            <h1>Фильтра</h1>
+                            <fieldset>
                                 <h2>Информация о дополнительных фильтрах применимых к товару установите значения</h2>
                                 <div id="properties">
 
 
                                 </div>
-
-
-                            </fieldset>
-
-                            <h1>Фотографии</h1>
-                            <fieldset>
-
 
                             </fieldset>
 
@@ -283,7 +283,7 @@
                                 <label for="acceptTerms">I agree with the Terms and Conditions.</label>
                             </fieldset>
                         </form>
-                        @include('site_admin_page.add_good.add_images');
+
 
                     </div>
                 </div>

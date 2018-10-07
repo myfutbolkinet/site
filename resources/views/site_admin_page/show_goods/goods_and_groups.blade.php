@@ -394,7 +394,7 @@
             block_class=block_class.replace('block_main_categories ', '');
             //alert(block_class)
             reload_parent_blocks(id_cat,block_class);
-//alert('installing')
+            //alert('installing')
             //alert(checked_categories)
 
         });

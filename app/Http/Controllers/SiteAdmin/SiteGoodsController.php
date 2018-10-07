@@ -127,35 +127,37 @@ class SiteGoodsController extends SiteAdminController
         $data['sub_menu2']=[
             1=>[
                 'btn_title'=>'Показывать все товары',
-                'data_href'=>'tab-1'
+                'href'=>'/admin/goods_and_groups'
             ],
             2 =>[
                 'btn_title'=>'Задать фильтр выборки товаров по категориям',
-                'data_href'=>'tab-2'
+                'href'=>'/admin/goods_and_groups/filter'
              ],
             3 =>[
                 'btn_title'=>'Товары по категориям',
-                'data_href'=>'tab-3'
+                'href'=>'/admin/goods_and_groups/goods_with_filter'
             ],
 
 
         ];
         $data['active_menu_item']=1;
         if(!$page){
-
+         $data['goods']=\App\Good::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->with('photos')->paginate(10);
         $data['active_menu2_item']=1;
         }
         elseif($page=='filter'){
-
             $data['active_menu2_item']=2;
-
         }
         elseif($page=='goods_with_filter'){
+        foreach($data['categories'] as $category){
+            $in_array[]=$category->id;
+        }
+            $data['goods']=\App\Good::where('user_id',Auth::user()->id)->whereIn('category',$in_array )->orderBy('id', 'desc')->with('photos')->paginate(10);
             $data['active_menu2_item']=3;
 
        }
 
-        $data['goods']=\App\Good::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->with('photos')->paginate(10);
+
 
 
         return view('site_admin_page/show_goods/index',$data,$data_nav);

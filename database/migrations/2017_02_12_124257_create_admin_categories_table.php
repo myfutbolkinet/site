@@ -19,6 +19,7 @@ class CreateAdminCategoriesTable extends Migration
             $table->string('name');
             $table->string('icon');
             $table->string('link');
+            $table->string('type');
             
         });
     }
