@@ -16,6 +16,8 @@ use Symfony\Component\Filesystem\Filesystem;
 use Intervention\Image\ImageManagerStatic as Image;
 class SiteGoodsController extends SiteAdminController
 {
+
+
    
     public function __construct()
     {
@@ -58,37 +60,6 @@ class SiteGoodsController extends SiteAdminController
         return view('site_admin_page/add_good/index',$data,$data_nav);
     }
 
-    public function inspinia(){
-        /*$this->user=Auth::user();*/
-        $this->title = 'Панель администратора';
-        $f=new CategoriesFactory();
-        $f=$f->get_categories('User');
-        $data['categories']=$f->show_categories();
-        $data['types']=Type_of_good::get();
-        $data_nav['menu']=$this->menu();
-        $data['title']="Додати товар";
-        $data['keywords']="Ukrainian industry platform";
-        $data['description']="Ukrainian industry platform";
-
-        $tmp_folder = '/files/tmpImages/';
-        $data['sub_menu']=[
-            1=>[
-                'btn_title'=>'управление товарами и группами',
-                'href'=>'/admin/goods_and_groups'
-            ],
-            2 =>[
-                'btn_title'=>'Добавить позицию',
-                'href'=>'/admin/add_good'
-            ],
-
-
-        ];
-        $data['active_menu_item']=2;
-
-        return view('site_admin_page/add_good/index_inspinia',$data,$data_nav);
-    }
-
-
     public function showGoodsAndGroups($page=null){
         $this->title = 'showGoodsAndGroups';
 
@@ -96,16 +67,22 @@ class SiteGoodsController extends SiteAdminController
         $f=$f->get_categories('User');
         $data['categories']=$f->show_categories();
         if(!$data['categories']){
-            $f=new CategoriesFactory();
-            $f=$f->get_categories('User');
-            $data['categories']=$f->show_categories();
+          $this->user=Auth::guard('admin')->user()->id;
+          $cats=\App\Site_categories::where('user_id', $this->user)->first();
+          $new_cats=new \App\SiteGoodsFilter();
+          $new_cats->user_id=$cats->user_id;
+          $new_cats->categories=$cats->categories;
+          $new_cats->save();
+          $f=new CategoriesFactory('filter');
+          $f=$f->get_categories('User');
+          $data['categories']=$f->show_categories();
+
         }
-        else{
-            foreach($data['categories'] as $cat){
+           foreach($data['categories'] as $cat){
                 $data['json'][]=$cat->id;
             }
             $data['json']=json_encode($data['json']);
-        }
+
         $data_nav['menu']=$this->menu();
         $data['title']="управление товарами и группами";
         $data['keywords']="Ukrainian industry platform";
@@ -204,13 +181,13 @@ class SiteGoodsController extends SiteAdminController
             $photo->photo=$file;
             $photo->save();
         }
-
+    if(null!==($request->input("color"))){
         foreach ($request->input("color") as $value){
             $color=new \App\Colors_of_good();
             $color->id_good=$data->id;
             $color->color=$value;
             $color->save();
-        }
+        }}
         session()->forget('images');
     return redirect()->guest(route('site.admin.add_good'));
 
