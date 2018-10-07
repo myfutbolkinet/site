@@ -205,6 +205,7 @@ Route::group(['prefix' => 'superadmin'],function(){
     Route::post('/edit_good_property_form','Superadmin\GoodsPropertiesController@edit_good_property_form');
     Route::post('/add_category','FuncController@add_category_form');
     Route::get('/good_property/{id}','Superadmin\GoodsPropertiesController@good_property');
+    Route::get('/add_pictures','Superadmin\CategoriesPicturesController@index');
 
 });
 
