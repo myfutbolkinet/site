@@ -194,6 +194,8 @@ Auth::logout();
 //superadmin
 Route::group(['prefix' => 'superadmin'],function(){
 
+    Route::get('/categories_to_xml', 'Tmp\CategoriesSeedtToXmlController@index');
+    Route::get('/categories_from_xml', 'Tmp\CategoriesSeedtToXmlController@from');
     Route::post('/add_category_photo','\App\Http\Ajax\FuncImagesClass@add_category_photo');
 
     Route::get('/login', 'Auth\SuperAdminLoginController@showLoginForm')->name('superadmin.login');
