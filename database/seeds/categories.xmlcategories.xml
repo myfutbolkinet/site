@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <categories>
   <title>Categories magelan</title>
   <totalRows>404</totalRows>
   <rows>
     <category>
       <parent_id>0</parent_id>
-      <name>Авто Мото</name>
+      <name>&#x410;&#x432;&#x442;&#x43E; &#x41C;&#x43E;&#x442;&#x43E;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -13,7 +13,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Одежда, обувь, аксессуары</name>
+      <name>&#x41E;&#x434;&#x435;&#x436;&#x434;&#x430;, &#x43E;&#x431;&#x443;&#x432;&#x44C;, &#x430;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B;</name>
       <link>/Odezhda</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -21,7 +21,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Материалы для ремонта</name>
+      <name>&#x41C;&#x430;&#x442;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x44B; &#x434;&#x43B;&#x44F; &#x440;&#x435;&#x43C;&#x43E;&#x43D;&#x442;&#x430;</name>
       <link>/Materialy-dlya-remonta</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -29,7 +29,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Техника и электроника</name>
+      <name>&#x422;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x430; &#x438; &#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43D;&#x438;&#x43A;&#x430;</name>
       <link>/Tehnika-i-elektronika</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -37,7 +37,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Красота и здоровье</name>
+      <name>&#x41A;&#x440;&#x430;&#x441;&#x43E;&#x442;&#x430; &#x438; &#x437;&#x434;&#x43E;&#x440;&#x43E;&#x432;&#x44C;&#x435;</name>
       <link>/Krasota-i-zdorove</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -45,7 +45,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Спорт и отдых</name>
+      <name>&#x421;&#x43F;&#x43E;&#x440;&#x442; &#x438; &#x43E;&#x442;&#x434;&#x44B;&#x445;</name>
       <link>/Sport-i-otdykh</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -53,7 +53,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Товары для детей</name>
+      <name>&#x422;&#x43E;&#x432;&#x430;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x434;&#x435;&#x442;&#x435;&#x439;</name>
       <link>/Tovary-dlya-detej</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -61,7 +61,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Товары для детей</name>
+      <name>&#x422;&#x43E;&#x432;&#x430;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x434;&#x435;&#x442;&#x435;&#x439;</name>
       <link>/Tovary-dlya-detej</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -69,7 +69,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Подарки, хобби, книги</name>
+      <name>&#x41F;&#x43E;&#x434;&#x430;&#x440;&#x43A;&#x438;, &#x445;&#x43E;&#x431;&#x431;&#x438;, &#x43A;&#x43D;&#x438;&#x433;&#x438;</name>
       <link>/Podarki-i-suveniry</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -77,7 +77,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Дом и сад</name>
+      <name>&#x414;&#x43E;&#x43C; &#x438; &#x441;&#x430;&#x434;</name>
       <link>/Dom-i-sad</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -85,7 +85,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Домашние животные и зоотовары</name>
+      <name>&#x414;&#x43E;&#x43C;&#x430;&#x448;&#x43D;&#x438;&#x435; &#x436;&#x438;&#x432;&#x43E;&#x442;&#x43D;&#x44B;&#x435; &#x438; &#x437;&#x43E;&#x43E;&#x442;&#x43E;&#x432;&#x430;&#x440;&#x44B;</name>
       <link>/Domashnie-zhivotnye-i-zootovary</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -93,7 +93,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Украшения и часы</name>
+      <name>&#x423;&#x43A;&#x440;&#x430;&#x448;&#x435;&#x43D;&#x438;&#x44F; &#x438; &#x447;&#x430;&#x441;&#x44B;</name>
       <link>/Ukrasheniya-i-chasy</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -101,7 +101,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Канцтовары</name>
+      <name>&#x41A;&#x430;&#x43D;&#x446;&#x442;&#x43E;&#x432;&#x430;&#x440;&#x44B;</name>
       <link>/Kantstovary-1</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -109,7 +109,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Свадебные товары</name>
+      <name>&#x421;&#x432;&#x430;&#x434;&#x435;&#x431;&#x43D;&#x44B;&#x435; &#x442;&#x43E;&#x432;&#x430;&#x440;&#x44B;</name>
       <link>/Svadebnye-tovary</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -117,7 +117,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Продукты питания и напитки</name>
+      <name>&#x41F;&#x440;&#x43E;&#x434;&#x443;&#x43A;&#x442;&#x44B; &#x43F;&#x438;&#x442;&#x430;&#x43D;&#x438;&#x44F; &#x438; &#x43D;&#x430;&#x43F;&#x438;&#x442;&#x43A;&#x438;</name>
       <link>/Produkty-pitaniya-napitki</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -125,7 +125,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Грузовики автобусы и спецтехника</name>
+      <name>&#x413;&#x440;&#x443;&#x437;&#x43E;&#x432;&#x438;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x431;&#x443;&#x441;&#x44B; &#x438; &#x441;&#x43F;&#x435;&#x446;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x430;</name>
       <link>/Avto-moto-spetstehnika</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -133,7 +133,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Инструмент</name>
+      <name>&#x418;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442;</name>
       <link>/Instrument</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -141,7 +141,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Антиквариат и коллекционирование</name>
+      <name>&#x410;&#x43D;&#x442;&#x438;&#x43A;&#x432;&#x430;&#x440;&#x438;&#x430;&#x442; &#x438; &#x43A;&#x43E;&#x43B;&#x43B;&#x435;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;</name>
       <link>/Antikvariat-i-predmety-roskoshi</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -149,7 +149,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Все для пляжа</name>
+      <name>&#x412;&#x441;&#x435; &#x434;&#x43B;&#x44F; &#x43F;&#x43B;&#x44F;&#x436;&#x430;</name>
       <link>/Vse-dlya-plyazha</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -157,7 +157,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Строительство</name>
+      <name>&#x421;&#x442;&#x440;&#x43E;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x441;&#x442;&#x432;&#x43E;</name>
       <link>/Stroitelstvo</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -165,7 +165,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Военторг</name>
+      <name>&#x412;&#x43E;&#x435;&#x43D;&#x442;&#x43E;&#x440;&#x433;</name>
       <link>/Voentorg</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -173,7 +173,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Здоровая неделя</name>
+      <name>&#x417;&#x434;&#x43E;&#x440;&#x43E;&#x432;&#x430;&#x44F; &#x43D;&#x435;&#x434;&#x435;&#x43B;&#x44F;</name>
       <link>/Zdorovaya-nedelya</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -181,7 +181,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Все на пикник</name>
+      <name>&#x412;&#x441;&#x435; &#x43D;&#x430; &#x43F;&#x438;&#x43A;&#x43D;&#x438;&#x43A;</name>
       <link>/Vse-na-piknik</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -189,7 +189,7 @@
     </category>
     <category>
       <parent_id>0</parent_id>
-      <name>Все для отпуска</name>
+      <name>&#x412;&#x441;&#x435; &#x434;&#x43B;&#x44F; &#x43E;&#x442;&#x43F;&#x443;&#x441;&#x43A;&#x430;</name>
       <link>/Vse-dlya-otpuska</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -197,7 +197,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Автозапчасти</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x437;&#x430;&#x43F;&#x447;&#x430;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -205,7 +205,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Аксессуары для авто</name>
+      <name>&#x410;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x430;&#x432;&#x442;&#x43E;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -213,7 +213,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Диски и шины</name>
+      <name>&#x414;&#x438;&#x441;&#x43A;&#x438; &#x438; &#x448;&#x438;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -221,7 +221,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Автохимия, автокосметика и автомасла</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x445;&#x438;&#x43C;&#x438;&#x44F;, &#x430;&#x432;&#x442;&#x43E;&#x43A;&#x43E;&#x441;&#x43C;&#x435;&#x442;&#x438;&#x43A;&#x430; &#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x441;&#x43B;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -229,7 +229,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Автомобильная электроника</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43D;&#x438;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -237,7 +237,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Электрооборудование автомобилей</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43E;&#x431;&#x43E;&#x440;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x435;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -245,7 +245,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Мототехника</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -253,7 +253,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Дополнительное оборудование</name>
+      <name>&#x414;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x431;&#x43E;&#x440;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -261,7 +261,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Автоинструмент</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -269,7 +269,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Легковые автомобили</name>
+      <name>&#x41B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x44B;&#x435; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -277,7 +277,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Легковые элктромобили</name>
+      <name>&#x41B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x44B;&#x435; &#x44D;&#x43B;&#x43A;&#x442;&#x440;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -285,7 +285,7 @@
     </category>
     <category>
       <parent_id>1</parent_id>
-      <name>Автодома</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x434;&#x43E;&#x43C;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -293,7 +293,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Детали ходовой</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x445;&#x43E;&#x434;&#x43E;&#x432;&#x43E;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -301,7 +301,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Двигатели и детали двигателя</name>
+      <name>&#x414;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x438; &#x438; &#x434;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -309,7 +309,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Кузовные запчасти</name>
+      <name>&#x41A;&#x443;&#x437;&#x43E;&#x432;&#x43D;&#x44B;&#x435; &#x437;&#x430;&#x43F;&#x447;&#x430;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -317,7 +317,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Световые приборы транспорта</name>
+      <name>&#x421;&#x432;&#x435;&#x442;&#x43E;&#x432;&#x44B;&#x435; &#x43F;&#x440;&#x438;&#x431;&#x43E;&#x440;&#x44B; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -325,7 +325,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Система питания двигателя</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#x43F;&#x438;&#x442;&#x430;&#x43D;&#x438;&#x44F; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -333,7 +333,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Запчасти тормозной системы</name>
+      <name>&#x417;&#x430;&#x43F;&#x447;&#x430;&#x441;&#x442;&#x438; &#x442;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -341,7 +341,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Детали трансмиссии транспорта</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x438; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -349,7 +349,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Кривошипно-шатунный механизм</name>
+      <name>&#x41A;&#x440;&#x438;&#x432;&#x43E;&#x448;&#x438;&#x43F;&#x43D;&#x43E;-&#x448;&#x430;&#x442;&#x443;&#x43D;&#x43D;&#x44B;&#x439; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -357,7 +357,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Система охлаждения двигателя</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#x43E;&#x445;&#x43B;&#x430;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x44F; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -365,7 +365,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Органы управления</name>
+      <name>&#x41E;&#x440;&#x433;&#x430;&#x43D;&#x44B; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -373,7 +373,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Детали мостов и привода трансмиссии</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x43C;&#x43E;&#x441;&#x442;&#x43E;&#x432; &#x438; &#x43F;&#x440;&#x438;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -381,7 +381,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Автостекла</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x441;&#x442;&#x435;&#x43A;&#x43B;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -389,7 +389,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Система зажигания двигателя</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -397,7 +397,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Детали салона автомобиля</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x441;&#x430;&#x43B;&#x43E;&#x43D;&#x430; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -405,7 +405,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Система смазки двигателя</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#x441;&#x43C;&#x430;&#x437;&#x43A;&#x438; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -413,7 +413,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Система выпуска отработавших газов</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#x432;&#x44B;&#x43F;&#x443;&#x441;&#x43A;&#x430; &#x43E;&#x442;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x432;&#x448;&#x438;&#x445; &#x433;&#x430;&#x437;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -421,7 +421,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Автозеркала и комплектующие</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x437;&#x435;&#x440;&#x43A;&#x430;&#x43B;&#x430; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -429,7 +429,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Газораспределительный механизм</name>
+      <name>&#x413;&#x430;&#x437;&#x43E;&#x440;&#x430;&#x441;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -437,7 +437,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Кондиционеры и комплектующие</name>
+      <name>&#x41A;&#x43E;&#x43D;&#x434;&#x438;&#x446;&#x438;&#x43E;&#x43D;&#x435;&#x440;&#x44B; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -445,7 +445,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Фильтры для авто-мото и грузовой техники</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x430;&#x432;&#x442;&#x43E;-&#x43C;&#x43E;&#x442;&#x43E; &#x438; &#x433;&#x440;&#x443;&#x437;&#x43E;&#x432;&#x43E;&#x439; &#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -453,7 +453,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Предпусковые обогреватели и автономные отопители</name>
+      <name>&#x41F;&#x440;&#x435;&#x434;&#x43F;&#x443;&#x441;&#x43A;&#x43E;&#x432;&#x44B;&#x435; &#x43E;&#x431;&#x43E;&#x433;&#x440;&#x435;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x438; &#x438; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x435; &#x43E;&#x442;&#x43E;&#x43F;&#x438;&#x442;&#x435;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -461,7 +461,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Шайбы, гровер</name>
+      <name>&#x428;&#x430;&#x439;&#x431;&#x44B;, &#x433;&#x440;&#x43E;&#x432;&#x435;&#x440;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -469,7 +469,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Ремкомплекты автомобильные</name>
+      <name>&#x420;&#x435;&#x43C;&#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -477,7 +477,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Сситемы очистки окон и фар автомобиля</name>
+      <name>&#x421;&#x441;&#x438;&#x442;&#x435;&#x43C;&#x44B; &#x43E;&#x447;&#x438;&#x441;&#x442;&#x43A;&#x438; &#x43E;&#x43A;&#x43E;&#x43D; &#x438; &#x444;&#x430;&#x440; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -485,7 +485,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Система очистки окон и фар автомобиля</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#x43E;&#x447;&#x438;&#x441;&#x442;&#x43A;&#x438; &#x43E;&#x43A;&#x43E;&#x43D; &#x438; &#x444;&#x430;&#x440; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -493,7 +493,7 @@
     </category>
     <category>
       <parent_id>25</parent_id>
-      <name>Авторазборка</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x440;&#x430;&#x437;&#x431;&#x43E;&#x440;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -501,7 +501,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Амортизаторы,стойки,подушки стоек</name>
+      <name>&#x410;&#x43C;&#x43E;&#x440;&#x442;&#x438;&#x437;&#x430;&#x442;&#x43E;&#x440;&#x44B;,&#x441;&#x442;&#x43E;&#x439;&#x43A;&#x438;,&#x43F;&#x43E;&#x434;&#x443;&#x448;&#x43A;&#x438; &#x441;&#x442;&#x43E;&#x435;&#x43A;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -509,7 +509,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Подшипники для транспорта</name>
+      <name>&#x41F;&#x43E;&#x434;&#x448;&#x438;&#x43F;&#x43D;&#x438;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -517,7 +517,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Пружины,рессоры для техники</name>
+      <name>&#x41F;&#x440;&#x443;&#x436;&#x438;&#x43D;&#x44B;,&#x440;&#x435;&#x441;&#x441;&#x43E;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -525,7 +525,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Сайлентблоки</name>
+      <name>&#x421;&#x430;&#x439;&#x43B;&#x435;&#x43D;&#x442;&#x431;&#x43B;&#x43E;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -533,7 +533,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Стабилизаторы,стойки стабилизатора,тяги стабилизатора</name>
+      <name>&#x421;&#x442;&#x430;&#x431;&#x438;&#x43B;&#x438;&#x437;&#x430;&#x442;&#x43E;&#x440;&#x44B;,&#x441;&#x442;&#x43E;&#x439;&#x43A;&#x438; &#x441;&#x442;&#x430;&#x431;&#x438;&#x43B;&#x438;&#x437;&#x430;&#x442;&#x43E;&#x440;&#x430;,&#x442;&#x44F;&#x433;&#x438; &#x441;&#x442;&#x430;&#x431;&#x438;&#x43B;&#x438;&#x437;&#x430;&#x442;&#x43E;&#x440;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -541,7 +541,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Втулки автомобильные</name>
+      <name>&#x412;&#x442;&#x443;&#x43B;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -549,7 +549,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Пневморессоры, пневмоподушки</name>
+      <name>&#x41F;&#x43D;&#x435;&#x432;&#x43C;&#x43E;&#x440;&#x435;&#x441;&#x441;&#x43E;&#x440;&#x44B;, &#x43F;&#x43D;&#x435;&#x432;&#x43C;&#x43E;&#x43F;&#x43E;&#x434;&#x443;&#x448;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -557,7 +557,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Рычаги,тяги</name>
+      <name>&#x420;&#x44B;&#x447;&#x430;&#x433;&#x438;,&#x442;&#x44F;&#x433;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -565,7 +565,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Шаровые опоры</name>
+      <name>&#x428;&#x430;&#x440;&#x43E;&#x432;&#x44B;&#x435; &#x43E;&#x43F;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -573,7 +573,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Пыльники,отбойники</name>
+      <name>&#x41F;&#x44B;&#x43B;&#x44C;&#x43D;&#x438;&#x43A;&#x438;,&#x43E;&#x442;&#x431;&#x43E;&#x439;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -581,7 +581,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Ступицы</name>
+      <name>&#x421;&#x442;&#x443;&#x43F;&#x438;&#x446;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -589,7 +589,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Автомобильные опоры стоек</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43E;&#x43F;&#x43E;&#x440;&#x44B; &#x441;&#x442;&#x43E;&#x435;&#x43A;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -597,7 +597,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Поворотные кулаки</name>
+      <name>&#x41F;&#x43E;&#x432;&#x43E;&#x440;&#x43E;&#x442;&#x43D;&#x44B;&#x435; &#x43A;&#x443;&#x43B;&#x430;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -605,7 +605,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Балки передней и задней подвески</name>
+      <name>&#x411;&#x430;&#x43B;&#x43A;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x435;&#x439; &#x438; &#x437;&#x430;&#x434;&#x43D;&#x435;&#x439; &#x43F;&#x43E;&#x434;&#x432;&#x435;&#x441;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -613,7 +613,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Ступичные болты,шпильки и гайки</name>
+      <name>&#x421;&#x442;&#x443;&#x43F;&#x438;&#x447;&#x43D;&#x44B;&#x435; &#x431;&#x43E;&#x43B;&#x442;&#x44B;,&#x448;&#x43F;&#x438;&#x43B;&#x44C;&#x43A;&#x438; &#x438; &#x433;&#x430;&#x439;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -621,7 +621,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Автомобильные шкворни</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x448;&#x43A;&#x432;&#x43E;&#x440;&#x43D;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -629,7 +629,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Крепежи узлов подвески</name>
+      <name>&#x41A;&#x440;&#x435;&#x43F;&#x435;&#x436;&#x438; &#x443;&#x437;&#x43B;&#x43E;&#x432; &#x43F;&#x43E;&#x434;&#x432;&#x435;&#x441;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -637,7 +637,7 @@
     </category>
     <category>
       <parent_id>37</parent_id>
-      <name>Торсионы</name>
+      <name>&#x422;&#x43E;&#x440;&#x441;&#x438;&#x43E;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -645,7 +645,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Турбины, турбокомпрессоры</name>
+      <name>&#x422;&#x443;&#x440;&#x431;&#x438;&#x43D;&#x44B;, &#x442;&#x443;&#x440;&#x431;&#x43E;&#x43A;&#x43E;&#x43C;&#x43F;&#x440;&#x435;&#x441;&#x441;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -653,7 +653,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Двигатели для техники</name>
+      <name>&#x414;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -661,7 +661,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Подшипники для транспорта</name>
+      <name>&#x41F;&#x43E;&#x434;&#x448;&#x438;&#x43F;&#x43D;&#x438;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -669,7 +669,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Прокладки для техники</name>
+      <name>&#x41F;&#x440;&#x43E;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -677,7 +677,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Сальники</name>
+      <name>&#x421;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -685,7 +685,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Ремни приводные автомобильные</name>
+      <name>&#x420;&#x435;&#x43C;&#x43D;&#x438; &#x43F;&#x440;&#x438;&#x432;&#x43E;&#x434;&#x43D;&#x44B;&#x435; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -693,7 +693,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Ролики и натяжители</name>
+      <name>&#x420;&#x43E;&#x43B;&#x438;&#x43A;&#x438; &#x438; &#x43D;&#x430;&#x442;&#x44F;&#x436;&#x438;&#x442;&#x435;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -701,7 +701,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Подушки двигателя</name>
+      <name>&#x41F;&#x43E;&#x434;&#x443;&#x448;&#x43A;&#x438; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -709,7 +709,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Шкивы двигателей</name>
+      <name>&#x428;&#x43A;&#x438;&#x432;&#x44B; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x435;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -717,7 +717,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Ремни вариатора</name>
+      <name>&#x420;&#x435;&#x43C;&#x43D;&#x438; &#x432;&#x430;&#x440;&#x438;&#x430;&#x442;&#x43E;&#x440;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -725,7 +725,7 @@
     </category>
     <category>
       <parent_id>38</parent_id>
-      <name>Ремни вариаторные</name>
+      <name>&#x420;&#x435;&#x43C;&#x43D;&#x438; &#x432;&#x430;&#x440;&#x438;&#x430;&#x442;&#x43E;&#x440;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -733,7 +733,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Бамперы</name>
+      <name>&#x411;&#x430;&#x43C;&#x43F;&#x435;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -741,7 +741,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные двери</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x434;&#x432;&#x435;&#x440;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -749,7 +749,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Крылья, арки автомобильные</name>
+      <name>&#x41A;&#x440;&#x44B;&#x43B;&#x44C;&#x44F;, &#x430;&#x440;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -757,7 +757,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Пистоны, заглушки, крепежные элементы</name>
+      <name>&#x41F;&#x438;&#x441;&#x442;&#x43E;&#x43D;&#x44B;, &#x437;&#x430;&#x433;&#x43B;&#x443;&#x448;&#x43A;&#x438;, &#x43A;&#x440;&#x435;&#x43F;&#x435;&#x436;&#x43D;&#x44B;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -765,7 +765,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Брызговики</name>
+      <name>&#x411;&#x440;&#x44B;&#x437;&#x433;&#x43E;&#x432;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -773,7 +773,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Защита картера и КПП</name>
+      <name>&#x417;&#x430;&#x449;&#x438;&#x442;&#x430; &#x43A;&#x430;&#x440;&#x442;&#x435;&#x440;&#x430; &#x438; &#x41A;&#x41F;&#x41F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -781,7 +781,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Фаркопы</name>
+      <name>&#x424;&#x430;&#x440;&#x43A;&#x43E;&#x43F;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -789,7 +789,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные решетки на бамперы и радиаторы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x440;&#x435;&#x448;&#x435;&#x442;&#x43A;&#x438; &#x43D;&#x430; &#x431;&#x430;&#x43C;&#x43F;&#x435;&#x440;&#x44B; &#x438; &#x440;&#x430;&#x434;&#x438;&#x430;&#x442;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -797,7 +797,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Капоты</name>
+      <name>&#x41A;&#x430;&#x43F;&#x43E;&#x442;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -805,7 +805,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные дверные ручки</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x434;&#x432;&#x435;&#x440;&#x43D;&#x44B;&#x435; &#x440;&#x443;&#x447;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -813,7 +813,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Стеклоподъемники</name>
+      <name>&#x421;&#x442;&#x435;&#x43A;&#x43B;&#x43E;&#x43F;&#x43E;&#x434;&#x44A;&#x435;&#x43C;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -821,7 +821,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные подкрылки</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43F;&#x43E;&#x434;&#x43A;&#x440;&#x44B;&#x43B;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -829,7 +829,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные эиблемы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x44D;&#x438;&#x431;&#x43B;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -837,7 +837,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные замки и ключи</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x437;&#x430;&#x43C;&#x43A;&#x438; &#x438; &#x43A;&#x43B;&#x44E;&#x447;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -845,7 +845,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Передние панели кузова</name>
+      <name>&#x41F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x438;&#x435; &#x43F;&#x430;&#x43D;&#x435;&#x43B;&#x438; &#x43A;&#x443;&#x437;&#x43E;&#x432;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -853,7 +853,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Амортизаторы капота, багажника</name>
+      <name>&#x410;&#x43C;&#x43E;&#x440;&#x442;&#x438;&#x437;&#x430;&#x442;&#x43E;&#x440;&#x44B; &#x43A;&#x430;&#x43F;&#x43E;&#x442;&#x430;, &#x431;&#x430;&#x433;&#x430;&#x436;&#x43D;&#x438;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -861,7 +861,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Усилители бампера, буфер бампера</name>
+      <name>&#x423;&#x441;&#x438;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x431;&#x430;&#x43C;&#x43F;&#x435;&#x440;&#x430;, &#x431;&#x443;&#x444;&#x435;&#x440; &#x431;&#x430;&#x43C;&#x43F;&#x435;&#x440;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -869,7 +869,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Кронштейны автомобильные</name>
+      <name>&#x41A;&#x440;&#x43E;&#x43D;&#x448;&#x442;&#x435;&#x439;&#x43D;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -877,7 +877,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Петли, ограничители автомобильные</name>
+      <name>&#x41F;&#x435;&#x442;&#x43B;&#x438;, &#x43E;&#x433;&#x440;&#x430;&#x43D;&#x438;&#x447;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -885,7 +885,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Крышки багажника</name>
+      <name>&#x41A;&#x440;&#x44B;&#x448;&#x43A;&#x438; &#x431;&#x430;&#x433;&#x430;&#x436;&#x43D;&#x438;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -893,7 +893,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Задние панели кузова</name>
+      <name>&#x417;&#x430;&#x434;&#x43D;&#x438;&#x435; &#x43F;&#x430;&#x43D;&#x435;&#x43B;&#x438; &#x43A;&#x443;&#x437;&#x43E;&#x432;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -901,7 +901,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Боковины кузова</name>
+      <name>&#x411;&#x43E;&#x43A;&#x43E;&#x432;&#x438;&#x43D;&#x44B; &#x43A;&#x443;&#x437;&#x43E;&#x432;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -909,7 +909,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Лонжироны, подрамники</name>
+      <name>&#x41B;&#x43E;&#x43D;&#x436;&#x438;&#x440;&#x43E;&#x43D;&#x44B;, &#x43F;&#x43E;&#x434;&#x440;&#x430;&#x43C;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -917,7 +917,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Кузова легковых автомобилей</name>
+      <name>&#x41A;&#x443;&#x437;&#x43E;&#x432;&#x430; &#x43B;&#x435;&#x433;&#x43A;&#x43E;&#x432;&#x44B;&#x445; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x435;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -925,7 +925,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Лючки, крышки бензобака</name>
+      <name>&#x41B;&#x44E;&#x447;&#x43A;&#x438;, &#x43A;&#x440;&#x44B;&#x448;&#x43A;&#x438; &#x431;&#x435;&#x43D;&#x437;&#x43E;&#x431;&#x430;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -933,7 +933,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные крыши</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43A;&#x440;&#x44B;&#x448;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -941,7 +941,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Автомобильные люки</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43B;&#x44E;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -949,7 +949,7 @@
     </category>
     <category>
       <parent_id>39</parent_id>
-      <name>Ноускаты</name>
+      <name>&#x41D;&#x43E;&#x443;&#x441;&#x43A;&#x430;&#x442;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -957,7 +957,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Лампочки для световых приборов автомобиля</name>
+      <name>&#x41B;&#x430;&#x43C;&#x43F;&#x43E;&#x447;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x441;&#x432;&#x435;&#x442;&#x43E;&#x432;&#x44B;&#x445; &#x43F;&#x440;&#x438;&#x431;&#x43E;&#x440;&#x43E;&#x432; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -965,7 +965,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Автомобильные передние фары</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x438;&#x435; &#x444;&#x430;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -973,7 +973,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Задние фонари, фонари видимости</name>
+      <name>&#x417;&#x430;&#x434;&#x43D;&#x438;&#x435; &#x444;&#x43E;&#x43D;&#x430;&#x440;&#x438;, &#x444;&#x43E;&#x43D;&#x430;&#x440;&#x438; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -981,7 +981,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Дополнительные противотуманные фары</name>
+      <name>&#x414;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43F;&#x440;&#x43E;&#x442;&#x438;&#x432;&#x43E;&#x442;&#x443;&#x43C;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x444;&#x430;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -989,7 +989,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Комплекты ксенона</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x44B; &#x43A;&#x441;&#x435;&#x43D;&#x43E;&#x43D;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -997,7 +997,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Повторители поворотов</name>
+      <name>&#x41F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x43F;&#x43E;&#x432;&#x43E;&#x440;&#x43E;&#x442;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1005,7 +1005,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Стекла фар и фонарей</name>
+      <name>&#x421;&#x442;&#x435;&#x43A;&#x43B;&#x430; &#x444;&#x430;&#x440; &#x438; &#x444;&#x43E;&#x43D;&#x430;&#x440;&#x435;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1013,7 +1013,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Блоки розжига</name>
+      <name>&#x411;&#x43B;&#x43E;&#x43A;&#x438; &#x440;&#x43E;&#x437;&#x436;&#x438;&#x433;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1021,7 +1021,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Плафоны внутреннего освещения</name>
+      <name>&#x41F;&#x43B;&#x430;&#x444;&#x43E;&#x43D;&#x44B; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x435;&#x43D;&#x43D;&#x435;&#x433;&#x43E; &#x43E;&#x441;&#x432;&#x435;&#x449;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1029,7 +1029,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Отражатели, корпуса фар и фонарей</name>
+      <name>&#x41E;&#x442;&#x440;&#x430;&#x436;&#x430;&#x442;&#x435;&#x43B;&#x438;, &#x43A;&#x43E;&#x440;&#x43F;&#x443;&#x441;&#x430; &#x444;&#x430;&#x440; &#x438; &#x444;&#x43E;&#x43D;&#x430;&#x440;&#x435;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1037,7 +1037,7 @@
     </category>
     <category>
       <parent_id>40</parent_id>
-      <name>Световые приборы транспорта, общее</name>
+      <name>&#x421;&#x432;&#x435;&#x442;&#x43E;&#x432;&#x44B;&#x435; &#x43F;&#x440;&#x438;&#x431;&#x43E;&#x440;&#x44B; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1045,7 +1045,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Турбины, турбокомпрессоры</name>
+      <name>&#x422;&#x443;&#x440;&#x431;&#x438;&#x43D;&#x44B;, &#x442;&#x443;&#x440;&#x431;&#x43E;&#x43A;&#x43E;&#x43C;&#x43F;&#x440;&#x435;&#x441;&#x441;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1053,7 +1053,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Распылители и топливные форсунки</name>
+      <name>&#x420;&#x430;&#x441;&#x43F;&#x44B;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x438; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x444;&#x43E;&#x440;&#x441;&#x443;&#x43D;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1061,7 +1061,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Фильтры топливные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1069,7 +1069,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Фильтры воздушные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x432;&#x43E;&#x437;&#x434;&#x443;&#x448;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1077,7 +1077,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Топливные насосы высокого давления</name>
+      <name>&#x422;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x441;&#x43E;&#x441;&#x44B; &#x432;&#x44B;&#x441;&#x43E;&#x43A;&#x43E;&#x433;&#x43E; &#x434;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1085,7 +1085,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Автомобильные топливные насосы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x441;&#x43E;&#x441;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1093,7 +1093,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Топливные трубки, магистрали и рампы</name>
+      <name>&#x422;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x442;&#x440;&#x443;&#x431;&#x43A;&#x438;, &#x43C;&#x430;&#x433;&#x438;&#x441;&#x442;&#x440;&#x430;&#x43B;&#x438; &#x438; &#x440;&#x430;&#x43C;&#x43F;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1101,7 +1101,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Топливные, маслянные баки</name>
+      <name>&#x422;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435;, &#x43C;&#x430;&#x441;&#x43B;&#x44F;&#x43D;&#x43D;&#x44B;&#x435; &#x431;&#x430;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1109,7 +1109,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Корбюраторы и комплектующие</name>
+      <name>&#x41A;&#x43E;&#x440;&#x431;&#x44E;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x44B; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1117,7 +1117,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Комплектующие системы питания</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43F;&#x438;&#x442;&#x430;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1125,7 +1125,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Дроссельные заслонки</name>
+      <name>&#x414;&#x440;&#x43E;&#x441;&#x441;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x437;&#x430;&#x441;&#x43B;&#x43E;&#x43D;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1133,7 +1133,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Впускные коллекторы</name>
+      <name>&#x412;&#x43F;&#x443;&#x441;&#x43A;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43B;&#x43B;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1141,7 +1141,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Регуляторы давления топлива</name>
+      <name>&#x420;&#x435;&#x433;&#x443;&#x43B;&#x44F;&#x442;&#x43E;&#x440;&#x44B; &#x434;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1149,7 +1149,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Топливные насосы низкого давления</name>
+      <name>&#x422;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x441;&#x43E;&#x441;&#x44B; &#x43D;&#x438;&#x437;&#x43A;&#x43E;&#x433;&#x43E; &#x434;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1157,7 +1157,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Штатные воздухозаборники и комплектующие</name>
+      <name>&#x428;&#x442;&#x430;&#x442;&#x43D;&#x44B;&#x435; &#x432;&#x43E;&#x437;&#x434;&#x443;&#x445;&#x43E;&#x437;&#x430;&#x431;&#x43E;&#x440;&#x43D;&#x438;&#x43A;&#x438; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1165,7 +1165,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Горловины, пробки топливного бака</name>
+      <name>&#x413;&#x43E;&#x440;&#x43B;&#x43E;&#x432;&#x438;&#x43D;&#x44B;, &#x43F;&#x440;&#x43E;&#x431;&#x43A;&#x438; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x431;&#x430;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1173,7 +1173,7 @@
     </category>
     <category>
       <parent_id>41</parent_id>
-      <name>Детали системы питания, общее</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43F;&#x438;&#x442;&#x430;&#x43D;&#x438;&#x44F;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1181,7 +1181,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Тормозные колодки</name>
+      <name>&#x422;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43B;&#x43E;&#x434;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1189,7 +1189,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Тормозные диски</name>
+      <name>&#x422;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x44B;&#x435; &#x434;&#x438;&#x441;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1197,7 +1197,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Тормозные суппорта, ремкомплекты суппорта</name>
+      <name>&#x422;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x44B;&#x435; &#x441;&#x443;&#x43F;&#x43F;&#x43E;&#x440;&#x442;&#x430;, &#x440;&#x435;&#x43C;&#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x44B; &#x441;&#x443;&#x43F;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1205,7 +1205,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Детали тормозной системы грузовиков</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x442;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x433;&#x440;&#x443;&#x437;&#x43E;&#x432;&#x438;&#x43A;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1213,7 +1213,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Тормозные циллиндры</name>
+      <name>&#x422;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x44B;&#x435; &#x446;&#x438;&#x43B;&#x43B;&#x438;&#x43D;&#x434;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1221,7 +1221,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Тормозные шланги, трубы</name>
+      <name>&#x422;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x44B;&#x435; &#x448;&#x43B;&#x430;&#x43D;&#x433;&#x438;, &#x442;&#x440;&#x443;&#x431;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1229,7 +1229,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Тормозные барабаны</name>
+      <name>&#x422;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x44B;&#x435; &#x431;&#x430;&#x440;&#x430;&#x431;&#x430;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1237,7 +1237,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Усилители тормозов</name>
+      <name>&#x423;&#x441;&#x438;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x442;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1245,7 +1245,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Детали тормозной системы ABS, EBD</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x442;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; ABS, EBD</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1253,7 +1253,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Комплектующие тормозной системы</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x442;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1261,7 +1261,7 @@
     </category>
     <category>
       <parent_id>42</parent_id>
-      <name>Элементы тормозной системы, общее</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x44B; &#x442;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1269,7 +1269,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Элементы механизма сцепления</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x44B; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;&#x430; &#x441;&#x446;&#x435;&#x43F;&#x43B;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1277,7 +1277,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Подшипники для транспорта</name>
+      <name>&#x41F;&#x43E;&#x434;&#x448;&#x438;&#x43F;&#x43D;&#x438;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1285,7 +1285,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Прокладки для техники</name>
+      <name>&#x41F;&#x440;&#x43E;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1293,7 +1293,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Коробки переключения передач (КПП)</name>
+      <name>&#x41A;&#x43E;&#x440;&#x43E;&#x431;&#x43A;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447; (&#x41A;&#x41F;&#x41F;)</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1301,7 +1301,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Сальники</name>
+      <name>&#x421;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1309,7 +1309,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Коробки отбора мощности</name>
+      <name>&#x41A;&#x43E;&#x440;&#x43E;&#x431;&#x43A;&#x438; &#x43E;&#x442;&#x431;&#x43E;&#x440;&#x430; &#x43C;&#x43E;&#x449;&#x43D;&#x43E;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1317,7 +1317,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Шестерни трансмиссии</name>
+      <name>&#x428;&#x435;&#x441;&#x442;&#x435;&#x440;&#x43D;&#x438; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1325,7 +1325,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Валы для коробки передач и редуктора</name>
+      <name>&#x412;&#x430;&#x43B;&#x44B; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x440;&#x43E;&#x431;&#x43A;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447; &#x438; &#x440;&#x435;&#x434;&#x443;&#x43A;&#x442;&#x43E;&#x440;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1333,7 +1333,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Синхронизаторы коробки передач</name>
+      <name>&#x421;&#x438;&#x43D;&#x445;&#x440;&#x43E;&#x43D;&#x438;&#x437;&#x430;&#x442;&#x43E;&#x440;&#x44B; &#x43A;&#x43E;&#x440;&#x43E;&#x431;&#x43A;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1341,7 +1341,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Фильтры трансмиссионные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1349,7 +1349,7 @@
     </category>
     <category>
       <parent_id>43</parent_id>
-      <name>Детали трансмиссии, общее</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x438;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1357,7 +1357,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Вкладыши коренные и шатунные</name>
+      <name>&#x412;&#x43A;&#x43B;&#x430;&#x434;&#x44B;&#x448;&#x438; &#x43A;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44B;&#x435; &#x438; &#x448;&#x430;&#x442;&#x443;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1365,7 +1365,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Поршневые кольца</name>
+      <name>&#x41F;&#x43E;&#x440;&#x448;&#x43D;&#x435;&#x432;&#x44B;&#x435; &#x43A;&#x43E;&#x43B;&#x44C;&#x446;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1373,7 +1373,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Поршни</name>
+      <name>&#x41F;&#x43E;&#x440;&#x448;&#x43D;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1381,7 +1381,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Коленчатый вал, шестерни коленчатого вала</name>
+      <name>&#x41A;&#x43E;&#x43B;&#x435;&#x43D;&#x447;&#x430;&#x442;&#x44B;&#x439; &#x432;&#x430;&#x43B;, &#x448;&#x435;&#x441;&#x442;&#x435;&#x440;&#x43D;&#x438; &#x43A;&#x43E;&#x43B;&#x435;&#x43D;&#x447;&#x430;&#x442;&#x43E;&#x433;&#x43E; &#x432;&#x430;&#x43B;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1389,7 +1389,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Головки блока цилиндров</name>
+      <name>&#x413;&#x43E;&#x43B;&#x43E;&#x432;&#x43A;&#x438; &#x431;&#x43B;&#x43E;&#x43A;&#x430; &#x446;&#x438;&#x43B;&#x438;&#x43D;&#x434;&#x440;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1397,7 +1397,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Поршневые группы</name>
+      <name>&#x41F;&#x43E;&#x440;&#x448;&#x43D;&#x435;&#x432;&#x44B;&#x435; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1405,7 +1405,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Маховики двигателей</name>
+      <name>&#x41C;&#x430;&#x445;&#x43E;&#x432;&#x438;&#x43A;&#x438; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x435;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1413,7 +1413,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Шатуны</name>
+      <name>&#x428;&#x430;&#x442;&#x443;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1421,7 +1421,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Гильзы двигателя</name>
+      <name>&#x413;&#x438;&#x43B;&#x44C;&#x437;&#x44B; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1429,7 +1429,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Блоки цилиндров</name>
+      <name>&#x411;&#x43B;&#x43E;&#x43A;&#x438; &#x446;&#x438;&#x43B;&#x438;&#x43D;&#x434;&#x440;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1437,7 +1437,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Поршневые пальцы</name>
+      <name>&#x41F;&#x43E;&#x440;&#x448;&#x43D;&#x435;&#x432;&#x44B;&#x435; &#x43F;&#x430;&#x43B;&#x44C;&#x446;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1445,7 +1445,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Крышки головки блока цилиндров</name>
+      <name>&#x41A;&#x440;&#x44B;&#x448;&#x43A;&#x438; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x43A;&#x438; &#x431;&#x43B;&#x43E;&#x43A;&#x430; &#x446;&#x438;&#x43B;&#x438;&#x43D;&#x434;&#x440;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1453,7 +1453,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Детали КШМ</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x41A;&#x428;&#x41C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1461,7 +1461,7 @@
     </category>
     <category>
       <parent_id>44</parent_id>
-      <name>Кривошипно-шатунный механизм, общее</name>
+      <name>&#x41A;&#x440;&#x438;&#x432;&#x43E;&#x448;&#x438;&#x43F;&#x43D;&#x43E;-&#x448;&#x430;&#x442;&#x443;&#x43D;&#x43D;&#x44B;&#x439; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1469,7 +1469,7 @@
     </category>
     <category>
       <parent_id>45</parent_id>
-      <name>Радиаторы автомобильные</name>
+      <name>&#x420;&#x430;&#x434;&#x438;&#x430;&#x442;&#x43E;&#x440;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1477,7 +1477,7 @@
     </category>
     <category>
       <parent_id>45</parent_id>
-      <name>Автомобильные водяные насосы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x432;&#x43E;&#x434;&#x44F;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x441;&#x43E;&#x441;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1485,7 +1485,7 @@
     </category>
     <category>
       <parent_id>45</parent_id>
-      <name>Термостаты и комплектующие системы охлаждения</name>
+      <name>&#x422;&#x435;&#x440;&#x43C;&#x43E;&#x441;&#x442;&#x430;&#x442;&#x44B; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43E;&#x445;&#x43B;&#x430;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1493,7 +1493,7 @@
     </category>
     <category>
       <parent_id>45</parent_id>
-      <name>Автомобильные диффузоры и вентиляторы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x434;&#x438;&#x444;&#x444;&#x443;&#x437;&#x43E;&#x440;&#x44B; &#x438; &#x432;&#x435;&#x43D;&#x442;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1501,7 +1501,7 @@
     </category>
     <category>
       <parent_id>45</parent_id>
-      <name>Компрессора системы охлаждения</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x440;&#x435;&#x441;&#x441;&#x43E;&#x440;&#x430; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43E;&#x445;&#x43B;&#x430;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1509,7 +1509,7 @@
     </category>
     <category>
       <parent_id>45</parent_id>
-      <name>Фильтры антикоррозионные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x430;&#x43D;&#x442;&#x438;&#x43A;&#x43E;&#x440;&#x440;&#x43E;&#x437;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1517,7 +1517,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Сальники</name>
+      <name>&#x421;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1525,7 +1525,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Наконечники рулевых тяг</name>
+      <name>&#x41D;&#x430;&#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x438;&#x43A;&#x438; &#x440;&#x443;&#x43B;&#x435;&#x432;&#x44B;&#x445; &#x442;&#x44F;&#x433;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1533,7 +1533,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Пыльники, отбойники</name>
+      <name>&#x41F;&#x44B;&#x43B;&#x44C;&#x43D;&#x438;&#x43A;&#x438;, &#x43E;&#x442;&#x431;&#x43E;&#x439;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1541,7 +1541,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Гидроусилитель руля и комплектующие</name>
+      <name>&#x413;&#x438;&#x434;&#x440;&#x43E;&#x443;&#x441;&#x438;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C; &#x440;&#x443;&#x43B;&#x44F; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1549,7 +1549,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Рулевой механизм</name>
+      <name>&#x420;&#x443;&#x43B;&#x435;&#x432;&#x43E;&#x439; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1557,7 +1557,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Рулевые тяги</name>
+      <name>&#x420;&#x443;&#x43B;&#x435;&#x432;&#x44B;&#x435; &#x442;&#x44F;&#x433;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1565,7 +1565,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Тросики автомобильные</name>
+      <name>&#x422;&#x440;&#x43E;&#x441;&#x438;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1573,7 +1573,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Педали автомобильные</name>
+      <name>&#x41F;&#x435;&#x434;&#x430;&#x43B;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1581,7 +1581,7 @@
     </category>
     <category>
       <parent_id>46</parent_id>
-      <name>Органы управления, общее</name>
+      <name>&#x41E;&#x440;&#x433;&#x430;&#x43D;&#x44B; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1589,7 +1589,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Сальники</name>
+      <name>&#x421;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1597,7 +1597,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Шарниры равных угловых скоростей, приводные валы</name>
+      <name>&#x428;&#x430;&#x440;&#x43D;&#x438;&#x440;&#x44B; &#x440;&#x430;&#x432;&#x43D;&#x44B;&#x445; &#x443;&#x433;&#x43B;&#x43E;&#x432;&#x44B;&#x445; &#x441;&#x43A;&#x43E;&#x440;&#x43E;&#x441;&#x442;&#x435;&#x439;, &#x43F;&#x440;&#x438;&#x432;&#x43E;&#x434;&#x43D;&#x44B;&#x435; &#x432;&#x430;&#x43B;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1605,7 +1605,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Карданные валы</name>
+      <name>&#x41A;&#x430;&#x440;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x432;&#x430;&#x43B;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1613,7 +1613,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Карданная передача</name>
+      <name>&#x41A;&#x430;&#x440;&#x434;&#x430;&#x43D;&#x43D;&#x430;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1621,7 +1621,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Редукторы мостов</name>
+      <name>&#x420;&#x435;&#x434;&#x443;&#x43A;&#x442;&#x43E;&#x440;&#x44B; &#x43C;&#x43E;&#x441;&#x442;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1629,7 +1629,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Задний мост</name>
+      <name>&#x417;&#x430;&#x434;&#x43D;&#x438;&#x439; &#x43C;&#x43E;&#x441;&#x442;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1637,7 +1637,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Передний мост</name>
+      <name>&#x41F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x438;&#x439; &#x43C;&#x43E;&#x441;&#x442;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1645,7 +1645,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Раздаточные коробки</name>
+      <name>&#x420;&#x430;&#x437;&#x434;&#x430;&#x442;&#x43E;&#x447;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x440;&#x43E;&#x431;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1653,7 +1653,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Средний мост</name>
+      <name>&#x421;&#x440;&#x435;&#x434;&#x43D;&#x438;&#x439; &#x43C;&#x43E;&#x441;&#x442;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1661,7 +1661,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Детали мостов и привода трансмиссии, общее</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x43C;&#x43E;&#x441;&#x442;&#x43E;&#x432; &#x438; &#x43F;&#x440;&#x438;&#x432;&#x43E;&#x434;&#x430; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x438;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1669,7 +1669,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Муфты свободного хода</name>
+      <name>&#x41C;&#x443;&#x444;&#x442;&#x44B; &#x441;&#x432;&#x43E;&#x431;&#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x445;&#x43E;&#x434;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1677,7 +1677,7 @@
     </category>
     <category>
       <parent_id>47</parent_id>
-      <name>Муфты карданного вала</name>
+      <name>&#x41C;&#x443;&#x444;&#x442;&#x44B; &#x43A;&#x430;&#x440;&#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x430;&#x43B;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1685,7 +1685,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Свечи накаливания и зажигания</name>
+      <name>&#x421;&#x432;&#x435;&#x447;&#x438; &#x43D;&#x430;&#x43A;&#x430;&#x43B;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x438; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1693,7 +1693,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Замки зажигания и ключи</name>
+      <name>&#x417;&#x430;&#x43C;&#x43A;&#x438; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F; &#x438; &#x43A;&#x43B;&#x44E;&#x447;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1701,7 +1701,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Автомобильные провода зажигания</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x43E;&#x434;&#x430; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1709,7 +1709,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Катушки зажигания, модули зажигания</name>
+      <name>&#x41A;&#x430;&#x442;&#x443;&#x448;&#x43A;&#x438; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F;, &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x438; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1717,7 +1717,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Трамблеры автомобильные</name>
+      <name>&#x422;&#x440;&#x430;&#x43C;&#x431;&#x43B;&#x435;&#x440;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1725,7 +1725,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Комплектующие системы зажигания</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1733,7 +1733,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Автомобильные коммутаторы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43C;&#x43C;&#x443;&#x442;&#x430;&#x442;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1741,7 +1741,7 @@
     </category>
     <category>
       <parent_id>49</parent_id>
-      <name>Системы зажигания, общее</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1749,7 +1749,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Пистоны, заглушки, крепежные элементы</name>
+      <name>&#x41F;&#x438;&#x441;&#x442;&#x43E;&#x43D;&#x44B;, &#x437;&#x430;&#x433;&#x43B;&#x443;&#x448;&#x43A;&#x438;, &#x43A;&#x440;&#x435;&#x43F;&#x435;&#x436;&#x43D;&#x44B;&#x435; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1757,7 +1757,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Автомобильные ремни и подушки безопасности</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x440;&#x435;&#x43C;&#x43D;&#x438; &#x438; &#x43F;&#x43E;&#x434;&#x443;&#x448;&#x43A;&#x438; &#x431;&#x435;&#x437;&#x43E;&#x43F;&#x430;&#x441;&#x43D;&#x43E;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1765,7 +1765,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Обшивки дверей, багажника, потолков, накладники салона</name>
+      <name>&#x41E;&#x431;&#x448;&#x438;&#x432;&#x43A;&#x438; &#x434;&#x432;&#x435;&#x440;&#x435;&#x439;, &#x431;&#x430;&#x433;&#x430;&#x436;&#x43D;&#x438;&#x43A;&#x430;, &#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x43E;&#x432;, &#x43D;&#x430;&#x43A;&#x43B;&#x430;&#x434;&#x43D;&#x438;&#x43A;&#x438; &#x441;&#x430;&#x43B;&#x43E;&#x43D;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1773,7 +1773,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Сидения автомобильные</name>
+      <name>&#x421;&#x438;&#x434;&#x435;&#x43D;&#x438;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1781,7 +1781,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Торпедо, накладки на торпедо, воздуховоды</name>
+      <name>&#x422;&#x43E;&#x440;&#x43F;&#x435;&#x434;&#x43E;, &#x43D;&#x430;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x438; &#x43D;&#x430; &#x442;&#x43E;&#x440;&#x43F;&#x435;&#x434;&#x43E;, &#x432;&#x43E;&#x437;&#x434;&#x443;&#x445;&#x43E;&#x432;&#x43E;&#x434;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1789,7 +1789,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Ручки КПП и ручника</name>
+      <name>&#x420;&#x443;&#x447;&#x43A;&#x438; &#x41A;&#x41F;&#x41F; &#x438; &#x440;&#x443;&#x447;&#x43D;&#x438;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1797,7 +1797,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Рули</name>
+      <name>&#x420;&#x443;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1805,7 +1805,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Бардачки и перчаточные ящики</name>
+      <name>&#x411;&#x430;&#x440;&#x434;&#x430;&#x447;&#x43A;&#x438; &#x438; &#x43F;&#x435;&#x440;&#x447;&#x430;&#x442;&#x43E;&#x447;&#x43D;&#x44B;&#x435; &#x44F;&#x449;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1813,7 +1813,7 @@
     </category>
     <category>
       <parent_id>50</parent_id>
-      <name>Детали салона автомобиля, общее</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x441;&#x430;&#x43B;&#x43E;&#x43D;&#x430; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1821,7 +1821,7 @@
     </category>
     <category>
       <parent_id>51</parent_id>
-      <name>Фильтры маслянные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x43C;&#x430;&#x441;&#x43B;&#x44F;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1829,7 +1829,7 @@
     </category>
     <category>
       <parent_id>51</parent_id>
-      <name>Автомобильные маслянные насосы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43C;&#x430;&#x441;&#x43B;&#x44F;&#x43D;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x441;&#x43E;&#x441;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1837,7 +1837,7 @@
     </category>
     <category>
       <parent_id>51</parent_id>
-      <name>Фильтры гидравлические</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x433;&#x438;&#x434;&#x440;&#x430;&#x432;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1845,7 +1845,7 @@
     </category>
     <category>
       <parent_id>51</parent_id>
-      <name>Поддоны двигателя</name>
+      <name>&#x41F;&#x43E;&#x434;&#x434;&#x43E;&#x43D;&#x44B; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1853,7 +1853,7 @@
     </category>
     <category>
       <parent_id>51</parent_id>
-      <name>Комплектующие системы смазки</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x441;&#x43C;&#x430;&#x437;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1861,7 +1861,7 @@
     </category>
     <category>
       <parent_id>51</parent_id>
-      <name>Детали системы смазки, общее</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x441;&#x43C;&#x430;&#x437;&#x43A;&#x438;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1869,7 +1869,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Глушители</name>
+      <name>&#x413;&#x43B;&#x443;&#x448;&#x438;&#x442;&#x435;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1877,7 +1877,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Гофры для выхлопных систем</name>
+      <name>&#x413;&#x43E;&#x444;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x432;&#x44B;&#x445;&#x43B;&#x43E;&#x43F;&#x43D;&#x44B;&#x445; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1885,7 +1885,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Насадки и наконечники на глушитель</name>
+      <name>&#x41D;&#x430;&#x441;&#x430;&#x434;&#x43A;&#x438; &#x438; &#x43D;&#x430;&#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x438;&#x43A;&#x438; &#x43D;&#x430; &#x433;&#x43B;&#x443;&#x448;&#x438;&#x442;&#x435;&#x43B;&#x44C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1893,7 +1893,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Резонаторы</name>
+      <name>&#x420;&#x435;&#x437;&#x43E;&#x43D;&#x430;&#x442;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1901,7 +1901,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Приемные трубы глушителя</name>
+      <name>&#x41F;&#x440;&#x438;&#x435;&#x43C;&#x43D;&#x44B;&#x435; &#x442;&#x440;&#x443;&#x431;&#x44B; &#x433;&#x43B;&#x443;&#x448;&#x438;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1909,7 +1909,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Выпускные коллекторы</name>
+      <name>&#x412;&#x44B;&#x43F;&#x443;&#x441;&#x43A;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43B;&#x43B;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1917,7 +1917,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Катализаторы для транспорта</name>
+      <name>&#x41A;&#x430;&#x442;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x442;&#x43E;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1925,7 +1925,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Пламегасители</name>
+      <name>&#x41F;&#x43B;&#x430;&#x43C;&#x435;&#x433;&#x430;&#x441;&#x438;&#x442;&#x435;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1933,7 +1933,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Крипежи элементов выхлопной системы</name>
+      <name>&#x41A;&#x440;&#x438;&#x43F;&#x435;&#x436;&#x438; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x432; &#x432;&#x44B;&#x445;&#x43B;&#x43E;&#x43F;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1941,7 +1941,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Комплектующие системы выпуска отработавших газов</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x432;&#x44B;&#x43F;&#x443;&#x441;&#x43A;&#x430; &#x43E;&#x442;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x432;&#x448;&#x438;&#x445; &#x433;&#x430;&#x437;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1949,7 +1949,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Выхлопные системы в сборе</name>
+      <name>&#x412;&#x44B;&#x445;&#x43B;&#x43E;&#x43F;&#x43D;&#x44B;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x432; &#x441;&#x431;&#x43E;&#x440;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1957,7 +1957,7 @@
     </category>
     <category>
       <parent_id>52</parent_id>
-      <name>Выхлопная система, общее</name>
+      <name>&#x412;&#x44B;&#x445;&#x43B;&#x43E;&#x43F;&#x43D;&#x430;&#x44F; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1965,7 +1965,7 @@
     </category>
     <category>
       <parent_id>54</parent_id>
-      <name>Ремни ГРМ, цепи ГРМ</name>
+      <name>&#x420;&#x435;&#x43C;&#x43D;&#x438; &#x413;&#x420;&#x41C;, &#x446;&#x435;&#x43F;&#x438; &#x413;&#x420;&#x41C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1973,7 +1973,7 @@
     </category>
     <category>
       <parent_id>54</parent_id>
-      <name>Клапаны, оси, коромысла двигателя, толкатели клапонов</name>
+      <name>&#x41A;&#x43B;&#x430;&#x43F;&#x430;&#x43D;&#x44B;, &#x43E;&#x441;&#x438;, &#x43A;&#x43E;&#x440;&#x43E;&#x43C;&#x44B;&#x441;&#x43B;&#x430; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;, &#x442;&#x43E;&#x43B;&#x43A;&#x430;&#x442;&#x435;&#x43B;&#x438; &#x43A;&#x43B;&#x430;&#x43F;&#x43E;&#x43D;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1981,7 +1981,7 @@
     </category>
     <category>
       <parent_id>54</parent_id>
-      <name>Распределительный вал, шестерни распределительного вала</name>
+      <name>&#x420;&#x430;&#x441;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x432;&#x430;&#x43B;, &#x448;&#x435;&#x441;&#x442;&#x435;&#x440;&#x43D;&#x438; &#x440;&#x430;&#x441;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x430;&#x43B;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1989,7 +1989,7 @@
     </category>
     <category>
       <parent_id>54</parent_id>
-      <name>Детали ГРМ</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x413;&#x420;&#x41C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -1997,7 +1997,7 @@
     </category>
     <category>
       <parent_id>54</parent_id>
-      <name>Гидрокомпенсаторы</name>
+      <name>&#x413;&#x438;&#x434;&#x440;&#x43E;&#x43A;&#x43E;&#x43C;&#x43F;&#x435;&#x43D;&#x441;&#x430;&#x442;&#x43E;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2005,7 +2005,7 @@
     </category>
     <category>
       <parent_id>54</parent_id>
-      <name>Газораспределительный механизм, общее</name>
+      <name>&#x413;&#x430;&#x437;&#x43E;&#x440;&#x430;&#x441;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2013,7 +2013,7 @@
     </category>
     <category>
       <parent_id>55</parent_id>
-      <name>Комплектующие системы отопления</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43E;&#x442;&#x43E;&#x43F;&#x43B;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2021,7 +2021,7 @@
     </category>
     <category>
       <parent_id>55</parent_id>
-      <name>Детали для автокондиционеров</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43A;&#x43E;&#x43D;&#x434;&#x438;&#x446;&#x438;&#x43E;&#x43D;&#x435;&#x440;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2029,7 +2029,7 @@
     </category>
     <category>
       <parent_id>55</parent_id>
-      <name>Компрессоры кондиционера</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x440;&#x435;&#x441;&#x441;&#x43E;&#x440;&#x44B; &#x43A;&#x43E;&#x43D;&#x434;&#x438;&#x446;&#x438;&#x43E;&#x43D;&#x435;&#x440;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2037,7 +2037,7 @@
     </category>
     <category>
       <parent_id>55</parent_id>
-      <name>Автомобильные комплектующие для кондиционеров, отопления, охлаждения, общее</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x43D;&#x434;&#x438;&#x446;&#x438;&#x43E;&#x43D;&#x435;&#x440;&#x43E;&#x432;, &#x43E;&#x442;&#x43E;&#x43F;&#x43B;&#x435;&#x43D;&#x438;&#x44F;, &#x43E;&#x445;&#x43B;&#x430;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x44F;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2045,7 +2045,7 @@
     </category>
     <category>
       <parent_id>55</parent_id>
-      <name>Автомобильные кондиционеры</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43D;&#x434;&#x438;&#x446;&#x438;&#x43E;&#x43D;&#x435;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2053,7 +2053,7 @@
     </category>
     <category>
       <parent_id>55</parent_id>
-      <name>Конденсаторы кондиционера</name>
+      <name>&#x41A;&#x43E;&#x43D;&#x434;&#x435;&#x43D;&#x441;&#x430;&#x442;&#x43E;&#x440;&#x44B; &#x43A;&#x43E;&#x43D;&#x434;&#x438;&#x446;&#x438;&#x43E;&#x43D;&#x435;&#x440;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2061,7 +2061,7 @@
     </category>
     <category>
       <parent_id>55</parent_id>
-      <name>Блоки управления кондиционером</name>
+      <name>&#x411;&#x43B;&#x43E;&#x43A;&#x438; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x43A;&#x43E;&#x43D;&#x434;&#x438;&#x446;&#x438;&#x43E;&#x43D;&#x435;&#x440;&#x43E;&#x43C;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2069,7 +2069,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Фильтры топливные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2077,7 +2077,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Фильтры воздушные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x432;&#x43E;&#x437;&#x434;&#x443;&#x448;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2085,7 +2085,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Фильтры маслянные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x43C;&#x430;&#x441;&#x43B;&#x44F;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2093,7 +2093,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Фильтры салона</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x441;&#x430;&#x43B;&#x43E;&#x43D;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2101,7 +2101,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Фильтры гидравлические</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x433;&#x438;&#x434;&#x440;&#x430;&#x432;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2109,7 +2109,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Комплекты автомобильных фильтров</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x444;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2117,7 +2117,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Автомобильные фильтры, общее</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x444;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2125,7 +2125,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Фильтры трансмиссионные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2133,7 +2133,7 @@
     </category>
     <category>
       <parent_id>56</parent_id>
-      <name>Фильтры антикоррозионные</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x430;&#x43D;&#x442;&#x438;&#x43A;&#x43E;&#x440;&#x440;&#x43E;&#x437;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2141,7 +2141,7 @@
     </category>
     <category>
       <parent_id>60</parent_id>
-      <name>Стеклоочистители, дворники</name>
+      <name>&#x421;&#x442;&#x435;&#x43A;&#x43B;&#x43E;&#x43E;&#x447;&#x438;&#x441;&#x442;&#x438;&#x442;&#x435;&#x43B;&#x438;, &#x434;&#x432;&#x43E;&#x440;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2149,7 +2149,7 @@
     </category>
     <category>
       <parent_id>60</parent_id>
-      <name>Комплектующие системы стеклоочистителя</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x441;&#x442;&#x435;&#x43A;&#x43B;&#x43E;&#x43E;&#x447;&#x438;&#x441;&#x442;&#x438;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2157,7 +2157,7 @@
     </category>
     <category>
       <parent_id>60</parent_id>
-      <name>Бачки, баки, емкости</name>
+      <name>&#x411;&#x430;&#x447;&#x43A;&#x438;, &#x431;&#x430;&#x43A;&#x438;, &#x435;&#x43C;&#x43A;&#x43E;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2165,7 +2165,7 @@
     </category>
     <category>
       <parent_id>60</parent_id>
-      <name>Сситема очистки окон и фар автомобиля, общее</name>
+      <name>&#x421;&#x441;&#x438;&#x442;&#x435;&#x43C;&#x430; &#x43E;&#x447;&#x438;&#x441;&#x442;&#x43A;&#x438; &#x43E;&#x43A;&#x43E;&#x43D; &#x438; &#x444;&#x430;&#x440; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2173,7 +2173,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Аксессуары салона автомобиля</name>
+      <name>&#x410;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B; &#x441;&#x430;&#x43B;&#x43E;&#x43D;&#x430; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2181,7 +2181,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Аксессуары для автотюнинга</name>
+      <name>&#x410;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x442;&#x44E;&#x43D;&#x438;&#x43D;&#x433;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2189,7 +2189,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Аксессуары для кузова автомобиля</name>
+      <name>&#x410;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x43A;&#x443;&#x437;&#x43E;&#x432;&#x430; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2197,7 +2197,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Автомобильные электронные аксессуары</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43D;&#x43D;&#x44B;&#x435; &#x430;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2205,7 +2205,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Багажники и крепления на крышу</name>
+      <name>&#x411;&#x430;&#x433;&#x430;&#x436;&#x43D;&#x438;&#x43A;&#x438; &#x438; &#x43A;&#x440;&#x435;&#x43F;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x43D;&#x430; &#x43A;&#x440;&#x44B;&#x448;&#x443;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2213,7 +2213,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Средства аварийной безопасности</name>
+      <name>&#x421;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x430; &#x430;&#x432;&#x430;&#x440;&#x438;&#x439;&#x43D;&#x43E;&#x439; &#x431;&#x435;&#x437;&#x43E;&#x43F;&#x430;&#x441;&#x43D;&#x43E;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2221,7 +2221,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Автоаксессуары, общее</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x430;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2229,7 +2229,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Щетки и скребки автомобильные</name>
+      <name>&#x429;&#x435;&#x442;&#x43A;&#x438; &#x438; &#x441;&#x43A;&#x440;&#x435;&#x431;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2237,7 +2237,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Автомобильный скотч, самоклеющиеся карманы для талонов</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x441;&#x43A;&#x43E;&#x442;&#x447;, &#x441;&#x430;&#x43C;&#x43E;&#x43A;&#x43B;&#x435;&#x44E;&#x449;&#x438;&#x435;&#x441;&#x44F; &#x43A;&#x430;&#x440;&#x43C;&#x430;&#x43D;&#x44B; &#x434;&#x43B;&#x44F; &#x442;&#x430;&#x43B;&#x43E;&#x43D;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2245,7 +2245,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Утеплители автомобильные</name>
+      <name>&#x423;&#x442;&#x435;&#x43F;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2253,7 +2253,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Устройства для экономии топлива</name>
+      <name>&#x423;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x441;&#x442;&#x432;&#x430; &#x434;&#x43B;&#x44F; &#x44D;&#x43A;&#x43E;&#x43D;&#x43E;&#x43C;&#x438;&#x438; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2261,7 +2261,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Конистры, лейки для топлива</name>
+      <name>&#x41A;&#x43E;&#x43D;&#x438;&#x441;&#x442;&#x440;&#x44B;, &#x43B;&#x435;&#x439;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2269,7 +2269,7 @@
     </category>
     <category>
       <parent_id>26</parent_id>
-      <name>Автомобильные сейфы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x441;&#x435;&#x439;&#x444;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2277,7 +2277,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Шины</name>
+      <name>&#x428;&#x438;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2285,7 +2285,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Колесные диски</name>
+      <name>&#x41A;&#x43E;&#x43B;&#x435;&#x441;&#x43D;&#x44B;&#x435; &#x434;&#x438;&#x441;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2293,7 +2293,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Колпаки для дисков</name>
+      <name>&#x41A;&#x43E;&#x43B;&#x43F;&#x430;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x434;&#x438;&#x441;&#x43A;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2301,7 +2301,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Болты, секретные болты, гайки</name>
+      <name>&#x411;&#x43E;&#x43B;&#x442;&#x44B;, &#x441;&#x435;&#x43A;&#x440;&#x435;&#x442;&#x43D;&#x44B;&#x435; &#x431;&#x43E;&#x43B;&#x442;&#x44B;, &#x433;&#x430;&#x439;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2309,7 +2309,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Проставки, цетровочные кольца для дисков</name>
+      <name>&#x41F;&#x440;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x43A;&#x438;, &#x446;&#x435;&#x442;&#x440;&#x43E;&#x432;&#x43E;&#x447;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43B;&#x44C;&#x446;&#x430; &#x434;&#x43B;&#x44F; &#x434;&#x438;&#x441;&#x43A;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2317,7 +2317,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Камеры для шин и ободные ленты</name>
+      <name>&#x41A;&#x430;&#x43C;&#x435;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x448;&#x438;&#x43D; &#x438; &#x43E;&#x431;&#x43E;&#x434;&#x43D;&#x44B;&#x435; &#x43B;&#x435;&#x43D;&#x442;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2325,7 +2325,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Средства повышения проходимости</name>
+      <name>&#x421;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x430; &#x43F;&#x43E;&#x432;&#x44B;&#x448;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x440;&#x43E;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2333,7 +2333,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Комплекты колес в сборе</name>
+      <name>&#x41A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x44B; &#x43A;&#x43E;&#x43B;&#x435;&#x441; &#x432; &#x441;&#x431;&#x43E;&#x440;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2341,7 +2341,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Автомобильные диски и шины, общее</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x434;&#x438;&#x441;&#x43A;&#x438; &#x438; &#x448;&#x438;&#x43D;&#x44B;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2349,7 +2349,7 @@
     </category>
     <category>
       <parent_id>27</parent_id>
-      <name>Шины, ремкомплекты</name>
+      <name>&#x428;&#x438;&#x43D;&#x44B;, &#x440;&#x435;&#x43C;&#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2357,7 +2357,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Авто, мото масла, смазки и жидкости</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;, &#x43C;&#x43E;&#x442;&#x43E; &#x43C;&#x430;&#x441;&#x43B;&#x430;, &#x441;&#x43C;&#x430;&#x437;&#x43A;&#x438; &#x438; &#x436;&#x438;&#x434;&#x43A;&#x43E;&#x441;&#x442;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2365,7 +2365,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Полироли и шампуни автомобильные</name>
+      <name>&#x41F;&#x43E;&#x43B;&#x438;&#x440;&#x43E;&#x43B;&#x438; &#x438; &#x448;&#x430;&#x43C;&#x43F;&#x443;&#x43D;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2373,7 +2373,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Автомобильные герметики, клея</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x433;&#x435;&#x440;&#x43C;&#x435;&#x442;&#x438;&#x43A;&#x438;, &#x43A;&#x43B;&#x435;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2381,7 +2381,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Очистители для автомобиля</name>
+      <name>&#x41E;&#x447;&#x438;&#x441;&#x442;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2389,7 +2389,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Автокраски, автоэмали</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43A;&#x440;&#x430;&#x441;&#x43A;&#x438;, &#x430;&#x432;&#x442;&#x43E;&#x44D;&#x43C;&#x430;&#x43B;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2397,7 +2397,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Жидкости для стеклоочистителя</name>
+      <name>&#x416;&#x438;&#x434;&#x43A;&#x43E;&#x441;&#x442;&#x438; &#x434;&#x43B;&#x44F; &#x441;&#x442;&#x435;&#x43A;&#x43B;&#x43E;&#x43E;&#x447;&#x438;&#x441;&#x442;&#x438;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2405,7 +2405,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Химические средства для двигателя</name>
+      <name>&#x425;&#x438;&#x43C;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435; &#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x430; &#x434;&#x43B;&#x44F; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2413,7 +2413,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Салфетки и губки для автомобиля</name>
+      <name>&#x421;&#x430;&#x43B;&#x444;&#x435;&#x442;&#x43A;&#x438; &#x438; &#x433;&#x443;&#x431;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2421,7 +2421,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Антикоррозионная защита</name>
+      <name>&#x410;&#x43D;&#x442;&#x438;&#x43A;&#x43E;&#x440;&#x440;&#x43E;&#x437;&#x438;&#x43E;&#x43D;&#x43D;&#x430;&#x44F; &#x437;&#x430;&#x449;&#x438;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2429,7 +2429,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Топливные присадки</name>
+      <name>&#x422;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x43F;&#x440;&#x438;&#x441;&#x430;&#x434;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2437,7 +2437,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Расходные материалы, автохимия и автокосметика, общее</name>
+      <name>&#x420;&#x430;&#x441;&#x445;&#x43E;&#x434;&#x43D;&#x44B;&#x435; &#x43C;&#x430;&#x442;&#x435;&#x440;&#x438;&#x430;&#x43B;&#x44B;, &#x430;&#x432;&#x442;&#x43E;&#x445;&#x438;&#x43C;&#x438;&#x44F; &#x438; &#x430;&#x432;&#x442;&#x43E;&#x43A;&#x43E;&#x441;&#x43C;&#x435;&#x442;&#x438;&#x43A;&#x430;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2445,7 +2445,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Средства для удаления царапин с автомобилей</name>
+      <name>&#x421;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x430; &#x434;&#x43B;&#x44F; &#x443;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x446;&#x430;&#x440;&#x430;&#x43F;&#x438;&#x43D; &#x441; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x435;&#x439;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2453,7 +2453,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Средства по уходу за шинами</name>
+      <name>&#x421;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x430; &#x43F;&#x43E; &#x443;&#x445;&#x43E;&#x434;&#x443; &#x437;&#x430; &#x448;&#x438;&#x43D;&#x430;&#x43C;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2461,7 +2461,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Средства от запотевания и размораживатели стекол</name>
+      <name>&#x421;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x430; &#x43E;&#x442; &#x437;&#x430;&#x43F;&#x43E;&#x442;&#x435;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x438; &#x440;&#x430;&#x437;&#x43C;&#x43E;&#x440;&#x430;&#x436;&#x438;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x438; &#x441;&#x442;&#x435;&#x43A;&#x43E;&#x43B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2469,7 +2469,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Жидкая резина</name>
+      <name>&#x416;&#x438;&#x434;&#x43A;&#x430;&#x44F; &#x440;&#x435;&#x437;&#x438;&#x43D;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2477,7 +2477,7 @@
     </category>
     <category>
       <parent_id>28</parent_id>
-      <name>Химические средства для трансмиссии</name>
+      <name>&#x425;&#x438;&#x43C;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435; &#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x430; &#x434;&#x43B;&#x44F; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2485,7 +2485,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Автозвук</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x437;&#x432;&#x443;&#x43A;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2493,7 +2493,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Автомобильные видеосистемы</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x432;&#x438;&#x434;&#x435;&#x43E;&#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2509,7 +2509,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Противоугонные системы и аксессуары</name>
+      <name>&#x41F;&#x440;&#x43E;&#x442;&#x438;&#x432;&#x43E;&#x443;&#x433;&#x43E;&#x43D;&#x43D;&#x44B;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x438; &#x430;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2517,7 +2517,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Автомобильные адаптеры питания</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x430;&#x434;&#x430;&#x43F;&#x442;&#x435;&#x440;&#x44B; &#x43F;&#x438;&#x442;&#x430;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2525,7 +2525,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Системы мониторинга транспорта и контроля топлива</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43C;&#x43E;&#x43D;&#x438;&#x442;&#x43E;&#x440;&#x438;&#x43D;&#x433;&#x430; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430; &#x438; &#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44F; &#x442;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2533,7 +2533,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>FM трансмиттеры автомобильные</name>
+      <name>FM &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43C;&#x438;&#x442;&#x442;&#x435;&#x440;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2541,7 +2541,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Парковочные системы</name>
+      <name>&#x41F;&#x430;&#x440;&#x43A;&#x43E;&#x432;&#x43E;&#x447;&#x43D;&#x44B;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2549,7 +2549,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Автомобильные антены</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x430;&#x43D;&#x442;&#x435;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2557,7 +2557,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Бортовые компьютеры</name>
+      <name>&#x411;&#x43E;&#x440;&#x442;&#x43E;&#x432;&#x44B;&#x435; &#x43A;&#x43E;&#x43C;&#x43F;&#x44C;&#x44E;&#x442;&#x435;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2565,7 +2565,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Разветвители для прикуривателя</name>
+      <name>&#x420;&#x430;&#x437;&#x432;&#x435;&#x442;&#x432;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x434;&#x43B;&#x44F; &#x43F;&#x440;&#x438;&#x43A;&#x443;&#x440;&#x438;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2573,7 +2573,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Антирадары</name>
+      <name>&#x410;&#x43D;&#x442;&#x438;&#x440;&#x430;&#x434;&#x430;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2581,7 +2581,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Автомобильные системы связи</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x441;&#x432;&#x44F;&#x437;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2589,7 +2589,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Подогрев автомобильных сидений и зеркал</name>
+      <name>&#x41F;&#x43E;&#x434;&#x43E;&#x433;&#x440;&#x435;&#x432; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x441;&#x438;&#x434;&#x435;&#x43D;&#x438;&#x439; &#x438; &#x437;&#x435;&#x440;&#x43A;&#x430;&#x43B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2597,7 +2597,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Автоэлектроника, общее</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43D;&#x438;&#x43A;&#x430;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2605,7 +2605,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Системы круиз-контроля</name>
+      <name>&#x421;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43A;&#x440;&#x443;&#x438;&#x437;-&#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2613,7 +2613,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Таксометры</name>
+      <name>&#x422;&#x430;&#x43A;&#x441;&#x43E;&#x43C;&#x435;&#x442;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2621,7 +2621,7 @@
     </category>
     <category>
       <parent_id>29</parent_id>
-      <name>Проекторы автомобильные</name>
+      <name>&#x41F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2629,7 +2629,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Аккумуляторы автомобильные</name>
+      <name>&#x410;&#x43A;&#x43A;&#x443;&#x43C;&#x443;&#x43B;&#x44F;&#x442;&#x43E;&#x440;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2637,7 +2637,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Реле и датчики автомобильные</name>
+      <name>&#x420;&#x435;&#x43B;&#x435; &#x438; &#x434;&#x430;&#x442;&#x447;&#x438;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2645,7 +2645,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Стартеры и комплектующие</name>
+      <name>&#x421;&#x442;&#x430;&#x440;&#x442;&#x435;&#x440;&#x44B; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2653,7 +2653,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Генераторы, альтернаторы и комплектующие</name>
+      <name>&#x413;&#x435;&#x43D;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x44B;, &#x430;&#x43B;&#x44C;&#x442;&#x435;&#x440;&#x43D;&#x430;&#x442;&#x43E;&#x440;&#x44B; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2661,7 +2661,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Блоки управления</name>
+      <name>&#x411;&#x43B;&#x43E;&#x43A;&#x438; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2669,7 +2669,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Предохранители и переключатели автомобильные</name>
+      <name>&#x41F;&#x440;&#x435;&#x434;&#x43E;&#x445;&#x440;&#x430;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x438; &#x438; &#x43F;&#x435;&#x440;&#x435;&#x43A;&#x43B;&#x44E;&#x447;&#x430;&#x442;&#x435;&#x43B;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2677,7 +2677,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Проводка, провода, клемы и разъемы автомобильные</name>
+      <name>&#x41F;&#x440;&#x43E;&#x432;&#x43E;&#x434;&#x43A;&#x430;, &#x43F;&#x440;&#x43E;&#x432;&#x43E;&#x434;&#x430;, &#x43A;&#x43B;&#x435;&#x43C;&#x44B; &#x438; &#x440;&#x430;&#x437;&#x44A;&#x435;&#x43C;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2685,7 +2685,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Индикаторы, панели приборов и управления автомобильные</name>
+      <name>&#x418;&#x43D;&#x434;&#x438;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x44B;, &#x43F;&#x430;&#x43D;&#x435;&#x43B;&#x438; &#x43F;&#x440;&#x438;&#x431;&#x43E;&#x440;&#x43E;&#x432; &#x438; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2693,7 +2693,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Звуковые сигналы и клаксоны автомобильные</name>
+      <name>&#x417;&#x432;&#x443;&#x43A;&#x43E;&#x432;&#x44B;&#x435; &#x441;&#x438;&#x433;&#x43D;&#x430;&#x43B;&#x44B; &#x438; &#x43A;&#x43B;&#x430;&#x43A;&#x441;&#x43E;&#x43D;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2701,7 +2701,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Электрооборудование автомобилей, общее</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43E;&#x431;&#x43E;&#x440;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x435;&#x439;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2709,7 +2709,7 @@
     </category>
     <category>
       <parent_id>30</parent_id>
-      <name>Электродвигатели, корректоры и приводы автомобильные</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x438;, &#x43A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x44B; &#x438; &#x43F;&#x440;&#x438;&#x432;&#x43E;&#x434;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2717,7 +2717,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Запчасти для мототехники</name>
+      <name>&#x417;&#x430;&#x43F;&#x447;&#x430;&#x441;&#x442;&#x438; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2725,7 +2725,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Мотоэкипировка</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x44D;&#x43A;&#x438;&#x43F;&#x438;&#x440;&#x43E;&#x432;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2733,7 +2733,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Мотоциклы, мотороллеры скутеры, мопеды</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x446;&#x438;&#x43A;&#x43B;&#x44B;, &#x43C;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43B;&#x43B;&#x435;&#x440;&#x44B; &#x441;&#x43A;&#x443;&#x442;&#x435;&#x440;&#x44B;, &#x43C;&#x43E;&#x43F;&#x435;&#x434;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2741,7 +2741,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Аксессуары для мототехники</name>
+      <name>&#x410;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2749,7 +2749,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Электроскутеры, электромотоциклы</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x441;&#x43A;&#x443;&#x442;&#x435;&#x440;&#x44B;, &#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43C;&#x43E;&#x442;&#x43E;&#x446;&#x438;&#x43A;&#x43B;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2757,7 +2757,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Квадроциклы и багги</name>
+      <name>&#x41A;&#x432;&#x430;&#x434;&#x440;&#x43E;&#x446;&#x438;&#x43A;&#x43B;&#x44B; &#x438; &#x431;&#x430;&#x433;&#x433;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2765,7 +2765,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Мотобуксировщики</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x431;&#x443;&#x43A;&#x441;&#x438;&#x440;&#x43E;&#x432;&#x449;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2773,7 +2773,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Мототехника, общее</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x430;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2781,7 +2781,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Моточехлы</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x447;&#x435;&#x445;&#x43B;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2789,7 +2789,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Инструмент для ремонта мототехники</name>
+      <name>&#x418;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442; &#x434;&#x43B;&#x44F; &#x440;&#x435;&#x43C;&#x43E;&#x43D;&#x442;&#x430; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2797,7 +2797,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Аксессуары для снегоходов и буксировщиков</name>
+      <name>&#x410;&#x43A;&#x441;&#x435;&#x441;&#x441;&#x443;&#x430;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x441;&#x43D;&#x435;&#x433;&#x43E;&#x445;&#x43E;&#x434;&#x43E;&#x432; &#x438; &#x431;&#x443;&#x43A;&#x441;&#x438;&#x440;&#x43E;&#x432;&#x449;&#x438;&#x43A;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2805,7 +2805,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Снегоходы</name>
+      <name>&#x421;&#x43D;&#x435;&#x433;&#x43E;&#x445;&#x43E;&#x434;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2813,7 +2813,7 @@
     </category>
     <category>
       <parent_id>31</parent_id>
-      <name>Трициклы</name>
+      <name>&#x422;&#x440;&#x438;&#x446;&#x438;&#x43A;&#x43B;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2821,7 +2821,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали двигателя мототехники</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x434;&#x432;&#x438;&#x433;&#x430;&#x442;&#x435;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2829,7 +2829,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Запчасти для мототехники, общее</name>
+      <name>&#x417;&#x430;&#x43F;&#x447;&#x430;&#x441;&#x442;&#x438; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2837,7 +2837,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали привода для мототехники</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x43F;&#x440;&#x438;&#x432;&#x43E;&#x434;&#x430; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2845,7 +2845,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Гусеницы для техники</name>
+      <name>&#x413;&#x443;&#x441;&#x435;&#x43D;&#x438;&#x446;&#x44B; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2853,7 +2853,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали выхлопной системы мототехники</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x432;&#x44B;&#x445;&#x43B;&#x43E;&#x43F;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2861,7 +2861,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Электрооборудование для мототехники</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43E;&#x431;&#x43E;&#x440;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2869,7 +2869,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали рамы и облицовки</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x440;&#x430;&#x43C;&#x44B; &#x438; &#x43E;&#x431;&#x43B;&#x438;&#x446;&#x43E;&#x432;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2877,7 +2877,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Аккумуляторы для мототехники</name>
+      <name>&#x410;&#x43A;&#x43A;&#x443;&#x43C;&#x443;&#x43B;&#x44F;&#x442;&#x43E;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2885,7 +2885,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали ходовой части мототехники</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x445;&#x43E;&#x434;&#x43E;&#x432;&#x43E;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2893,7 +2893,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Топливная система мототехники</name>
+      <name>&#x422;&#x43E;&#x43F;&#x43B;&#x438;&#x432;&#x43D;&#x430;&#x44F; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2901,7 +2901,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Колеса для мототехники</name>
+      <name>&#x41A;&#x43E;&#x43B;&#x435;&#x441;&#x430; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2909,7 +2909,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Фильтры для мототехники</name>
+      <name>&#x424;&#x438;&#x43B;&#x44C;&#x442;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2917,7 +2917,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Световые приборы для мототехники</name>
+      <name>&#x421;&#x432;&#x435;&#x442;&#x43E;&#x432;&#x44B;&#x435; &#x43F;&#x440;&#x438;&#x431;&#x43E;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2925,7 +2925,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали рулевого управления мототехники</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x440;&#x443;&#x43B;&#x435;&#x432;&#x43E;&#x433;&#x43E; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2933,7 +2933,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Элементы сцепления для мототехники</name>
+      <name>&#x42D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x44B; &#x441;&#x446;&#x435;&#x43F;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2941,7 +2941,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали тормозной системы мототехники</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x442;&#x43E;&#x440;&#x43C;&#x43E;&#x437;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2949,7 +2949,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Тросики для мототехники</name>
+      <name>&#x422;&#x440;&#x43E;&#x441;&#x438;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2957,7 +2957,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Защитные накладки для мототехники</name>
+      <name>&#x417;&#x430;&#x449;&#x438;&#x442;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2965,7 +2965,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Свечи зажигания для мототехники</name>
+      <name>&#x421;&#x432;&#x435;&#x447;&#x438; &#x437;&#x430;&#x436;&#x438;&#x433;&#x430;&#x43D;&#x438;&#x44F; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2973,7 +2973,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Подножки для мототехники</name>
+      <name>&#x41F;&#x43E;&#x434;&#x43D;&#x43E;&#x436;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2981,7 +2981,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Сидения для мототехники</name>
+      <name>&#x421;&#x438;&#x434;&#x435;&#x43D;&#x438;&#x44F; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2989,7 +2989,7 @@
     </category>
     <category>
       <parent_id>340</parent_id>
-      <name>Детали системы охлаждения мототехники</name>
+      <name>&#x414;&#x435;&#x442;&#x430;&#x43B;&#x438; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x43E;&#x445;&#x43B;&#x430;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x44F; &#x43C;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x445;&#x43D;&#x438;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -2997,7 +2997,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотошлемы</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x448;&#x43B;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3005,7 +3005,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Балаклавы, подшлемники, маски</name>
+      <name>&#x411;&#x430;&#x43B;&#x430;&#x43A;&#x43B;&#x430;&#x432;&#x44B;, &#x43F;&#x43E;&#x434;&#x448;&#x43B;&#x435;&#x43C;&#x43D;&#x438;&#x43A;&#x438;, &#x43C;&#x430;&#x441;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3013,7 +3013,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотоперчатки</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x43F;&#x435;&#x440;&#x447;&#x430;&#x442;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3021,7 +3021,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотокуртки</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x43A;&#x443;&#x440;&#x442;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3029,7 +3029,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотоочки</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x43E;&#x447;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3037,7 +3037,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотозащита</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x437;&#x430;&#x449;&#x438;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3045,7 +3045,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотоботы</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x431;&#x43E;&#x442;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3053,7 +3053,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотоштаны</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x448;&#x442;&#x430;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3061,7 +3061,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотокомбинезоны</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x43A;&#x43E;&#x43C;&#x431;&#x438;&#x43D;&#x435;&#x437;&#x43E;&#x43D;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3069,7 +3069,7 @@
     </category>
     <category>
       <parent_id>341</parent_id>
-      <name>Мотоэкипировка, общее</name>
+      <name>&#x41C;&#x43E;&#x442;&#x43E;&#x44D;&#x43A;&#x438;&#x43F;&#x438;&#x440;&#x43E;&#x432;&#x43A;&#x430;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3077,7 +3077,7 @@
     </category>
     <category>
       <parent_id>32</parent_id>
-      <name>Газобалонное оборудование и комплектующие автотранспорта</name>
+      <name>&#x413;&#x430;&#x437;&#x43E;&#x431;&#x430;&#x43B;&#x43E;&#x43D;&#x43D;&#x43E;&#x435; &#x43E;&#x431;&#x43E;&#x440;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x442;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x430;&#x432;&#x442;&#x43E;&#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3085,7 +3085,7 @@
     </category>
     <category>
       <parent_id>32</parent_id>
-      <name>Дополнительное оборудование, общее</name>
+      <name>&#x414;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x43E;&#x431;&#x43E;&#x440;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3093,7 +3093,7 @@
     </category>
     <category>
       <parent_id>32</parent_id>
-      <name>Лебедки автомобильные</name>
+      <name>&#x41B;&#x435;&#x431;&#x435;&#x434;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3101,7 +3101,7 @@
     </category>
     <category>
       <parent_id>32</parent_id>
-      <name>Механические противоугонные системы</name>
+      <name>&#x41C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435; &#x43F;&#x440;&#x43E;&#x442;&#x438;&#x432;&#x43E;&#x443;&#x433;&#x43E;&#x43D;&#x43D;&#x44B;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3109,7 +3109,7 @@
     </category>
     <category>
       <parent_id>32</parent_id>
-      <name>Пневматическая подвеска</name>
+      <name>&#x41F;&#x43D;&#x435;&#x432;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x43F;&#x43E;&#x434;&#x432;&#x435;&#x441;&#x43A;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3117,7 +3117,7 @@
     </category>
     <category>
       <parent_id>32</parent_id>
-      <name>Проставки для увеличения клиренса</name>
+      <name>&#x41F;&#x440;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x443;&#x432;&#x435;&#x43B;&#x438;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x43A;&#x43B;&#x438;&#x440;&#x435;&#x43D;&#x441;&#x430;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3125,7 +3125,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Наборы инструментов</name>
+      <name>&#x41D;&#x430;&#x431;&#x43E;&#x440;&#x44B; &#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x432;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3133,7 +3133,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Отвертки</name>
+      <name>&#x41E;&#x442;&#x432;&#x435;&#x440;&#x442;&#x43A;&#x438;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3141,7 +3141,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Головки торцовые</name>
+      <name>&#x413;&#x43E;&#x43B;&#x43E;&#x432;&#x43A;&#x438; &#x442;&#x43E;&#x440;&#x446;&#x43E;&#x432;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3149,7 +3149,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Ключи комбинированные</name>
+      <name>&#x41A;&#x43B;&#x44E;&#x447;&#x438; &#x43A;&#x43E;&#x43C;&#x431;&#x438;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3157,7 +3157,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Домкраты, подставки автомобильные</name>
+      <name>&#x414;&#x43E;&#x43C;&#x43A;&#x440;&#x430;&#x442;&#x44B;, &#x43F;&#x43E;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43A;&#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3165,7 +3165,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Автомобильные насосы, компрессоры и манометры</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x43E;&#x431;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x441;&#x43E;&#x441;&#x44B;, &#x43A;&#x43E;&#x43C;&#x43F;&#x440;&#x435;&#x441;&#x441;&#x43E;&#x440;&#x44B; &#x438; &#x43C;&#x430;&#x43D;&#x43E;&#x43C;&#x435;&#x442;&#x440;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3173,7 +3173,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Пасатижи, плоскогубцы, тонкогубцы</name>
+      <name>&#x41F;&#x430;&#x441;&#x430;&#x442;&#x438;&#x436;&#x438;, &#x43F;&#x43B;&#x43E;&#x441;&#x43A;&#x43E;&#x433;&#x443;&#x431;&#x446;&#x44B;, &#x442;&#x43E;&#x43D;&#x43A;&#x43E;&#x433;&#x443;&#x431;&#x446;&#x44B;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3181,7 +3181,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Ключи накидные</name>
+      <name>&#x41A;&#x43B;&#x44E;&#x447;&#x438; &#x43D;&#x430;&#x43A;&#x438;&#x434;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3189,7 +3189,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Ключи шестигранные</name>
+      <name>&#x41A;&#x43B;&#x44E;&#x447;&#x438; &#x448;&#x435;&#x441;&#x442;&#x438;&#x433;&#x440;&#x430;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3197,7 +3197,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Ключи торцовые</name>
+      <name>&#x41A;&#x43B;&#x44E;&#x447;&#x438; &#x442;&#x43E;&#x440;&#x446;&#x43E;&#x432;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3205,7 +3205,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Ключи рожковые</name>
+      <name>&#x41A;&#x43B;&#x44E;&#x447;&#x438; &#x440;&#x43E;&#x436;&#x43A;&#x43E;&#x432;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3213,7 +3213,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Ключи разводные</name>
+      <name>&#x41A;&#x43B;&#x44E;&#x447;&#x438; &#x440;&#x430;&#x437;&#x432;&#x43E;&#x434;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3221,7 +3221,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Автоинструмент, общее</name>
+      <name>&#x410;&#x432;&#x442;&#x43E;&#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442;, &#x43E;&#x431;&#x449;&#x435;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>
@@ -3229,7 +3229,7 @@
     </category>
     <category>
       <parent_id>33</parent_id>
-      <name>Ключи балонные</name>
+      <name>&#x41A;&#x43B;&#x44E;&#x447;&#x438; &#x431;&#x430;&#x43B;&#x43E;&#x43D;&#x43D;&#x44B;&#x435;</name>
       <link>/auto_moto</link>
       <icon>/img/dashboard_icon.png</icon>
       <icon_hover>/img/dashboard_icon_white.png</icon_hover>

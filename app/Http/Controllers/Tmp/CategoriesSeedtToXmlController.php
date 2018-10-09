@@ -3671,11 +3671,7 @@ class CategoriesSeedtToXmlController extends Controller
 
         ];
 
-        echo $this->createXML($start_array);
-
-        /*$xml = new SimpleXMLElement('<rootTag/>');
-        $this->to_xml($xml, $start_array);
-        print $xml->asXML(base_path('/database/seeds/categories.xml'));*/
+       $this->createXML($this->utf8_converter($start_array));
     }
 
     function createXML($data) {
@@ -3683,7 +3679,7 @@ class CategoriesSeedtToXmlController extends Controller
         $rowCount = count($data);
 
         //create the xml document
-        $xmlDoc = new DOMDocument();
+        $xmlDoc = new DOMDocument('1.0', 'UTF-8');
 
         $root = $xmlDoc->appendChild($xmlDoc->createElement("categories"));
         $root->appendChild($xmlDoc->createElement("title",$title));
@@ -3698,18 +3694,30 @@ class CategoriesSeedtToXmlController extends Controller
                 }
             }
         }
-
-        header("Content-Type: text/plain");
+        header('Content-Type: charset=utf-8');
+       header("Content-Type: text/plain");
 
         //make the output pretty
         $xmlDoc->formatOutput = true;
 
         //save xml file
-        $file_name = str_replace(' ', '_',$title).'_'.time().'.xml';
-        $xmlDoc->save(base_path('/database/seeds/categories.xml'));
+        $file_name = 'categories.xml';
+        $xmlDoc->save(base_path('/database/seeds/'.$file_name));
 
         //return xml file name
         return $file_name;
+    }
+
+    function utf8_converter($array)
+    {
+        array_walk_recursive($array, function(&$item, $key){
+            if(!mb_detect_encoding($item, 'utf-8', true)){
+                $item = utf8_encode($item);
+            }
+
+        });
+
+        return $array;
     }
 
     public function from(){
