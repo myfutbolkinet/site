@@ -3,7 +3,31 @@
 @section('title', 'Main page')
 
 @section('content')
+    <div id="main" role="main" style="">
 
+        <!-- Main view  -->
+
+        <!-- RIBBON -->
+        <div id="ribbon">
+
+            <div class="back_btn" style="z-index:999;margin-left:-10px;display:inline-block;position:relative;left:0px;width:30px;height:40px;background:linear-gradient(to right,#3a3633 93%,#2a2725 100%);">
+                <a href="@php echo (isset($_SERVER['HTTP_REFERER'])) ?  $_SERVER['HTTP_REFERER'] : ''; @endphp "><i style="position:absolute;color:#fff;top:15px;left:10px;" class="fa fa-step-backward"></i></a>
+            </div>
+
+            <span class="ribbon-button-alignment" style="position:absolute;right:30px">
+					<a href="javascript:window.location.reload();"><span id="refresh" class="btn btn-ribbon" >
+						<i class="fa fa-refresh"></i>
+					</span></a>
+				</span>
+
+            <!-- breadcrumb -->
+
+
+        </div>
+        <!-- END RIBBON -->
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
             <h2>Свойства товаров</h2>
@@ -131,6 +155,7 @@
                     </div>
                 </div>
     </div>
-
+        </div>
+    </div>
 
 @endsection

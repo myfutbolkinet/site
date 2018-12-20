@@ -63,7 +63,6 @@ class GoodsPropertiesController extends SuperadminController
             ->orderBy('updated_at', 'desc')
             ->get();
         $data['menu']=$this->menu();
-
         $this->title = 'Панель администратора';
         return view('superadmin/add_good_property',$data);
     }

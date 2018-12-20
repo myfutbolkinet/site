@@ -7,7 +7,7 @@
     <div id="main" role="main" style="">
 
     <!-- Main view  -->
-    @include('layouts.goods_topnavbar')
+   @include('layouts.goods_topnavbar')
         <!-- RIBBON -->
         <div id="ribbon">
 

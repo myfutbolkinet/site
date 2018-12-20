@@ -31,6 +31,8 @@
 
     <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
     <link rel="stylesheet" type="text/css" media="screen" href="/smartAdmin/css/demo.min.css">
+
+    <link href="{!! asset('inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/colorpicker/bootstrap-colorpicker.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/clockpicker/clockpicker.css') !!}" rel="stylesheet">
     <!-- FAVICONS -->

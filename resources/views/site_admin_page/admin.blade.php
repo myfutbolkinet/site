@@ -1,4 +1,4 @@
-@extends('site_admin_page.index_app')
+@extends('site_admin_page.app')
 
 @section('title', 'Main page')
 
