@@ -31,8 +31,8 @@ class SuperadminController extends \App\Http\Controllers\Controller
     }
     public function index()
     {
-
-     return view('superadmin.index');
+    $data['menu']=$this->menu();
+     return view('superadmin.index',$data);
 
 
     }

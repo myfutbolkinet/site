@@ -1,4 +1,4 @@
-@extends('superadmin.app')
+@extends('layouts.superadmin_app')
 
 @section('title', 'Main page')
 

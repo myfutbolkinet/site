@@ -48,7 +48,7 @@ class SuperadminsMenuTableSeeder extends Seeder
             [
                 'parent_id' => 3,
                 'name' => 'Категоріі',
-                'icon'=> 'fa-envelope','link'=> '/superadmin/categories','type'=>'linked'
+                'icon'=> 'fa-envelope','link'=> '/superadmin/categories','type'=>'not_linked'
             ],
             [
                 'parent_id' => 3,
