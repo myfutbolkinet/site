@@ -3,13 +3,14 @@
  * Created by PhpStorm.
  * User: imediasun
  * Date: 15.06.2019
- * Time: 19:25
+ * Time: 21:15
  */
 
 namespace App\Domain\Good;
 
 
-interface GoodRepositoryInterface
+interface GoodServiceInterface
 {
-    public function create(Good $good);
+
+    public function create($clientId);
 }

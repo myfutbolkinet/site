@@ -2,61 +2,34 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 use App\Domain\Good\GoodRepositoryInterface;
-class EloquentGoodRepository extends Model implements GoodRepositoryInterface
+class EloquentGoodRepository implements GoodRepositoryInterface
 {
-    use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    public function create(\App\Domain\Good\Good $good){
 
+        dump($good->getUser()->getId());
 
+     $fin=\App\Good::insert(
+     [
+        'id'=>null,
+        'name' => 'sds',
+        'user_id'=>$good->getUser()->getId(),
+        'articul' => 'artikul',
+        'price' => '12345',
+        'type' => 1,
+        'qnt' =>2,
+        'discount'=> 5,
+        'category'=>2,
+        'description'=>'editor1',
+        'description2'=>''
+        ]
+        );
 
-
-    protected $fillable = [
-       'facebook_id', 'name', 'email', 'password',
-    ];
-    
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    public function createGood(Good $good){
-
+     dump($fin);
     }
 
 
-    public function likes(){
 
-        return $this->belongsTo('App\Like','id_goods');
-    }
-    public function photos(){
-
-        return $this->hasMany('App\Photo','id_good');
-    }
-
-    public function colors(){
-
-        return $this->hasMany('App\Colors_of_good','id_good');
-    }
-    public function videos(){
-
-    return $this->hasMany('App\Video','id_good');
-    }
-    public function sizes(){
-
-        return $this->hasMany('App\Size','id_good');
-    }
 
 }

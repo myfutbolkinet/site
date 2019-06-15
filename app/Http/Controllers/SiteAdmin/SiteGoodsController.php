@@ -144,9 +144,6 @@ class SiteGoodsController extends SiteAdminController
     //TODO: переименовать функцию в store
     public function add_good(Request $request){
         dump(session()->all());
-
-        $client=$thisClientRepository->findById(Auth::user()->id);
-        $good= new \App\Good($client);
         //To DTO
        /* $data->name = $request->input('name');
         $data->articul = $request->input('artikul');
@@ -159,11 +156,14 @@ class SiteGoodsController extends SiteAdminController
         $data->description2='';
         $data->user_id=Auth::user()->id;*/
        //Todo
-       $this->goodRepository->create($good);
+        $goodRepository=new \App\EloquentGoodRepository();
+        $userRepository=new \App\EloquentUserRepository();
+        $service=new \App\Domain\Good\GoodService($userRepository,$goodRepository);
+        $goodId=$service->create(Auth::user()->id);
+        var_dump('good created',$goodId);die();
         //$data->save();
         //$tmp_folder = '/files/tmpImages/';
-        foreach(session('images') as $file){
-            //rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
+/*        foreach(session('images') as $file){
             $img=Image::make(storage_path()."/app/public/".$file);
             $height=$img->height();
             $width=$img->width();
@@ -191,7 +191,7 @@ class SiteGoodsController extends SiteAdminController
             $color->color=$value;
             $color->save();
         }}
-        session()->forget('images');
+        session()->forget('images');*/
     return redirect()->guest(route('site.admin.add_good'));
 
 

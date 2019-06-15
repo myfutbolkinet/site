@@ -12,8 +12,22 @@ namespace App\Domain\Good;
 class Good
 {
 
+    protected $user;
 
-    public function __construct($client){
 
+    public function __construct(\App\User $user)
+    {
+        $this->user=$user;
     }
+
+    public function getId(){
+        return 12;
+    }
+
+    public function getUser(){
+        return $this->user;
+    }
+
+
+
 }

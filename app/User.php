@@ -33,7 +33,10 @@ class User extends Authenticatable
     public function status(){
         return $this->hasOne('App\Customers_statuses');
     }
-    
+
+    public function getId(){
+        return $this->id;
+    }
 
     public function canDo($permission, $require = FALSE){
         

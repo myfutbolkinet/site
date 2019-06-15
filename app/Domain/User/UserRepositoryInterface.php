@@ -9,7 +9,9 @@
 namespace App\Domain\Good;
 
 
-interface GoodRepositoryInterface
+interface UserRepositoryInterface
 {
-    public function create(Good $good);
+
+
+    public function findById($userId);
 }
