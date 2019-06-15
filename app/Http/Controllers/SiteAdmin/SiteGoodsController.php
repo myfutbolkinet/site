@@ -145,9 +145,10 @@ class SiteGoodsController extends SiteAdminController
     public function add_good(Request $request){
         dump(session()->all());
 
-
-        $data= new \App\Good();
-        $data->name = $request->input('name');
+        $client=$thisClientRepository->findById(Auth::user()->id);
+        $good= new \App\Good($client);
+        //To DTO
+       /* $data->name = $request->input('name');
         $data->articul = $request->input('artikul');
         $data->price = $request->input('price');
         $data->type = $request->input('type');
@@ -156,8 +157,10 @@ class SiteGoodsController extends SiteAdminController
         $data->category=$request->input("id_cat");
         $data->description=$request->input("editor1");
         $data->description2='';
-        $data->user_id=Auth::user()->id;
-        $data->save();
+        $data->user_id=Auth::user()->id;*/
+       //Todo
+       $this->goodRepository->create($good);
+        //$data->save();
         //$tmp_folder = '/files/tmpImages/';
         foreach(session('images') as $file){
             //rename(base_path().$tmp_folder.$file, storage_path()."/app/public/".$file);
