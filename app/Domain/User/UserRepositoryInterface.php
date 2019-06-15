@@ -6,7 +6,7 @@
  * Time: 19:25
  */
 
-namespace App\Domain\Good;
+namespace App\Domain\User;
 
 
 interface UserRepositoryInterface

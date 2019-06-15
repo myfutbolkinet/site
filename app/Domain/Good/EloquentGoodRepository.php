@@ -1,16 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Domain\Good;
 
 use App\Domain\Good\GoodRepositoryInterface;
 class EloquentGoodRepository implements GoodRepositoryInterface
 {
 
-    public function create(\App\Domain\Good\Good $good){
+    public function create(\App\Good $good){
 
-        dump($good->getUser()->getId());
-
-     $fin=\App\Good::insert(
+     $good::insert(
      [
         'id'=>null,
         'name' => 'sds',
@@ -25,8 +23,6 @@ class EloquentGoodRepository implements GoodRepositoryInterface
         'description2'=>''
         ]
         );
-
-     dump($fin);
     }
 
 

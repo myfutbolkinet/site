@@ -21,7 +21,22 @@ class Good extends Model
      * @var array
      */
 
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        if(!empty($attributes)){
+            $this->user=$attributes['user'];
+        }
 
+    }
+
+    public function getUser(){
+        return $this->user;
+    }
+
+    public function getLastId(){
+        return \DB::getPdo()->lastInsertId();;
+    }
 
 
     protected $fillable = [

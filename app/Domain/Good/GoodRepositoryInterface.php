@@ -11,5 +11,5 @@ namespace App\Domain\Good;
 
 interface GoodRepositoryInterface
 {
-    public function create(Good $good);
+    public function create(\App\Good $good);
 }

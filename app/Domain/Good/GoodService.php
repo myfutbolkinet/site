@@ -16,7 +16,7 @@ class GoodService implements GoodServiceInterface
     public $goodRepository;
 
     public function __construct(
-        UserRepositoryInterface $userRepository,
+        \App\Domain\User\UserRepositoryInterface $userRepository,
         GoodRepositoryInterface $goodRepository
     )
     {
@@ -26,9 +26,8 @@ class GoodService implements GoodServiceInterface
 
     public function create($userId){
         $user=$this->userRepository->findById($userId);
-        dump($user);
-        $good= new Good($user);
+        $good= new \App\Good(['user'=>$user]);
         $this->goodRepository->create($good);
-        return $good->getId();
+        return $good->getLastId();
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Domain\User;
 
 
-use App\Domain\Good\UserRepositoryInterface;
+use App\Domain\User\UserRepositoryInterface;
 class EloquentUserRepository implements UserRepositoryInterface
 {
 

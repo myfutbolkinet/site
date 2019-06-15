@@ -156,8 +156,8 @@ class SiteGoodsController extends SiteAdminController
         $data->description2='';
         $data->user_id=Auth::user()->id;*/
        //Todo
-        $goodRepository=new \App\EloquentGoodRepository();
-        $userRepository=new \App\EloquentUserRepository();
+        $goodRepository=new \App\Domain\Good\EloquentGoodRepository();
+        $userRepository=new \App\Domain\User\EloquentUserRepository();
         $service=new \App\Domain\Good\GoodService($userRepository,$goodRepository);
         $goodId=$service->create(Auth::user()->id);
         var_dump('good created',$goodId);die();
