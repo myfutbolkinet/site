@@ -5,7 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-class Good extends Model
+use App\Domain\Good\GoodRepositoryInterface;
+class EloquentGoodRepository extends Model implements GoodRepositoryInterface
 {
     use Notifiable;
 
@@ -14,6 +15,10 @@ class Good extends Model
      *
      * @var array
      */
+
+
+
+
     protected $fillable = [
        'facebook_id', 'name', 'email', 'password',
     ];
@@ -26,6 +31,12 @@ class Good extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function createGood(Good $good){
+
+    }
+
+
     public function likes(){
 
         return $this->belongsTo('App\Like','id_goods');
