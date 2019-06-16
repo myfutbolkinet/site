@@ -12,5 +12,5 @@ namespace App\Domain\Good;
 interface GoodServiceInterface
 {
 
-    public function create($clientId);
+    public function create($clientId, GoodDto $dto);
 }

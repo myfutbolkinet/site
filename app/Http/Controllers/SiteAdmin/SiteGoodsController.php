@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\SiteAdmin;
 
+use App\Domain\Good\GoodDto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Gate;
@@ -143,55 +144,13 @@ class SiteGoodsController extends SiteAdminController
 
     //TODO: переименовать функцию в store
     public function add_good(Request $request){
-        dump(session()->all());
-        //To DTO
-       /* $data->name = $request->input('name');
-        $data->articul = $request->input('artikul');
-        $data->price = $request->input('price');
-        $data->type = $request->input('type');
-        $data->qnt =$request->input('count');
-        $data->discount= $request->input('discount');
-        $data->category=$request->input("id_cat");
-        $data->description=$request->input("editor1");
-        $data->description2='';
-        $data->user_id=Auth::user()->id;*/
-       //Todo
-        $goodRepository=new \App\Domain\Good\EloquentGoodRepository();
+        //dump(session()->all());
+        $goodRepository=new \App\Domain\Good\SqlGoodRepository();
         $userRepository=new \App\Domain\User\EloquentUserRepository();
         $service=new \App\Domain\Good\GoodService($userRepository,$goodRepository);
-        $goodId=$service->create(Auth::user()->id);
-        var_dump('good created',$goodId);die();
-        //$data->save();
-        //$tmp_folder = '/files/tmpImages/';
-/*        foreach(session('images') as $file){
-            $img=Image::make(storage_path()."/app/public/".$file);
-            $height=$img->height();
-            $width=$img->width();
-            if($width>$height){
-                $pxl_perc=$width/$height;
-                $img->resize($pxl_perc*1036, 1036);
-            }
-            if($height>$width){
-                $pxl_perc=$height/$width;
-                $img->resize(850, $pxl_perc*850);
-            }
-            $img->crop(850, 1036);
-            $img->save();
-            //echo "<img src='".asset('storage/'.$file.'')."'>";
-
-            $photo=new \App\Photo();
-            $photo->id_good=$data->id;
-            $photo->photo=$file;
-            $photo->save();
-        }
-    if(null!==($request->input("color"))){
-        foreach ($request->input("color") as $value){
-            $color=new \App\Colors_of_good();
-            $color->id_good=$data->id;
-            $color->color=$value;
-            $color->save();
-        }}
-        session()->forget('images');*/
+        $dto=GoodDto::fromRequest($request);
+        $goodId=$service->create(Auth::user()->id,$dto);
+        session()->forget('images');
     return redirect()->guest(route('site.admin.add_good'));
 
 

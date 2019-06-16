@@ -20,14 +20,25 @@ class GoodService implements GoodServiceInterface
         GoodRepositoryInterface $goodRepository
     )
     {
-        $this->userRepository=$userRepository;
-        $this->goodRepository=$goodRepository;
+        $this->userRepository = $userRepository;
+        $this->goodRepository = $goodRepository;
     }
 
-    public function create($userId){
-        $user=$this->userRepository->findById($userId);
-        $good= new \App\Good(['user'=>$user]);
-        $this->goodRepository->create($good);
-        return $good->getLastId();
+    public function create($userId, GoodDto $dto)
+    {
+        $user = $this->userRepository->findById($userId);
+
+
+        $dto->user=$user;
+
+        $good = new \App\Good([
+            $dto
+        ]);
+
+        dump('g=>',$good);
+
+        $good_id = $this->goodRepository->create($good);
+        dump($good_id);
+        return $good_id;
     }
 }

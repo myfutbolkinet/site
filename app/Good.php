@@ -21,11 +21,31 @@ class Good extends Model
      * @var array
      */
 
+    public $user;
+    public $name;
+    public $articul;
+    public $price;
+    public $type;
+    public $qnt;
+    public $discount;
+    public $category;
+    public $description;
+    public $description2;
+    public $color;
+
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
         if(!empty($attributes)){
-            $this->user=$attributes['user'];
+        foreach($attributes[0] as $prop=>$val){
+            if(property_exists($this, $prop)){
+                $this->$prop=$val;
+            }
+
+        }
+
+
+           // $this->user=$attributes['user'];
         }
 
     }
@@ -38,9 +58,21 @@ class Good extends Model
         return \DB::getPdo()->lastInsertId();;
     }
 
+    public function getFillable(){
+        return $this->fillable;
+    }
 
     protected $fillable = [
-        'facebook_id', 'name', 'email', 'password',
+    'user_id',
+    'name',
+    'articul',
+    'price',
+    'type',
+    'qnt',
+    'discount',
+    'category',
+    'description',
+    'description2',
     ];
 
     /**
@@ -51,11 +83,6 @@ class Good extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function create(Good $good){
-
-    }
-
 
     public function likes(){
 
