@@ -58,6 +58,12 @@ class SiteGoodsController extends SiteAdminController
         ];
         $data['active_menu_item']=2;
 
+        $data['sizes']=\App\Size::all();
+        $data['seasons']=\App\Season::all();
+        $data['fabrics']=\App\Fabric::all();
+        $data['decorations']=\App\Decoration::all();
+        $data['product_types']=\App\ProductType::all();
+
         return view('site_admin_page/add_good/index',$data,$data_nav);
     }
 
@@ -145,6 +151,8 @@ class SiteGoodsController extends SiteAdminController
     //TODO: переименовать функцию в store
     public function add_good(Request $request){
         //dump(session()->all());
+
+        dd($request->input());
         $goodRepository=new \App\Domain\Good\SqlGoodRepository();
         $userRepository=new \App\Domain\User\EloquentUserRepository();
         $service=new \App\Domain\Good\GoodService($userRepository,$goodRepository);

@@ -114,6 +114,14 @@ class AdminsMenuTableSeeder extends Seeder
                 'icon'=> 'fa-envelope','link'=> '/admin/nav_goods_menu',
                 'type'=>'linked'
             ],
+            /*14*/
+            [
+                'parent_id' => 0,
+                'name' => 'Подчиненные списки',
+                'icon'=> 'fa-envelope',
+                'link'=> '/admin/subordinate lists',
+                'type'=>'linked'
+            ],
         ]);
     }
 }

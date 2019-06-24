@@ -49,6 +49,30 @@ if($domain != "magelan.loc"){
 
     Route::group(['prefix' => 'admin'],function(){
 
+        Route::post('/add_season','SiteAdmin\SubordinateListsController@addSeason');
+        Route::post('/get_seasons','SiteAdmin\SubordinateListsController@getSeasons');
+        Route::post('/delete_season','SiteAdmin\SubordinateListsController@deleteSeason');
+
+        Route::post('/add_product','SiteAdmin\SubordinateListsController@addProduct');
+        Route::post('/get_products','SiteAdmin\SubordinateListsController@getProducts');
+        Route::post('/delete_product','SiteAdmin\SubordinateListsController@deleteProduct');
+
+
+        Route::post('/add_fabric','SiteAdmin\SubordinateListsController@addFabric');
+        Route::post('/get_fabrics','SiteAdmin\SubordinateListsController@getFabrics');
+        Route::post('/delete_fabric','SiteAdmin\SubordinateListsController@deleteFabric');
+
+
+        Route::post('/add_size','SiteAdmin\SubordinateListsController@addSize');
+        Route::post('/get_sizes','SiteAdmin\SubordinateListsController@getSizes');
+        Route::post('/delete_size','SiteAdmin\SubordinateListsController@deleteSize');
+
+        Route::post('/add_decoration','SiteAdmin\SubordinateListsController@addDecoration');
+        Route::post('/get_decorations','SiteAdmin\SubordinateListsController@getDecorations');
+        Route::post('/delete_decoration','SiteAdmin\SubordinateListsController@deleteDecoration');
+
+
+        Route::get('/subordinate lists','SiteAdmin\SubordinateListsController@index')->name('site.admin.subordinate_lists');
         Route::post('/add_photo_file','\App\Http\Ajax\FuncImagesClass@add_photo_file');
         Route::post('/save_cats_filter', '\App\Http\Ajax\FuncCategoriesClass@save_cats_filter');
         Route::get('/login', 'Auth\SiteAdminLoginController@showLoginForm')->name('site.admin.login');

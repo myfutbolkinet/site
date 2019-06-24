@@ -49,6 +49,8 @@
     <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
 
+    <link href="{!! asset('inspinia/css/plugins/iCheck/custom.css') !!}" rel="stylesheet">
+
     <!--link rel="stylesheet" type="text/css" media="screen" href="/css/neu.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/credit_edit_media.css"-->
     <!--link href="{!! asset('/inspinia/css/style.css') !!}" rel="stylesheet"-->
@@ -71,7 +73,7 @@
 
         }
         .wizard-big.wizard > .content {
-            min-height: 1220px;
+            min-height: 1620px;
         }
 
         .ibox-content {
@@ -211,6 +213,10 @@
 
     <!-- PAGE RELATED PLUGIN(S) -->
     <script src="/smartAdmin/js/plugin/dropzone/dropzone.min.js"></script>
+
+
+    <!-- iCheck -->
+    <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
 <script>
 
 
@@ -519,13 +525,13 @@ $('.color_btn').click(function(){
                         $('input[name="id_cat"]').val(data.value.id)
                         $('.cat_name').val(data.value.info.name)
                             alert('меняется категория')
-                        //достать все свойства категории и отобразить в блоке #properties
-                            $.ajax({
+                        //достать все свойства категории и отобразить в блоке #properties Временно заремлена
+         /*                   $.ajax({
                                 type: "POST",
                                 dataType: 'json',
                                 async: false,
                                 url: '/show_property_by_category',
-                                data: {id_cat: data.value.id}, // serializes the form's elements.
+                                data: {id_cat: data.value.id},
                                 success: function (dataprop) {
                                     if(dataprop=='no_properties'){
 
@@ -535,8 +541,6 @@ $('.color_btn').click(function(){
                                 console.log(dataprop);
                                 $('#properties').empty();
                                      $.each( dataprop, function( k, prop ) {
-                                      //alert(prop.name)
-                                      /*   prop_array = prop.data.split(',');*/
                                        $('#properties').append(' <div style="border-right:1px solid #000;border-left:1px solid #000" class="prop col-md-3" >' +
                                             '<input type="hidden" value="'+prop.id+'">' +
                                            ' <div><h3 style="text-align:center;margin-top:10px;">'+prop.name+'</h3></div>'
@@ -544,9 +548,7 @@ $('.color_btn').click(function(){
                                             '</div>')
 
                                     $.each( prop.data, function( v, dat ) {
-                                    //alert(dat.data)
-
-                                    $('#prop_datas_'+k).append('<div><div class="i-checks"><label><input type="radio" value="'+dat.id+'" name="property['+prop.id+'][]"> <i></i> '+dat.data+'</label></div></div>');
+                                   $('#prop_datas_'+k).append('<div><div class="i-checks"><label><input type="radio" value="'+dat.id+'" name="property['+prop.id+'][]"> <i></i> '+dat.data+'</label></div></div>');
                                     });
 
 
@@ -558,7 +560,7 @@ $('.color_btn').click(function(){
                                 }
                                 }
 
-                            });
+                            });*/
 
 
                         //если (data.value.info.parent_num) ==2
@@ -603,7 +605,14 @@ $('.color_btn').click(function(){
 
             });
 
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
         });
+
 
 
 

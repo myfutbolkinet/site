@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSizesTable extends Migration
+class CreateSizesGoodsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,12 @@ class CreateSizesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sizes', function (Blueprint $table) {
+        Schema::create('sizes_goods', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_good')->unsigned()->default(0);
-            $table->string('34')->default('0');
-            $table->string('35')->default('0');
-            $table->string('36')->default('0');
-            $table->string('37')->default('0');
-            $table->string('38')->default('0');
-            $table->string('39')->default('0');
-            $table->string('40')->default('0');
             $table->foreign('id_good')->references('id')->on('goods');
+            $table->integer('id_size')->unsigned()->default(0);
+            $table->foreign('id_size')->references('id')->on('sizes');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
@@ -37,6 +32,6 @@ class CreateSizesTable extends Migration
     public function down()
     {
 
-        Schema::dropIfExists('sizes');
+        Schema::dropIfExists('sizes_goods');
     }
 }
