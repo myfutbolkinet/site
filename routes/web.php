@@ -72,6 +72,10 @@ if($domain != "magelan.loc"){
         Route::post('/delete_decoration','SiteAdmin\SubordinateListsController@deleteDecoration');
 
 
+        Route::post('/send_crop_color_to_server','SiteAdmin\SiteGoodsController@cropColorToServer');
+
+
+
         Route::get('/subordinate lists','SiteAdmin\SubordinateListsController@index')->name('site.admin.subordinate_lists');
         Route::post('/add_photo_file','\App\Http\Ajax\FuncImagesClass@add_photo_file');
         Route::post('/save_cats_filter', '\App\Http\Ajax\FuncCategoriesClass@save_cats_filter');

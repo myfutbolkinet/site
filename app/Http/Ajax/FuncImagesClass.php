@@ -76,7 +76,7 @@ class FuncImagesClass
                 session()->save();
             }
         }
-        echo json_encode($target);
+        echo json_encode($target, JSON_UNESCAPED_UNICODE);
     }
 
 

@@ -30,6 +30,21 @@ class SiteGoodsController extends SiteAdminController
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function cropColorToServer(Request $request){
+
+        var_dump(123,$request->file('cropped_image'));
+        $file=$request->file('cropped_image');
+        $extension = $file[0]->extension(); // getting image extension
+        var_dump($file[0]);
+        var_dump($extension);
+        $filename =time().'color_for_good.'.$extension;
+
+        $file[0]->move(storage_path() . "/app/public/", $filename);
+        return json_encode(['success'=>$request->file()]);
+    }
+
+
     public function index(){
         /*$this->user=Auth::user();*/
         session()->forget('images');
