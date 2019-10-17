@@ -26,6 +26,8 @@ class SiteAdminController extends  \App\Http\SiteEntity
     return $data_nav['menu']=MenuController::index('admin_categories');
 
     }
+
+
     public function index()
     {   $this->title = 'Панель администратора';
         $data['menu']=$this->menu();
@@ -45,6 +47,18 @@ class SiteAdminController extends  \App\Http\SiteEntity
     public function get_categories(){
 
 
+    }
+
+    public function renderOutput($data){
+        /*$this->vars = arry_add($this->vars,'title',$this->title);*/
+        //подключить меню
+        $data_nav['menu']=$this->menu();
+        //передача в вид через Display_Lib
+
+        $data['title']="Фрилансим по крупному";
+        $data['keywords']="Фрилансим по крупному";
+        $data['description']="Фрилансим по крупному";
+        return \App\Http\Libraries\Display_lib::admin($this->template,$data,$data_nav);
     }
 
 

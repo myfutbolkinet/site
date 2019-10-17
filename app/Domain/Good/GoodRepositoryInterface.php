@@ -7,9 +7,10 @@
  */
 
 namespace App\Domain\Good;
-
+use Illuminate\Http\Request;
 
 interface GoodRepositoryInterface
 {
     public function create(\App\Good $good);
+    public function editAction(Request $request, $userId,\App\Good $good,$goodId);
 }

@@ -32,6 +32,10 @@ if($domain != "magelan.loc"){
     //TODO OOP
     //TODO Перенести всю логику связанную с категориями в FuncCategoriesController
     //TODO OOP
+
+    Route::get('/product/{id}', 'SiteController@showProduct');
+    Route::get('/category', 'SiteController@showCategory');
+    Route::get('/products', 'SiteController@showAllProducts');
     Route::post('/show_subcat', 'FuncController@show_subcat');
     Route::post('/show_subcat_all_levels', 'FuncController@show_subcat_all_levels');
     Route::post('/show_subcat_all_levels_back', 'FuncController@show_subcat_all_levels_back');
@@ -42,12 +46,24 @@ if($domain != "magelan.loc"){
     Route::post('/show_parent_categories_tree','FuncController@show_parent_categories_tree');
     Route::post('/show_property_by_category','\App\Http\Ajax\FuncPropertiesClass@show_property_by_category');
     Route::post('/if_link_exist','FuncController@if_link_exist');
+    Route::post('/add_to_cart_action', 'ShopingCartController@addToCart');
+    //Route::post('/delete_from_cart_action', 'ShopingCartController@delete_product_by_one');
+    Route::post('/delete_from_cart_action', 'ShopingCartController@delete_products');
+    Route::post('/update_cart_qty', 'ShopingCartController@updateCartQty');
+
+    Route::get('/shoping_cart','ShopingCartController@getCart')->name('shoping_cart');
+    Route::get('/checkout','ShopingCartController@showCheckout')->name('show_checkout');
+    Route::post('/send_order', 'ShopingCartController@getCheckout');
+
+
 
 
 
     //admin
 
     Route::group(['prefix' => 'admin'],function(){
+        Route::get('/categories/add','SiteAdmin\CategoriesController@add_show');
+        Route::get('/categories','SiteAdmin\CategoriesController@index');
 
         Route::post('/add_season','SiteAdmin\SubordinateListsController@addSeason');
         Route::post('/get_seasons','SiteAdmin\SubordinateListsController@getSeasons');
@@ -83,8 +99,13 @@ if($domain != "magelan.loc"){
         Route::post('/login', 'Auth\SiteAdminLoginController@login')->name('site.admin.login.submit');
         Route::get('/', 'SiteAdmin\SiteAdminController@index')->name('site.admin.dashboard');
         Route::get('/add_good','SiteAdmin\SiteGoodsController@index')->name('site.admin.add_good');
+        Route::get('/clone_good/{id}','SiteAdmin\SiteGoodsController@cloneGood')->name('site.admin.clone_good');
+        Route::get('/edit_good/{id}','SiteAdmin\SiteGoodsController@editGood')->name('site.admin.edit_good');
         Route::get('/add_good_inspinia','SiteAdmin\SiteGoodsController@inspinia')->name('site.admin.add_good_inspinia');
         Route::post('/add_good', 'SiteAdmin\SiteGoodsController@add_good');
+        Route::post('/edit_good', 'SiteAdmin\SiteGoodsController@edit_good');
+        Route::post('/delete_good', 'SiteAdmin\SiteGoodsController@deleteGood');
+        Route::post('/set_main_screen', 'SiteAdmin\SiteGoodsController@setMainScreen');
         Route::get('/goods_and_groups/{page?}', 'SiteAdmin\SiteGoodsController@showGoodsAndGroups');
         Route::get('/goods_by_filter/{goods}', 'SiteAdmin\SiteGoodsController@showGoodsByFilter')->name('site.admin.show_good_by_filter');
         Route::post('/fileupload', '\App\Http\Ajax\FuncUploadClass@actionImagesUpload');
@@ -98,7 +119,7 @@ if($domain != "magelan.loc"){
 
         Route::get('/add_logos','SiteAdmin\PertnersController@add_logos');
         Route::get('/del_logos','SiteAdmin\PertnersController@del_logos');
-        Route::get('/categories','SiteAdmin\CategoriesController@index');
+
         Route::get('/partners','SiteAdmin\PertnersController@index');
         Route::get('/add_category','SiteAdmin\CategoriesController@add_category');
         Route::get('/delete_good','SiteAdmin\GoodsController@delete_good');

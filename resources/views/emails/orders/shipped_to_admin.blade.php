@@ -1,41 +1,55 @@
 <html>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div style="font-size: 20px;" class="panel-heading">Ви замовили товар</div>
-<?php
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div style="font-size: 20px;" class="panel-heading">Есть новый заказ на товар</div>
+                <div style="font-size: 20px;" class="panel-heading">от покупателя {{$post['customer_email']}}</div>
+                <?php
 
+                //$n=count($cart);
+                $i=0;
 
-                    $n=count($cart);
-                    $i=0;
+                ?>
+                <table class="table table-responsive">
+                    <tbody>
+                    <tr class="mail-unread">
+
+                        <td>Название </td>
+                        <td>Цена</td>
+                        <td>Количество</td>
+                        <td>Сумма</td>
+                    </tr>
+
+                    <?php
 
                     foreach($cart->items as $c){
 
-                        ?>
-                        <p>Назва</p>
-                        <h3><?php print($c['item']['name']);?></h3>
-                        <p>Ціна</p>
-                        <h3><?php echo print($c['item']['price']);?></h3>
-                        <p>Загальна кількість</p>
-                        <h3><?php echo print($c['item']['qnt']);?></h3>
-                        <p>Загальна Вартість по позиції</p>
-                        <h3><?php echo print($c['item']['qnt']*$c['item']['price']);?></h3>
-                        <?
+                    ?>
+
+                    <tr class="mail-unread">
+
+                        <td><?php print($c['item']['name']);?></td>
+                        <td><?php print($c['item']['price']);?> грн.</td>
+                        <td><?php print($c['qnt']);?></td>
+                        <td><?php print($c['qnt']*$c['item']['price']);?>грн.</td>
+                    </tr>
+                    <?
                     $i++;
                     }
 
-?>
-<h3>Загальна вартість</h3>
-{{$cart_total_price}}
-                    <div class="panel-body">
+                    ?>
+                    </tbody></table>
+                <h3>Общая стоимость</h3>
+                {{$cart_total_price.'грн.'}}
+                <div class="panel-body">
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>

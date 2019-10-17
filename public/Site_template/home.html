@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home | Tshirts Ecommerce</title>
+
+    <!-- Google Font (Nunito)-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main template styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Responsive styles for mobile devices -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Font Awesome CDN -->
+    <script src="https://use.fontawesome.com/302c3108d6.js"></script>
+    
+    <!-- favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- page content -->
+    <div id="page-content">
+      <!-- overlay -->
+    <div class="overlay">
+      <div class="ov-content text-center">
+        <div class="spiners">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="logo"></div>
+      </div>
+    </div>
+
+      <!-- navbar for mobile devices only -->
+      <nav class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header text-center">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- cart icon view -->
+            <div class="text-center cart-show">
+              <a href="#" class="cart-lnk" data-bg="img/cart_bag.png">
+                <span class="summ">0</span>
+              </a>
+              <span class="val text-uppercase">usd</span>
+            </div>
+            <a class="navbar-brand" href="home.html">
+              <img alt="Brand" src="img/logo_w.png">
+            </a>
+          </div>
+  
+          <div class="collapse navbar-collapse" id="mobile-menu">
+            <!-- magazine name -->
+            <div class="shop-name">
+              <h4>
+                <span class="text-uppercase">TS</span>
+                Shop
+              </h4>
+              <span class="text-uppercase shop-subtitle">Personality wear</span>
+            </div>
+            
+            <!-- menu -->
+            <ul class="nav navbar-nav">
+              <li class="active text-uppercase">
+                <a href="home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="dropdown text-uppercase">
+                <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="menu-item">
+                    <a href="#">Tshirts</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Sweaters</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Pants</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Boots</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown text-uppercase">
+                <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="menu-item">
+                    <a href="#">Tshirts</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Sweaters</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Pants</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Sunglasses</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="text-uppercase">
+                <button class="btn">Kids</button>
+              </li>
+              <li class="text-uppercase">
+                <a href="#">Custom Design</a>
+              </li>
+              <li>
+                <a href="#">Account +</a>
+              </li>
+              <li>
+                <a href="about.html">About</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <!-- socials -->
+            <ul class="mobile-social-lnk list-inline text-center">
+              <li>
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="callto:+9018230918">+9018230918</a>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav>
+
+      <!-- Left side fixed navigation (Main Menu) -->
+      <aside class="hidden-xs nav-showcase">
+        <!-- controls -->
+        <div class="nav-controls">
+          <!-- brand -->
+          <a class="store-brand" href="home.html">
+            <img alt="Brand" src="img/logo_w.png">
+          </a>
+
+          <!-- main menu button -->
+          <button class="btn" type="button" id="menuSwitch">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- cart icon view -->
+          <div class="text-center cart-show">
+            <a href="#" class="cart-lnk" data-bg="img/cart_bag.png">
+              <span class="summ">0</span>
+            </a>
+            <span class="val text-uppercase">usd</span>
+          </div>
+        </div>
+
+        <!-- main-menu-content -->
+        <div class="menu-content" id="main-menu">
+          <!-- magazine name -->
+          <div class="shop-name">
+            <h4>
+              <span class="text-uppercase">TS</span>
+              Shop
+            </h4>
+            <span class="text-uppercase shop-subtitle">Personality wear</span>
+          </div>
+          <!-- the menu -->
+          <ul class="nav menu-list text-uppercase">
+            <li class="menu-item active">
+              <a href="home.html">Home</a>
+            </li>
+            <li class="menu-item menu-item-dropdown">
+              <button class="btn">Men <span>+</span></button>
+              <!-- the submenu -->
+              <div class="sub-nav sub-nav-menu">
+                <ul class="list-unstyled">
+                  <li class="menu-item">
+                    <a href="#">Tshirts</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Sweaters</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Pants</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Boots</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item-dropdown">
+              <button class="btn">Women <span>+</span></button>
+              <!-- the submenu -->
+              <div class="sub-nav sub-nav-menu">
+                <ul class="list-unstyled">
+                  <li class="menu-item">
+                    <a href="#">Tshirts</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Sweaters</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Pants</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Sunglasses</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item">
+              <button class="btn">Kids</button>
+            </li>
+            <li class="menu-item">
+              <button class="btn">Custom design</button>
+            </li>
+            <li class="menu-item menu-item-dropdown">
+              <button class="btn">Pages <span>+</span></button>
+              <!-- the submenu -->
+              <div class="sub-nav sub-nav-menu">
+                <ul class="list-unstyled">
+                  <li class="menu-item">
+                    <a href="home_v2.html">Home v.2</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="categories.html">Shop v.1</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="categories_v2.html">Shop v.2</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="categories_v3.html">Shop v.3</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="categories_v4.html">Shop v.4</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="blog.html">Blog</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="cart.html">Cart</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="checkout.html">Checkout</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="page_404.html">Page 404</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav menu-list">
+            <li class="menu-item">
+              <a href="#">Account +</a>
+            </li>
+            <li class="menu-item">
+              <a href="about.html">About</a>
+            </li>
+            <li class="menu-item">
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- menu contacts -->
+          <ul class="list-inline menu-contacts">
+            <li>
+              <a href="#"><i class="fa fa-facebook-official"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="pull-right">
+              <a href="callto:+9018230918">+9018230918</a>
+            </li>
+          </ul>
+        </div>
+      </aside>  
+      <!-- /.Left side fixed navigation (Main Menu) -->
+
+      <!-- right side fixed cart content -->
+      <aside class="cart-showcase">
+        <div class="cart-wrapp">
+          <h4 class="text-uppercase text-center cart-title">Your shopping cart</h4>
+          <span class="empty-text">Your bag is currently empty.</span>
+          <div class="cart-products"></div>
+          <div class="cart-control">
+            <ul class="list-inline">
+              <li class="pull-left">
+                <h4>Total</h4>
+              </li>
+              <li class="pull-right total-cash">
+                <span>&dollar;</span> 
+                <span>0.00</span>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+            <a href="cart.html" class="btn btn-primary">View cart</a>
+            <a href="checkout.html" class="btn btn-important">Checkout</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- top big image (background is changed on page refresh)-->
+      <div class="showcase" data-bg="http://placehold.it/1920x1080"></div>
+
+      <!-- content container fluid-->
+      <div class="container-fluid main-wrapp" id="content-grid">  
+
+        <!-- top products -->
+        <div class="top-products">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="product.html">Product title go here</a>
+                    </h5>
+                    <span class="price">&dollar;19.99</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="product.html">Product title go here</a>
+                    </h5>
+                    <span class="old-price">&dollar;23.99</span>
+                    <span class="price">&dollar;19.99</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="product.html">Product title go here</a>
+                    </h5>
+                    <span class="old-price">&dollar;99.99</span>
+                    <span class="price">&dollar;43.33</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="product.html">Product title go here</a>
+                    </h5>
+                    <span class="price">&dollar;9.99</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="product.html">Product title go here and can bee a little bit longer and can be in two rows</a>
+                    </h5>
+                    <span class="price">&dollar;19.99</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="product.html">Product title go here</a>
+                    </h5>
+                    <span class="old-price">&dollar;33.19</span>
+                    <span class="price">&dollar;9.00</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 hidden-md col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="#">Product title go here and can bee a little bit longer and can be in two rows</a>
+                    </h5>
+                    <span class="price">&dollar;19.99</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 hidden-md col-sm-6 col-xs-12 text-center no-padding">
+              <div class="product product-blk-lg">
+                <a href="product.html" class="product-lnk"></a>
+                <img src="http://placehold.it/700x550" alt="product-image" class="img-responsive product-img">
+                <div class="hover-caption" data-bg="http://placehold.it/700x550">
+                  <div class="text-uppercase product-controls">
+                    <h5>
+                      <a href="product.html">Product title go here</a>
+                    </h5>
+                    <span class="old-price">&dollar;33.19</span>
+                    <span class="price">&dollar;9.00</span>
+                    <ul class="list-inline">
+                      <li><button class="btn btn-default">Add to cart</button></li>
+                      <li><button class="btn btn-default">Add to whis list</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- buttons -->
+          <div class="row">
+            <div class="col-lg-12 text-center text-uppercase">
+              <a href="categories.html" class="btn btn-primary">all products</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- product categories -->
+        <div class="padded15 product-categories">
+          <div class="row" id="category-block">
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 cat-item">
+              <div class="category" data-bg="http://placehold.it/700x550">
+                <a href="categories.html" class="cat-lnk"></a>
+                <h3 class="cat-title">T shirts</h3>
+              </div>
+            </div>
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 cat-item cat-item-height2">
+              <div class="journal-blk">
+                <div class="journal-intro text-center">
+                  <span>Keep an eye on our</span>
+                  <h3>Succes stories</h3>
+                  <a href="blog.html" class="btn btn-important">journal</a>
+                </div>
+              </div>
+            </div>
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 cat-item">
+              <div class="category" data-bg="http://placehold.it/700x550">
+                <a href="categories.html" class="cat-lnk"></a>
+                <h3 class="cat-title">Tops</h3>
+              </div>
+            </div>
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 cat-item">
+              <div class="category" data-bg="http://placehold.it/700x550">
+                <a href="categories.html" class="cat-lnk"></a>
+                <h3 class="cat-title">Shoes</h3>
+              </div>
+            </div>
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 cat-item">
+              <div class="category" data-bg="http://placehold.it/700x550">
+                <a href="categories.html" class="cat-lnk"></a>
+                <h3 class="cat-title">Men</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- shop description -->
+        <div class="padded30 shop-description">
+          <div class="row">
+            <div class="col-lg-offset-3 col-lg-6 text-center about-shop">
+              <div class="section-title text-uppercase">
+                  <span>Top quality &amp; only</span>
+                  <h3>Premium materials</h3>
+              </div>
+              <div class="section-wrapp">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div> 
+              <a href="#" class="btn btn-primary text-uppercase">About us</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- instagram feed -->
+        <div class="instagram-feed">
+          <div class="row" id="instagram-block">
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 col-xs-12 insta-item">
+              <ul class="list-inline">
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/550x750" class="popup-lnk"></a>
+                </li>
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/750x750" class="popup-lnk"></a>
+                </li>
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/1750x750" class="popup-lnk"></a>
+                </li>
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/950x750" class="popup-lnk"></a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 col-xs-12 insta-item insta-item-overflow">
+              <div class="category insta">
+                <div class="insta-intro text-center">
+                  <span>Follow the vibe on</span>
+                  <h3>Instagram</h3>
+                  <a href="#" class="btn btn-important">@Themesdojo</a>
+                </div>
+              </div>
+            </div>
+            <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 col-xs-12 insta-item">
+              <ul class="list-inline">
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/650x750" class="popup-lnk"></a>
+                </li>
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/850x750" class="popup-lnk"></a>
+                </li>
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/900x550" class="popup-lnk"></a>
+                </li>
+                <li data-bg="http://placehold.it/550x550" class="shine-effect">
+                  <a href="http://placehold.it/750x550" class="popup-lnk"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+      
+      <!-- footer -->
+      <footer>
+        <div class="container text-center text-uppercase">
+          <!-- footer-menu -->
+          <div class="row">
+            <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-12">
+              <ul class="list-unstyled footer-menu">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Catalog</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- copyright -->
+          <div class="row">
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-12">
+              <div class="copyright">
+                <p>PRIVACY POLICY / TERMS &amp; CONDITIONS / LEGAL NOTICE</p>
+                <p>PROWDLY POWERED BY <a href="http://wordpress.org" target="_blank">WORDPRESS</a> &amp; CUSTOMIZED BY HAND IN <a href="http://themesdojo.com" target="_blank">THEMES DOJO STUDIO</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- footer-socials -->
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <ul class="list-inline footer-socials">
+                <li>
+                  <a href="#" class="social-lnk"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="social-lnk"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="social-lnk"><i class="fa fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootsrap plugin -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- isotope -->
+    <script src="js/isotope.min.js"></script>
+    <!-- mgnific popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- jquery-ui for price range -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- Main javascript funcitons-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

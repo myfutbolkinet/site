@@ -7,7 +7,7 @@
  */
 
 namespace App\Domain\Good;
-
+use Illuminate\Http\Request;
 
 class GoodService implements GoodServiceInterface
 {
@@ -38,7 +38,19 @@ class GoodService implements GoodServiceInterface
         dump('g=>',$good);
 
         $good_id = $this->goodRepository->create($good);
-        dump($good_id);
+        return $good_id;
+    }
+    public function editAction(Request $request, $userId, GoodDto $dto, $goodId)
+    {
+        $user = $this->userRepository->findById($userId);
+        $dto->user=$user;
+        $good = new \App\Good([
+            $dto
+        ]);
+
+        dump('g=>',$good);
+
+        $good_id = $this->goodRepository->editAction($request,$userId,$good,$goodId);
         return $good_id;
     }
 }

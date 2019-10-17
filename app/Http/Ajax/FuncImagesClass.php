@@ -11,6 +11,10 @@ class FuncImagesClass
 
     public function add_photo_file(Request $request){
         // define absolute folder path
+
+        if(null!=($request->input('photo_id'))){
+            \App\Photo::where('id',$request->input('photo_id'))->delete();
+        }
         $storeFolder = storage_path().'/app/public/';
 // if folder doesn't exists, create it
         if(!file_exists($storeFolder) && !is_dir($storeFolder)) {
@@ -29,6 +33,11 @@ class FuncImagesClass
 
             if(move_uploaded_file($tempFile,$targetFile)) {
 
+
+// crop image
+                $path_parts = pathinfo($targetFile);
+
+
                 $background = Image::canvas(1036, 1036);
                 $background->fill('#fff');
 
@@ -41,6 +50,15 @@ class FuncImagesClass
                 if($width>$height){
                     $aspect_ratio=$width/$height;
 
+                    $img_width = Image::make($targetFile);
+                    $img_width->resize(550*$aspect_ratio,550 );
+                    $offset_x=(550*$aspect_ratio)-700;
+                    if($offset_x>2){
+                        $offset=$offset_x/2;
+                    }
+                    else{$offset=0;}
+                    $img_width->crop(700, 550, $offset, 0);
+                    $img_width->save($storeFolder.'width_'.$path_parts['basename']);
                     $img->resize(1036,1036/$aspect_ratio );
                     $rest=(1036-1036/$aspect_ratio)/2;
                     $background->insert($img,'top-left', intval(0),intval($rest));
@@ -48,6 +66,13 @@ class FuncImagesClass
                 elseif($height>$width){
 
                     $aspect_ratio=$height/$width;
+
+                    $img_height = Image::make($targetFile);
+                    $img_height->resize(700,700*$aspect_ratio );
+                    $img_height->crop(700, 550, 0, 25);
+                    $img_height->save($storeFolder.'width_'.$path_parts['basename']);
+
+
                     $img->resize(1036/$aspect_ratio, 1036);
                     $rest=(1036-1036/$aspect_ratio)/2;
                     $background->insert($img,'top-left', intval($rest),intval(0));
@@ -60,23 +85,32 @@ class FuncImagesClass
 
                 //$background->crop(1036, 1036);
 
-                $background->save($targetFile);
+
+
+                //var_dump( $path_parts['dirname']);
+                //var_dump($path_parts['basename']);
+                //var_dump($path_parts['extension']);
+                //var_dump($path_parts['filename']); // начиная с PHP 5.2.0
+
+                $background->save($storeFolder.'small_'.$path_parts['basename']);
 
 
                 $items = session('images');
 
                 if ($items == null) {
-                    session()->push('images', $target);
+                    session()->push('images','small_'.$target );//
 
                 } else {
-                    $items = array_push($items,$target);
-                    session()->push('images',$target);
+                    $items = array_push($items,'small_'.$target);//
+                    session()->push('images','small_'.$target);//
 
                 }
+
+
                 session()->save();
             }
         }
-        echo json_encode($target, JSON_UNESCAPED_UNICODE);
+        echo json_encode('small_'.$path_parts['basename'], JSON_UNESCAPED_UNICODE);//$target
     }
 
 

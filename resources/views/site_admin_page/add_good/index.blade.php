@@ -40,117 +40,6 @@
                         <div class="ibox-title">
                             <h5>Вы можете добавить товарную позицию</h5>
 
-                            <div class="ibox-content">
-                                <p>
-                                    A simple jQuery image cropping plugin.
-                                </p>
-
-
-
-
-
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="ibox float-e-margins">
-                                            <div class="ibox-title  back-change">
-                                                <h5>Image cropper <small>http://fengyuanchen.github.io/cropper/</small></h5>
-                                                <div class="ibox-tools">
-                                                    <a class="collapse-link">
-                                                        <i class="fa fa-chevron-up"></i>
-                                                    </a>
-                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                        <i class="fa fa-wrench"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu dropdown-user">
-                                                        <li><a href="#">Config option 1</a>
-                                                        </li>
-                                                        <li><a href="#">Config option 2</a>
-                                                        </li>
-                                                    </ul>
-                                                    <a class="close-link">
-                                                        <i class="fa fa-times"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="ibox-content">
-                                                <p>
-                                                    A simple jQuery image cropping plugin.
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="image-crop" style="width:100%">
-                                                            <img src="/img/palette.png" style="width:100%">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <h4>Preview image</h4>
-                                                        <div class="img-preview img-preview-sm"></div>
-                                                        <div id="views"></div>
-                                                        <h4>Comon method</h4>
-                                                        <p>
-                                                            You can upload new image to crop container and easy download new cropped image.
-                                                        </p>
-                                                        <div class="btn-group">
-                                                            <label title="Upload image file" for="inputImage" class="btn btn-primary">
-                                                                <input type="file" accept="image/*" name="file" id="inputImage" class="hide">
-                                                                Upload new image
-                                                            </label>
-                                                            <label title="Donload image" id="download2" class="btn btn-primary">Download</label>
-                                                        </div>
-                                                        <h4>Other method</h4>
-                                                        <p>
-                                                            You may set cropper options with <code>$(image}).cropper(options)</code>
-                                                        </p>
-                                                        <div class="btn-group">
-                                                            <button class="btn btn-white" id="zoomIn" type="button">Zoom In</button>
-                                                            <button class="btn btn-white" id="zoomOut" type="button">Zoom Out</button>
-                                                            <button class="btn btn-white" id="rotateLeft" type="button">Rotate Left</button>
-                                                            <button class="btn btn-white" id="rotateRight" type="button">Rotate Right</button>
-                                                            <button class="btn btn-warning" id="setDrag" type="button">New crop</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                <!--div class="row">
-                                    <form id="form1" enctype="multipart/form-data">
-                                        <h1>Client-side image-editor and uploader</h1>
-                                        <h2>Image file select</h2>
-                                        <input id="file" type="file" />
-                                        <h2>Image cropper (Jcrop)</h2>
-                                        <button id="cropbutton" type="button">Crop</button>
-                                        <button id="scalebutton" type="button">Scale</button>
-                                        <button id="rotatebutton" type="button">Rotate</button>
-                                        <button id="hflipbutton" type="button">H-flip</button>
-                                        <button id="vflipbutton" type="button">V-flip</button>
-                                        <br>
-                                        <div id="views"></div>
-                                        <h2>Submit form</h2>
-                                        <input type="submit" value="Upload form data and image" />
-                                    </form>
-                                </--div-->
-                            </div>
-
-
-
-
-
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -245,6 +134,7 @@
                                                 <label class="control-label" style="display:block;">Категория в
                                                     каталоге*</label>
                                                 <input type="hidden" name="id_cat">
+                                                <input type="hidden" name="model_id" value="{{null}}">
                                                 <input type="text" class="col-sm-11 control-label cat_name required"
                                                        style="font-size:17px;">
 

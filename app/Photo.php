@@ -22,4 +22,6 @@ class Photo extends Authenticatable
 
         return $this->belongsTo('App\Good','id');
     }
+
+
 }

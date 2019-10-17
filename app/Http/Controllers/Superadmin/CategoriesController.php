@@ -8,14 +8,9 @@ use Gate;
 use App\Category;
 class CategoriesController extends SuperadminController
 {
-    //
 
     public function add_show(){
-
-        if(Gate::denies('SUPERADMIN_EDIT')){
-
-            abort(403);
-        }$data=array();
+        $data=array();
         $data['menu']=$this->menu();
         $data['categories']=Category::orderBy('parent_id', 'asc')
             ->orderBy('created_at', 'desc')

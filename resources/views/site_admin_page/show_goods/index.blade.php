@@ -29,7 +29,7 @@
 
         <!-- MAIN CONTENT -->
         <div id="content">
-
+123
 
     <div class="row border-bottom">
         <!--Nav Tabs-->
@@ -103,39 +103,99 @@
                                         <tr>
                                             <th>Фото</th>
                                             <th>#</th>
+                                            <th>#Модели</th>
                                             <th>Артикул</th>
                                             <th>Наименование</th>
                                             <th>Цена</th>
-                                            <th>Username</th>
+                                            <th>Цвет</th>
+                                            <th>Действия</th>
                                         </tr>
                                         </thead>
                                         <tbody>
 
 
                                         @foreach($goods as $good)
-                                        <tr>
+                                        <tr id="tr_{{$good->id}}">
 
                                             <td>
                                                 @if($good->photos->first())
-                                                <img width="50px;" height="50px;"  src="/storage/{{$good->photos->first()->photo}}">
+                                                <img width="120px;" height="120px;"  src="/storage/{{$good->photos->first()->photo}}">
                                             @endif
                                             </td>
                                             <td>{{$good->id}}  </td>
+                                            <td>{{$good->model_id}}  </td>
                                             <td>{{$good->articul}}</td>
                                             <td>{{$good->name}}</td>
                                             <td>{{$good->price}}</td>
+                                            <td >
+                                                <div style="width:70px;text-align: center">
+                                                @if($good->colors->first())
+                                                    <img width="50px;" height="50px;" class="thumbpost img-circle" src="/storage/{{$good->colors->first()->color}}">
+                                                @endif
+                                </div>
+
+                                            </td>
+                                            <td>
+                                                <ul class="demo-btns">
+
+                                                    <li>
+                                                        <a href="#" id="trash_{{$good->id}}"
+                                                           class="btn btn-danger btn-sm delete_dialog_link"><i
+                                                                    class="glyphicon glyphicon-trash"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                <a href="/admin/clone_good/{{$good->id}}"><span  id="clone_{{$good->id}}"
+                                                       class="btn btn-success btn-sm featured_dialog_link featured"><i
+                                                            class="glyphicon glyphicon-send"></i></span></a>
+                                                        </li>
+
+
+                                                    <li>
+                                                        <a href="/admin/edit_good/{{$good->id}}"><span  id="edit_{{$good->id}}"
+                                                                                                         class="btn btn-success btn-sm featured_dialog_link featured"><i
+                                                                        class="glyphicon glyphicon-pencil"></i></span></a>
+                                                    </li>
+
+                                                    @if($good->main_screen==0)
+                                                    <li>
+                                                        <a href="#" id="screen_{{$good->id}}"
+                                                           class="btn btn-danger btn-sm screen_link"><i
+                                                                    class="glyphicon glyphicon-gift"></i></a>
+                                                    </li>
+                                                    @else
+                                                        <li>
+                                                            <a href="#" id="screen_{{$good->id}}"
+                                                               class="btn btn-successr btn-sm screen_link"><i
+                                                                        class="glyphicon glyphicon-gift"></i></a>
+                                                        </li>
+                                                    @endif
+
+
+                                                </ul>
+                                            </td>
                                         </tr>
                                         @endforeach
+
+                                        {{ $goods->links() }}
                                         </tbody>
                                     </table>
-
+                                    {{ $goods->links() }}
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endif
 
+                    <style>
+                        .thumbpost {
+                            object-position: center; /* Center the image within the element */
+                            object-fit: cover;
 
+                           width: 147%;
+                           max-height: 50px;
+                        }
+                    </style>
 
                     <div class="row">
                         <div class="col-lg-12">
@@ -395,4 +455,7 @@
     </div>
 
         </div></div>
+@endsection
+@section('script')
+
 @endsection

@@ -32,15 +32,78 @@ class SiteGoodsController extends SiteAdminController
      */
 
     public function cropColorToServer(Request $request){
-
-        var_dump(123,$request->file('cropped_image'));
+        session()->forget('color');
+        //var_dump(123,$request->file('cropped_image'));
         $file=$request->file('cropped_image');
         $extension = $file[0]->extension(); // getting image extension
-        var_dump($file[0]);
-        var_dump($extension);
+        //var_dump($file[0]);
+        //var_dump($extension);
         $filename =time().'color_for_good.'.$extension;
+        $storeFolder=storage_path() . "/app/public/";
+        $target=$filename;
+        $targetFile =  $storeFolder. $target;
 
-        $file[0]->move(storage_path() . "/app/public/", $filename);
+        if($file[0]->move(storage_path() . "/app/public/", $filename)) {
+
+            $background = Image::canvas(1036, 1036);
+            $background->fill('#fff');
+
+
+            $img=Image::make($targetFile);
+
+            $height=$img->height();
+            $width=$img->width();
+
+            if($width>$height){
+                $aspect_ratio=$width/$height;
+
+                $img->resize(1036,1036/$aspect_ratio );
+                $rest=(1036-1036/$aspect_ratio)/2;
+                $background->insert($img,'top-left', intval(0),intval($rest));
+            }
+            elseif($height>$width){
+
+                $aspect_ratio=$height/$width;
+                $img->resize(1036/$aspect_ratio, 1036);
+                $rest=(1036-1036/$aspect_ratio)/2;
+                $background->insert($img,'top-left', intval($rest),intval(0));
+            }
+            elseif($height==$width){
+                $img->resize(1036, 1036);
+
+                $background->insert($img,'center');
+            }
+
+            //$background->crop(1036, 1036);
+
+            $path_parts = pathinfo($targetFile);
+
+            //var_dump( $path_parts['dirname']);
+            //var_dump($path_parts['basename']);
+            //var_dump($path_parts['extension']);
+            //var_dump($path_parts['filename']); // начиная с PHP 5.2.0
+
+            $background->save($targetFile);
+
+
+            $items = session('color');
+
+            if ($items == null) {
+                session()->push('color',$filename );//
+
+            } else {
+                $items = array_push($items,$filename);//
+                session()->push('color',$filename);//
+
+            }
+
+
+            session()->save();
+        }
+
+
+
+       //$file[0]->move(storage_path() . "/app/public/", $filename);
         return json_encode(['success'=>$request->file()]);
     }
 
@@ -152,6 +215,7 @@ class SiteGoodsController extends SiteAdminController
             $in_array[]=$category->id;
         }
             $data['goods']=\App\Good::where('user_id',Auth::user()->id)->whereIn('category',$in_array )->orderBy('id', 'desc')->with('photos')->paginate(10);
+
             $data['active_menu2_item']=3;
 
        }
@@ -165,16 +229,31 @@ class SiteGoodsController extends SiteAdminController
 
     //TODO: переименовать функцию в store
     public function add_good(Request $request){
-        //dump(session()->all());
+        dump(session()->all());
 
-        dd($request->input());
+       // dd($request->input());
+
         $goodRepository=new \App\Domain\Good\SqlGoodRepository();
         $userRepository=new \App\Domain\User\EloquentUserRepository();
         $service=new \App\Domain\Good\GoodService($userRepository,$goodRepository);
         $dto=GoodDto::fromRequest($request);
         $goodId=$service->create(Auth::user()->id,$dto);
+        //$goodId=$service->editAction($request, Auth::user()->id,$dto,$request->input('good_id'));
         session()->forget('images');
     return redirect()->guest(route('site.admin.add_good'));
+
+
+    }
+
+    public function edit_good(Request $request){
+        dump(session()->all());
+        $goodRepository=new \App\Domain\Good\SqlGoodRepository();
+        $userRepository=new \App\Domain\User\EloquentUserRepository();
+        $service=new \App\Domain\Good\GoodService($userRepository,$goodRepository);
+        $dto=GoodDto::fromRequest($request);
+        $goodId=$service->editAction($request, Auth::user()->id,$dto,$request->input('good_id'));
+        session()->forget('images');
+        return redirect()->guest(route('site.admin.add_good'));
 
 
     }
@@ -271,7 +350,7 @@ class SiteGoodsController extends SiteAdminController
     {
         //
     }
-    public function edit_good($id){
+/*    public function edit_good($id){
 
         if(Gate::denies('VIEW_ADMIN')){
 
@@ -292,6 +371,7 @@ class SiteGoodsController extends SiteAdminController
             ->orderBy('updated_at', 'desc')
             ->get();
 
+
         $this->template='site_admin_page/edit_good';
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
@@ -299,5 +379,123 @@ class SiteGoodsController extends SiteAdminController
 
         return $this->renderOutput($data);
         
+    }*/
+
+    public function deleteGood(Request $request){
+        $id=$request->input('id');
+        \App\Good::where('id',$id)->delete();
+        \App\ModelsGoods::where('good_id',$id)->delete();
+
+        return json_encode(['message'=>'success']);
+
     }
+
+
+    public function editGood($id){
+        /*$this->user=Auth::user();*/
+
+        $good=\App\Good::where('id',$id)->with('getSeasons')->first();
+        //dump($good);
+        session()->forget('images');
+        $this->title = 'Панель администратора';
+        $f=new CategoriesFactory();
+        $f=$f->get_categories('User');
+        $data['good_id']=$id;
+        $data['good']=$good;
+        $data['photos']=\App\Photo::where('id_good',$id)->get();
+        $data['color']=\App\Colors_of_good::where('id_good', $id)
+            ->orderBy('created_at', 'desc')
+            ->orderBy('updated_at', 'desc')
+            ->first();
+        dump('good=>',$good);
+        $data['categories']=$f->show_categories();
+        $data['types']=Type_of_good::get();
+        $data_nav['menu']=$this->menu();
+        $data['title']="Додати товар";
+        $data['keywords']="Ukrainian industry platform";
+        $data['description']="Ukrainian industry platform";
+
+        $tmp_folder = '/files/tmpImages/';
+        $data['sub_menu']=[
+            1=>[
+                'btn_title'=>'управление товарами и группами',
+                'href'=>'/admin/goods_and_groups'
+            ],
+            2 =>[
+                'btn_title'=>'Добавить позицию',
+                'href'=>'/admin/add_good'
+            ],
+
+
+        ];
+        $data['active_menu_item']=2;
+
+        $data['sizes']=\App\Size::all();
+        $data['seasons']=\App\Season::all();
+        $data['fabrics']=\App\Fabric::all();
+        $data['decorations']=\App\Decoration::all();
+        $data['product_types']=\App\ProductType::all();
+
+        return view('site_admin_page/edit_good/index',$data,$data_nav);
+    }
+
+
+
+    public function cloneGood($id){
+        /*$this->user=Auth::user();*/
+
+        $good=\App\Good::where('id',$id)->first();
+        //dump($good);
+        session()->forget('images');
+        $this->title = 'Панель администратора';
+        $f=new CategoriesFactory();
+        $f=$f->get_categories('User');
+        $data['good']=$good;
+        $data['categories']=$f->show_categories();
+        $data['types']=Type_of_good::get();
+        $data_nav['menu']=$this->menu();
+        $data['title']="Додати товар";
+        $data['keywords']="Ukrainian industry platform";
+        $data['description']="Ukrainian industry platform";
+
+        $tmp_folder = '/files/tmpImages/';
+        $data['sub_menu']=[
+            1=>[
+                'btn_title'=>'управление товарами и группами',
+                'href'=>'/admin/goods_and_groups'
+            ],
+            2 =>[
+                'btn_title'=>'Добавить позицию',
+                'href'=>'/admin/add_good'
+            ],
+
+
+        ];
+        $data['active_menu_item']=2;
+
+        $data['sizes']=\App\Size::all();
+        $data['seasons']=\App\Season::all();
+        $data['fabrics']=\App\Fabric::all();
+        $data['decorations']=\App\Decoration::all();
+        $data['product_types']=\App\ProductType::all();
+
+        return view('site_admin_page/clone_good/index',$data,$data_nav);
+    }
+
+    public function setMainScreen(Request $request){
+        $id=$request->input('id');
+        \App\Good::where('id',$id)->update(['main_screen'=>$request->input('main_screen')]);
+        if($request->input('main_screen')==0){
+            $message='main_screen_off';
+        }
+        else{
+            $message='main_screen_on';
+        }
+        return json_encode(['message'=>$message]);
+
+    }
+
+
+
+
 }

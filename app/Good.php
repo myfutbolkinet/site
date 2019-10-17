@@ -21,34 +21,94 @@ class Good extends Model
      * @var array
      */
 
-    public $user;
-    public $name;
-    public $articul;
-    public $price;
-    public $type;
-    public $qnt;
-    public $discount;
-    public $category;
-    public $description;
-    public $description2;
-    public $color;
+    private $id;
+    private $user;
+    private $name;
+    private $articul;
+    private $price;
+    private $type;
+    private $qnt;
+    private $discount;
+    private $model_id;
+    private $category;
+    private $main_screen;
+    private $description;
+    private $description2;
+    private $color;
+    private $_photos;
+    private $_seasons;
+    private $_sizes;
+    private $_fabrics;
+    private $seasons;
+    private $sizes;
+    private $fabric;
+    private $decorations;
+    private $producttypes;
+    private $_decorations;
+    private $_producttypes;
 
     public function __construct(array $attributes = [])
     {
+
+
         parent::__construct($attributes);
         if(!empty($attributes)){
+
         foreach($attributes[0] as $prop=>$val){
             if(property_exists($this, $prop)){
                 $this->$prop=$val;
             }
 
         }
-
-
-           // $this->user=$attributes['user'];
         }
 
     }
+
+
+    public function __get($name){
+      $attributes=$this->getAttributes();
+        if($name=='photos'){
+            return self::photos();
+        }
+        elseif($name=='getSeasons'){
+            return self::getSeasons();
+        }
+        elseif($name=='getSizes'){
+            return self::getSizes();
+        }
+        elseif($name=='getFabrics'){
+            return self::getFabrics();
+        }
+        elseif($name=='getDecorations'){
+            return self::getDecorations();
+        }
+        elseif($name=='getProducttypes'){
+            return self::getProducttypes();
+        }
+        elseif($name=='colors'){
+            return self::colors();
+        }
+        elseif($name=='getModel'){
+            return self::getModel();
+        }
+        elseif($name=='latestPhoto'){
+            return self::latestPhoto();
+        }
+        elseif($name=='firstPhoto'){
+            return self::firstPhoto();
+        }
+        else{
+      if(!$this->$name ){
+          if(isset($attributes[$name])){
+          $this->$name=$attributes[$name];
+          return $this->$name;}
+      }
+        else{
+            return $this->$name;
+        }}
+
+    }
+
 
     public function getUser(){
         return $this->user;
@@ -70,9 +130,15 @@ class Good extends Model
     'type',
     'qnt',
     'discount',
+    'model_id',
     'category',
     'description',
     'description2',
+        'main_screen'
+    ];
+
+    protected $functions=[
+        'photos'
     ];
 
     /**
@@ -90,9 +156,27 @@ class Good extends Model
     }
     public function photos(){
 
-        return $this->hasMany('App\Photo','id_good');
+        return $this->_photos=$this->hasMany('App\Photo','id_good');
     }
 
+    public function getSeasons(){
+        return $this->_seasons=$this->hasManyThrough('App\Season', 'App\Seasons_good','good_id','id','id','season_id');
+    }
+
+    public function getSizes(){
+        return $this->_sizes=$this->hasManyThrough('App\Size', 'App\Sizes_good','id_good','id','id','id_size');
+    }
+
+    public function getDecorations(){
+        return $this->_decorations=$this->hasManyThrough('App\Decoration', 'App\Decorations_good','good_id','id','id','decoration_id');
+    }
+    public function getProducttypes(){
+        return $this->_producttypes=$this->hasManyThrough('App\Producttype', 'App\Producttypes_good','good_id','id','id','producttype_id');
+    }
+
+    public function getFabrics(){
+        return $this->_sizes=$this->hasManyThrough('App\Fabric', 'App\Fabrics_good','good_id','id','id','fabric_id');
+    }
     public function colors(){
 
         return $this->hasMany('App\Colors_of_good','id_good');
@@ -104,5 +188,8 @@ class Good extends Model
     public function sizes(){
 
         return $this->hasMany('App\Size','id_good');
+    }
+    public function getModel(){
+        return $this->hasOne('App\ModelsGoods','good_id','id');
     }
 }

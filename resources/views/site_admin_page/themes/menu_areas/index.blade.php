@@ -1,8 +1,13 @@
-@extends('site_admin_page.themes.menu_areas.nav_good_menu_app')
+@extends('site_admin_page.themes.menu_areas.nav_good_app')
 
 @section('title', 'Main page')
 
 @section('content')
+
+    <div id="main" role="main" style="">
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
 
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
@@ -144,5 +149,7 @@
                 </div>
     </div>
 
+        </div>
+    </div>
 
 @endsection

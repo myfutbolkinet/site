@@ -42,7 +42,9 @@ class MainController extends Controller
 
         $data_nav['curs']=CursController::index();
         $data_content['curs']=CursController::index();
-        //goods
+
+
+       //goods
    $data_content['latest']=Good::orderBy('created_at', 'desc')
         ->orderBy('updated_at', 'desc')
         ->take(10)
@@ -56,7 +58,7 @@ class MainController extends Controller
         //page
 
         $data_content['title']="Industry";
-        $path='main_page';
+        $path='main_site';
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
 
@@ -78,4 +80,6 @@ class MainController extends Controller
      Mail::to('imediasun1@gmail.com')->send(new Send_mail($_POST));
      return view('mail.checkout');
     }
+
+
 }

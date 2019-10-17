@@ -43,6 +43,28 @@ class Cart
 
     }
 
+
+    public function change_qty($item,$qty,$id){
+        $storedItem['qnt']=$qty;
+        $storedItem['price']=$item['price'];
+        $storedItem['summ_quantaty']=$qty;
+        $substr_total_price=($this->items[$id]['price']*intval($this->items[$id]['qnt']));
+        if($storedItem['summ_quantaty']==0){
+            unset($this->items[$id] );
+
+        }
+        else{
+            $storedItem['item']=$item['item'];
+            $this->items[$id]=$storedItem;
+        }
+
+        $this->totalQty-=$this->items[$id]['qnt'];
+        $this->totalQty+=$qty;
+        $this->totalPrice -=$substr_total_price;
+        $this->totalPrice +=$storedItem['price']*$qty;
+    }
+
+
     public function delete_by_one($item,$id){
 
         $storedItem['qnt']=$item['qnt'];
@@ -68,7 +90,7 @@ class Cart
     public function delete_all($item,$id){
 
 
-//установить общее количество продукта
+        //установить общее количество продукта
         $storedItem['qnt']=$item['qnt'];
         $storedItem['price']=$item['price'];
         $storedItem['summ_quantaty']=$item['summ_quantaty'];

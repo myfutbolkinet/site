@@ -19,7 +19,7 @@ class SuperadminController extends \App\Http\Controllers\Controller
 
     public function __construct()
     {
-        $this->middleware('auth:superadmin');
+        //$this->middleware('auth:superadmin');
         //dd('SuperadminController@constructor');
 
 

@@ -542,6 +542,67 @@
                 }
             });
         })
+
+
+        $('.delete_dialog_link').click(function(){
+
+            var id_good=$(this).attr('id')
+            id_good=id_good.split('_');
+            console.log(id_good[1])
+
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/admin/delete_good",
+                data: {id: id_good[1]}, // serializes the form's elements.
+                success: function (data) {
+                    console.log(data)
+                    $('#tr_'+id_good[1]).remove()
+                    alert('Товар удален')
+
+                }
+            });
+        })
+
+
+        $('.screen_link').click(function(){
+            var id_good=$(this).attr('id')
+            id_good=id_good.split('_');
+            console.log(id_good[1])
+            var _this=$(this)
+            if($(this).hasClass('btn-danger')){
+
+                var main_screen = 1
+            }
+            else{
+                var main_screen = 0
+            }
+
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/admin/set_main_screen",
+                data: {id: id_good[1],main_screen:main_screen}, // serializes the form's elements.
+                success: function (data) {
+                    if(data.message=='main_screen_off'){
+                        alert('Товар убран с главного экрана')
+                        _this.removeClass('btn-success')
+                        _this.addClass('btn-danger')
+                    }
+                    else{
+                        _this.removeClass('btn-danger')
+                        _this.addClass('btn-success')
+                        alert('Товар добавлен на главный экран')
+                    }
+                    console.log(data)
+
+
+                }
+            });
+        })
+
     </script>
 </body>
 </html>

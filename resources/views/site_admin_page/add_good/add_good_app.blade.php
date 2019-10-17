@@ -61,6 +61,26 @@
     <link href="/inspinia/css/style.css" rel="stylesheet">
     <link href="/inspinia/css/plugins/cropper/cropper.min.css" rel="stylesheet">
 
+    <!--================================================== -->
+
+    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+    <script data-pace-options='{ "restartOnRequestAfter": true }' src="/smartAdmin/js/plugin/pace/pace.min.js"></script>
+
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        if (!window.jQuery) {
+            document.write('<script src="/smartAdmin/js/libs/jquery-3.2.1.min.js"><\/script>');
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        if (!window.jQuery.ui) {
+            document.write('<script src="/smartAdmin/js/libs/jquery-ui.min.js"><\/script>');
+        }
+    </script>
+
 
     <style>
         .cat_block:hover{
@@ -158,25 +178,7 @@
 @section('scripts')
 
 
-    <!--================================================== -->
 
-    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
-    <script data-pace-options='{ "restartOnRequestAfter": true }' src="/smartAdmin/js/plugin/pace/pace.min.js"></script>
-
-    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        if (!window.jQuery) {
-            document.write('<script src="/smartAdmin/js/libs/jquery-3.2.1.min.js"><\/script>');
-        }
-    </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script>
-        if (!window.jQuery.ui) {
-            document.write('<script src="/smartAdmin/js/libs/jquery-ui.min.js"><\/script>');
-        }
-    </script>
 
     <!-- IMPORTANT: APP CONFIG -->
     <script src="/smartAdmin/js/app.config.js"></script>
@@ -454,6 +456,9 @@ var myDropzone_files=[];
             });
 
             $(".fileupload").change(function (e){//input[name='myFile']
+var photo_id=$(this).parent().find('.photo_id').val()
+console.log('photo_id=>',photo_id)
+
 
                 var fileName = $(this).val();
                 var file_data = $(this).prop('files')[0];
@@ -462,6 +467,9 @@ var myDropzone_files=[];
                 console.log(file_data);
                 var form_data = new FormData();
                 form_data.append('file', file_data);
+                if(photo_id){
+                    form_data.append('photo_id', photo_id);
+                }
                 console.log(form_data);
                 $.ajax({
                     url: '/admin/add_photo_file', // point to server-side PHP script

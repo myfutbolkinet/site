@@ -59,8 +59,11 @@
 <!-- Page wraper -->
     <div id="page-wrapper" class="gray-bg">
 
-        <!-- Page wrapper -->
-    @include('layouts.topnavbar')
+        <!-- HEADER -->
+        @include ('layouts.admin_header');
+        <!-- END HEADER -->
+        <!-- Navigation -->
+        @include('layouts.navigation_view')
 
     <!-- Main view  -->
     @yield('content')

@@ -17,7 +17,7 @@ class CreatePhotosTable extends Migration
             $table->increments('id');
             $table->integer('id_good')->unsigned()->default(0);
             $table->string('photo');
-            $table->foreign('id_good')->references('id')->on('goods');
+            $table->foreign('id_good')->references('id')->on('goods')->onDelete('cascade');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });

@@ -16,6 +16,7 @@ class CreateGoodsTable extends Migration
         Schema::create('goods', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->default(0);
+            $table->integer('model_id')->unsigned()->default(0);
             $table->integer('type')->nullable()->default(0);
             $table->integer('category')->default(0);
             $table->integer('qnt')->default(0);
@@ -29,6 +30,7 @@ class CreateGoodsTable extends Migration
             $table->float('price')->default(0);
             $table->bigInteger('count')->default(1);
             $table->integer('discount')->nullable()->default(0);
+            $table->integer('main_screen')->nullable()->default(0);
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

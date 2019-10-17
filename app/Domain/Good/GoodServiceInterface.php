@@ -8,9 +8,10 @@
 
 namespace App\Domain\Good;
 
-
+use Illuminate\Http\Request;
 interface GoodServiceInterface
 {
 
     public function create($clientId, GoodDto $dto);
+    public function editAction(Request $request, $userId, GoodDto $dto, $goodId);
 }

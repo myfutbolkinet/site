@@ -1,9 +1,13 @@
-@extends('layouts.add_category_app')
+@extends('site_admin_page.add_good.add_good_app')
 
 @section('title', 'Main page')
 
 @section('content')
 
+    <div id="main" role="main" style="">
+
+    <!-- MAIN CONTENT -->
+    <div id="content">
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
             <h2>Добавление категории</h2>
@@ -145,6 +149,7 @@
                     </div>
                 </div>
     </div>
-
+    </div>
+    </div>
 
 @endsection

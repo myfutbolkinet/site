@@ -7,8 +7,7 @@
                     <div style="font-size: 20px;" class="panel-heading">Вы заказали товар</div>
 <?php
 
-
-                    $n=count($cart);
+                    //$n=count($cart);
                     $i=0;
 
                     ?>
@@ -31,9 +30,9 @@
                     <tr class="mail-unread">
 
                             <td><?php print($c['item']['name']);?></td>
-                            <td><?php echo print($c['item']['price']*$curs);?> грн.</td>
-                            <td><?php echo print($c['qnt']);?></td>
-                            <td><?php echo print($c['qnt']*$c['item']['price']*$curs);?>грн.</td>
+                            <td><?php print($c['item']['price']);?> грн.</td>
+                            <td><?php print($c['qnt']);?></td>
+                            <td><?php print($c['qnt']*$c['item']['price']);?>грн.</td>
                     </tr>
                         <?
                     $i++;
@@ -42,7 +41,7 @@
 ?>
 </tbody></table>
 <h3>Загальна вартість</h3>
-{{$cart_total_price*$curs.'грн.'}}
+{{$cart_total_price.'грн.'}}
                     <div class="panel-body">
 
                     </div>
