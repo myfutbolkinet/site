@@ -16,53 +16,31 @@ use App\Http\Controllers\CursController;
 use Illuminate\Support\Facades\Mail;
 class MainController extends Controller
 {
-    //
-  /*  public function __construct()
-    {
-        $this->middleware('auth');
-    }*/
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
 
-    //Get data from DB
-        //menu
-        
-        $data_nav['menu']=MenuController::index('categories');
-        
-    //logos_of_partners 
-  /*  $data_content['logos']=Logo::orderBy('created_at', 'desc')
-        ->orderBy('updated_at', 'desc')
-        ->take(10)
-        ->get();*/
-
-        $data_nav['curs']=CursController::index();
-        $data_content['curs']=CursController::index();
+        $data['menu']=MenuController::index('categories');
 
 
        //goods
-   $data_content['latest']=Good::orderBy('created_at', 'desc')
+   $data['latest']=Good::orderBy('created_at', 'desc')
         ->orderBy('updated_at', 'desc')
         ->take(10)
         ->get()->load('photos');
 
-        $data_content['onsale']=Good::where('category',6)
+        $data['onsale']=Good::where('category',6)
         ->orderBy('created_at', 'desc')
             ->orderBy('updated_at', 'desc')
             ->take(10)
             ->get()->load('photos');
         //page
 
-        $data_content['title']="Industry";
-        $path='main_site';
+        $data['title']="Industry";
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
 
-       return Display_lib::first_page($path,$data,$data_nav,$data_content);
+       return view('agregator.index',$data);
     }
 
     public function contacts()

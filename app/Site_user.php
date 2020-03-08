@@ -27,4 +27,8 @@ class Site_user extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function merchant(){
+        return $this->hasOne('App\Merchant','user_id','id');
+    }
+
 }

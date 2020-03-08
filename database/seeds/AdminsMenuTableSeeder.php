@@ -110,11 +110,18 @@ class AdminsMenuTableSeeder extends Seeder
             /*13*/
             [
                 'parent_id' => 12,
-                'name' => 'Меню категорий товаров',
-                'icon'=> 'fa-envelope','link'=> '/admin/nav_goods_menu',
+                'name' => 'Категории товаров',
+                'icon'=> 'fa-envelope','link'=> '/admin/menu_areas',
                 'type'=>'linked'
             ],
             /*14*/
+            [
+                'parent_id' => 12,
+                'name' => 'Редактор меню страниц сайта',
+                'icon'=> 'fa-envelope','link'=> '/admin/site_navigation',
+                'type'=>'linked'
+            ],
+            /*15*/
             [
                 'parent_id' => 0,
                 'name' => 'Подчиненные списки',

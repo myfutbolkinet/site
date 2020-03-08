@@ -128,8 +128,10 @@ if($domain != "magelan.loc"){
         Route::resource('/customers_managment','SiteAdmin\CustomersController');*/
 
         Route::get('/menu_areas','SiteAdmin\MenuController@index')->name('site.admin.menu_areas');
+        Route::get('/site_navigation','SiteAdmin\SitePagesMenuController@index')->name('site.admin.sit_pages_menu');
+        Route::post('/nestable_pages_menu/postData','SiteAdmin\SitePagesMenuController@postData')->name('site.admin.nestable_pages_menu.postData');
         Route::post('/Ajax/FuncImagesClass','\App\Http\Ajax\FuncImagesClass@index');
-
+        Route::post('/updatePagesOrder','SiteAdmin\SitePagesMenuController@updatePagesOrder')->name('site.admin.update_pages_order');
 
 
 

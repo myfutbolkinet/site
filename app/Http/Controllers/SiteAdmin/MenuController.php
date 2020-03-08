@@ -19,6 +19,7 @@ class MenuController extends SiteAdminController
     {
        parent::__construct();
       //dd($this->user_categories);
+
     }
 
     public function index(){
@@ -26,6 +27,9 @@ class MenuController extends SiteAdminController
         $f=$f->get_categories('All');
         $data=$f->show_categories();
         $data['menu']=$this->menu();
+
+
+
         $data['title']="Додати товар";
         $data['keywords']="Ukrainian industry platform";
         $data['description']="Ukrainian industry platform";
@@ -33,6 +37,24 @@ class MenuController extends SiteAdminController
         //dd($data);
 
         return view('site_admin_page/themes/menu_areas/index',$data);
+    }
+
+    public function sitePagesMenu(){
+        $data['menu']=$this->menu();
+        $data['title']="Додати товар";
+        $data['keywords']="Ukrainian industry platform";
+        $data['description']="Ukrainian industry platform";
+        //dd($data);
+        return view('site_admin_page/themes/site_pages_menu/index',$data);
+    }
+
+    public function postData(){
+        $data['menu']=$this->menu();
+        $data['title']="Додати товар";
+        $data['keywords']="Ukrainian industry platform";
+        $data['description']="Ukrainian industry platform";
+        //dd($data);
+        return view('site_admin_page/themes/site_pages_menu/index',$data);
     }
 
 

@@ -134,7 +134,7 @@ class Good extends Model
     'category',
     'description',
     'description2',
-        'main_screen'
+        'main_screen','site_id'
     ];
 
     protected $functions=[

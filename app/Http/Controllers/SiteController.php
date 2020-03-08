@@ -25,6 +25,7 @@ class SiteController extends Controller
      */
     public function index(Request $request)
     {
+        dump($this->host);
         $data['images']=\App\Good::where('main_screen',1)->with('photos')->take(8)->get();
         $data_content=($this->ShowCart()['products']) ? $this->ShowCart() : [];
         $data_content['cart'] = session()->get('cart');

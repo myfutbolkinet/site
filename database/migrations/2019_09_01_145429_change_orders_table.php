@@ -39,14 +39,14 @@ class ChangeOrdersTable extends Migration
     public function down()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('client_phone');
+           /* $table->dropColumn('client_phone');
             $table->dropColumn('client_email');
             $table->dropColumn('client_name');
             $table->dropColumn('client_city');
             $table->dropColumn('client_country');
             $table->dropColumn('orders_details');
             $table->dropColumn('client_postal_code');
-            $table->dropColumn('client_address');
+            $table->dropColumn('client_address');*/
             Schema::dropIfExists('orders');
 
         });

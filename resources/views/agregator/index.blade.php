@@ -1,0 +1,1 @@
+@extends('agregator.layouts.app')

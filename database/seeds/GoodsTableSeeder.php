@@ -33,7 +33,26 @@ class GoodsTableSeeder extends Seeder
 
         ]);
 
+        DB::table('merchants')->insert([
 
+            /*1*/
+            [
+                'user_id'=>1
+            ]
+        ]);
+
+        DB::table('sites')->insert([
+
+            /*1*/
+            [
+                'merchant_id'=>1,
+                'domain'=>'marafett.loc',
+                'package'=>1,
+                'paid_until'=>\Carbon\Carbon::parse('2020-01-01'),
+                'template'=>1
+
+            ]
+        ]);
 
         DB::table('goods')->insert([
 
@@ -51,7 +70,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы</p>',
-                'description2'=>'<p>Надежные амортизаторы 2</p>'
+                'description2'=>'<p>Надежные амортизаторы 2</p>',
+                'site_id'=>1
             ],
             /*2*/
             [
@@ -67,7 +87,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Мерседес</p>',
-                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>',
+                'site_id'=>1
             ],
             /*3*/
             [
@@ -83,7 +104,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Audi</p>',
-                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>',
+                'site_id'=>1
             ],
             /*4*/
             [
@@ -99,7 +121,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>',
+                'site_id'=>1
             ],
             /*5*/
             [
@@ -115,7 +138,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW2</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*6*/
             [
@@ -131,7 +155,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW3</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*7*/
             [
@@ -147,7 +172,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW5</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>',
+                'site_id'=>1
             ],
             /*8*/
             [
@@ -163,7 +189,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW7</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>',
+                'site_id'=>1
             ],
 
             /*9*/
@@ -180,7 +207,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы</p>',
-                'description2'=>'<p>Надежные амортизаторы 2</p>'
+                'description2'=>'<p>Надежные амортизаторы 2</p>',
+                'site_id'=>1
             ],
             /*10*/
             [
@@ -196,7 +224,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Мерседес</p>',
-                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>',
+                'site_id'=>1
             ],
             /*11*/
             [
@@ -212,7 +241,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Audi</p>',
-                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>',
+                'site_id'=>1
             ],
             /*12*/
             [
@@ -228,7 +258,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>',
+                'site_id'=>1
             ],
             /*13*/
             [
@@ -244,7 +275,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW2</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*14*/
             [
@@ -260,7 +292,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW3</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*15*/
             [
@@ -276,7 +309,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW5</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>',
+                'site_id'=>1
             ],
             /*16*/
             [
@@ -292,7 +326,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW7</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>',
+                'site_id'=>1
             ],
             /*17*/
             [
@@ -308,7 +343,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы</p>',
-                'description2'=>'<p>Надежные амортизаторы 2</p>'
+                'description2'=>'<p>Надежные амортизаторы 2</p>',
+                'site_id'=>1
             ],
             /*18*/
             [
@@ -324,7 +360,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Мерседес</p>',
-                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>',
+                'site_id'=>1
             ],
             /*19*/
             [
@@ -340,7 +377,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Audi</p>',
-                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>',
+                'site_id'=>1
             ],
             /*20*/
             [
@@ -356,7 +394,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>',
+                'site_id'=>1
             ],
             /*21*/
             [
@@ -372,7 +411,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW2</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*22*/
             [
@@ -388,7 +428,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW3</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*23*/
             [
@@ -404,7 +445,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW5</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>',
+                'site_id'=>1
             ],
             /*24*/
             [
@@ -420,7 +462,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW7</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>',
+                'site_id'=>1
             ],
 
             /*25*/
@@ -437,7 +480,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы</p>',
-                'description2'=>'<p>Надежные амортизаторы 2</p>'
+                'description2'=>'<p>Надежные амортизаторы 2</p>',
+                'site_id'=>1
             ],
             /*26*/
             [
@@ -453,7 +497,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Мерседес</p>',
-                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Мерседес 2</p>',
+                'site_id'=>1
             ],
             /*27*/
             [
@@ -469,7 +514,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на Audi</p>',
-                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на Audi 2</p>',
+                'site_id'=>1
             ],
             /*28*/
             [
@@ -485,7 +531,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW 2</p>',
+                'site_id'=>1
             ],
             /*29*/
             [
@@ -501,7 +548,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW2</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*30*/
             [
@@ -517,7 +565,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW3</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW2 2</p>',
+                'site_id'=>1
             ],
             /*31*/
             [
@@ -533,7 +582,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW5</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW5 2</p>',
+                'site_id'=>1
             ],
             /*32*/
             [
@@ -549,7 +599,8 @@ class GoodsTableSeeder extends Seeder
                 'star_counts'=>10,
                 'discount'=>10,
                 'description'=>'<p>Надежные амортизаторы на BMW7</p>',
-                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>'
+                'description2'=>'<p>Надежные амортизаторы на BMW7 2</p>',
+                'site_id'=>1
             ],
 
 

@@ -34,6 +34,7 @@ class User extends Authenticatable
         return $this->hasOne('App\Customers_statuses');
     }
 
+
     public function getId(){
         return $this->id;
     }
