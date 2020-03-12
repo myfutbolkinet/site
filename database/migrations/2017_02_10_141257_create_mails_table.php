@@ -14,7 +14,7 @@ class CreateMailsTable extends Migration
     public function up()
     {
         Schema::create('mails', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('text');
             $table->rememberToken();
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

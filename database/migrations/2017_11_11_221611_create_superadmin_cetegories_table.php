@@ -14,7 +14,7 @@ class CreateSuperadminCetegoriesTable extends Migration
     public function up()
     {
         Schema::create('superadmin_categories', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->integer('parent_id');
             $table->string('name');
             $table->string('icon');

@@ -14,10 +14,10 @@ class CreatePropertyCategoryTable extends Migration
     public function up()
     {
         Schema::create('property_category', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('property_id')->unsigned()->default(0);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('property_id')->unsigned()->default(0);
             $table->foreign('property_id')->references('id')->on('properties');
-            $table->integer('category_id')->unsigned()->default(0);
+            $table->unsignedBigInteger('category_id')->unsigned()->default(0);
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

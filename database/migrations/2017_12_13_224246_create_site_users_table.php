@@ -14,7 +14,7 @@ class CreateSiteUsersTable extends Migration
     public function up()
     {
         Schema::create('site_users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('domain')->unique();

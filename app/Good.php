@@ -46,6 +46,7 @@ class Good extends Model
     private $producttypes;
     private $_decorations;
     private $_producttypes;
+    private $site_id;
 
     public function __construct(array $attributes = [])
     {

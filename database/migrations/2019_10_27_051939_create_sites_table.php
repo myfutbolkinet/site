@@ -14,8 +14,8 @@ class CreateSitesTable extends Migration
     public function up()
     {
         Schema::create('sites', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('merchant_id')->unsigned();;
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('merchant_id')->unsigned();;
             $table->string('domain')->unique();
             $table->integer('package');
             $table->date('paid_until');

@@ -14,7 +14,7 @@ class CreateCustomersStatusesTable extends Migration
     public function up()
     {
         Schema::create('customers_statuses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
            
             $table->rememberToken();

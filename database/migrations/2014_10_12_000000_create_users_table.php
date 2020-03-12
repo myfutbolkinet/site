@@ -15,9 +15,9 @@ class CreateUsersTable extends Migration
     {
 
        
-
+/*
             Schema::create('users', function (Blueprint $table) {
-                $table->increments('id');
+                $table->bigIncrements('id');
                 $table->string('name');
                 $table->string('email')->unique();
                 $table->string('password');
@@ -29,7 +29,25 @@ class CreateUsersTable extends Migration
                 $table->boolean('activated')->default(false);
                 $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
                 $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
-            });
+            });*/
+
+
+
+
+
+        Schema::create('users', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('name')->default('UserName');
+            $table->string('sername')->default('UserSername');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('non_hashed');
+            $table->boolean('active')->default(false);
+            $table->rememberToken();
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+        });
       
     }
 

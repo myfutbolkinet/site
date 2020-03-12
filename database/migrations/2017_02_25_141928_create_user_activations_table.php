@@ -14,7 +14,7 @@ class CreateUserActivationsTable extends Migration
     public function up()
     {
         Schema::create('user_activations', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned();
+            $table->unsignedBigInteger('user_id')->unsigned();
             $table->string('token')->index();
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

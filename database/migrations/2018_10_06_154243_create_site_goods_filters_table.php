@@ -14,7 +14,7 @@ class CreateSiteGoodsFiltersTable extends Migration
     public function up()
     {
         Schema::create('site_goods_filters', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->integer('user_id')->unique();
             $table->text('categories');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

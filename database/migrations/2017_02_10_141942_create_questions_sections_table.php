@@ -14,7 +14,7 @@ class CreateQuestionsSectionsTable extends Migration
     public function up()
     {
         Schema::create('questions_sections', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->rememberToken();
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

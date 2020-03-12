@@ -14,9 +14,9 @@ class CreateMerchantSiteMenuPositionsTable extends Migration
     public function up()
     {
         Schema::create('merchant_site_menu_positions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('site_id')->unsigned();
-            $table->integer('merchant_id')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('site_id')->unsigned();
+            $table->unsignedBigInteger('merchant_id')->unsigned();
             $table->foreign('merchant_id')->references('id')->on('merchants')->onDelete('cascade');
             $table->foreign('site_id')->references('id')->on('sites')->onDelete('cascade');
             $table->text('data');

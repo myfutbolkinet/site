@@ -14,10 +14,10 @@ class CreateSizesGoodsTable extends Migration
     public function up()
     {
         Schema::create('sizes_goods', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_good')->unsigned()->default(0);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('id_good')->unsigned()->default(0);
             $table->foreign('id_good')->references('id')->on('goods')->onDelete('cascade');;
-            $table->integer('id_size')->unsigned()->default(0);
+            $table->unsignedBigInteger('id_size')->unsigned()->default(0);
             $table->foreign('id_size')->references('id')->on('sizes')->onDelete('cascade');;
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

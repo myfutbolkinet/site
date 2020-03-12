@@ -14,7 +14,7 @@ class CreateClientsTable extends Migration
     public function up()
     {
         Schema::create('clients', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });

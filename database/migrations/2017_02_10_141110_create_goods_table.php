@@ -14,9 +14,9 @@ class CreateGoodsTable extends Migration
     public function up()
     {
         Schema::create('goods', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned()->default(0);
-            $table->integer('model_id')->unsigned()->default(0);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id')->unsigned()->default(0);
+            $table->unsignedBigInteger('model_id')->unsigned()->default(0);
             $table->integer('type')->nullable()->default(0);
             $table->integer('category')->default(0);
             $table->integer('qnt')->default(0);
@@ -27,7 +27,7 @@ class CreateGoodsTable extends Migration
             $table->float('star')->default(0);
             $table->integer('star_counts')->default(0);
             $table->bigInteger('price_without_discount')->default(0);
-            $table->float('price')->default(0);
+            $table->float('price',15,2)->default(0);
             $table->bigInteger('count')->default(1);
             $table->integer('discount')->nullable()->default(0);
             $table->integer('main_screen')->nullable()->default(0);

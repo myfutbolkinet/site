@@ -14,7 +14,7 @@ class CreateCartTable extends Migration
     public function up()
     {
         Schema::create('cart', function (Blueprint $table) {
-            $table->increments('id_good');
+            $table->bigIncrements('id_good');
             $table->bigInteger('id_cart');
              $table->rememberToken();
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

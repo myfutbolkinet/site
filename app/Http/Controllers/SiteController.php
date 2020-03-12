@@ -30,7 +30,7 @@ class SiteController extends Controller
         $data_content=($this->ShowCart()['products']) ? $this->ShowCart() : [];
         $data_content['cart'] = session()->get('cart');
         $data_content['title']="Industry";
-        $path='main_site/index';
+        $path='main_site_marafett/index';
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
         //dd($data_content);
@@ -46,7 +46,7 @@ class SiteController extends Controller
             $data_content['colors'][]=$good->colors->first();
         }
         $data_content['title']="Industry";
-        $path='main_site/product';
+        $path='main_site_marafett/product';
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
         return view($path,$data,$data_content);
@@ -79,7 +79,7 @@ class SiteController extends Controller
         $data_content=($this->ShowCart()['products']) ? $this->ShowCart() : [];
         $data_content['goods']=\App\Good::with('photos')->simplePaginate(20);
         //dump($data_content['goods']);
-        $path='main_site/products';
+        $path='main_site_marafett/products';
         return view($path,$data_content);
     }
 
@@ -97,7 +97,7 @@ class SiteController extends Controller
             $data_content['goods']=\App\Good::where('category',$id)->with('photos')->simplePaginate(20);
         }
         //dump($data_content['goods']);
-        $path='main_site/products';
+        $path='main_site_marafett/products';
         return view($path,$data_content);
     }
 

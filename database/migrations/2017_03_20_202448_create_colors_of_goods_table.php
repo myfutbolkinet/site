@@ -14,8 +14,8 @@ class CreateColorsOfGoodsTable extends Migration
     public function up()
     {
         Schema::create('colors_of_goods', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_good')->unsigned()->default(0);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('id_good')->unsigned()->default(0);
             $table->string('color')->default('0');
 
             $table->foreign('id_good')->references('id')->on('goods')->onDelete('cascade');;

@@ -14,8 +14,8 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_user')->unsigned()->default(1);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('id_user')->unsigned()->default(1);
             $table->string('name');
             $table->string('edrpou');
             $table->string('bank');

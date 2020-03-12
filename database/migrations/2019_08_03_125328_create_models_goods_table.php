@@ -14,7 +14,7 @@ class CreateModelsGoodsTable extends Migration
     public function up()
     {
         Schema::create('models_goods', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->integer('model_id');
             $table->integer('good_id');
             $table->timestamps();

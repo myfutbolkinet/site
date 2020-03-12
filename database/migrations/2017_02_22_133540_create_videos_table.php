@@ -14,8 +14,8 @@ class CreateVideosTable extends Migration
     public function up()
     {
         Schema::create('videos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_good')->unsigned()->default(0);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('id_good')->unsigned()->default(0);
             $table->string('video');
             $table->foreign('id_good')->references('id')->on('goods');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

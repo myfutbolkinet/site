@@ -14,8 +14,8 @@ class CreatePhotosTable extends Migration
     public function up()
     {
         Schema::create('photos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_good')->unsigned()->default(0);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('id_good')->unsigned()->default(0);
             $table->string('photo');
             $table->foreign('id_good')->references('id')->on('goods')->onDelete('cascade');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

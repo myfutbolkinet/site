@@ -14,7 +14,7 @@ class CreateAdvTable extends Migration
     public function up()
     {
     Schema::create('adv', function (Blueprint $table) {
-        $table->increments('id');
+        $table->bigIncrements('id');
         $table->string('main_text');
         $table->string('img_url');
         $table->bigInteger('section');

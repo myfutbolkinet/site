@@ -14,7 +14,7 @@ class CreateSalesmanagerCategoriesTable extends Migration
     public function up()
     {
         Schema::create('salesmanager_categories', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->integer('parent_id');
             $table->string('name');
             $table->string('icon');

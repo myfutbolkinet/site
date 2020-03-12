@@ -14,7 +14,7 @@ class CreateFabricsTable extends Migration
     public function up()
     {
         Schema::create('fabrics', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->timestamps();
         });

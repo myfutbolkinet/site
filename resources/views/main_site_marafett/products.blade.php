@@ -1,4 +1,4 @@
-@extends('main_site.layouts.app')
+@extends('main_site_marafett.layouts.app')
 
 @section('content')
 

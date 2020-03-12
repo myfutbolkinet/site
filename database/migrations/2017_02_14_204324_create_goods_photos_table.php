@@ -14,7 +14,7 @@ class CreateGoodsPhotosTable extends Migration
     public function up()
     {
         Schema::create('goods_photos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->integer('id_good');
             $table->string('photo');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

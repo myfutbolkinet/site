@@ -14,8 +14,8 @@ class CreatePropertiesDataTable extends Migration
     public function up()
     {
         Schema::create('property_datas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('property_id')->unsigned()->default(0);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('property_id')->unsigned()->default(0);
             $table->foreign('property_id')->references('id')->on('properties');
             $table->string('data');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

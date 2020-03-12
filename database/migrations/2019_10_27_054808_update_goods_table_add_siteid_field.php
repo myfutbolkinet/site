@@ -16,7 +16,7 @@ class UpdateGoodsTableAddSiteidField extends Migration
         Schema::table('goods', function($table) {
             if (!Schema::hasColumn('goods', 'site_id'))
             {
-                $table->integer('site_id')->unsigned();;
+                $table->unsignedBigInteger('site_id')->unsigned();;
                 $table->foreign('site_id')->references('id')->on('sites')->onDelete('cascade');
             }
 
