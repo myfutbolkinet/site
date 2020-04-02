@@ -198,7 +198,34 @@
     <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
     <script src="/smartAdmin/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
 
-    <!-- iCheck -->
+    <!-- JARVIS WIDGETS -->
+    <script src="/smartAdmin/js/smartwidgets/jarvis.widget.min.js"></script>
+
+
+    <!-- SPARKLINES -->
+    <script src="/smartAdmin/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- JQUERY MASKED INPUT -->
+    <script src="/smartAdmin/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="/smartAdmin/js/plugin/select2/select2.min.js"></script>
+
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script src="/smartAdmin/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+    <!-- browser msie issue fix -->
+    <script src="/smartAdmin/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+    <!-- FastClick: For mobile devices -->
+    <script src="/smartAdmin/js/plugin/fastclick/fastclick.min.js"></script>
+
+    <!--[if IE 8]>
+
+
+
+
+<!-- iCheck -->
     <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
     <!--[if IE 8]>
 
@@ -301,7 +328,7 @@ var myDropzone_files=[];
 
 
         setTimeout(function(){
-            CKEDITOR.replace( 'editor1' );
+           // CKEDITOR.replace( 'editor1' );
         },500);
     </script>
 
@@ -607,6 +634,8 @@ $('.color_btn').click(function(){
 
                         }
                         $.each( data.value, function( key, value ) {
+
+                            console.log(value.name)
                             $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
                                 '<input type="hidden" value="'+value.id+'">' +
                                 value.name+

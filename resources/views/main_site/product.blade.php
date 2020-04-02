@@ -2,408 +2,305 @@
 
 @section('content')
 
-
-    <!-- content container fluid-->
-    <div class="container-fluid main-wrapp" id="content-grid">
-        <!-- product navbar -->
-        <div class="navbar-fixed-top text-uppercase product-nav">
-            <ul class="list-inline text-center">
-                <li>
-                    <a href="/">Главная</a>
-                </li>
-                <li class="active">
-                    <a href="#page-content">Товар</a>
-                </li>
-                <li>
-                    <a href="#description-tag">Описание</a>
-                </li>
-                <li>
-                    <a href="#gallery-tag">Галерея</a>
-                </li>
-                <li>
-                    <a href="#reviews-tag">Отзывы</a>
-                </li>
-            </ul>
-            <div class="top-product-details">
-                <h5 class="product-title">Alice skirt</h5>
-                <div class="pull-right cart-detail">
-                    <button class="btn btn-important btn-lg">
-                        <span class="btn-text">В корзину</span>
-                        -
-                        <span class="product-price">&dollar;127.99</span>
-                    </button>
-                </div>
+<!-- Off-Canvas Wrapper-->
+<div class="offcanvas-wrapper">
+    <!-- Page Title-->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>Single Product</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="separator">&nbsp;</li>
+                    <li><a href="shop-grid-ls.html">Shop</a>
+                    </li>
+                    <li class="separator">&nbsp;</li>
+                    <li>Single Product</li>
+                </ul>
             </div>
         </div>
-
+    </div>
+    <!-- Page Content-->
+    <div class="container padding-bottom-3x mb-1">
         <div class="row">
-            <!-- product showcase magic scroll ;-) -->
-            <div class="product-showcase">
-                <!-- product bg and slider -->
-                <div class="product-bg">
-                    <div class="showcase-scroll">
-                        <div class="text-bg">Alice</div>
-                        <!-- slider -->
-                        <div class="col-lg-offset-2 col-lg-4 col-md-6 product-slider-wrapp">
-                            <!-- product-slider -->
-                            <div class="owl-carousel product-slider">
-                                @foreach($product->photos->get() as $img)
-                                    <div class="slide">
-                                        <?php $big_photo=explode('small_',$img->photo);
+            <!-- Poduct Gallery-->
+            <div class="col-md-6">
+                <div class="product-gallery"><span class="product-badge text-danger">30% Off</span>
+                    <div class="gallery-wrapper">
 
-                                        ?>
-                                        <a href="/storage/{{$big_photo[1]}}"><img src="/storage/{{$img->photo}}" alt="product-image" class="img-responsive"></a>
-                                    </div>
+                        @foreach($product->photos->get() as $photo)
+                        <div class="gallery-item active"><a href="/storage/goods/{{$photo->photo}}" data-hash="hash_{{$photo->id}}" data-size="1000x667"></a></div>
 
-                                @endforeach
-                            </div>
-                        </div>
+                            @endforeach
                     </div>
-                </div>
-                <!-- right content -->
-                <div class="blk-product">
-                    <div class="col-lg-offset-6 col-lg-4 col-md-offset-6 col-md-6 text-center">
-                        <!-- product overview -->
-                        <div class="product-spec-height">
-                            <div class="product-overview" id="overview">
-                                <h3 class="text-uppercase product-title">{{$product->name}}</h3>
-                                <p class="subtitle">
-                                    <?php print($product->description);?>
-                                </p>
+                    <div class="product-carousel owl-carousel">
+                        @foreach($product->photos->get() as $photo)
 
-
-                                <div class="colors" style="padding: 20px;">
-                                    @foreach($colors as $key=>$color)
-                                        <div style="cursor:pointer;width:70px;text-align: center;display:inline-block;@if($key!=0) margin-left:40px @endif">
-                                            <img width="50px;" height="50px;" class="thumbpost img-circle" src="/storage/{{$color->color}}">
-                                            <label style="padding-left:10px;float:left;display:inline-block;position:absolute;margin-left:-30px;">Кол-во</label>
-                                            <div class="cant-select" style="float:left;display:inline-block;margin-left:70px;">
-                                                <input type="hidden" class="good_id" value="{{$color->id_good}}">
-                                                <input type="hidden" class="qty_number" value="{{$key}}">
-                                                <input  class="qty" style="width:120%" type="number"  name="qty" value="0">
-                                            </div>
-                                            <label style="padding-left:10px;float:left;display:inline-block;position:absolute;margin-left:-100px;margin-top:30px;">Размер</label>
-                                            <!-- size select -->
-                                            <div class="size-select" style="float:left;display:inline-block;margin-left:70px;">
-                                                <select class="text-uppercase">
-                                                    <option value="0" selected>xs</option>
-                                                    <option value="1">s</option>
-                                                    <option value="2">m</option>
-                                                    <option value="3">xl</option>
-                                                    <option value="4">xxl</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                    @endforeach
-
-                                </div>
-
-
-                                <!-- amount select -->
-                                <!--div class="form-group cant-select">
-                                    <input type="number" value="1">
-                                </div>
-                                <div class="form-group cant-select">
-                                    <input type="number" value="1">
-                                </div-->
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <button class="btn btn-important btn-lg">
-                                            <span class="btn-text">В корзину</span>
-                                            -
-                                            <span class="product_price product-price">0</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="btn btn-link"><i class="fa fa-heart-o"></i>Добавить в список желаний</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- product description -->
-                        <div class="product-spec-height" id="description-tag">
-                            <div class="product-overview" id="pd-description">
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#descriptionTab" aria-expanded="true" aria-controls="descriptionTab">
-                                                    Description
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="descriptionTab" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                <?php print($product->description2);?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingTwo">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#specTab" aria-expanded="false" aria-controls="specTab">
-                                                    Specifications
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="specTab" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                            <div class="panel-body">
-                                                <ul class="list-unstyled text-uppercase spec-list">
-                                                    <li>
-                                                        <strong>Case</strong>
-                                                        <span>39 mm</span>
-                                                    </li>
-                                                    <li>
-                                                        <strong>Material</strong>
-                                                        <span>Steel</span>
-                                                    </li>
-                                                    <li>
-                                                        <strong>Case color</strong>
-                                                        <span>black</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#shpTab" aria-expanded="false" aria-controls="shpTab">
-                                                    Shipping / Returns
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="shpTab" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                            <div class="panel-body">
-                                                <ul class="list-unstyled">
-                                                    <li>Free shipping worldwide.</li>
-                                                    <li>Fast and safe with DHL.</li>
-                                                    <li>Easy returns within 14 days of delivery.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div data-hash="hash_{{$photo->id}}"><img src="/storage/goods/{{$photo->photo}}" alt="Product"></div>
+                        @endforeach
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- product stats -->
-        <div class="padded15 product-stats">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 text-uppercase text-center">
-                    <div class="status">
-                        <span>Satisfaction</span>
-                        <h4>Guaranteed</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-uppercase text-center">
-                    <div class="status">
-                        <span>30 days return</span>
-                        <h4>policy</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-uppercase text-center">
-                    <div class="status">
-                        <span>Free orders</span>
-                        <h4>delivery</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-uppercase text-center">
-                    <div class="status">
-                        <span>100% secured</span>
-                        <h4>payments</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- product gallery -->
-        <div class="padded15 product-gallery" id="gallery-tag">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="lg-img shine-effect">
-                        <a href="http://placehold.it/750x1150" class="popup-lnk">
-                            <img src="http://placehold.it/950x550" alt="product-image" class="img-responsive">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="md-img shine-effect">
-                        <a href="http://placehold.it/750x1150" class="popup-lnk">
-                            <img src="http://placehold.it/550x750" alt="product-image" class="img-responsive">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="sm-img shine-effect">
-                        <a href="http://placehold.it/550x550" class="popup-lnk">
-                            <img src="http://placehold.it/350x350" alt="product-image" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="sm-img shine-effect">
-                        <a href="http://placehold.it/550x550" class="popup-lnk">
-                            <img src="http://placehold.it/350x350" alt="product-image" class="img-responsive">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- testimonials  carousel -->
-        <div class="padded15 testimonials" id="reviews-tag">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="testimonials-wrapp">
-                        <div class="testimonials-header text-uppercase">
-                            <span>10 users</span>
-                            <h3>reviews</h3>
-                        </div>
-                        <div class="owl-carousel testimonials-carousel text-center">
-                            <div class="testimonial">
-                                <ul class="list-inline star-rating">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                                <h5 class="user-name text-uppercase">John Doe</h5>
-                            </div>
-                            <div class="testimonial">
-                                <ul class="list-inline star-rating">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star-o"></i></li>
-                                    <li><i class="fa fa-star-o"></i></li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, dignissimos nostrum! Maiores culpa quibusdam, ad, dolorem perspiciatis, at nobis doloremque nulla, cupiditate voluptatem unde illo odit iusto saepe aspernatur modi.</p>
-                                <h5 class="user-name text-uppercase">Barack Kross</h5>
-                            </div>
-                            <div class="testimonial">
-                                <ul class="list-inline star-rating">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star-half-o"></i></li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facilis debitis placeat beatae? Labore eum unde repudiandae blanditiis impedit vero quisquam sequi ipsa, excepturi nulla totam tenetur veniam accusantium voluptate.</p>
-                                <h5 class="user-name text-uppercase">Britney Sappers</h5>
-                            </div>
-                        </div>
-                        <!-- carousel outside navigation -->
-                        <div class="carousel-nav"></div>
-                        <button class="btn btn-primary">Add review</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- instagram feed -->
-        <div class="instagram-feed">
-            <div class="row" id="instagram-block">
-                <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 col-xs-12 insta-item">
-                    <ul class="list-inline">
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk" >
-                            </a>
-                        </li>
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk">
-                            </a>
-                        </li>
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk">
-                            </a>
-                        </li>
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk">
-                            </a>
-                        </li>
+                    <ul class="product-thumbnails">
+                        @foreach($product->photos->get() as $key=> $photo)
+                        <li @if($key==1)class="active"@endif><a href="#hash_{{$photo->id}}"><img src="/storage/goods/{{$photo->photo}}" alt="Product"></a></li>
+                        @endforeach
                     </ul>
                 </div>
-                <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 col-xs-12 insta-item insta-item-overflow">
-                    <div class="category insta">
-                        <div class="insta-intro text-center">
-                            <span>Follow the vibe on</span>
-                            <h3>Instagram</h3>
-                            <a href="#" class="btn btn-important">@Themesdojo</a>
+            </div>
+            <!-- Product Info-->
+            <div class="col-md-6">
+                <div class="padding-top-2x mt-2 hidden-md-up"></div>
+                <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
+                </div><span class="text-muted align-middle">&nbsp;&nbsp;4.2 | 3 customer reviews</span>
+                <h2 class="padding-top-1x text-normal">Reebok Royal CL Jogger 2</h2><span class="h2 d-block">
+              <del class="text-muted text-normal">$68.00</del>&nbsp; $47.60</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis laborum excepturi aliquid nobis ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.</p>
+                <div class="row margin-top-1x">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="size">Men's size</label>
+                            <select class="form-control" id="size">
+                                <option>Chooze size</option>
+                                <option>11.5</option>
+                                <option>11</option>
+                                <option>10.5</option>
+                                <option>10</option>
+                                <option>9.5</option>
+                                <option>9</option>
+                                <option>8.5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <label for="color">Choose color</label>
+                            <select class="form-control" id="color">
+                                <option>White/Red/Blue</option>
+                                <option>Black/Orange/Green</option>
+                                <option>Gray/Purple/White</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <select class="form-control" id="quantity">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="text-uppercase col-lg-4 col-md-4 col-sm-4 col-xs-12 insta-item">
-                    <ul class="list-inline">
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk">
-                            </a>
-                        </li>
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk">
-                            </a>
-                        </li>
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk">
-                            </a>
-                        </li>
-                        <li data-bg="http://placehold.it/550x550" class="shine-effect">
-                            <a href="http://placehold.it/550x750" class="popup-lnk">
-                            </a>
-                        </li>
-                    </ul>
+                <div class="pt-1 mb-2"><span class="text-medium">SKU:</span> #21457832</div>
+                <div class="padding-bottom-1x mb-2"><span class="text-medium">Categories:&nbsp;</span><a class="navi-link" href="#">Men’s shoes,</a><a class="navi-link" href="#"> Snickers,</a><a class="navi-link" href="#"> Sport shoes</a></div>
+                <hr class="mb-3">
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="entry-share mt-2 mb-2"><span class="text-muted">Share:</span>
+                        <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
+                    </div>
+                    <div class="sp-buttons mt-2 mb-2">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                        <button class="btn btn-primary" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Tabs-->
+        <div class="row padding-top-3x mb-3">
+            <div class="col-lg-10 offset-lg-1">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab" role="tab">Description</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews" data-toggle="tab" role="tab">Reviews (3)</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error blanditiis a, deserunt magnam pariatur quam suscipit quae. Veniam, deserunt reprehenderit quasi hic recusandae itaque omnis fugiat animi architecto facilis repellendus. Commodi dolorem, eius consectetur. Amet maiores nemo at nobi s aspernatur velit, sequi odio, a veritatis inventore autem esse provident in? Placeat, sunt!</p>
+                        <p class="mb-30">Iste assumenda, vitae, aliquam excepturi libero quia ullam quisquam tenetur id sint labore. Pariatur praesentium velit, fugit facere maxime voluptates optio qui? Quidem obcaecati necessitatibus rem aspernatur, mollitia, assumenda explicabo numquam minus eos sapiente totam dicta, laborum dolorum! Vitae distinctio quos non ut fugiat.</p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/B81qd2v6alw?rel=0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <!-- Review-->
+                        <div class="comment">
+                            <div class="comment-author-ava"><img src="img/reviews/01.jpg" alt="Review author"></div>
+                            <div class="comment-body">
+                                <div class="comment-header d-flex flex-wrap justify-content-between">
+                                    <h4 class="comment-title">Average quality for the price</h4>
+                                    <div class="mb-2">
+                                        <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i><i class="icon-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="comment-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                <div class="comment-footer"><span class="comment-meta">Francis Burton</span></div>
+                            </div>
+                        </div>
+                        <!-- Review-->
+                        <div class="comment">
+                            <div class="comment-author-ava"><img src="img/reviews/02.jpg" alt="Review author"></div>
+                            <div class="comment-body">
+                                <div class="comment-header d-flex flex-wrap justify-content-between">
+                                    <h4 class="comment-title">My husband love his new...</h4>
+                                    <div class="mb-2">
+                                        <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <div class="comment-footer"><span class="comment-meta">Maggie Scott</span></div>
+                            </div>
+                        </div>
+                        <!-- Review-->
+                        <div class="comment">
+                            <div class="comment-author-ava"><img src="img/reviews/03.jpg" alt="Review author"></div>
+                            <div class="comment-body">
+                                <div class="comment-header d-flex flex-wrap justify-content-between">
+                                    <h4 class="comment-title">Soft, comfortable, quite durable...</h4>
+                                    <div class="mb-2">
+                                        <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="comment-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                                <div class="comment-footer"><span class="comment-meta">Jacob Hammond</span></div>
+                            </div>
+                        </div>
+                        <!-- Review Form-->
+                        <h5 class="mb-30 padding-top-1x">Leave Review</h5>
+                        <form class="row" method="post">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="review_name">Your Name</label>
+                                    <input class="form-control form-control-rounded" type="text" id="review_name" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="review_email">Your Email</label>
+                                    <input class="form-control form-control-rounded" type="email" id="review_email" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="review_subject">Subject</label>
+                                    <input class="form-control form-control-rounded" type="text" id="review_subject" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="review_rating">Rating</label>
+                                    <select class="form-control form-control-rounded" id="review_rating">
+                                        <option>5 Stars</option>
+                                        <option>4 Stars</option>
+                                        <option>3 Stars</option>
+                                        <option>2 Stars</option>
+                                        <option>1 Star</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="review_text">Review </label>
+                                    <textarea class="form-control form-control-rounded" id="review_text" rows="8" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 text-right">
+                                <button class="btn btn-outline-primary" type="submit">Submit Review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Related Products Carousel-->
+        <h3 class="text-center padding-top-2x mt-2 padding-bottom-1x">You May Also Like</h3>
+        <!-- Carousel-->
+        <div class="owl-carousel" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 30, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;576&quot;:{&quot;items&quot;:2},&quot;768&quot;:{&quot;items&quot;:3},&quot;991&quot;:{&quot;items&quot;:4},&quot;1200&quot;:{&quot;items&quot;:4}} }">
+            <!-- Product-->
+            <div class="grid-item">
+                <div class="product-card">
+                    <div class="product-badge text-danger">22% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/09.jpg" alt="Product"></a>
+                    <h3 class="product-title"><a href="shop-single.html">Rocket Dog</a></h3>
+                    <h4 class="product-price">
+                        <del>$44.95</del>$34.99
+                    </h4>
+                    <div class="product-buttons">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                        <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="grid-item">
+                <div class="product-card">
+                    <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
+                    </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/03.jpg" alt="Product"></a>
+                    <h3 class="product-title"><a href="shop-single.html">Oakley Kickback</a></h3>
+                    <h4 class="product-price">$155.00</h4>
+                    <div class="product-buttons">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                        <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="grid-item">
+                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/12.jpg" alt="Product"></a>
+                    <h3 class="product-title"><a href="shop-single.html">Vented Straw Fedora</a></h3>
+                    <h4 class="product-price">$49.50</h4>
+                    <div class="product-buttons">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                        <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="grid-item">
+                <div class="product-card">
+                    <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i>
+                    </div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/11.jpg" alt="Product"></a>
+                    <h3 class="product-title"><a href="shop-single.html">Top-Sider Fathom</a></h3>
+                    <h4 class="product-price">$90.00</h4>
+                    <div class="product-buttons">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                        <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="grid-item">
+                <div class="product-card"><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/04.jpg" alt="Product"></a>
+                    <h3 class="product-title"><a href="shop-single.html">Waist Leather Belt</a></h3>
+                    <h4 class="product-price">$47.00</h4>
+                    <div class="product-buttons">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                        <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="grid-item">
+                <div class="product-card">
+                    <div class="product-badge text-danger">50% Off</div><a class="product-thumb" href="shop-single.html"><img src="img/shop/products/01.jpg" alt="Product"></a>
+                    <h3 class="product-title"><a href="shop-single.html">Unionbay Park</a></h3>
+                    <h4 class="product-price">
+                        <del>$99.99</del>$49.99
+                    </h4>
+                    <div class="product-buttons">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
+                        <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /.container-fluid -->
-<script>
-    window.qty=[];
-  $('.qty').change(function(){
-      var qty=$(this).val();
-      var input_number=$(this).parent().find('.qty_number').val()
-      window.qty[input_number]=parseInt(qty);
-      var price={{$product->price}}
-      var total=$('.product_price').html()
-      console.log(window.qty)
-      summ = window.qty.reduce(function(a,b){return(a+b)})
-      console.log(summ)
-      var tot=summ*price
-      $('.product_price').html('<b>'+summ+' * '+price+' = '+tot+' грн.</b>')
-      console.log(total)
-  });
 
-    $('.product_price').click(function(){
-        var add_to_cart_array=[];
-        $.each($('.qty'),function(index,value,obj){
-            console.log($(this).val())
-            var good_id=$(this).parent().find('.good_id').val()
-            console.log(good_id)
-            add_to_cart_array.push({'good_id':good_id,'qty':$(this).val()})
-        });
+</div>
 
-        console.log('add_to_cart_array',add_to_cart_array)
-        var valid=true;
-        $.each(add_to_cart_array,function(index,value){
-            if(value['qty'] == 0) {
-               valid=false;
-            }
-
-        });
-        if(valid!==false){
-        $.post("/add_to_cart_action", JSON.stringify(add_to_cart_array), function( data ) {
-        });}
-        else{
-            alert('Вы не выбрали не одного экземпляра товара')
-        }
-
-    })
-</script>
 @endsection

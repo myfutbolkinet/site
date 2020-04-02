@@ -78,4 +78,13 @@ class CategoriesController extends \App\Http\SiteEntity
         return view('superadmin/add_category',$data);
     }
 
+    public function changeCatName(Request $request){
+        var_dump($request->input('action'));
+       $data=[
+            'link'=>$request->input('link'),
+            'name'=>$request->input('name')
+        ];
+       \App\Category::where('id',$request->input('id'))->update($data);
+    }
+
 }

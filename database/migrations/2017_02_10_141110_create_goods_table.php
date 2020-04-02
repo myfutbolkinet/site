@@ -31,6 +31,7 @@ class CreateGoodsTable extends Migration
             $table->bigInteger('count')->default(1);
             $table->integer('discount')->nullable()->default(0);
             $table->integer('main_screen')->nullable()->default(0);
+            $table->integer('is_featured')->nullable()->default(null);
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

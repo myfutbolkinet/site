@@ -16,147 +16,133 @@ class CategoriesTableSeeder extends Seeder
             /*1*/
             [
                 'parent_id' => 0,
-                'name' => 'Женская одежда',
+                'name' => 'Одежда с принтами',
                 'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>false
             ],
             /*2*/
+
             [
-                'parent_id' => 1,
-                'name' => 'Платья',
-                'link'=> '/Platya',
+                'parent_id' => 0,
+                'name' => 'Одежда под печать',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>true
+                'can_be_last_cat'=>false
             ],
             /*3*/
+
             [
-                'parent_id' => 1,
-                'name' => 'Блузы',
-                'link'=> '/Bluzi',
+                'parent_id' => 0,
+                'name' => 'Принты',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>true
+                'can_be_last_cat'=>false
             ],
             /*4*/
+
             [
                 'parent_id' => 1,
-                'name' => 'Кардиганы, ветровки',
-                'link'=> '/kardigani-vetrovki',
+                'name' => 'Топ продаж',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>true
             ],
             /*5*/
+
             [
                 'parent_id' => 1,
-                'name' => 'Для пышных дам',
-                'link'=> '/Dly-pishnih-dam',
+                'name' => 'Модные',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>false
+                'can_be_last_cat'=>true
             ],
             /*6*/
+
             [
                 'parent_id' => 1,
-                'name' => 'Юбки',
-                'link'=> '/Ubki',
+                'name' => 'Новые',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>true
             ],
             /*7*/
+
             [
                 'parent_id' => 1,
-                'name' => 'Брюки, комбенизоны',
-                'link'=> '/Bruki-kombenizoni',
+                'name' => 'Спорт',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>false
+                'can_be_last_cat'=>true
             ],
             /*8*/
+
             [
                 'parent_id' => 1,
-                'name' => 'Товары со скидкой',
-                'link'=> '/Tovary-so-skidkoy',
+                'name' => 'Хобби',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>true
             ],
             /*9*/
+
             [
                 'parent_id' => 1,
-                'name' => 'Кофты',
-                'link'=> '/Kofti',
+                'name' => 'Праздники',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>true
             ],
             /*10*/
+
             [
                 'parent_id' => 1,
-                'name' => 'Спортивная одежда',
-                'link'=> '/Sportivnaya-odezhda',
+                'name' => 'И тд',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>true
             ],
             /*11*/
+
             [
-                'parent_id' => 0,
-                'name' => 'Детская одежда',
-                'link'=> '/Detskaya-odezhda',
+                'parent_id' => 2,
+                'name' => 'Однотонная одежда',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>false
+                'can_be_last_cat'=>true
             ],
             /*12*/
+
             [
-                'parent_id' => 11,
-                'name' => 'Платья для девочек',
-                'link'=> '/Platya-dlya-devocheck',
+                'parent_id' => 2,
+                'name' => 'Футболки',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>true
             ],
             /*13*/
+
             [
-                'parent_id' => 0,
-                'name' => 'Школьная форма',
-                'link'=> '/Shkolnaya-forma',
-                'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>false
-            ],
-            /*14*/
-            [
-                'parent_id' => 13,
-                'name' => 'Для девочек',
-                'link'=> '/Dlya-devochek',
+                'parent_id' => 2,
+                'name' => 'Майки',
+                'link'=> '/Zhenskaya-odezhda',
                 'icon'=>'/img/dashboard_icon.png',
                 'icon_hover'=>'/img/dashboard_icon_white.png',
                 'can_be_last_cat'=>true
             ],
-            /*15*/
-            [
-                'parent_id' => 0,
-                'name' => 'Аксессуары',
-                'link'=> '/Aksessuari',
-                'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>false
-            ],
-            /*16*/
-            [
-                'parent_id' => 15,
-                'name' => 'Бижутерия',
-                'link'=> '/Bizhuteria',
-                'icon'=>'/img/dashboard_icon.png',
-                'icon_hover'=>'/img/dashboard_icon_white.png',
-                'can_be_last_cat'=>true
-            ]
+
 
         ]);
 

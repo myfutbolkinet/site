@@ -25,12 +25,13 @@ class SiteController extends Controller
      */
     public function index(Request $request)
     {
-        dump($this->host);
+        //dump('host',$this->host);
         $data['images']=\App\Good::where('main_screen',1)->with('photos')->take(8)->get();
         $data_content=($this->ShowCart()['products']) ? $this->ShowCart() : [];
         $data_content['cart'] = session()->get('cart');
         $data_content['title']="Industry";
-        $path='main_site_marafett/index';
+        $path='main_site/index';
+        $data_content['menu']=\App\Category::get();
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
         //dd($data_content);
@@ -46,7 +47,7 @@ class SiteController extends Controller
             $data_content['colors'][]=$good->colors->first();
         }
         $data_content['title']="Industry";
-        $path='main_site_marafett/product';
+        $path='main_site/product';
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
         return view($path,$data,$data_content);
@@ -83,10 +84,14 @@ class SiteController extends Controller
         return view($path,$data_content);
     }
 
-    public function showCategory(Request $request){
-        $id=$request->input('cat');
+    public function showCategory($id, Request $request){
+        $data_content=(!isset($this->ShowCart()['products'])) ? $this->ShowCart() : [];
+        $data_content['menu']=\App\Category::get();
+
         $price_filter=$request->input('price_filter');
-        $data_content=($this->ShowCart()['products']) ? $this->ShowCart() : [];
+        $price_filter=1;
+
+
         if($price_filter && $price_filter==1 ){
             $data_content['goods']=\App\Good::where('category',$id)->with('photos')->orderBy('price', 'ASC')->simplePaginate(20);
         }
@@ -97,7 +102,7 @@ class SiteController extends Controller
             $data_content['goods']=\App\Good::where('category',$id)->with('photos')->simplePaginate(20);
         }
         //dump($data_content['goods']);
-        $path='main_site_marafett/products';
+        $path='main_site/category';
         return view($path,$data_content);
     }
 

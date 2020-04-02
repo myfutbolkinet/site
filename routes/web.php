@@ -34,7 +34,7 @@ if($domain != "magelan.loc"){
     //TODO OOP
 
     Route::get('/product/{id}', 'SiteController@showProduct');
-    Route::get('/category', 'SiteController@showCategory');
+    Route::get('/category/{id}', 'SiteController@showCategory');
     Route::get('/products', 'SiteController@showAllProducts');
     Route::post('/show_subcat', 'FuncController@show_subcat');
     Route::post('/show_subcat_all_levels', 'FuncController@show_subcat_all_levels');
@@ -62,6 +62,9 @@ if($domain != "magelan.loc"){
     //admin
 
     Route::group(['prefix' => 'admin'],function(){
+
+
+        Route::post('/change_category_name','SiteAdmin\CategoriesController@changeCatName');
         Route::get('/categories/add','SiteAdmin\CategoriesController@add_show');
         Route::get('/categories','SiteAdmin\CategoriesController@index');
 
