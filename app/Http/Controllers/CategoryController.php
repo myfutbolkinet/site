@@ -13,7 +13,6 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
 
-
         $data_nav['curs']=CursController::index();
         $data_content['curs']=CursController::index();
 

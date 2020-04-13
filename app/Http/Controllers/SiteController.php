@@ -25,6 +25,7 @@ class SiteController extends Controller
      */
     public function index(Request $request)
     {
+
         //dump('host',$this->host);
         $data['images']=\App\Good::where('main_screen',1)->with('photos')->take(8)->get();
         $data_content=($this->ShowCart()['products']) ? $this->ShowCart() : [];
@@ -87,7 +88,7 @@ class SiteController extends Controller
     public function showCategory($id, Request $request){
         $data_content=(!isset($this->ShowCart()['products'])) ? $this->ShowCart() : [];
         $data_content['menu']=\App\Category::get();
-
+        $data_content['cart'] = session()->get('cart');
         $price_filter=$request->input('price_filter');
         $price_filter=1;
 

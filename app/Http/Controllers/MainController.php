@@ -19,7 +19,7 @@ class MainController extends Controller
 
     public function index()
     {
-
+dd(123);
         $data['menu']=MenuController::index('categories');
 
 

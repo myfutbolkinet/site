@@ -22,12 +22,9 @@ class ShopingCartController extends Controller
 
     //
     public function addToCart(Request $request){
-        //var_dump($request->json()->all());
-        $add_to_cart_array=json_decode($request->getContent(), true);
-        foreach($add_to_cart_array as $value){
-            $good = Good::find($value['good_id']);
+            $good = Good::with('photos')->find($request->input('id'));
             $this->product = $good;
-            $this->product['qnt'] = (int)$value['qty'];
+            $this->product['qnt'] = ($request->input('id')) ? (int)$request->input('id') : 1;
 
             if (Session::has('cart')) {
                 $oldCart = session()->get('cart');
@@ -38,8 +35,10 @@ class ShopingCartController extends Controller
             $cart->add($this->product, $this->product->id);
             session()->put('cart',$cart);
             session()->save();
-        }
 
+       /* if (Session::has('cart')) {
+            var_dump(session()->get('cart'));
+        }*/
 
 
 

@@ -60,8 +60,9 @@
                                 <del>$99.99</del>$49.99
                             </h4>
                             <div class="product-buttons">
+                                <input type="hidden" class="add_to_cart_id" value="{{$good->id}}">
                                 <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                                <button class="btn btn-outline-primary btn-sm" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+                                <button class="btn btn-outline-primary btn-sm add_to_cart" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -350,3 +351,23 @@
 
 
 @endsection
+
+@section('scripts')
+    <script>
+        $('.add_to_cart').click(function(){
+var add_to_cart_id=$(this).parent().find('.add_to_cart_id').val()
+           console.log(add_to_cart_id);
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/add_to_cart_action",
+                data: {id: add_to_cart_id}, // serializes the form's elements.
+                success: function (data) {
+                }
+            });
+        })
+
+    </script>
+
+    @endsection

@@ -322,5 +322,6 @@
 <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
 <script src="/main_site/js/vendor.min.js"></script>
 <script src="/main_site/js/scripts.min.js"></script>
+@yield('scripts')
 </body>
 </html>

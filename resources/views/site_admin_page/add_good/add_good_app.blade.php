@@ -174,51 +174,45 @@
 
 
 
-
-@section('scripts')
-
-
-
-
     <!-- IMPORTANT: APP CONFIG -->
-    <script src="/smartAdmin/js/app.config.js"></script>
+    <script src="smartAdmin/js/app.config.js"></script>
     <!--CKEDITOR-->
     <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
 
     <!-- Jquery Validate -->
     <script src="{!! asset('inspinia/js/plugins/validate/jquery.validate.min.js') !!}"></script>
     <!-- BOOTSTRAP JS -->
-    <script src="/smartAdmin/js/bootstrap/bootstrap.min.js"></script>
+    <script src="smartAdmin/js/bootstrap/bootstrap.min.js"></script>
     <!-- Color picker -->
     <script src="{!! asset('inspinia/js/plugins/colorpicker/bootstrap-colorpicker.min.js') !!}"></script>
     <!-- CUSTOM NOTIFICATION -->
-    <script src="/smartAdmin/js/notification/SmartNotification.min.js"></script>
+    <script src="smartAdmin/js/notification/SmartNotification.min.js"></script>
     <!-- Steps -->
     <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
     <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
-    <script src="/smartAdmin/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+    <script src="smartAdmin/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
 
     <!-- JARVIS WIDGETS -->
-    <script src="/smartAdmin/js/smartwidgets/jarvis.widget.min.js"></script>
+    <script src="smartAdmin/js/smartwidgets/jarvis.widget.min.js"></script>
 
 
     <!-- SPARKLINES -->
-    <script src="/smartAdmin/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+    <script src="smartAdmin/js/plugin/sparkline/jquery.sparkline.min.js"></script>
 
     <!-- JQUERY MASKED INPUT -->
-    <script src="/smartAdmin/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+    <script src="smartAdmin/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
 
     <!-- JQUERY SELECT2 INPUT -->
-    <script src="/smartAdmin/js/plugin/select2/select2.min.js"></script>
+    <script src="smartAdmin/js/plugin/select2/select2.min.js"></script>
 
     <!-- JQUERY UI + Bootstrap Slider -->
-    <script src="/smartAdmin/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <script src="smartAdmin/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
 
     <!-- browser msie issue fix -->
-    <script src="/smartAdmin/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+    <script src="smartAdmin/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
 
     <!-- FastClick: For mobile devices -->
-    <script src="/smartAdmin/js/plugin/fastclick/fastclick.min.js"></script>
+    <script src="smartAdmin/js/plugin/fastclick/fastclick.min.js"></script>
 
     <!--[if IE 8]>
 
@@ -234,10 +228,10 @@
     <![endif]-->
 
     <!-- Demo purpose only -->
-    <script src="/smartAdmin/js/demo.min.js"></script>
+    <script src="smartAdmin/js/demo.min.js"></script>
 
     <!-- MAIN APP JS FILE -->
-    <script src="/smartAdmin/js/app.min.js"></script>
+    <script src="smartAdmin/js/app.min.js"></script>
 
     <!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
      <!-- PAGE RELATED PLUGIN(S) -->
@@ -245,12 +239,12 @@
 
 
     <!-- PAGE RELATED PLUGIN(S) -->
-    <script src="/smartAdmin/js/plugin/dropzone/dropzone.min.js"></script>
+    <script src="smartAdmin/js/plugin/dropzone/dropzone.min.js"></script>
 
     <!--script src="/js/jquery.Jcrop.min.js"></script>
 
   <!-- Image cropper -->
-    <script src="/inspinia/js/plugins/cropper/cropper.min.js"></script>
+    <script src="inspinia/js/plugins/cropper/cropper.min.js"></script>
 
 
 
@@ -1015,9 +1009,6 @@ $('.color_btn').click(function(){
 
 
     </script>
-
-
-
 
 </body>
 </html>

@@ -199,6 +199,7 @@
 
 
         // modal dialog init: custom buttons and a "close" callback reseting the form inside
+
         var dialog = $("#addtab").dialog({
             autoOpen : false,
             width : 600,
@@ -213,7 +214,7 @@
                 }
             }, {
 
-                html : "<i class='fa fa-plus'></i>&nbsp; Изменить",
+                html :  "<i class='fa fa-plus '></i>&nbsp; <span class='add_edit_category_btn'>Изменить</span>",
                 "class" : "btn btn-danger",
                 click : function(e) {
                     console.log('click_action')
@@ -269,7 +270,7 @@
             $('.edit_cat').click(function () {
                 console.log(333)
                 window.cat_id=$(this).parent().find('.fahover_cubes_input').val()
-
+                $( "#addtab" ).dialog( "option", "title", "Изменение названия категории" );
                 dialog.dialog("open");
                 return false;
 
@@ -279,6 +280,8 @@
             $('.categories').delegate('.edit_cat','click',function(event) {
                 console.log(334)
                 window.cat_id=$(this).parent().find('.fahover_cubes_input').val()
+                $('.add_edit_category_btn').text('Изменить')
+                $( "#addtab" ).dialog( "option", "title", "Изменение названия категории" );
 
                 dialog.dialog("open");
                 return false;
@@ -494,6 +497,8 @@
             console.log(334)
            window.cat_id=null;
            window.parent_cat_id=$(this).parent().find('.category_level').val()
+           $('.add_edit_category_btn').text('Добавить')
+           $( "#addtab" ).dialog( "option", "title", "Добавление новой категории в уровень" );
             console.log(window.parent_cat_id)
 
             dialog.dialog("open");
