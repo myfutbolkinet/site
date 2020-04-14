@@ -47,12 +47,23 @@ if($domain != "magelan.loc"){
     Route::post('/show_property_by_category','\App\Http\Ajax\FuncPropertiesClass@show_property_by_category');
     Route::post('/if_link_exist','FuncController@if_link_exist');
     Route::post('/add_to_cart_action', 'ShopingCartController@addToCart');
+    Route::post('/delete_from_cart', 'ShopingCartController@delete_product_by_one');
+    Route::post('/delete_from_cart_all', 'ShopingCartController@delete_products');
+
+    Route::post('/get_cart_items', 'ShopingCartController@showCart');
+    Route::post('/get_shoping_cart_items', 'ShopingCartController@showShopingCart');
+
+
+
     //Route::post('/delete_from_cart_action', 'ShopingCartController@delete_product_by_one');
     Route::post('/delete_from_cart_action', 'ShopingCartController@delete_products');
     Route::post('/update_cart_qty', 'ShopingCartController@updateCartQty');
 
     Route::get('/shoping_cart','ShopingCartController@getCart')->name('shoping_cart');
     Route::get('/checkout','ShopingCartController@showCheckout')->name('show_checkout');
+    Route::get('/checkout_shipping','ShopingCartController@showCheckoutShipping')->name('show_checkout_shipping');
+    Route::get('/checkout_payment','ShopingCartController@showCheckoutPayment')->name('show_checkout_payment');
+    Route::get('/checkout_review','ShopingCartController@showCheckoutReview')->name('show_checkout_review');
     Route::post('/send_order', 'ShopingCartController@getCheckout');
 
 

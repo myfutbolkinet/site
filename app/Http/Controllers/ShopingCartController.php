@@ -21,10 +21,22 @@ class ShopingCartController extends Controller
     protected $product;
 
     //
+    public function showCart(){
+
+        $data_content['cart'] = session()->get('cart');
+            return view('main_site.layouts.cart',$data_content);
+    }
+
+    public function showShopingCart(){
+
+        $data_content['cart'] = session()->get('cart');
+        return view('main_site.shop.shoping_cart_table',$data_content);
+    }
+
     public function addToCart(Request $request){
             $good = Good::with('photos')->find($request->input('id'));
             $this->product = $good;
-            $this->product['qnt'] = ($request->input('id')) ? (int)$request->input('id') : 1;
+            $this->product['qnt'] = ($request->input('qnt')) ? (int)$request->input('qnt') : 1;
 
             if (Session::has('cart')) {
                 $oldCart = session()->get('cart');
@@ -51,6 +63,7 @@ class ShopingCartController extends Controller
         }*/
     }
 
+
     public function getCart(){
     $data_content['curs']=CursController::index();
         $data_nav['curs']=CursController::index();
@@ -68,12 +81,10 @@ class ShopingCartController extends Controller
         $oldCart = session()->get('cart');
         $cart=new Cart($oldCart);
         $path='shoping_cart';
-        dump($cart);
         $data_content['products']=$cart->items;
         
         $data_content['totalPrice']=$cart->totalPrice;
-
-        return view('shop.shoping_cart',$data_content);
+        return view('main_site.shop.shoping_cart',$data_content);
     }
 
     public function showCheckout($error=null){
@@ -85,7 +96,46 @@ class ShopingCartController extends Controller
         $data_content['products']=$cart->items;
         $data_content['error']=$error;
         $data_content['totalPrice']=$cart->totalPrice;
-        return view('shop.checkout',$data_content);
+        return view('main_site.shop.checkout',$data_content);
+
+    }
+
+    public function showCheckoutShipping($error=null){
+
+        $data_nav['menu']=MenuController::index('categories');
+        $oldCart = session()->get('cart');
+        $cart=new Cart($oldCart);
+        $path='shoping_cart';
+        $data_content['products']=$cart->items;
+        $data_content['error']=$error;
+        $data_content['totalPrice']=$cart->totalPrice;
+        return view('main_site.shop.checkout_shipping',$data_content);
+
+    }
+
+    public function showCheckoutPayment($error=null){
+
+        $data_nav['menu']=MenuController::index('categories');
+        $oldCart = session()->get('cart');
+        $cart=new Cart($oldCart);
+        $path='shoping_cart';
+        $data_content['products']=$cart->items;
+        $data_content['error']=$error;
+        $data_content['totalPrice']=$cart->totalPrice;
+        return view('main_site.shop.checkout_payment',$data_content);
+
+    }
+
+    public function showCheckoutReview($error=null){
+
+        $data_nav['menu']=MenuController::index('categories');
+        $oldCart = session()->get('cart');
+        $cart=new Cart($oldCart);
+        $path='shoping_cart';
+        $data_content['products']=$cart->items;
+        $data_content['error']=$error;
+        $data_content['totalPrice']=$cart->totalPrice;
+        return view('main_site.shop.checkout_review',$data_content);
 
     }
 
@@ -171,6 +221,9 @@ class ShopingCartController extends Controller
     
     public function delete_product_by_one(Request $request){
         $id=json_decode($request->getContent(), true);
+        if(!$id){
+            $id=$request->input('id');
+        }
         if(!Session::has('cart')){
             return view('shop.shoping_cart',['products'=> null]);
 
@@ -186,6 +239,9 @@ class ShopingCartController extends Controller
 
     public function delete_products(Request $request){
         $id=json_decode($request->getContent(), true);
+        if(!$id){
+            $id=$request->input('id');
+        }
         if(!Session::has('cart')){
         return view('shop.shoping_cart',['products'=> null]);
         }
@@ -195,6 +251,11 @@ class ShopingCartController extends Controller
         session()->put('cart',$cart);
         session()->save();
         //return view('shop.shoping_cart',['products'=> $cart->items, 'totalPrice'=>$cart->totalPrice]);
+    }
+
+    public function getCartItems(){
+
+
     }
 
 }

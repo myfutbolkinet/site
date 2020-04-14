@@ -41,8 +41,8 @@ class SiteController extends Controller
 
     public function showProduct($id)
     {
-        $data['product']=\App\Good::where('id',$id)->with('photos')->first();
-
+        $data['product']=\App\Good::where('id',$id)->with('photos')->with('getSizes')->first();
+        $data_content['menu']=\App\Category::get();
         $models_exemplars=\App\Good::where('model_id',$data['product']->model_id)->with('colors')->get();
         foreach($models_exemplars as $good){
             $data_content['colors'][]=$good->colors->first();

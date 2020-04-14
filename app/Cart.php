@@ -66,7 +66,6 @@ class Cart
 
 
     public function delete_by_one($item,$id){
-
         $storedItem['qnt']=$item['qnt'];
         $storedItem['price']=$item['price'];
         $storedItem['summ_quantaty']=$item['summ_quantaty']-1;

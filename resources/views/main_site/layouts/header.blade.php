@@ -47,8 +47,8 @@
                         </ul>
                     </li>
                     <li><a href="shop-single.html">Single Product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li class="has-children"><a href="checkout-address.html"><span>Checkout</span></a>
+                    <li><a href="/shoping_cart">Cart</a></li>
+                    <li class="has-children"><a href="/checkout-address"><span>Checkout</span></a>
                         <ul class="sub-menu">
                             <li><a href="checkout-address.html">Address</a></li>
                             <li><a href="checkout-shipping.html">Shipping</a></li>
@@ -212,28 +212,34 @@
                         <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
                     </ul>
                 </div>
-                <div class="cart"><a href="cart.html"></a><i class="icon-bag"></i><span class="count">{{(isset($cart->totalQty)) ? $cart->totalQty : 0 }}</span><span class="subtotal">{{(isset($cart->totalPrice)) ? $cart->totalPrice : 0 }} грн.</span>
-                   @if(isset($cart->items))
-                    <div class="toolbar-dropdown">
-                        @foreach($cart->items as $key=>$item)
-                            <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="shop-single.html"><img src="/storage/goods/{{$item['item']->name}}" alt="Product"></a>
-                                <div class="dropdown-product-info"><a class="dropdown-product-title" href="/product/{{$item['item']->id}}">{{$item['item']->name}}</a><span class="dropdown-product-details">{{$item['qnt']}} x {{$item['price']}}</span></div>
-                            </div>
-                        @endforeach
-
-                        <!--span class="summ"></span-->
-                        <div class="toolbar-dropdown-group">
-                            <div class="column"><span class="text-lg">Всего:</span></div>
-                            <div class="column text-right"><span class="text-lg text-medium">{{(isset($cart->totalPrice)) ? $cart->totalPrice : 0 }} грн.</span></div>
-                        </div>
-                        <div class="toolbar-dropdown-group">
-                            <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="cart.html">Подробнее</a></div>
-                            <div class="column"><a class="btn btn-sm btn-block btn-success" href="checkout-address.html">Заказать</a></div>
-                        </div>
-                    </div>
-                       @endif
+                <div class="cart">
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+@section('scripts_header')
+<script>
+    console.log(123)
+    $.reloadCart();
+
+        $('.delete_from_cart').click(function(){
+        var id=$(this).parent().parent().find('.cart_item_id').val()
+            console.log(id)
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/delete_from_cart",
+                data: {id: id}, // serializes the form's elements.
+                success: function (data) {
+                }
+            });
+        })
+
+
+
+</script>
+
+@endsection

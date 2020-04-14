@@ -28,23 +28,23 @@
         <div class="row">
             <!-- Poduct Gallery-->
             <div class="col-md-6">
-                <div class="product-gallery"><span class="product-badge text-danger">30% Off</span>
+                <div class="product-gallery"><span class="product-badge text-danger">{{$product->discount}}% Off</span>
                     <div class="gallery-wrapper">
 
                         @foreach($product->photos->get() as $photo)
-                        <div class="gallery-item active"><a href="/storage/goods/{{$photo->photo}}" data-hash="hash_{{$photo->id}}" data-size="1000x667"></a></div>
+                        <div class="gallery-item active"><a href="/storage/{{$photo->photo}}" data-hash="hash_{{$photo->id}}" data-size="1000x667"></a></div>
 
                             @endforeach
                     </div>
                     <div class="product-carousel owl-carousel">
                         @foreach($product->photos->get() as $photo)
 
-                        <div data-hash="hash_{{$photo->id}}"><img src="/storage/goods/{{$photo->photo}}" alt="Product"></div>
+                        <div data-hash="hash_{{$photo->id}}"><img src="/storage/{{$photo->photo}}" alt="Product"></div>
                         @endforeach
                     </div>
                     <ul class="product-thumbnails">
                         @foreach($product->photos->get() as $key=> $photo)
-                        <li @if($key==1)class="active"@endif><a href="#hash_{{$photo->id}}"><img src="/storage/goods/{{$photo->photo}}" alt="Product"></a></li>
+                        <li @if($key==1)class="active"@endif><a href="#hash_{{$photo->id}}"><img src="/storage/{{$photo->photo}}" alt="Product"></a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -54,22 +54,21 @@
                 <div class="padding-top-2x mt-2 hidden-md-up"></div>
                 <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star"></i>
                 </div><span class="text-muted align-middle">&nbsp;&nbsp;4.2 | 3 customer reviews</span>
-                <h2 class="padding-top-1x text-normal">Reebok Royal CL Jogger 2</h2><span class="h2 d-block">
-              <del class="text-muted text-normal">$68.00</del>&nbsp; $47.60</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus quos ea dolore rem, molestias laudantium et explicabo assumenda fugiat deserunt in, facilis laborum excepturi aliquid nobis ipsam deleniti aut? Aliquid sit hic id velit qui fuga nemo suscipit obcaecati. Officia nisi quaerat minus nulla saepe aperiam sint possimus magni veniam provident.</p>
+                <h2 class="padding-top-1x text-normal">{{$product->name}}</h2><span class="h2 d-block">
+              <del class="text-muted text-normal">{{$product->price}}грн.</del>{{$product->price-(($product->price/100)*$product->discount)}}грн</span>
+                <? print($product->description);?>
                 <div class="row margin-top-1x">
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="size">Men's size</label>
+                            <label for="size">Размеры</label>
+
                             <select class="form-control" id="size">
                                 <option>Chooze size</option>
-                                <option>11.5</option>
-                                <option>11</option>
-                                <option>10.5</option>
-                                <option>10</option>
-                                <option>9.5</option>
-                                <option>9</option>
-                                <option>8.5</option>
+                                @foreach($product->getSizes->get() as $size)
+
+                                <option value="{{$size->id}}">{{$size->name}}</option>
+
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -105,7 +104,7 @@
                     </div>
                     <div class="sp-buttons mt-2 mb-2">
                         <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                        <button class="btn btn-primary" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> Add to Cart</button>
+                        <button class="btn btn-primary" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> В Корзину</button>
                     </div>
                 </div>
             </div>
@@ -119,7 +118,7 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="description" role="tabpanel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error blanditiis a, deserunt magnam pariatur quam suscipit quae. Veniam, deserunt reprehenderit quasi hic recusandae itaque omnis fugiat animi architecto facilis repellendus. Commodi dolorem, eius consectetur. Amet maiores nemo at nobi s aspernatur velit, sequi odio, a veritatis inventore autem esse provident in? Placeat, sunt!</p>
+                        <? print($product->description2);?>
                         <p class="mb-30">Iste assumenda, vitae, aliquam excepturi libero quia ullam quisquam tenetur id sint labore. Pariatur praesentium velit, fugit facere maxime voluptates optio qui? Quidem obcaecati necessitatibus rem aspernatur, mollitia, assumenda explicabo numquam minus eos sapiente totam dicta, laborum dolorum! Vitae distinctio quos non ut fugiat.</p>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="//www.youtube.com/embed/B81qd2v6alw?rel=0" allowfullscreen></iframe>

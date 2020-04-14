@@ -54,10 +54,10 @@
                     <!-- Product-->
                     <div class="grid-item">
                         <div class="product-card">
-                            <div class="product-badge text-danger">50% Off</div><a class="product-thumb" href="/product/{{$good->id}}"><img src="/storage/goods/{{$good->photos->first()->photo}}" alt="Product"></a>
-                            <h3 class="product-title"><a href="shop-single.html">Unionbay Park</a></h3>
+                            <div class="product-badge text-danger">{{$good->discount}}% Off</div><a class="product-thumb" href="/product/{{$good->id}}"><img src="/storage/{{$good->photos->first()->photo}}" alt="Product"></a>
+                            <h3 class="product-title"><a href="shop-single.html">{{$good->name}}</a></h3>
                             <h4 class="product-price">
-                                <del>$99.99</del>$49.99
+                                <del>{{$good->price}}грн.</del>{{$good->price-(($good->price/100)*$good->discount)}}грн
                             </h4>
                             <div class="product-buttons">
                                 <input type="hidden" class="add_to_cart_id" value="{{$good->id}}">
@@ -356,7 +356,7 @@
     <script>
         $('.add_to_cart').click(function(){
 var add_to_cart_id=$(this).parent().find('.add_to_cart_id').val()
-           console.log(add_to_cart_id);
+           console.log('add_to_cart_id',add_to_cart_id);
             $.ajax({
                 method: 'POST',
                 dataType: 'json',
@@ -364,8 +364,12 @@ var add_to_cart_id=$(this).parent().find('.add_to_cart_id').val()
                 url: "/add_to_cart_action",
                 data: {id: add_to_cart_id}, // serializes the form's elements.
                 success: function (data) {
+
                 }
             });
+            console.log('add_to_cart_action')
+            $('.cart').empty()
+            $.reloadCart()
         })
 
     </script>

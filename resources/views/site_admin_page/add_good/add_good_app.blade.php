@@ -53,7 +53,7 @@
 
     <!--link rel="stylesheet" type="text/css" media="screen" href="/css/neu.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/credit_edit_media.css"-->
-    <!--link href="{!! asset('/inspinia/css/style.css') !!}" rel="stylesheet"-->
+<!--link href="{!! asset('/inspinia/css/style.css') !!}" rel="stylesheet"-->
     <link href="{!! asset('/css/style_admin.css') !!}" rel="stylesheet">
     <link href="{!! asset('inspinia/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css') !!}" rel="stylesheet">
     <!--link href="/css/jquery.Jcrop.css" rel="stylesheet"-->
@@ -163,63 +163,33 @@
 <!-- HEADER -->
 @include ('layouts.admin_header');
 <!-- END HEADER -->
-        <!-- Navigation -->
-        @include('layouts.navigation_view')
+<!-- Navigation -->
+@include('layouts.navigation_view')
 
 
 
 
-            @yield('content')
-
-
-
+@yield('content')
 
     <!-- IMPORTANT: APP CONFIG -->
-    <script src="smartAdmin/js/app.config.js"></script>
+    <script src="/smartAdmin/js/app.config.js"></script>
     <!--CKEDITOR-->
     <script src="{!! asset('ckeditor/ckeditor.js') !!}"></script>
 
     <!-- Jquery Validate -->
     <script src="{!! asset('inspinia/js/plugins/validate/jquery.validate.min.js') !!}"></script>
     <!-- BOOTSTRAP JS -->
-    <script src="smartAdmin/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/smartAdmin/js/bootstrap/bootstrap.min.js"></script>
     <!-- Color picker -->
     <script src="{!! asset('inspinia/js/plugins/colorpicker/bootstrap-colorpicker.min.js') !!}"></script>
     <!-- CUSTOM NOTIFICATION -->
-    <script src="smartAdmin/js/notification/SmartNotification.min.js"></script>
+    <script src="/smartAdmin/js/notification/SmartNotification.min.js"></script>
     <!-- Steps -->
     <script src="{!! asset('inspinia/js/plugins/steps/jquery.steps.min.js') !!}"></script>
     <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
-    <script src="smartAdmin/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+    <script src="/smartAdmin/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
 
-    <!-- JARVIS WIDGETS -->
-    <script src="smartAdmin/js/smartwidgets/jarvis.widget.min.js"></script>
-
-
-    <!-- SPARKLINES -->
-    <script src="smartAdmin/js/plugin/sparkline/jquery.sparkline.min.js"></script>
-
-    <!-- JQUERY MASKED INPUT -->
-    <script src="smartAdmin/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
-
-    <!-- JQUERY SELECT2 INPUT -->
-    <script src="smartAdmin/js/plugin/select2/select2.min.js"></script>
-
-    <!-- JQUERY UI + Bootstrap Slider -->
-    <script src="smartAdmin/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
-
-    <!-- browser msie issue fix -->
-    <script src="smartAdmin/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
-
-    <!-- FastClick: For mobile devices -->
-    <script src="smartAdmin/js/plugin/fastclick/fastclick.min.js"></script>
-
-    <!--[if IE 8]>
-
-
-
-
-<!-- iCheck -->
+    <!-- iCheck -->
     <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
     <!--[if IE 8]>
 
@@ -228,32 +198,32 @@
     <![endif]-->
 
     <!-- Demo purpose only -->
-    <script src="smartAdmin/js/demo.min.js"></script>
+    <script src="/smartAdmin/js/demo.min.js"></script>
 
     <!-- MAIN APP JS FILE -->
-    <script src="smartAdmin/js/app.min.js"></script>
+    <script src="/smartAdmin/js/app.min.js"></script>
 
     <!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
-     <!-- PAGE RELATED PLUGIN(S) -->
+    <!-- PAGE RELATED PLUGIN(S) -->
 
 
 
     <!-- PAGE RELATED PLUGIN(S) -->
-    <script src="smartAdmin/js/plugin/dropzone/dropzone.min.js"></script>
+    <script src="/smartAdmin/js/plugin/dropzone/dropzone.min.js"></script>
 
     <!--script src="/js/jquery.Jcrop.min.js"></script>
 
   <!-- Image cropper -->
-    <script src="inspinia/js/plugins/cropper/cropper.min.js"></script>
+    <script src="/inspinia/js/plugins/cropper/cropper.min.js"></script>
 
 
 
     <!-- iCheck -->
     <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
-<script>
+    <script>
 
 
-</script>
+    </script>
 
     <script>
         // Replace the <textarea id="editor1"> with a CKEditor
@@ -262,67 +232,67 @@
 
 
         Dropzone.autoDiscover = false;
-var myDropzone_files=[];
-           $("#mydropzone").dropzone({
-                url: "/admin/fileupload",
-                params: {
+        var myDropzone_files=[];
+        $("#mydropzone").dropzone({
+            url: "/admin/fileupload",
+            params: {
 
-                },
-                addRemoveLinks : true,
-                maxFilesize: 2.5,
-                dictDefaultMessage: '<span class="text-center"><span class="font-lg visible-xs-block visible-sm-block visible-lg-block"><span class="font-lg"><i class="fa fa-caret-right text-danger"></i> Drop files <span class="font-xs">to upload</span></span><span>&nbsp&nbsp<h4 class="display-inline"> (Or Click)</h4></span>',
-                dictResponseError: 'Error uploading file!',
-                paramName: "file",
-                autoProcessQueue: true,
-                uploadMultiple: false, // uplaod files in a single request
-                //parallelUploads: 100, // use it with uploadMultiple
-                maxFiles: 5,
-                acceptedFiles: ".png, .jpeg, .jpg",
-                // Language Strings
-                dictFileTooBig: "File is to big ",
-                dictInvalidFileType: "Invalid File Type",
-                dictCancelUpload: "Cancel",
-                dictRemoveFile: "Remove",
-                dictMaxFilesExceeded: "Only 5 files are allowed",
-                dictDefaultMessage: "Drop files here to upload",
-               init: function(file) {
+            },
+            addRemoveLinks : true,
+            maxFilesize: 2.5,
+            dictDefaultMessage: '<span class="text-center"><span class="font-lg visible-xs-block visible-sm-block visible-lg-block"><span class="font-lg"><i class="fa fa-caret-right text-danger"></i> Drop files <span class="font-xs">to upload</span></span><span>&nbsp&nbsp<h4 class="display-inline"> (Or Click)</h4></span>',
+            dictResponseError: 'Error uploading file!',
+            paramName: "file",
+            autoProcessQueue: true,
+            uploadMultiple: false, // uplaod files in a single request
+            //parallelUploads: 100, // use it with uploadMultiple
+            maxFiles: 5,
+            acceptedFiles: ".png, .jpeg, .jpg",
+            // Language Strings
+            dictFileTooBig: "File is to big ",
+            dictInvalidFileType: "Invalid File Type",
+            dictCancelUpload: "Cancel",
+            dictRemoveFile: "Remove",
+            dictMaxFilesExceeded: "Only 5 files are allowed",
+            dictDefaultMessage: "Drop files here to upload",
+            init: function(file) {
 
 
 
-               },
-                success: function(file, data){
-                    myDropzone_files.push(file)
-                    console.log(data);
-                },
-                removedfile:function(file){
-                    console.log(myDropzone_files);
-                    var index=myDropzone_files.map(function(obj,index){
-                        if(file==obj){
-                            return index;
-                        }
-                    }).filter(isFinite)[0];
-                    console.log(index);
+            },
+            success: function(file, data){
+                myDropzone_files.push(file)
+                console.log(data);
+            },
+            removedfile:function(file){
+                console.log(myDropzone_files);
+                var index=myDropzone_files.map(function(obj,index){
+                    if(file==obj){
+                        return index;
+                    }
+                }).filter(isFinite)[0];
+                console.log(index);
 
-                    $.ajax({
-                        type: "POST",
-                        dataType: 'json',
-                        async: false,
-                        url: '/admin/delete_image_from_session',
-                        data: {file_index: index}, // serializes the form's elements.
-                        success: function (dataprop) {
-                            console.log(dataprop);
-                        }
+                $.ajax({
+                    type: "POST",
+                    dataType: 'json',
+                    async: false,
+                    url: '/admin/delete_image_from_session',
+                    data: {file_index: index}, // serializes the form's elements.
+                    success: function (dataprop) {
+                        console.log(dataprop);
+                    }
 
-                    });
-                }
-            });
+                });
+            }
+        });
 
 
 
 
 
         setTimeout(function(){
-           // CKEDITOR.replace( 'editor1' );
+            CKEDITOR.replace( 'editor1' );
         },500);
     </script>
 
@@ -448,7 +418,7 @@ var myDropzone_files=[];
                 var color=$(this).parent('.color_div').find('input').val()
                 alert(color)
                 if (confirm("Удалить цвет "+color+"?")) {
-                $(this).parent('.color_div').remove() ;
+                    $(this).parent('.color_div').remove() ;
                     alert("Цвет "+color+" удален!")
                 } else {
                     alert("Вы нажали кнопку отмена")
@@ -458,14 +428,14 @@ var myDropzone_files=[];
             })
 
 
-    $('.cat_name').focus(function (){
+            $('.cat_name').focus(function (){
 
 
-    }, function (){
-        //mouse leave
-        $('input[name="name"]').focus();alert('Чтобы ввести в это поле информацию выберите категорию в таблице ниже,конечная категория будет зафиксированна')
+            }, function (){
+                //mouse leave
+                $('input[name="name"]').focus();alert('Чтобы ввести в это поле информацию выберите категорию в таблице ниже,конечная категория будет зафиксированна')
 
-    });
+            });
 
 
             ///////////////////////////////////////////////////////////////////////////////////////--photos adding--//////////////////////////////////////////////////////
@@ -477,8 +447,8 @@ var myDropzone_files=[];
             });
 
             $(".fileupload").change(function (e){//input[name='myFile']
-var photo_id=$(this).parent().find('.photo_id').val()
-console.log('photo_id=>',photo_id)
+                var photo_id=$(this).parent().find('.photo_id').val()
+                console.log('photo_id=>',photo_id)
 
 
                 var fileName = $(this).val();
@@ -508,8 +478,8 @@ console.log('photo_id=>',photo_id)
                         _this.parent('div').parent('.photo').find('.photo_blocks').find('.photo_image').empty();
                         _this.parent('div').parent('.photo').find('.photo_blocks').find('.photo_image').prepend(
 
-                           "<img style='position:absolute;margin-left:-13px;z-index:998;width:100%;height:100%' src='/storage/"+file+"'>"+
-                               "<div style='margin-left:-13px;z-index:999;width:100%;height:100%;position:absolute;background:rgba(255,255,255,0.5)'></div>"
+                            "<img style='position:absolute;margin-left:-13px;z-index:998;width:100%;height:100%' src='/storage/"+file+"'>"+
+                            "<div style='margin-left:-13px;z-index:999;width:100%;height:100%;position:absolute;background:rgba(255,255,255,0.5)'></div>"
                         );
                         _this.parent('div').parent('.photo').find('.photo_blocks').find('.photo_icon .fa-camera').css('color','#fff')
                     }
@@ -519,17 +489,17 @@ console.log('photo_id=>',photo_id)
 
 
 
- ///////////////////////////////////////////////////////////////////////////////////////--colors adding--//////////////////////////////////////////////////////
-$('.color_btn').click(function(){
-    var color=$('.input_color').val()
-    alert(color)
-    $('.position_colors').append('<div class="color_div" style="width:150px;display:inline-block">' +
-        '<input type="text" style="width:100px;" name="color[]" class="demo1" value="'+color+'" />' +
-        '<div style="background:'+color+';display:inline-block;width:25px;height:25px"></div>' +
-        '<a class="btn_delete_color btn btn-danger btn-rounded btn-outline" href="#">Удалить</a></div>')
+            ///////////////////////////////////////////////////////////////////////////////////////--colors adding--//////////////////////////////////////////////////////
+            $('.color_btn').click(function(){
+                var color=$('.input_color').val()
+                alert(color)
+                $('.position_colors').append('<div class="color_div" style="width:150px;display:inline-block">' +
+                    '<input type="text" style="width:100px;" name="color[]" class="demo1" value="'+color+'" />' +
+                    '<div style="background:'+color+';display:inline-block;width:25px;height:25px"></div>' +
+                    '<a class="btn_delete_color btn btn-danger btn-rounded btn-outline" href="#">Удалить</a></div>')
 
 
-});
+            });
 
 
 
@@ -539,7 +509,7 @@ $('.color_btn').click(function(){
                 color: divStyle.backgroundColor
             }).on('changeColor', function(ev) {
                 divStyle.backgroundColor = ev.color.toHex();
-            $('.input_color').val(ev.color.toHex())
+                $('.input_color').val(ev.color.toHex())
             });
 
 
@@ -559,85 +529,83 @@ $('.color_btn').click(function(){
                     data: {id_cat: id_cat,is_user:1}, // serializes the form's elements.
                     success: function (data) {
                         if(data.message=='null'){
-                        //проверить чтобы соседние последующие блоки были пусты
+                            //проверить чтобы соседние последующие блоки были пусты
 
-                        $('input[name="id_cat"]').val(data.value.id)
-                        $('.cat_name').val(data.value.info.name)
+                            $('input[name="id_cat"]').val(data.value.id)
+                            $('.cat_name').val(data.value.info.name)
                             alert('меняется категория')
-                        //достать все свойства категории и отобразить в блоке #properties Временно заремлена
-         /*                   $.ajax({
-                                type: "POST",
-                                dataType: 'json',
-                                async: false,
-                                url: '/show_property_by_category',
-                                data: {id_cat: data.value.id},
-                                success: function (dataprop) {
-                                    if(dataprop=='no_properties'){
+                            //достать все свойства категории и отобразить в блоке #properties Временно заремлена
+                            /*                   $.ajax({
+                             type: "POST",
+                             dataType: 'json',
+                             async: false,
+                             url: '/show_property_by_category',
+                             data: {id_cat: data.value.id},
+                             success: function (dataprop) {
+                             if(dataprop=='no_properties'){
 
 
-                                    }
-                                else{
-                                console.log(dataprop);
-                                $('#properties').empty();
-                                     $.each( dataprop, function( k, prop ) {
-                                       $('#properties').append(' <div style="border-right:1px solid #000;border-left:1px solid #000" class="prop col-md-3" >' +
-                                            '<input type="hidden" value="'+prop.id+'">' +
-                                           ' <div><h3 style="text-align:center;margin-top:10px;">'+prop.name+'</h3></div>'
-                                            +'<div id="prop_datas_'+k+'" class=""></div>'+
-                                            '</div>')
+                             }
+                             else{
+                             console.log(dataprop);
+                             $('#properties').empty();
+                             $.each( dataprop, function( k, prop ) {
+                             $('#properties').append(' <div style="border-right:1px solid #000;border-left:1px solid #000" class="prop col-md-3" >' +
+                             '<input type="hidden" value="'+prop.id+'">' +
+                             ' <div><h3 style="text-align:center;margin-top:10px;">'+prop.name+'</h3></div>'
+                             +'<div id="prop_datas_'+k+'" class=""></div>'+
+                             '</div>')
 
-                                    $.each( prop.data, function( v, dat ) {
-                                   $('#prop_datas_'+k).append('<div><div class="i-checks"><label><input type="radio" value="'+dat.id+'" name="property['+prop.id+'][]"> <i></i> '+dat.data+'</label></div></div>');
-                                    });
-
-
-                                         $('.i-checks').iCheck({
-                                             checkboxClass: 'icheckbox_square-green',
-                                             radioClass: 'iradio_square-green',
-                                         });
-                                     });
-                                }
-                                }
-
-                            });*/
+                             $.each( prop.data, function( v, dat ) {
+                             $('#prop_datas_'+k).append('<div><div class="i-checks"><label><input type="radio" value="'+dat.id+'" name="property['+prop.id+'][]"> <i></i> '+dat.data+'</label></div></div>');
+                             });
 
 
-                        //если (data.value.info.parent_num) ==2
-                        //удалить 3,4
+                             $('.i-checks').iCheck({
+                             checkboxClass: 'icheckbox_square-green',
+                             radioClass: 'iradio_square-green',
+                             });
+                             });
+                             }
+                             }
+
+                             });*/
+
+
+                            //если (data.value.info.parent_num) ==2
+                            //удалить 3,4
                             // если (data.value.info.parent_num) ==3
                             //4
-                         if(data.value.info.parent_num==2){
-                             $('.cat_block_3').empty();
-                             $('.cat_block_4').empty();
-                         }
-                         else if(data.value.info.parent_num==3){
-                             $('.cat_block_4').empty();
-                         }
-
-                        }
-                       else{
-                        $('.'+new_block_cl+'').empty();
-                        switch(new_block_cl){
-                            case 'cat_block_2':
+                            if(data.value.info.parent_num==2){
                                 $('.cat_block_3').empty();
                                 $('.cat_block_4').empty();
-                                break;
-                            case 'cat_block_3':
+                            }
+                            else if(data.value.info.parent_num==3){
                                 $('.cat_block_4').empty();
-                                break;
+                            }
 
                         }
-                        $.each( data.value, function( key, value ) {
+                        else{
+                            $('.'+new_block_cl+'').empty();
+                            switch(new_block_cl){
+                                case 'cat_block_2':
+                                    $('.cat_block_3').empty();
+                                    $('.cat_block_4').empty();
+                                    break;
+                                case 'cat_block_3':
+                                    $('.cat_block_4').empty();
+                                    break;
 
-                            console.log(value.name)
-                            $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
-                                '<input type="hidden" value="'+value.id+'">' +
-                                value.name+
-                                '<span class="fa arrow" style="float:right"></span>' +
-                                '</div></a>')
-                        });
+                            }
+                            $.each( data.value, function( key, value ) {
+                                $('.'+new_block_cl+'').append(' <a ><div class="cat_block" >' +
+                                    '<input type="hidden" value="'+value.id+'">' +
+                                    value.name+
+                                    '<span class="fa arrow" style="float:right"></span>' +
+                                    '</div></a>')
+                            });
 
-                    }}
+                        }}
 
                 });
 
@@ -776,14 +744,14 @@ $('.color_btn').click(function(){
                 context.drawImage(image, 0, 0);
 
                 canvas.cropper("replace", res);
-             /*   $("#canvas").Jcrop({
-                    onSelect: selectcanvas,
-                    onRelease: clearcanvas,
-                    boxWidth: crop_max_width,
-                    boxHeight: crop_max_height
-                }, function() {
-                    jcrop_api = this;
-                });*/
+                /*   $("#canvas").Jcrop({
+                 onSelect: selectcanvas,
+                 onRelease: clearcanvas,
+                 boxWidth: crop_max_width,
+                 boxHeight: crop_max_height
+                 }, function() {
+                 jcrop_api = this;
+                 });*/
                 //clearcanvas();
             }
 
@@ -914,11 +882,11 @@ $('.color_btn').click(function(){
                         fileReader.readAsDataURL(file);
 
                         canvas = null;
-                  /*      reader.onload = function(e) {
-                            image = new Image();
-                            image.onload = validateImageC;
-                            image.src = e.target.result;
-                        }*/
+                        /*      reader.onload = function(e) {
+                         image = new Image();
+                         image.onload = validateImageC;
+                         image.src = e.target.result;
+                         }*/
                         //reader.readAsDataURL(input.files[0]);
                         reader.readAsDataURL(file);
 
@@ -926,12 +894,12 @@ $('.color_btn').click(function(){
                             $inputImage.val("");
                             $image.cropper("reset", true).cropper("replace", this.result);
                             console.log($image)
-                         /*   image = new Image();
-                            image.onload = validateImageC(this.result);
-                            image.src = e.target.result;
-                            console.log(image)*/
+                            /*   image = new Image();
+                             image.onload = validateImageC(this.result);
+                             image.src = e.target.result;
+                             console.log(image)*/
 
-                            };
+                        };
                     } else {
                         showMessage("Please choose an image file.");
                     }
@@ -1009,6 +977,9 @@ $('.color_btn').click(function(){
 
 
     </script>
+
+
+
 
 </body>
 </html>

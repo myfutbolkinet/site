@@ -29,7 +29,7 @@
 <!-- Off-Canvas Category Menu-->
 <div class="offcanvas-container" id="shop-categories">
     <div class="offcanvas-header">
-        <h3 class="offcanvas-title">Shop Categories </h3>
+        <h3 class="offcanvas-title">Shop Categories 2 </h3>
     </div>
     @include('main_site.layouts.nav')
 </div>
@@ -323,5 +323,26 @@
 <script src="/main_site/js/vendor.min.js"></script>
 <script src="/main_site/js/scripts.min.js"></script>
 @yield('scripts')
+<script>
+
+    $.reloadCart= function (){
+        console.log('reloadCart')
+        $.ajax({
+            method: 'POST',
+            dataType: 'html',
+            async:false,
+            url: "/get_cart_items",
+            success: function (data) {
+                console.log(data)
+                $('.cart_block').empty()
+                $('.cart').empty()
+                $('.cart').append(data)
+
+            }
+        });
+    }
+</script>
+@yield('scripts_header')
+@yield('scripts_cart')
 </body>
 </html>

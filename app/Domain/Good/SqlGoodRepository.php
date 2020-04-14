@@ -27,6 +27,7 @@ class SqlGoodRepository implements GoodRepositoryInterface
                 } else {
                     $res_array['user_id'] = $good->getUser()->getId();
                 }
+                $res_array['site_id'] = 1;
 
             }
             //dump('$res_array',$res_array);
