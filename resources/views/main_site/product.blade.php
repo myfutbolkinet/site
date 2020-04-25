@@ -103,8 +103,9 @@
                         <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
                     </div>
                     <div class="sp-buttons mt-2 mb-2">
+                        <input type="hidden" class="add_to_cart_id" value="{{$product->id}}">
                         <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                        <button class="btn btn-primary" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> В Корзину</button>
+                        <button class="btn btn-primary add_to_cart" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> В Корзину</button>
                     </div>
                 </div>
             </div>
@@ -301,5 +302,29 @@
     </div>
 
 </div>
+
+@endsection
+
+@section('scripts')
+    <script>
+        $('.add_to_cart').click(function(){
+            var add_to_cart_id=$(this).parent().find('.add_to_cart_id').val()
+            console.log('add_to_cart_id',add_to_cart_id);
+            $.ajax({
+                method: 'POST',
+                dataType: 'json',
+                async:false,
+                url: "/add_to_cart_action",
+                data: {id: add_to_cart_id}, // serializes the form's elements.
+                success: function (data) {
+
+                }
+            });
+            console.log('add_to_cart_action')
+            $('.cart').empty()
+            $.reloadCart()
+        })
+
+    </script>
 
 @endsection

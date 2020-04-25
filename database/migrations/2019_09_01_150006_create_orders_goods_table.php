@@ -18,7 +18,7 @@ class CreateOrdersGoodsTable extends Migration
 
         Schema::create('orders_goods', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('order_id');
+            $table->string('order_id');
             $table->integer('good_id');
             $table->integer('quantaty');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\MailService;
+use App\OrdersGood;
 use Illuminate\Http\Request;
 use App\Good;
 use App\Http\Libraries\Display_lib;
@@ -13,6 +14,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
 use App\Cart;
 use Auth;
+use App\Order;
+use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\CursController;
 class ShopingCartController extends Controller
 {
@@ -256,6 +259,57 @@ class ShopingCartController extends Controller
     public function getCartItems(){
 
 
+    }
+
+    public function checkoutComplete($error=null){
+
+        $data_nav['menu']=MenuController::index('categories');
+        $oldCart = session()->get('cart');
+        dump($oldCart);
+        $path='shoping_cart';
+
+
+        //$order->user_id = Auth()->id();
+        $latestOrder = \App\Order::orderBy('created_at','DESC')->first();
+        if(!$latestOrder){
+            $id=1;
+        }
+        else{
+            $id=$latestOrder->id;
+        }
+        $s = substr(str_shuffle(str_repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 2)), 0, 2);
+        $order = new Order;
+        $order_nr=$s.str_pad($id + 1, 8, "0", STR_PAD_LEFT);
+        $order->order_nr = $order_nr;
+        $order->status='not_payed';
+        $order->client_email=session()->get('client_email');
+        $order->client_phone=session()->get('client_phone');
+        $order->client_name=session()->get('client_name');
+        $order->save();
+        foreach($oldCart->items as $item){
+            $orderProduct = new OrdersGood();
+            $orderProduct->order_id=$order_nr;
+            $orderProduct->good_id=$item['item']->id;
+            $orderProduct->quantaty=$item['qnt'];
+            $orderProduct->save();
+        }
+
+
+
+
+        $data_content['error']=$error;
+        return view('main_site.shop.checkout_complete',$data_content);
+
+    }
+
+    public function saveCustomerAddress($link){
+
+        session()->put('client_email',Input::get('email'));
+        session()->put('client_phone',Input::get('phone'));
+        session()->put('client_name',Input::get('name'));
+        session()->put('client_last_name',Input::get('name'));
+        //dd(session()->get('customer_email'));
+        return redirect($link);
     }
 
 }

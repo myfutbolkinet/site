@@ -64,6 +64,10 @@ if($domain != "magelan.loc"){
     Route::get('/checkout_shipping','ShopingCartController@showCheckoutShipping')->name('show_checkout_shipping');
     Route::get('/checkout_payment','ShopingCartController@showCheckoutPayment')->name('show_checkout_payment');
     Route::get('/checkout_review','ShopingCartController@showCheckoutReview')->name('show_checkout_review');
+    Route::get('/checkout_complete','ShopingCartController@checkoutComplete')->name('checkout_complete');
+    Route::get('/save_customer_address/{link}','ShopingCartController@saveCustomerAddress')->name('save_customer_address');
+
+
     Route::post('/send_order', 'ShopingCartController@getCheckout');
 
 
@@ -75,6 +79,8 @@ if($domain != "magelan.loc"){
     Route::group(['prefix' => 'admin'],function(){
 
 
+        Route::get('/orders','SiteAdmin\OrdersController@index');
+        Route::post('/orders/data','SiteAdmin\OrdersController@postData');
         Route::post('/change_category_name','SiteAdmin\CategoriesController@changeCatName');
         Route::get('/categories/add','SiteAdmin\CategoriesController@add_show');
         Route::get('/categories','SiteAdmin\CategoriesController@index');

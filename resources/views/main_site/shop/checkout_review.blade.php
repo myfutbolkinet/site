@@ -78,8 +78,8 @@
                         </div>
                     </div>
                     <div class="checkout-footer margin-top-1x">
-                        <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="checkout-payment.html"><i class="icon-arrow-left"></i>&nbsp;Back</a></div>
-                        <div class="column"><a class="btn btn-primary" href="checkout-complete.html">Complete Order</a></div>
+                        <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="checkout_-payment"><i class="icon-arrow-left"></i>&nbsp;Back</a></div>
+                        <div class="column"><a class="btn btn-primary" href="checkout_complete">Отправить заказ</a></div>
                     </div>
                 </div>
                 <!-- Sidebar          -->

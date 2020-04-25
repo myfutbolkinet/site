@@ -53,9 +53,9 @@ class SitePagesMenuController extends SiteAdminController
 
        // var_dump($request->site_id);
         if(!empty(json_decode($request->string_data))){
-            var_dump($request->string_data);
+            //var_dump($request->string_data);
             $update=[
-                'data'=>$request->string_data
+                'data'=>serialize($request->string_data)
             ];
             if(\App\MerchantSiteMenuPosition::where('site_id',$request->site_id)->update($update)){
                 return json_encode(['message'=>'success']);

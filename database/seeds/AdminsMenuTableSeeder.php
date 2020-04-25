@@ -66,7 +66,7 @@ class AdminsMenuTableSeeder extends Seeder
                 'parent_id' => 0,
                 'name' => 'Замовлення',
                 'icon'=> 'fa-envelope',
-                'link'=> '/admin',
+                'link'=> '/admin/orders',
                 'type'=>'linked'
 
             ],

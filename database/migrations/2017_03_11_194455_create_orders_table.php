@@ -18,9 +18,18 @@ class CreateOrdersTable extends Migration
 
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('id_good');
-            $table->integer('quantaty');
+            $table->string('order_nr');
             $table->string('status');
+            $table->string('client_phone')->nullable();
+            $table->string('client_email')->nullable();
+            $table->string('client_name')->nullable();
+            $table->string('client_city')->nullable();
+            $table->string('client_country')->nullable();
+            $table->string('orders_details')->nullable();
+            $table->string('client_postal_code')->nullable();
+            $table->string('client_address')->nullable();
+
+
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });

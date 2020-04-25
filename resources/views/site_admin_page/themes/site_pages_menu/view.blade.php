@@ -2,7 +2,7 @@
 <ol class="dd-list">
 
 
-    @foreach(json_decode($data) as $line)
+    @foreach(json_decode(unserialize($data)) as $line)
 
         @if(array_key_exists('children',$line))
             <li class="dd-item dd3-item" data-id="{{$line->id}}">
@@ -13,16 +13,7 @@
                 <div class="dd3-content">
                     With a switch
 
-                    <span class="pull-right">
 
-															<span class="onoffswitch">
-																<input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="start_interval">
-																<label class="onoffswitch-label" for="start_interval">
-																	<span class="onoffswitch-inner" data-swchon-text="ON" data-swchoff-text="OFF"></span>
-																	<span class="onoffswitch-switch"></span>
-																</label>
-															</span>
-														</span>
 
                 </div>
             <ol class="dd-list">
@@ -33,7 +24,6 @@
                         </div>
                         <div class="dd3-content">
                             Item {{$inserted->id}}
-
 
 
                         </div>

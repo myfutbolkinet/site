@@ -458,11 +458,28 @@
                     },
 
                     setParent: function(li) {
+                        console.log('Parent')
                         if (li.children(this.options.listNodeName).length) {
                             li.prepend($(this.options.expandBtnHTML));
                             li.prepend($(this.options.collapseBtnHTML));
                         }
                         li.children('[data-action="expand"]').hide();
+                        var el = this.dragEl.children(this.options.itemNodeName).first();
+                        if(!el.find('.dd3-content').find("span").length){
+                        console.log(el.find('.dd3-content').append(
+                            '<span class="pull-right">'+
+                            '<span class="onoffswitch">'+
+                            '<input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="start_interval">'+
+                            '<label class="onoffswitch-label" for="start_interval">'+
+                            '<span class="onoffswitch-inner" data-swchon-text="ON" data-swchoff-text="OFF"></span>'+
+                            '<span class="onoffswitch-switch"></span>'+
+                            '</label>'+
+                            '</span>'+
+                            '</span>'
+
+                        ))
+                        }
+                        //li.children(this.options.listNodeName).children().text('qwe')
                     },
 
                     unsetParent: function(li) {
@@ -510,6 +527,7 @@
 
                     dragStop: function(e) {
                         var el = this.dragEl.children(this.options.itemNodeName).first();
+
                         el[0].parentNode.removeChild(el[0]);
                         this.placeEl.replaceWith(el);
 
@@ -700,6 +718,7 @@
             })(window.jQuery, window, document);
 
            var updateOutput = function(e) {
+               console.log('updateOutput')
                 var list = e.length ? e : $(e.target),
                     output = list.data('output');
                 if (window.JSON) {

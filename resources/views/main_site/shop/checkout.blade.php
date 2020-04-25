@@ -26,34 +26,38 @@
             <div class="row">
                 <!-- Checkout Adress-->
                 <div class="col-xl-9 col-lg-8">
-                    <div class="checkout-steps"><a href="/checkout_review">4. Review</a><a href="/checkout_payment"><span class="angle"></span>3. Payment</a><a href="/checkout_shipping"><span class="angle"></span>2. Shipping</a><a class="active" href="/checkout"><span class="angle"></span>1. Address</a></div>
+                    <div class="checkout-steps"><a onclick="submitAndReloadArea('/checkout_review')" href="#">4. Review</a><a onclick="submitAndReloadArea('/checkout_payment')" href="#"><span class="angle"></span>3. Payment</a><a onclick="submitAndReloadArea('/checkout_shipping')" href="#"><span class="angle"></span>2. Shipping</a><a class="active" href="/checkout"><span class="angle"></span>1. Address</a></div>
                     <h4>Billing Address</h4>
                     <hr class="padding-bottom-1x">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="checkout-fn">First Name</label>
-                                <input class="form-control" type="text" id="checkout-fn">
+                                <label for="checkout-fn">Имя</label>
+                                <input class="form-control" type="text" id="checkout-fn" required>
+                                <div style="display: none;color:red" id="validation_item_name" class="validation-advice">Поле обязательное.</div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="checkout-ln">Last Name</label>
-                                <input class="form-control" type="text" id="checkout-ln">
+                                <label for="checkout-ln">Фамилия</label>
+                                <input class="form-control" type="text" id="checkout-ln" required>
+                                <div style="display: none;color:red" id="validation_item_ln" class="validation-advice">Поле обязательное.</div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="checkout-email">E-mail Address</label>
-                                <input class="form-control" type="email" id="checkout-email">
+                                <label for="checkout-email">E-mail адрес</label>
+                                <input class="form-control" type="email" id="checkout-email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                                <div style="display: none;color:red" id="validation_item_email" class="validation-advice">Поле обязательное должно содержать валидный email.</div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="checkout-phone">Phone Number</label>
+                                <label for="checkout-phone">Номер телефона</label>
                                 <input class="form-control" type="text" id="checkout-phone">
+                                <div style="display: none;color:red" id="validation_item_phone" class="validation-advice">Поле обязательное.</div>
                             </div>
                         </div>
                     </div>
@@ -124,7 +128,7 @@
                     </div>
                     <div class="checkout-footer">
                         <div class="column"><a class="btn btn-outline-secondary" href="/cart"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Назад в корзину</span></a></div>
-                        <div class="column"><a class="btn btn-primary" href="/checkout_shipping"><span class="hidden-xs-down">Продолжить&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+                        <div class="column"><a class="btn btn-primary" onclick="submitAndReloadArea('/checkout_shipping')" href="#"><span class="hidden-xs-down">Продолжить&nbsp;</span><i class="icon-arrow-right"></i></a></div>
                     </div>
                 </div>
                 <!-- Sidebar          -->
@@ -204,5 +208,44 @@
 @section('scripts_cart')
     <script>
 
+        function isEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            console.log(regex.test(email))
+            return regex.test(email);
+        }
+
+        function submitAndReloadArea(link) {
+            var name = $('#checkout-fn').val();
+            var ln=$('#checkout-ln').val()
+            var email = $('#checkout-email').val()
+            var phone = $('#checkout-phone').val()
+    if(name=='' || ln=='' || email=='' || !isEmail(email) || phone=='' ){
+            if(name=='') {
+                $('#validation_item_name').show();
+
+            }
+    if(ln=='') {
+        $('#validation_item_ln').show();
+
+    }
+    if(phone=='') {
+        $('#validation_item_phone').show();
+
+    }
+    console.log(isEmail(email))
+    if(!isEmail(email)) {
+        $('#validation_item_email').show();
+
+    }
+    return false;
+
+
+
+            }else {
+                $('#validation_item_custom_payment').hide();
+                window.location.href='/save_customer_address'+link+'?name='+name+'&ln='+ln+'&email='+email+'&phone='+phone
+            ///checkout_shipping
+            }
+        }
     </script>
 @endsection

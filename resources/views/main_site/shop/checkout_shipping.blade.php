@@ -121,8 +121,8 @@
                         </table>
                     </div>
                     <div class="checkout-footer margin-top-1x">
-                        <div class="column"><a class="btn btn-outline-secondary" href="checkout-address.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a></div>
-                        <div class="column"><a class="btn btn-primary" href="checkout-payment.html"><span class="hidden-xs-down">Continue&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+                        <div class="column"><a class="btn btn-outline-secondary" href="\checkout_address"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Назад</span></a></div>
+                        <div class="column"><a class="btn btn-primary" href="\checkout_payment"><span class="hidden-xs-down">Продолжить&nbsp;</span><i class="icon-arrow-right"></i></a></div>
                     </div>
                 </div>
                 <!-- Sidebar          -->
