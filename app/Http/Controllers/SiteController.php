@@ -25,7 +25,6 @@ class SiteController extends Controller
      */
     public function index(Request $request)
     {
-
         //dump('host',$this->host);
         $data['images']=\App\Good::where('main_screen',1)->with('photos')->take(8)->get();
         $data_content=($this->ShowCart()['products']) ? $this->ShowCart() : [];
@@ -35,6 +34,7 @@ class SiteController extends Controller
         $data_content['menu']=\App\Category::get();
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
+        $data_content['additional_menu'] = \App\MerchantSiteMenuPosition::where('site_id',1)->first()->data;
         //dd($data_content);
         return view($path,$data,$data_content);
     }
@@ -51,6 +51,7 @@ class SiteController extends Controller
         $path='main_site/product';
         $data['keywords']="Фрилансим по крупному";
         $data['description']="Фрилансим по крупному";
+        $data_content['additional_menu'] = \App\MerchantSiteMenuPosition::where('site_id',1)->first()->data;
         return view($path,$data,$data_content);
     }
 
@@ -82,6 +83,7 @@ class SiteController extends Controller
         $data_content['goods']=\App\Good::with('photos')->simplePaginate(20);
         //dump($data_content['goods']);
         $path='main_site_marafett/products';
+        $data_content['additional_menu'] = \App\MerchantSiteMenuPosition::where('site_id',1)->first()->data;
         return view($path,$data_content);
     }
 
@@ -104,6 +106,7 @@ class SiteController extends Controller
         }
         //dump($data_content['goods']);
         $path='main_site/category';
+        $data_content['additional_menu'] = \App\MerchantSiteMenuPosition::where('site_id',1)->first()->data;
         return view($path,$data_content);
     }
 

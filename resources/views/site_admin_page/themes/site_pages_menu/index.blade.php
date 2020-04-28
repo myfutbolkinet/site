@@ -41,7 +41,26 @@
 
     </div>
 
+            <div id="addtab" title="Изменение названия категории">
 
+                <form>
+
+                    <fieldset>
+                        <input name="authenticity_token" type="hidden">
+                        <div class="form-group">
+                            <label>Ссылка</label>
+                            <input class="form-control" id="link" value="" placeholder="Text field" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Название пункта меню</label>
+                            <input class="form-control" id="menu_name" value="" placeholder="Text field" type="text">
+                        </div>
+                    </fieldset>
+
+                </form>
+
+            </div>
 
 
     <div class="row">
@@ -147,6 +166,9 @@
     <script>
     console.log('footer_scripts')
     reloadData($('#site_select').val(),'nestable_pages_menu')
+
+
+
 
     </script>
 

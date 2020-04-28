@@ -68,6 +68,7 @@ class ShopingCartController extends Controller
 
 
     public function getCart(){
+    $data_content['additional_menu'] = \App\MerchantSiteMenuPosition::where('site_id',1)->first()->data;
     $data_content['curs']=CursController::index();
         $data_nav['curs']=CursController::index();
     

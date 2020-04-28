@@ -79,6 +79,9 @@ if($domain != "magelan.loc"){
     Route::group(['prefix' => 'admin'],function(){
 
 
+        Route::post('/get_additional_menu_item','SiteAdmin\AdditionalMenuController@getData');
+        Route::post('/save_additional_menu_item','SiteAdmin\AdditionalMenuController@saveData');
+
         Route::get('/orders','SiteAdmin\OrdersController@index');
         Route::post('/orders/data','SiteAdmin\OrdersController@postData');
         Route::post('/change_category_name','SiteAdmin\CategoriesController@changeCatName');

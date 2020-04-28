@@ -61,7 +61,7 @@
 
                     echo '
                           <li>
-                        <a href="'.$arr[$parent_id][$i]->link.'  ">'.$arr[$parent_id][$i]->name;
+                        <a href="/category/'.$arr[$parent_id][$i]->id.'  ">'.$arr[$parent_id][$i]->name;
 
 
 

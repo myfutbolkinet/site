@@ -288,6 +288,7 @@
                 function Plugin(element, options) {
                     this.w = $(document);
                     this.el = $(element);
+
                     this.options = $.extend({}, defaults, options);
                     this.init();
                 }
@@ -304,7 +305,9 @@
                         list.placeEl = $('<div class="' + list.options.placeClass + '"/>');
 
                         $.each(this.el.find(list.options.itemNodeName), function(k, el) {
+
                             list.setParent($(el));
+
                         });
 
                         list.el.on('click', 'button', function(e) {
@@ -700,6 +703,7 @@
                         retval = this;
 
                     lists.each(function() {
+                        console.log('list=>',$(this))
                         var plugin = $(this).data("nestable");
 
                         if (!plugin) {
@@ -790,8 +794,113 @@ console.log(string_data)
         });
     }
 </script>
+<script>
+
+    function itemConfigure(id){
+
+        console.log('itemConfigureId=>',id)
+
+        window.additional_menu_nestable_id=id
+        $.ajax({
+            url: '/admin/get_additional_menu_item', // point to server-side PHP script
+            dataType: 'json',  // what to expect back from the PHP script, if anything
+            cache: false,
+            data: {id:id},
+            type: 'post',
+            success: function(data){
+                console.log('hereData',data)
+                $('.add_edit_category_btn').text('Изменить')
+                if(data.link=='not_linked'){
+                    $('#link').hide()
+                }else{
+                    $('#link').show()
+                $('#link').val(data.link);}
+
+
+
+                $('#menu_name').val(data.text);
+                $( "#addtab" ).dialog( "option", "title", "Изменение данных о пункте меню" );
+                dialog.dialog("open");
+                return false;
+
+            }
+        });
+
+
+
+    }
+
+
+
+    // modal dialog init: custom buttons and a "close" callback reseting the form inside
+
+    var dialog = $("#addtab").dialog({
+        autoOpen : false,
+        width : 600,
+        resizable : false,
+        modal : true,
+        buttons : [{
+            html : "<i class='fa fa-times'></i>&nbsp; Отмена",
+            "class" : "btn btn-default",
+            click : function() {
+                $(this).dialog("close");
+
+            }
+        }, {
+
+            html :  "<i class='fa fa-plus '></i>&nbsp; <span class='add_edit_category_btn'>Изменить</span>",
+            "class" : "btn btn-danger",
+            click : function(e) {
+                console.log('click_action')
+                console.log('cat_id',window.cat_id)
+                dialog.find("form").submit()
+                $(this).dialog("close");
+            }
+        }]
+    });
+    var form = dialog.find("form").submit(function(event) {
+
+        console.log(event.target.elements[2].value)
+        console.log('link=>',event.target.elements[2].value)
+        if(!event.target.elements[2].value){
+            var link='not_linked'
+        }
+        else{
+            var link=event.target.elements[2].value
+        }
+        console.log(window.cat_id)
+        var level=window.level
+        if(window.cat_id==null && window.parent_id!=null){
+            var action = 'add'
+        }
+        else{
+            var action = 'edit'
+        }
+
+        $.ajax({
+            url: '/admin/save_additional_menu_item', // point to server-side PHP script
+            dataType: 'json',  // what to expect back from the PHP script, if anything
+            cache: false,
+            data: {name:event.target.elements[3].value,link:link,id:window.cat_id,action:action, nestable_id:window.additional_menu_nestable_id},
+            type: 'post',
+            success: function(){
+                window.parent_id=null;
+                console.log('here')
+                location.reload();
+
+            }
+        });
+
+
+
+
+        dialog.dialog("close");
+        event.preventDefault();
+    });
+</script>
+
 @yield ('footer_scripts')
 
-
+@yield ('nestable')
 </body>
 </html>

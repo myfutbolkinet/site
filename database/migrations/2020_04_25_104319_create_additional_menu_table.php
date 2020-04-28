@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMerchantSiteMenuPositionsTable extends Migration
+class CreateAdditionalMenuTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,14 +18,8 @@ class CreateMerchantSiteMenuPositionsTable extends Migration
             $table->integer('nestable_id');
             $table->string('text');
             $table->boolean('is_photo');
-            $table->string('photo1');
-            $table->string('link1');
-            $table->string('photo2');
-            $table->string('link2');
-            $table->string('photo3');
-            $table->string('link3');
-            $table->string('photo4');
-            $table->string('link4');
+            $table->string('photo')->nullable();
+            $table->string('link');
             $table->timestamps();
         });
     }

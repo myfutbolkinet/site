@@ -231,6 +231,24 @@
 
     <!-- iCheck -->
     <script src="{!! asset('inspinia/js/plugins/iCheck/icheck.min.js') !!}"></script>
+    <script>
+        $(document).ready(function () {
+            console.log(789);
+            checked_categories=[];
+            <?php if(isset($json)){?>
+                checked_categories=eval('<?php echo $json;?>');
+            <?php } ?>
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+///////////////////////////////////////////////
+
+
 
     <script>
         function checkValue(value,arr){
@@ -441,36 +459,7 @@
             });
         })
     </script>
-@endsection
-
-
-@section('scripts_table')
-
-
-    <script>
-
-        $(document).ready(function() {
-
-
-            console.log(789);
-            checked_categories = [];
-            <?php if(isset($json)){?>
-                checked_categories = eval('<?php echo $json;?>');
-            <?php } ?>
-
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green',
-                radioClass: 'iradio_square-green',
-            });
-
-        });
-
-
-    </script>
-@endsection
-
 
 @yield('scripts')
-    @yield('scripts_table')
 </body>
 </html>
