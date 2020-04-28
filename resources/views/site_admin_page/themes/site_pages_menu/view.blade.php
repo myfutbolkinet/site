@@ -44,7 +44,10 @@
                             .
                         </div>
                         <div class="dd3-content">
-                            button 2 {{$line->id}}
+                            {{$itemChild->text}}
+                            <span class="pull-right" style="position:relative;top:-5px">
+                        <a onclick="itemConfigure({{$inserted->id}})" href="javascript:void(0);" class="btn btn-default txt-color-green"><i class="fa fa-gear fa-lg"></i></a>
+                    </span>
 
 
 
