@@ -17,7 +17,7 @@ Auth::routes();
 
 
 $domain=Request::server("HTTP_HOST");
-
+Route::get('/opt', 'Opt\OptController@index');
 if($domain != "magelan.loc"){
 
 // TODO Получить из базы данных список активных доменов
@@ -116,6 +116,9 @@ if($domain != "magelan.loc"){
 
 
         Route::get('/subordinate lists','SiteAdmin\SubordinateListsController@index')->name('site.admin.subordinate_lists');
+        Route::get('/import_opt','SiteAdmin\ImportController@indexOpt')->name('site.admin.import_opt');
+
+        Route::post('/file/import/opt','SiteAdmin\ImportController@importOpt');
         Route::post('/add_photo_file','\App\Http\Ajax\FuncImagesClass@add_photo_file');
         Route::post('/save_cats_filter', '\App\Http\Ajax\FuncCategoriesClass@save_cats_filter');
         Route::get('/login', 'Auth\SiteAdminLoginController@showLoginForm')->name('site.admin.login');

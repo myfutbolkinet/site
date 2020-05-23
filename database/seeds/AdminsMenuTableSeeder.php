@@ -129,6 +129,53 @@ class AdminsMenuTableSeeder extends Seeder
                 'link'=> '/admin/subordinate lists',
                 'type'=>'linked'
             ],
+            /*16*/
+            [
+                'parent_id' => 0,
+                'name' => 'Импорт',
+                'icon'=> 'fa-envelope','link'=> '/admin/themes',
+                'type'=>'not_linked'
+            ],
+            /*17*/
+            [
+                'parent_id' => 16,
+                'name' => 'Импорт оптовиков',
+                'icon'=> 'fa-envelope','link'=> '/admin/import_opt',
+                'type'=>'linked'
+            ],
+        ]);
+
+        DB::table('opt_categories')->insert([
+            /*1*/
+            [
+                'parent_id' => 0,
+                'name' => 'Пункт меню 1',
+                'icon'=> 'fa-users',
+                'link'=> '/admin',
+                'type'=>'not_linked'
+            ],
+            [
+                'parent_id' => 0,
+                'name' => 'Пункт меню 2',
+                'icon'=> 'fa-users',
+                'link'=> '/admin',
+                'type'=>'not_linked'
+            ],
+            [
+                'parent_id' => 0,
+                'name' => 'Пункт меню 3',
+                'icon'=> 'fa-users',
+                'link'=> '/admin',
+                'type'=>'not_linked'
+            ],
+            [
+                'parent_id' => 0,
+                'name' => 'Пункт меню 4',
+                'icon'=> 'fa-users',
+                'link'=> '/admin',
+                'type'=>'not_linked'
+            ],
+
         ]);
     }
 }
